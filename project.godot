@@ -11,5 +11,15 @@ config_version=5
 [application]
 
 config/name="wordwise"
+run/main_scene="res://samples/godot_whisper/mic_transcribe.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="res://samples/godot_whisper/sample_bus_layout.tres"
+driver/enable_input=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_whisper/plugin.cfg")
