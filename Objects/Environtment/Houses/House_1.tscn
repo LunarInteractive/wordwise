@@ -43,7 +43,7 @@ emission_enabled = true
 emission_energy_multiplier = 0.1
 emission_texture = ExtResource("2_jit0e")
 normal_enabled = true
-normal_scale = 0.5
+normal_scale = 0.75
 normal_texture = ExtResource("2_nmvpa")
 texture_filter = 4
 
