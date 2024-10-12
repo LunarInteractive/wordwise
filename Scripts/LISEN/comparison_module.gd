@@ -1,5 +1,6 @@
 extends Node
 
+
 # List of valid commands
 var commands: Array[String] = ["hello my name is obed", "bro? my name is obed", "call me obed", "rawrrr"]
 
@@ -28,6 +29,7 @@ func _ready() -> void:
 	LimboConsole.add_argument_autocomplete_source("lisen_compare", 1, func() -> Array[String]: return commands)
 	LimboConsole.register_command(set_difficulty_level, "lisen_set_difficulty_level", "set difficulty level")
 	LimboConsole.add_argument_autocomplete_source("lisen_set_difficulty_level", 1, func() -> Array: return difficulty_settings.keys())
+	#TODO: Add connection to speech recognition module
 
 # Function to change difficulty level
 func set_difficulty_level(level: String) -> void:
