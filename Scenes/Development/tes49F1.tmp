@@ -1,10 +1,10 @@
 [gd_scene load_steps=11 format=3 uid="uid://ewck2sucefpr"]
 
-[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_ev6ih"]
-[ext_resource type="Texture2D" uid="uid://blw08u8v25ulj" path="res://addons/kenney_prototype_textures/dark/texture_03.png" id="1_g4glh"]
-[ext_resource type="Texture2D" uid="uid://cjpqncrnplppv" path="res://9204e92a39b8db416db75b29e34e26c1.png" id="1_pqkn6"]
-[ext_resource type="PackedScene" uid="uid://c4pbtkd0malj7" path="res://Objects/Characters/Player/Player.tscn" id="1_qm52k"]
-[ext_resource type="PackedScene" uid="uid://cf2ebhsxe2ls" path="res://Objects/Environtment/Houses/House_1.tscn" id="5_85ivh"]
+[ext_resource type="Texture2D" uid="uid://cjpqncrnplppv" path="res://Resources/PostProcessing/dirt.png" id="1_sinej"]
+[ext_resource type="Texture2D" uid="uid://blw08u8v25ulj" path="res://addons/kenney_prototype_textures/dark/texture_03.png" id="2_kxqkq"]
+[ext_resource type="PackedScene" uid="uid://cf2ebhsxe2ls" path="res://Objects/Environtment/Houses/House_1.tscn" id="3_1ddf6"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_n8qci"]
+[ext_resource type="PackedScene" uid="uid://c4pbtkd0malj7" path="res://Objects/Characters/Player/Player.tscn" id="5_3nwyx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tp6cc"]
 ground_bottom_color = Color(0.384314, 0.454902, 0.54902, 1)
@@ -23,7 +23,7 @@ glow_intensity = 1.75
 glow_strength = 1.41
 glow_blend_mode = 1
 glow_hdr_threshold = 1.05
-glow_map = ExtResource("1_pqkn6")
+glow_map = ExtResource("1_sinej")
 fog_enabled = true
 fog_light_color = Color(0.494968, 0.569624, 0.549717, 1)
 fog_sun_scatter = 0.48
@@ -33,11 +33,11 @@ adjustment_contrast = 1.04
 adjustment_saturation = 1.07
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0is1s"]
-albedo_texture = ExtResource("1_g4glh")
+albedo_texture = ExtResource("2_kxqkq")
 uv1_triplanar = true
 texture_filter = 5
 
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_d7ao5"]
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_pppng"]
 auto_exposure_scale = 0.06
 auto_exposure_speed = 0.01
 dof_blur_far_enabled = true
@@ -64,6 +64,7 @@ material = SubResource("StandardMaterial3D_0is1s")
 transform = Transform3D(-0.38456, 0.922538, 0.0322231, 0.808442, 0.319739, 0.494154, 0.445572, 0.216082, -0.868777, 0, 4.50955, 0)
 light_angular_distance = 2.0
 shadow_enabled = true
+shadow_bias = 0.045
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="SETUP"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.15406, 2.92764, 2.44064)
@@ -105,28 +106,28 @@ light_size = 1.0
 shadow_enabled = true
 omni_range = 6.0
 
-[node name="House10" parent="SETUP" instance=ExtResource("5_85ivh")]
+[node name="House10" parent="SETUP" instance=ExtResource("3_1ddf6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7302, 0.0175399, -4.26115)
 
-[node name="House11" parent="SETUP" instance=ExtResource("5_85ivh")]
+[node name="House11" parent="SETUP" instance=ExtResource("3_1ddf6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7302, 0.0175399, -4.26115)
 
-[node name="House12" parent="SETUP" instance=ExtResource("5_85ivh")]
+[node name="House12" parent="SETUP" instance=ExtResource("3_1ddf6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.52898, 0.0175399, -4.26115)
 
-[node name="House2" parent="SETUP" instance=ExtResource("5_85ivh")]
+[node name="House2" parent="SETUP" instance=ExtResource("3_1ddf6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.01485, 0.0175399, -4.26115)
 
-[node name="House7" parent="SETUP" instance=ExtResource("5_85ivh")]
+[node name="House7" parent="SETUP" instance=ExtResource("3_1ddf6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.31438, 0.0175399, -4.26115)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.999995, 9.96386e-13, -1.98138e-12, -4.92095e-13, 0.970799, 0.239836, 2.16254e-12, -0.239836, 0.970799, -0.942234, 3.76018, 9.9155)
-attributes = SubResource("CameraAttributesPractical_d7ao5")
+transform = Transform3D(0.999995, 9.96386e-13, -1.98138e-12, -4.92095e-13, 0.970799, 0.239836, 2.16254e-12, -0.239836, 0.970799, 13.6784, 3.69545, 9.91833)
+attributes = SubResource("CameraAttributesPractical_pppng")
 fov = 45.0
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
-script = ExtResource("1_ev6ih")
+script = ExtResource("4_n8qci")
 
-[node name="Player" parent="." instance=ExtResource("1_qm52k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.942234, 0.705986, 1.60344)
+[node name="Player" parent="." instance=ExtResource("5_3nwyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6784, 0.641255, 1.60344)

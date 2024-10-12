@@ -1,8 +1,14 @@
 extends CharacterBody3D
 
 
-const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
+var SPEED = 5.0
+var JUMP_VELOCITY: float = 4.5 : set = set_jump_velocity, get = get_jump_velocity
+
+@onready var animated_sprite_3d: AnimatedSprite3D = $AnimatedSprite3D
+
+func _ready() -> void:
+	LimboConsole.register_command(jump, "jump", "jump")
+	LimboConsole.register_command(set_jump_velocity, "set_jump_velocity", "set jump velocity")
 
 
 func _physics_process(delta: float) -> void:
@@ -26,3 +32,14 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+func jump():
+	LimboConsole.info("Jump!")
+	velocity.y = JUMP_VELOCITY
+
+func set_jump_velocity(value: float) -> void:
+	LimboConsole.info("Set jump velocity to: " + str(value))
+	JUMP_VELOCITY = value
+
+func get_jump_velocity() -> float:
+	return JUMP_VELOCITY

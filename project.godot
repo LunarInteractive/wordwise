@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="wordwise"
-run/main_scene="res://test_map.tscn"
+run/main_scene="res://Scenes/Development/test_map.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 run/max_fps=60
 config/icon="res://icon.svg"
@@ -25,6 +25,8 @@ driver/enable_input=true
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
+RuntimeDebugTools="*res://addons/runtime_debug_tools/scenes/remote_inspector.tscn"
+LimboConsole="*res://addons/limbo_console/limbo_console.gd"
 
 [display]
 
@@ -32,14 +34,23 @@ window/size/always_on_top=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/godot_whisper/plugin.cfg", "res://addons/phantom_camera/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/godot_whisper/plugin.cfg", "res://addons/limbo_console/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/runtime_debug_tools/plugin.cfg")
+
+[input]
+
+limbo_console_toggle={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":96,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://test.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Scenes/Development/test.dialogue")
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=3
 camera/depth_of_field/depth_of_field_use_jitter=true
 viewport/hdr_2d=true
 anti_aliasing/quality/use_debanding=true
