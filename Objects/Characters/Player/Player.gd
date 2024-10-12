@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 
 var SPEED = 5.0
-var JUMP_VELOCITY: float = 4.5 : set = set_jump_velocity, get = get_jump_velocity
+var JUMP_VELOCITY: float = 4.5: set = set_jump_velocity, get = get_jump_velocity
 
 @onready var animated_sprite_3d: AnimatedSprite3D = $AnimatedSprite3D
 
