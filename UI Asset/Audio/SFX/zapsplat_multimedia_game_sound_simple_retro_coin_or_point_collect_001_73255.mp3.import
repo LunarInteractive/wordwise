@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cuh4bmn6ib2df"
+path="res://.godot/imported/zapsplat_multimedia_game_sound_simple_retro_coin_or_point_collect_001_73255.mp3-1d5a9d4caaa48a49ec7cc699002240cd.mp3str"
+
+[deps]
+
+source_file="res://UI Asset/Audio/SFX/zapsplat_multimedia_game_sound_simple_retro_coin_or_point_collect_001_73255.mp3"
+dest_files=["res://.godot/imported/zapsplat_multimedia_game_sound_simple_retro_coin_or_point_collect_001_73255.mp3-1d5a9d4caaa48a49ec7cc699002240cd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
