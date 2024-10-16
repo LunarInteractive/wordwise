@@ -37,7 +37,7 @@ albedo_texture = ExtResource("1_g4glh")
 uv1_triplanar = true
 texture_filter = 5
 
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_qsayc"]
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_jqy0j"]
 auto_exposure_scale = 0.06
 auto_exposure_speed = 0.01
 dof_blur_far_enabled = true
@@ -121,8 +121,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.01485, 0.0175399, -4.26115)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.31438, 0.0175399, -4.26115)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 9.96399e-13, -1.98141e-12, -4.92097e-13, 0.970813, 0.239839, 2.16255e-12, -0.239839, 0.970813, -0.942234, 3.76018, 9.9155)
-attributes = SubResource("CameraAttributesPractical_qsayc")
+transform = Transform3D(1, 9.96399e-13, -1.98141e-12, -4.92098e-13, 0.970813, 0.239839, 2.16255e-12, -0.239839, 0.970813, -0.942234, 3.76018, 9.9155)
+attributes = SubResource("CameraAttributesPractical_jqy0j")
 fov = 45.0
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]

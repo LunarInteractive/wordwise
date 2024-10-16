@@ -4,7 +4,7 @@ extends Control
 @export var coin_count : int = 10
 @export var min_travel_distance : float = 0.5
 @export var max_travel_distance : float = 1.5
-const COIN = preload("res://Asset/Scene/coin.tscn")
+const COIN = preload("res://UI Asset/Scene/coin.tscn")
 
 #panel value
 @export var from_center : bool = true

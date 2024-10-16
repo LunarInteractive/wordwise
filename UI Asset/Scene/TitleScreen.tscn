@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://btacos8t8yu20"]
+
+[ext_resource type="Script" path="res://UI Asset/title_screen_Settings.gd" id="1_r7ind"]
+[ext_resource type="Texture2D" uid="uid://deqd7xf74pi1r" path="res://icon.svg" id="2_entxq"]
+[ext_resource type="FontFile" uid="uid://c4oi6yeb8dvyl" path="res://UI Asset/Font/Fredoka-VariableFont_wdth,wght.ttf" id="3_fukr3"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r7ind")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureButton" type="TextureButton" parent="PanelContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_entxq")
+texture_pressed = ExtResource("2_entxq")
+texture_hover = ExtResource("2_entxq")
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 70
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 65
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("3_fukr3")
+theme_override_font_sizes/font_size = 140
+text = "WORDWISE PART 2"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("3_fukr3")
+theme_override_font_sizes/font_size = 70
+text = "PRESS ANYWHERE TO START"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="PanelContainer/TextureButton" to="." method="_on_texture_button_pressed"]
