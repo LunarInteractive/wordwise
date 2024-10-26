@@ -4,7 +4,7 @@ var Coins_value = 0
 @onready var coin_values: Label = %CoinValues
 @onready var Music_Bus_ID = AudioServer.get_bus_index("Music")
 @onready var SFX_Bus_ID = AudioServer.get_bus_index("SFX")
-const SaveMaterial = preload("res://Asset/Script/SaveMaterial.gd")
+const SaveMaterial = preload("res://UI Asset/Script/SaveMaterial.gd")
 
 
 # Called when the node enters the scene tree for the first time.

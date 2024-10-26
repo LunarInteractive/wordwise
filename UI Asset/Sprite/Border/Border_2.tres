@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dtpu7llqp2oq2"]
+
+[ext_resource type="Texture2D" uid="uid://bf12qyd8dxajb" path="res://UI Asset/Sprite/Border/Pxiel Art UI borders.png" id="1_n6wja"]
+
+[resource]
+atlas = ExtResource("1_n6wja")
+region = Rect2(307, 275, 90, 90)

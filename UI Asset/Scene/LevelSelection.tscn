@@ -1,10 +1,17 @@
-[gd_scene load_steps=10 format=3 uid="uid://nlbc1gy77br2"]
+[gd_scene load_steps=22 format=3 uid="uid://nlbc1gy77br2"]
 
 [ext_resource type="Script" path="res://UI Asset/Script/ScrollUI.gd" id="1_a6gtd"]
-[ext_resource type="FontFile" uid="uid://c4oi6yeb8dvyl" path="res://UI Asset/Font/Fredoka-VariableFont_wdth,wght.ttf" id="1_krxtl"]
+[ext_resource type="Texture2D" uid="uid://bo7pxrurhgb66" path="res://UI Asset/Sprite/Border/Border_1.tres" id="2_c62by"]
 [ext_resource type="Script" path="res://UI Asset/Script/BtnAnimation.gd" id="2_x5l80"]
+[ext_resource type="StyleBox" uid="uid://cu30ijamn0ms3" path="res://UI Asset/Shader/buton_texture.tres" id="3_8wlu1"]
+[ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="4_oibx1"]
+[ext_resource type="Texture2D" uid="uid://dj6styde7tmsc" path="res://UI Asset/Sprite/slider_grabber.tres" id="6_yulhw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0kjdm"]
+bg_color = Color(0.784314, 0.721569, 0.831373, 0.431373)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8tx5f"]
+bg_color = Color(0.360784, 0.458824, 0.690196, 1)
 corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
@@ -14,29 +21,56 @@ expand_margin_top = 20.0
 expand_margin_right = 20.0
 expand_margin_bottom = 20.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3imvn"]
-content_margin_left = 10.0
-content_margin_top = 10.0
-content_margin_right = 10.0
-content_margin_bottom = 10.0
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vxmr3"]
+texture = ExtResource("2_c62by")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+expand_margin_left = 12.0
+expand_margin_top = 12.0
+expand_margin_right = 12.0
+expand_margin_bottom = 12.0
+region_rect = Rect2(0, 0, 92, 92)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lh2ki"]
-border_width_left = 20
-border_width_top = 20
-border_width_right = 20
-border_width_bottom = 20
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g2hp3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mnm7j"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dx3xl"]
+bg_color = Color(1, 1, 1, 1)
+expand_margin_left = 10.0
+expand_margin_right = 13.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sctdg"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_40f25"]
+bg_color = Color(1, 1, 1, 1)
 expand_margin_left = 10.0
 expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5kpcn"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qpnrr"]
+bg_color = Color(0.360784, 0.458824, 0.690196, 1)
+border_width_top = 3
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7018s"]
+bg_color = Color(0.167951, 0.19941, 0.306789, 1)
+border_width_top = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d71jl"]
+texture = ExtResource("6_yulhw")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(0, 0, 42, 10)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mlb3i"]
 bg_color = Color(0, 0, 0, 0.807843)
@@ -66,6 +100,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0kjdm")
+
 [node name="MarginContainer" type="MarginContainer" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
@@ -74,7 +117,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 100
+theme_override_constants/margin_top = -25
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 30
 script = ExtResource("1_a6gtd")
@@ -105,6 +148,10 @@ layout_mode = 2
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_8tx5f")
 
+[node name="Panel" type="Panel" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_vxmr3")
+
 [node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1"]
 layout_mode = 2
 theme_override_constants/margin_left = 20
@@ -127,16 +174,18 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_3imvn")
+theme_override_styles/panel = ExtResource("3_8wlu1")
 
 [node name="Button" type="Button" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/level1/PanelContainer"]
 custom_minimum_size = Vector2(121.255, 110.395)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("1_krxtl")
-theme_override_font_sizes/font_size = 40
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_oibx1")
+theme_override_font_sizes/font_size = 85
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g2hp3")
 text = "Level 1
 "
 
@@ -146,11 +195,12 @@ hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="Panel" type="Panel" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/level1"]
-custom_minimum_size = Vector2(15, 47.865)
+custom_minimum_size = Vector2(10, 16.16)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_mnm7j")
 
 [node name="SideQuest" type="Button" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/level1"]
 custom_minimum_size = Vector2(150, 100)
@@ -158,9 +208,12 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("1_krxtl")
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_lh2ki")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_oibx1")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = ExtResource("3_8wlu1")
 text = "Side Quest"
 autowrap_mode = 2
 
@@ -170,10 +223,11 @@ hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="-" type="Panel" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1"]
-custom_minimum_size = Vector2(300, 15.5)
+custom_minimum_size = Vector2(300, 10.315)
 layout_mode = 2
 size_flags_vertical = 4
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_mnm7j")
 
 [node name="level2" type="PanelContainer" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1"]
 custom_minimum_size = Vector2(300, 300)
@@ -181,24 +235,26 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_3imvn")
+theme_override_styles/panel = ExtResource("3_8wlu1")
 
 [node name="Button2" type="Button" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/level2"]
 custom_minimum_size = Vector2(121.255, 110.395)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("1_krxtl")
-theme_override_font_sizes/font_size = 40
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_oibx1")
+theme_override_font_sizes/font_size = 85
 text = "Level 2
 "
 
 [node name="-2" type="Panel" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1"]
-custom_minimum_size = Vector2(300, 15.5)
+custom_minimum_size = Vector2(300, 10.315)
 layout_mode = 2
 size_flags_vertical = 4
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_mnm7j")
 
 [node name="level3" type="PanelContainer" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1"]
 custom_minimum_size = Vector2(300, 300)
@@ -206,24 +262,26 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_3imvn")
+theme_override_styles/panel = ExtResource("3_8wlu1")
 
 [node name="Button" type="Button" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/level3"]
 custom_minimum_size = Vector2(121.255, 110.395)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("1_krxtl")
-theme_override_font_sizes/font_size = 40
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_oibx1")
+theme_override_font_sizes/font_size = 85
 text = "Level 3
 "
 
 [node name="-3" type="Panel" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1"]
-custom_minimum_size = Vector2(300, 15.5)
+custom_minimum_size = Vector2(300, 10.315)
 layout_mode = 2
 size_flags_vertical = 4
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_mnm7j")
 
 [node name="level4" type="PanelContainer" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1"]
 custom_minimum_size = Vector2(300, 300)
@@ -231,43 +289,52 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_3imvn")
+theme_override_styles/panel = ExtResource("3_8wlu1")
 
 [node name="Button2" type="Button" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/level4"]
 custom_minimum_size = Vector2(121.255, 110.395)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("1_krxtl")
-theme_override_font_sizes/font_size = 40
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_oibx1")
+theme_override_font_sizes/font_size = 85
 text = "Level 4
 "
 
 [node name="Label" type="Label" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1"]
 layout_mode = 2
 size_flags_vertical = 0
-
-[node name="HSlider" type="HSlider" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1"]
-layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_oibx1")
+theme_override_font_sizes/font_size = 111
+text = "Chapter 1"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Seperation" type="Panel" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(300, 15.5)
 layout_mode = 2
 size_flags_vertical = 4
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_dx3xl")
 
 [node name="Panel Chapter 2" type="PanelContainer" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_8tx5f")
 
+[node name="Panel" type="Panel" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 2"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_vxmr3")
+
 [node name="Label" type="Label" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 2"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource("1_krxtl")
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("4_oibx1")
+theme_override_font_sizes/font_size = 111
 text = "Chapter 2"
 
 [node name="Chapter 2" type="HBoxContainer" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 2"]
@@ -286,16 +353,16 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_3imvn")
+theme_override_styles/panel = ExtResource("3_8wlu1")
 
 [node name="Button" type="Button" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 2/Chapter 2/level1/PanelContainer"]
 custom_minimum_size = Vector2(121.255, 110.395)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_horizontal = 5
+size_flags_vertical = 5
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("1_krxtl")
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("4_oibx1")
+theme_override_font_sizes/font_size = 90
 text = "Level 1
 "
 
@@ -305,6 +372,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_sctdg")
 
 [node name="SideQuest" type="Button" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 2/Chapter 2/level1"]
 custom_minimum_size = Vector2(150, 100)
@@ -312,9 +380,9 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("1_krxtl")
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_lh2ki")
+theme_override_fonts/font = ExtResource("4_oibx1")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = ExtResource("3_8wlu1")
 text = "Side Quest"
 autowrap_mode = 2
 
@@ -323,6 +391,7 @@ custom_minimum_size = Vector2(300, 15.5)
 layout_mode = 2
 size_flags_vertical = 4
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_sctdg")
 
 [node name="level2" type="PanelContainer" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 2/Chapter 2"]
 custom_minimum_size = Vector2(300, 300)
@@ -330,16 +399,16 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_3imvn")
+theme_override_styles/panel = ExtResource("3_8wlu1")
 
 [node name="Button2" type="Button" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 2/Chapter 2/level2"]
 custom_minimum_size = Vector2(121.255, 110.395)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_horizontal = 5
+size_flags_vertical = 5
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("1_krxtl")
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("4_oibx1")
+theme_override_font_sizes/font_size = 90
 text = "Level 2
 "
 
@@ -348,6 +417,7 @@ custom_minimum_size = Vector2(300, 15.5)
 layout_mode = 2
 size_flags_vertical = 4
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_sctdg")
 
 [node name="level3" type="PanelContainer" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 2/Chapter 2"]
 custom_minimum_size = Vector2(300, 300)
@@ -355,16 +425,16 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_3imvn")
+theme_override_styles/panel = ExtResource("3_8wlu1")
 
 [node name="Button" type="Button" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 2/Chapter 2/level3"]
 custom_minimum_size = Vector2(121.255, 110.395)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_horizontal = 5
+size_flags_vertical = 5
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("1_krxtl")
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("4_oibx1")
+theme_override_font_sizes/font_size = 90
 text = "Level 3
 "
 
@@ -373,6 +443,7 @@ custom_minimum_size = Vector2(300, 15.5)
 layout_mode = 2
 size_flags_vertical = 4
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_sctdg")
 
 [node name="level4" type="PanelContainer" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 2/Chapter 2"]
 custom_minimum_size = Vector2(300, 300)
@@ -380,16 +451,16 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_3imvn")
+theme_override_styles/panel = ExtResource("3_8wlu1")
 
 [node name="Button2" type="Button" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 2/Chapter 2/level4"]
 custom_minimum_size = Vector2(121.255, 110.395)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_horizontal = 5
+size_flags_vertical = 5
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("1_krxtl")
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("4_oibx1")
+theme_override_font_sizes/font_size = 85
 text = "Level 4
 "
 
@@ -398,183 +469,208 @@ custom_minimum_size = Vector2(300, 15.5)
 layout_mode = 2
 size_flags_vertical = 4
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_40f25")
 
 [node name="Panel Chapter 3" type="PanelContainer" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_8tx5f")
 
+[node name="Panel" type="Panel" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_vxmr3")
+
 [node name="Label" type="Label" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource("1_krxtl")
-theme_override_font_sizes/font_size = 50
-text = "Chapter 2"
+theme_override_fonts/font = ExtResource("4_oibx1")
+theme_override_font_sizes/font_size = 111
+text = "Chapter 3"
 
-[node name="Chapter 2" type="HBoxContainer" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3"]
+[node name="Chapter 3" type="HBoxContainer" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3"]
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="level1" type="VBoxContainer" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 2"]
+[node name="level1" type="VBoxContainer" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 3"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 1
 
-[node name="PanelContainer" type="PanelContainer" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 2/level1"]
+[node name="PanelContainer" type="PanelContainer" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 3/level1"]
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_3imvn")
+theme_override_styles/panel = ExtResource("3_8wlu1")
 
-[node name="Button" type="Button" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 2/level1/PanelContainer"]
+[node name="Button" type="Button" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 3/level1/PanelContainer"]
 custom_minimum_size = Vector2(121.255, 110.395)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_horizontal = 5
+size_flags_vertical = 5
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("1_krxtl")
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("4_oibx1")
+theme_override_font_sizes/font_size = 85
 text = "Level 1
 "
 
-[node name="Panel" type="Panel" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 2/level1"]
+[node name="Panel" type="Panel" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 3/level1"]
 custom_minimum_size = Vector2(15, 47.865)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_5kpcn")
 
-[node name="SideQuest" type="Button" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 2/level1"]
+[node name="SideQuest" type="Button" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 3/level1"]
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("1_krxtl")
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_lh2ki")
+theme_override_fonts/font = ExtResource("4_oibx1")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = ExtResource("3_8wlu1")
 text = "Side Quest"
 autowrap_mode = 2
 
-[node name="Panel" type="Panel" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 2"]
+[node name="Panel" type="Panel" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 3"]
 custom_minimum_size = Vector2(300, 15.5)
 layout_mode = 2
 size_flags_vertical = 4
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_5kpcn")
 
-[node name="level2" type="PanelContainer" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 2"]
+[node name="level2" type="PanelContainer" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 3"]
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_3imvn")
+theme_override_styles/panel = ExtResource("3_8wlu1")
 
-[node name="Button2" type="Button" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 2/level2"]
+[node name="Button2" type="Button" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 3/level2"]
 custom_minimum_size = Vector2(121.255, 110.395)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_horizontal = 5
+size_flags_vertical = 5
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("1_krxtl")
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("4_oibx1")
+theme_override_font_sizes/font_size = 85
 text = "Level 2
 "
 
-[node name="Panel2" type="Panel" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 2"]
+[node name="Panel2" type="Panel" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 3"]
 custom_minimum_size = Vector2(300, 15.5)
 layout_mode = 2
 size_flags_vertical = 4
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_5kpcn")
 
-[node name="level3" type="PanelContainer" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 2"]
+[node name="level3" type="PanelContainer" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 3"]
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_3imvn")
+theme_override_styles/panel = ExtResource("3_8wlu1")
 
-[node name="Button" type="Button" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 2/level3"]
+[node name="Button" type="Button" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 3/level3"]
 custom_minimum_size = Vector2(121.255, 110.395)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_horizontal = 5
+size_flags_vertical = 5
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("1_krxtl")
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("4_oibx1")
+theme_override_font_sizes/font_size = 85
 text = "Level 3
 "
 
-[node name="Panel3" type="Panel" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 2"]
+[node name="Panel3" type="Panel" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 3"]
 custom_minimum_size = Vector2(300, 15.5)
 layout_mode = 2
 size_flags_vertical = 4
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_5kpcn")
 
-[node name="level4" type="PanelContainer" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 2"]
+[node name="level4" type="PanelContainer" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 3"]
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_3imvn")
+theme_override_styles/panel = ExtResource("3_8wlu1")
 
-[node name="Button2" type="Button" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 2/level4"]
+[node name="Button2" type="Button" parent="Control/MarginContainer/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 3/Chapter 3/level4"]
 custom_minimum_size = Vector2(121.255, 110.395)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_horizontal = 5
+size_flags_vertical = 5
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("1_krxtl")
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("4_oibx1")
+theme_override_font_sizes/font_size = 85
 text = "Level 4
 "
 
-[node name="PanelContainer" type="PanelContainer" parent="Control/MarginContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="Control"]
 custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -57.0
+grow_horizontal = 2
+grow_vertical = 0
 size_flags_vertical = 8
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_qpnrr")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/PanelContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/PanelContainer"]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_constants/separation = 370
 alignment = 1
 
-[node name="Label" type="Label" parent="Control/MarginContainer/PanelContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Control/PanelContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_krxtl")
-theme_override_font_sizes/font_size = 50
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_oibx1")
+theme_override_font_sizes/font_size = 80
 text = "Chapter 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="Control/MarginContainer/PanelContainer/HBoxContainer"]
+[node name="Label2" type="Label" parent="Control/PanelContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_krxtl")
-theme_override_font_sizes/font_size = 50
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_oibx1")
+theme_override_font_sizes/font_size = 80
 text = "Chapter 2"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label3" type="Label" parent="Control/MarginContainer/PanelContainer/HBoxContainer"]
+[node name="Label3" type="Label" parent="Control/PanelContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_krxtl")
-theme_override_font_sizes/font_size = 50
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_oibx1")
+theme_override_font_sizes/font_size = 80
 text = "Chapter 3"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HScrollBar" type="HScrollBar" parent="Control/MarginContainer/PanelContainer"]
+[node name="HScrollBar" type="HScrollBar" parent="Control/PanelContainer"]
 custom_minimum_size = Vector2(0, 26.66)
 layout_mode = 2
 size_flags_vertical = 8
+theme_override_styles/scroll = SubResource("StyleBoxFlat_7018s")
+theme_override_styles/grabber = SubResource("StyleBoxTexture_d71jl")
 page = 33.0
 
 [node name="Control2" type="Control" parent="."]

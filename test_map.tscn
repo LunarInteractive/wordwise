@@ -37,7 +37,7 @@ albedo_texture = ExtResource("1_g4glh")
 uv1_triplanar = true
 texture_filter = 5
 
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_jqy0j"]
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_5fywf"]
 auto_exposure_scale = 0.06
 auto_exposure_speed = 0.01
 dof_blur_far_enabled = true
@@ -121,12 +121,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.01485, 0.0175399, -4.26115)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.31438, 0.0175399, -4.26115)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 9.96399e-13, -1.98141e-12, -4.92098e-13, 0.970813, 0.239839, 2.16255e-12, -0.239839, 0.970813, -0.942234, 3.76018, 9.9155)
-attributes = SubResource("CameraAttributesPractical_jqy0j")
+transform = Transform3D(0.999995, 9.25164e-13, -1.82097e-12, -4.6298e-13, 0.970998, 0.239053, 1.98902e-12, -0.239051, 0.970992, -0.942234, 5.69855, 935.597)
+attributes = SubResource("CameraAttributesPractical_5fywf")
 fov = 45.0
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 script = ExtResource("1_ev6ih")
 
-[node name="Player" parent="." instance=ExtResource("1_qm52k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.942234, 0.705986, 1.60344)
+[node name="Player" parent="Camera3D" instance=ExtResource("1_qm52k")]
+transform = Transform3D(1, -4.92059e-13, 2.16248e-12, 9.9634e-13, 0.970813, -0.239837, -1.98135e-12, 0.239837, 0.970813, 0, -1.28973, -7.53762)
