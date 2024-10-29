@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="2_3s32c"]
 [ext_resource type="StyleBox" uid="uid://c8uao04yg21v4" path="res://UI Asset/Shader/Button_Normal.tres" id="3_fs6dy"]
 [ext_resource type="Texture2D" uid="uid://bo7pxrurhgb66" path="res://UI Asset/Sprite/Border/Border_1.tres" id="4_o1bpl"]
-[ext_resource type="Texture2D" uid="uid://bhmq7o34g2c8j" path="res://UI Asset/Sprite/Button_X.tres" id="5_vslde"]
+[ext_resource type="Texture2D" uid="uid://bhmq7o34g2c8j" path="res://UI Asset/Sprite/GUI/Button_X.tres" id="5_vslde"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dp2mp"]
 bg_color = Color(0, 0, 0, 0.65098)

@@ -1,8 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://dlkjulndtiubl"]
+[gd_scene load_steps=12 format=3 uid="uid://dlkjulndtiubl"]
 
-[ext_resource type="Texture2D" uid="uid://be8ovik6e657" path="res://UI Asset/Sprite/Bubble_Text.tres" id="1_h01be"]
+[ext_resource type="FontFile" uid="uid://dclwgnpvy23n7" path="res://UI Asset/Font/Pixel Dogica/dogicapixelbold.ttf" id="1_0egma"]
+[ext_resource type="Texture2D" uid="uid://be8ovik6e657" path="res://UI Asset/Sprite/GUI/Bubble_Text.tres" id="1_h01be"]
 [ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="2_lysqd"]
-[ext_resource type="Texture2D" uid="uid://cmu07715hl87m" path="res://UI Asset/Sprite/profile pixel.png" id="3_j1f7k"]
+[ext_resource type="Texture2D" uid="uid://cmu07715hl87m" path="res://UI Asset/Sprite/GUI/profile pixel.png" id="3_j1f7k"]
+[ext_resource type="Texture2D" uid="uid://ee0pg8gnkqox" path="res://UI Asset/Sprite/UI_Wordwise/Bubble_Text/bubbletext2.png" id="5_7frkw"]
+[ext_resource type="Texture2D" uid="uid://bo7pxrurhgb66" path="res://UI Asset/Sprite/Border/Border_1.tres" id="5_xqy85"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oxhju"]
+bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_73wql"]
 content_margin_left = 40.0
@@ -14,13 +20,21 @@ region_rect = Rect2(0, 0, 46, 14)
 modulate_color = Color(0.960784, 0.941176, 1, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w1u2e"]
+content_margin_left = 57.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q20ct"]
 content_margin_left = 40.0
 content_margin_right = 40.0
-texture = ExtResource("1_h01be")
-region_rect = Rect2(0, 0, 46, 14)
+texture = ExtResource("5_7frkw")
+texture_margin_left = 6.0
+texture_margin_right = 15.0
+region_rect = Rect2(7, 4, 49, 24)
 modulate_color = Color(0.647977, 0.72051, 0.881403, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wir23"]
+bg_color = Color(0.16471, 0.275779, 0.537395, 1)
+border_width_left = 3
+border_width_top = 3
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -39,6 +53,39 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_bottom = 1015
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_oxhju")
+
+[node name="MarginContainer2" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 85.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 160
+theme_override_constants/margin_top = 45
+
+[node name="Label" type="Label" parent="Control/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_outline_size = 15
+theme_override_fonts/font = ExtResource("1_0egma")
+theme_override_font_sizes/font_size = 75
+text = "Level 1"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control"]
 layout_mode = 1
@@ -79,7 +126,7 @@ autowrap_mode = 3
 [node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer/NpcPanel/VBoxContainer"]
 custom_minimum_size = Vector2(350, 350)
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 4
 texture = ExtResource("3_j1f7k")
 stretch_mode = 5
 
@@ -88,27 +135,30 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 100
 theme_override_constants/margin_top = 80
-theme_override_constants/margin_right = 100
-theme_override_constants/margin_bottom = 15
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Control/HBoxContainer/AwnserPanel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/AwnserPanel"]
 layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/HBoxContainer/AwnserPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxEmpty_w1u2e")
 follow_focus = true
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/AwnserPanel/VBoxContainer/ScrollContainer"]
 layout_mode = 2
 theme_override_constants/separation = 45
 
-[node name="PanelContainer" type="PanelContainer" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="Control/HBoxContainer/AwnserPanel/VBoxContainer/ScrollContainer/VBoxContainer"]
 custom_minimum_size = Vector2(1000, 130)
 layout_mode = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_q20ct")
 
-[node name="Label" type="Label" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer/PanelContainer"]
+[node name="Label" type="Label" parent="Control/HBoxContainer/AwnserPanel/VBoxContainer/ScrollContainer/VBoxContainer/PanelContainer"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -117,13 +167,13 @@ theme_override_font_sizes/font_size = 111
 text = "Sebuah Text"
 autowrap_mode = 3
 
-[node name="PanelContainer2" type="PanelContainer" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer"]
+[node name="PanelContainer2" type="PanelContainer" parent="Control/HBoxContainer/AwnserPanel/VBoxContainer/ScrollContainer/VBoxContainer"]
 custom_minimum_size = Vector2(1000, 130)
 layout_mode = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_q20ct")
 
-[node name="Label" type="Label" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer/PanelContainer2"]
+[node name="Label" type="Label" parent="Control/HBoxContainer/AwnserPanel/VBoxContainer/ScrollContainer/VBoxContainer/PanelContainer2"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -132,13 +182,13 @@ theme_override_font_sizes/font_size = 111
 text = "Sebuah Text"
 autowrap_mode = 3
 
-[node name="PanelContainer3" type="PanelContainer" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer"]
+[node name="PanelContainer3" type="PanelContainer" parent="Control/HBoxContainer/AwnserPanel/VBoxContainer/ScrollContainer/VBoxContainer"]
 custom_minimum_size = Vector2(1000, 130)
 layout_mode = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_q20ct")
 
-[node name="Label" type="Label" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer/PanelContainer3"]
+[node name="Label" type="Label" parent="Control/HBoxContainer/AwnserPanel/VBoxContainer/ScrollContainer/VBoxContainer/PanelContainer3"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -147,13 +197,13 @@ theme_override_font_sizes/font_size = 111
 text = "Sebuah Text"
 autowrap_mode = 3
 
-[node name="PanelContainer4" type="PanelContainer" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer"]
+[node name="PanelContainer4" type="PanelContainer" parent="Control/HBoxContainer/AwnserPanel/VBoxContainer/ScrollContainer/VBoxContainer"]
 custom_minimum_size = Vector2(1000, 130)
 layout_mode = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_q20ct")
 
-[node name="Label" type="Label" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer/PanelContainer4"]
+[node name="Label" type="Label" parent="Control/HBoxContainer/AwnserPanel/VBoxContainer/ScrollContainer/VBoxContainer/PanelContainer4"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -162,13 +212,13 @@ theme_override_font_sizes/font_size = 111
 text = "Sebuah Text"
 autowrap_mode = 3
 
-[node name="PanelContainer5" type="PanelContainer" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer"]
+[node name="PanelContainer5" type="PanelContainer" parent="Control/HBoxContainer/AwnserPanel/VBoxContainer/ScrollContainer/VBoxContainer"]
 custom_minimum_size = Vector2(1000, 130)
 layout_mode = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_q20ct")
 
-[node name="Label" type="Label" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer/PanelContainer5"]
+[node name="Label" type="Label" parent="Control/HBoxContainer/AwnserPanel/VBoxContainer/ScrollContainer/VBoxContainer/PanelContainer5"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -177,13 +227,13 @@ theme_override_font_sizes/font_size = 111
 text = "Sebuah Text"
 autowrap_mode = 3
 
-[node name="PanelContainer6" type="PanelContainer" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer"]
+[node name="PanelContainer6" type="PanelContainer" parent="Control/HBoxContainer/AwnserPanel/VBoxContainer/ScrollContainer/VBoxContainer"]
 custom_minimum_size = Vector2(1000, 130)
 layout_mode = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_q20ct")
 
-[node name="Label" type="Label" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer/PanelContainer6"]
+[node name="Label" type="Label" parent="Control/HBoxContainer/AwnserPanel/VBoxContainer/ScrollContainer/VBoxContainer/PanelContainer6"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -192,13 +242,13 @@ theme_override_font_sizes/font_size = 111
 text = "Sebuah Text"
 autowrap_mode = 3
 
-[node name="PanelContainer7" type="PanelContainer" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer"]
+[node name="PanelContainer7" type="PanelContainer" parent="Control/HBoxContainer/AwnserPanel/VBoxContainer/ScrollContainer/VBoxContainer"]
 custom_minimum_size = Vector2(1000, 130)
 layout_mode = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_q20ct")
 
-[node name="Label" type="Label" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer/PanelContainer7"]
+[node name="Label" type="Label" parent="Control/HBoxContainer/AwnserPanel/VBoxContainer/ScrollContainer/VBoxContainer/PanelContainer7"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -206,3 +256,41 @@ theme_override_fonts/font = ExtResource("2_lysqd")
 theme_override_font_sizes/font_size = 111
 text = "Sebuah Text"
 autowrap_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/HBoxContainer/AwnserPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 187.665)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_wir23")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control/HBoxContainer/AwnserPanel/VBoxContainer/PanelContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("5_xqy85")
+region_rect = Rect2(0, 0, 92, 92)
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/HBoxContainer/AwnserPanel/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/AwnserPanel/VBoxContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Control/HBoxContainer/AwnserPanel/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_lysqd")
+theme_override_font_sizes/font_size = 76
+text = "Your Word"
+horizontal_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Control/HBoxContainer/AwnserPanel/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 69.995)
+layout_mode = 2
+editable = false
