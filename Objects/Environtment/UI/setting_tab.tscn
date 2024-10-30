@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://d7rkg7ufvq46"]
+
+[node name="Setting_Tab" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_alignment = 1
+current_tab = 2
+
+[node name="Gameplay" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Gameplay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Gameplay/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="Difficulty" type="Label" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Difficulty"
+
+[node name="Listen Accuracy" type="Label" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Listen Accuracy"
+
+[node name="Listen Control" type="Label" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Listen Control"
+
+[node name="Visual" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Visual"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Visual/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="Graphics" type="Label" parent="TabContainer/Visual/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Graphics"
+
+[node name="Advanced" type="Label" parent="TabContainer/Visual/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Advanced"
+
+[node name="Bloom" type="Label" parent="TabContainer/Visual/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Bloom"
+
+[node name="Vignette" type="Label" parent="TabContainer/Visual/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Vignette"
+
+[node name="Blur" type="Label" parent="TabContainer/Visual/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Blur"
+
+[node name="AA" type="Label" parent="TabContainer/Visual/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Abnomatic Abbreviation"
+
+[node name="Audio" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Audio"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Audio/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="Master" type="Label" parent="TabContainer/Audio/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Master Volume"
+
+[node name="HSlider" type="HSlider" parent="TabContainer/Audio/MarginContainer/VBoxContainer/Master"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.001
+anchor_top = 1.913
+anchor_right = 0.001
+anchor_bottom = 1.913
+offset_left = -0.872
+offset_top = -16.999
+offset_right = 1861.13
+offset_bottom = 38.001
+value = 90.0
+
+[node name="Dialogue" type="Label" parent="TabContainer/Audio/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Dialogue Volume"
+
+[node name="Sound Effect" type="Label" parent="TabContainer/Audio/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Sound Effect Volume"
+
+[node name="Music" type="Label" parent="TabContainer/Audio/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Music Volume"
