@@ -3,20 +3,17 @@
 [ext_resource type="Script" path="res://Objects/Environtment/UI/menu.gd" id="1_xit0o"]
 [ext_resource type="Texture2D" uid="uid://cjpqncrnplppv" path="res://9204e92a39b8db416db75b29e34e26c1.png" id="2_4lkao"]
 [ext_resource type="Texture2D" uid="uid://ce6uyu0k3jgov" path="res://UI Asset/Sprite/Screenshot 2024-10-23 015005.png" id="2_8qd0f"]
-[ext_resource type="Texture2D" uid="uid://cmu07715hl87m" path="res://UI Asset/Sprite/profile pixel.png" id="3_cakrx"]
 [ext_resource type="PackedScene" uid="uid://7m43aipf46oo" path="res://Objects/Environtment/UI/settings.tscn" id="4_ijbmb"]
+[ext_resource type="Texture2D" uid="uid://x4ruv8xt1qxv" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/whitprog.tres" id="5_4qexl"]
 [ext_resource type="FontFile" uid="uid://c7mvg73i0pnen" path="res://UI Asset/Font/Pixel Dogica/dogicabold.ttf" id="5_643lq"]
 [ext_resource type="Texture2D" uid="uid://ccl2nharts8li" path="res://Objects/Environtment/UI/Assets/Button/taskpurple.tres" id="6_cpc8p"]
+[ext_resource type="Texture2D" uid="uid://4bthiqt45xgn" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/bingkaiprog.tres" id="6_m4ken"]
 [ext_resource type="Texture2D" uid="uid://cptbowved4tl0" path="res://Objects/Environtment/UI/Assets/Button/whiteset.tres" id="7_f3lv5"]
+[ext_resource type="Texture2D" uid="uid://c3bwdc7825qnk" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/purpleprog.tres" id="7_ktxwi"]
 [ext_resource type="Texture2D" uid="uid://1h6labmjx1jf" path="res://Objects/Environtment/UI/Assets/Button/whiteprev.tres" id="7_mwoma"]
 [ext_resource type="Texture2D" uid="uid://drod8gw52fomm" path="res://Objects/Environtment/UI/Assets/Chara/Chara.png" id="8_1rdef"]
 [ext_resource type="Texture2D" uid="uid://ckchu8i8vfwx8" path="res://Objects/Environtment/UI/Assets/Button/whitenext.tres" id="9_3upm5"]
 [ext_resource type="Texture2D" uid="uid://3jn4lqpls24m" path="res://Objects/Environtment/UI/Assets/Button/GEMBOKSENDIRI.png" id="9_8s06r"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_32ma0"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l3kxa"]
-bg_color = Color(0.990733, 0.281737, 0.615115, 1)
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -77,15 +74,14 @@ layout_mode = 2
 texture = ExtResource("2_4lkao")
 expand_mode = 1
 
-[node name="Avatar" type="TextureRect" parent="MarginContainer/HBoxContainer/VBC Profile and Task/HBC Profile/TextureRect2"]
+[node name="Avatar" type="Button" parent="MarginContainer/HBoxContainer/VBC Profile and Task/HBC Profile/TextureRect2"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 offset_left = 15.0
 offset_top = 9.0
 offset_right = 115.0
 offset_bottom = 109.0
-texture = ExtResource("3_cakrx")
-expand_mode = 1
+text = "AVATAR"
 
 [node name="Nama" type="Label" parent="MarginContainer/HBoxContainer/VBC Profile and Task/HBC Profile/TextureRect2"]
 layout_mode = 2
@@ -98,15 +94,17 @@ theme_override_font_sizes/font_size = 24
 text = "ANGELE"
 vertical_alignment = 2
 
-[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/VBC Profile and Task/HBC Profile/TextureRect2"]
+[node name="ProgressBar" type="TextureProgressBar" parent="MarginContainer/HBoxContainer/VBC Profile and Task/HBC Profile/TextureRect2"]
 layout_mode = 2
 offset_left = 120.0
 offset_top = 72.0
-offset_right = 289.0
-offset_bottom = 95.0
-theme_override_styles/background = SubResource("StyleBoxFlat_32ma0")
-theme_override_styles/fill = SubResource("StyleBoxFlat_l3kxa")
+offset_right = 280.0
+offset_bottom = 97.0
 value = 80.0
+nine_patch_stretch = true
+texture_under = ExtResource("5_4qexl")
+texture_over = ExtResource("6_m4ken")
+texture_progress = ExtResource("7_ktxwi")
 
 [node name="Task" type="Button" parent="MarginContainer/HBoxContainer/VBC Profile and Task"]
 custom_minimum_size = Vector2(200, 100)
