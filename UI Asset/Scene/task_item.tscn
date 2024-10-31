@@ -1,7 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://cadifnixsr0yw"]
+[gd_scene load_steps=19 format=3 uid="uid://dru6beado57f8"]
 
 [ext_resource type="Script" path="res://UI Asset/Script/task_item.gd" id="1_6xfpo"]
-[ext_resource type="Texture2D" uid="uid://b4h65moa8nd7o" path="res://UI Asset/Sprite/fajar_assets/Border_.png" id="1_pqrfq"]
+[ext_resource type="Texture2D" uid="uid://v3rklep6qe7s" path="res://UI Asset/Sprite/fajar_assets/Border_.png" id="1_pqrfq"]
 [ext_resource type="Texture2D" uid="uid://lnx6onv3ycd5" path="res://UI Asset/Sprite/two-coins.svg" id="2_ig6cp"]
 [ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="2_m8p31"]
 [ext_resource type="Texture2D" uid="uid://deuywd1hv7tcv" path="res://UI Asset/Sprite/fajar_assets/Progress2_BAR_rebag_under.png" id="4_kxrab"]
@@ -10,49 +10,6 @@
 [ext_resource type="AudioStream" uid="uid://deesmb07s1up7" path="res://UI Asset/Audio/SFX/zapsplat_multimedia_game_sound_coins_collect_several_at_once_002_40813.mp3" id="8_3dbft"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8vfva"]
-
-[sub_resource type="Animation" id="Animation_gv7ir"]
-resource_name = "claimed"
-length = 2.0
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Control/Panel:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.143333, 1),
-"transitions": PackedFloat32Array(0.25, 0.143588, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(2),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"queue_free"
-}]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Control:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.7, 2),
-"transitions": PackedFloat32Array(1, 0.203063, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, 0), Vector2(1920, 0)]
-}
 
 [sub_resource type="Animation" id="Animation_ia2n8"]
 length = 0.001
@@ -115,6 +72,49 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gv7ir"]
+resource_name = "claimed"
+length = 2.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/Panel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.143333, 1),
+"transitions": PackedFloat32Array(0.25, 0.143588, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7, 2),
+"transitions": PackedFloat32Array(1, 0.203063, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(1920, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_xcyja"]

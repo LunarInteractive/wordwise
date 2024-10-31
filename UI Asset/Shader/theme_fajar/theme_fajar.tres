@@ -1,12 +1,14 @@
-[gd_resource type="Theme" load_steps=28 format=4 uid="uid://la05b3bnexvl"]
+[gd_resource type="Theme" load_steps=40 format=4 uid="uid://la05b3bnexvl"]
 
 [ext_resource type="Texture2D" uid="uid://uy53rqws78ku" path="res://UI Asset/Sprite/fajar_assets/buttonx1_l.png" id="1_l750i"]
 [ext_resource type="Texture2D" uid="uid://vgvs1ovdnfdb" path="res://UI Asset/Sprite/fajar_assets/buttonx2_l.png" id="2_23dog"]
-[ext_resource type="Texture2D" uid="uid://b4h65moa8nd7o" path="res://UI Asset/Sprite/fajar_assets/Border_.png" id="3_5ghqt"]
+[ext_resource type="Texture2D" uid="uid://v3rklep6qe7s" path="res://UI Asset/Sprite/fajar_assets/Border_.png" id="3_5ghqt"]
+[ext_resource type="Texture2D" uid="uid://caxpl2w8wpky2" path="res://UI Asset/Sprite/fajar_assets/bubbletext2.png" id="3_maqne"]
 [ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="4_8gp6t"]
 [ext_resource type="Texture2D" uid="uid://bq4dm1vlpf1yx" path="res://UI Asset/Sprite/fajar_assets/buttonarrow21_up.png" id="4_r7k1h"]
 [ext_resource type="Texture2D" uid="uid://cks6cqtwqtslv" path="res://UI Asset/Sprite/fajar_assets/buttonarrow21_dw.png" id="5_2ptkn"]
 [ext_resource type="Texture2D" uid="uid://dbagv8eovmclp" path="res://UI Asset/Shader/theme_fajar/tombol_polos_1.tres" id="5_p7vre"]
+[ext_resource type="Texture2D" uid="uid://byu31x1gksyxg" path="res://UI Asset/Sprite/fajar_assets/buttonplay1-export.png" id="6_np4jm"]
 [ext_resource type="Texture2D" uid="uid://4wy5khij5agp" path="res://UI Asset/Sprite/fajar_assets/Slider_BAR_u_tgk.png" id="6_we40q"]
 [ext_resource type="Texture2D" uid="uid://bd3awsovpaf6s" path="res://UI Asset/Sprite/fajar_assets/Slider_BAR_tgk.png" id="7_cvshc"]
 
@@ -1728,6 +1730,23 @@ texture = ExtResource("2_23dog")
 texture = ExtResource("2_23dog")
 modulate_color = Color(0.471762, 0.0741116, 0.654955, 1)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o8otf"]
+texture = ExtResource("3_maqne")
+texture_margin_left = 4.0
+texture_margin_top = 3.0
+texture_margin_right = 14.0
+texture_margin_bottom = 9.0
+region_rect = Rect2(7, 4, 49, 24)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6pncb"]
+texture = ExtResource("3_maqne")
+texture_margin_left = 4.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 9.0
+region_rect = Rect2(7, 4, 49, 24)
+modulate_color = Color(0.347817, 0.347817, 0.347817, 1)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mp31m"]
 texture = ExtResource("3_5ghqt")
 texture_margin_left = 60.0
@@ -1741,6 +1760,22 @@ region_rect = Rect2(483, 810, 318, 320)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w2foe"]
 texture = ExtResource("3_5ghqt")
 region_rect = Rect2(219, 220, 191, 190)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7855x"]
+texture = ExtResource("6_np4jm")
+texture_margin_left = 40.0
+texture_margin_top = 50.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
+region_rect = Rect2(10, 240, 220, 220)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6vaow"]
+texture = ExtResource("6_np4jm")
+texture_margin_left = 40.0
+texture_margin_top = 50.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
+region_rect = Rect2(240, 240, 220, 220)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6h6fk"]
 load_path = "res://.godot/imported/button_polos_2.png-ea3035c8f51183a6e5f2167b0d28e6fd.ctex"
@@ -1762,6 +1797,38 @@ texture_margin_bottom = 4.0
 region_rect = Rect2(5, 5, 22, 22)
 modulate_color = Color(0.370364, 0.370364, 0.370364, 1)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l148m"]
+texture = ExtResource("6_np4jm")
+texture_margin_left = 40.0
+texture_margin_top = 50.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
+region_rect = Rect2(10, 1620, 220, 220)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7ajl1"]
+texture = ExtResource("6_np4jm")
+texture_margin_left = 40.0
+texture_margin_top = 50.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
+region_rect = Rect2(240, 1620, 220, 220)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5a3gw"]
+texture = ExtResource("6_np4jm")
+texture_margin_left = 40.0
+texture_margin_top = 50.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
+region_rect = Rect2(10, 1390, 220, 220)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ldsmr"]
+texture = ExtResource("6_np4jm")
+texture_margin_left = 40.0
+texture_margin_top = 50.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
+region_rect = Rect2(240, 1390, 220, 220)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a6oad"]
 texture = ExtResource("5_p7vre")
 texture_margin_left = 4.0
@@ -1778,6 +1845,22 @@ texture_margin_right = 4.0
 texture_margin_bottom = 4.0
 region_rect = Rect2(5, 5, 22, 22)
 modulate_color = Color(0.255659, 0.255659, 0.255659, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q40dc"]
+texture = ExtResource("6_np4jm")
+texture_margin_left = 40.0
+texture_margin_top = 50.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
+region_rect = Rect2(470, 10, 220, 220)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hsysp"]
+texture = ExtResource("6_np4jm")
+texture_margin_left = 40.0
+texture_margin_top = 50.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
+region_rect = Rect2(700, 10, 220, 220)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_54tym"]
 texture = ExtResource("6_we40q")
@@ -1804,9 +1887,19 @@ CloseButton/styles/disabled = SubResource("StyleBoxTexture_d7ps4")
 CloseButton/styles/hover = SubResource("StyleBoxTexture_hddx0")
 CloseButton/styles/normal = SubResource("StyleBoxTexture_4e6cc")
 CloseButton/styles/pressed = SubResource("StyleBoxTexture_m2oec")
+DialogOption/base_type = &"Button"
+DialogOption/styles/hover = SubResource("StyleBoxTexture_o8otf")
+DialogOption/styles/normal = SubResource("StyleBoxTexture_o8otf")
+DialogOption/styles/pressed = SubResource("StyleBoxTexture_6pncb")
+Label/font_sizes/font_size = 32
+Label/fonts/font = ExtResource("4_8gp6t")
 PanelHeaderTask/base_type = &"PanelContainer"
 PanelHeaderTask/styles/panel = SubResource("StyleBoxTexture_mp31m")
 PanelTask/styles/panel = SubResource("StyleBoxTexture_w2foe")
+TombolAudio/base_type = &"Button"
+TombolAudio/styles/hover = SubResource("StyleBoxTexture_7855x")
+TombolAudio/styles/normal = SubResource("StyleBoxTexture_7855x")
+TombolAudio/styles/pressed = SubResource("StyleBoxTexture_6vaow")
 TombolClaim/base_type = &"Button"
 TombolClaim/colors/font_pressed_color = Color(0.404511, 0.404511, 0.404511, 1)
 TombolClaim/font_sizes/font_size = 32
@@ -1814,6 +1907,14 @@ TombolClaim/fonts/font = ExtResource("4_8gp6t")
 TombolClaim/styles/hover = SubResource("StyleBoxTexture_t125c")
 TombolClaim/styles/normal = SubResource("StyleBoxTexture_t125c")
 TombolClaim/styles/pressed = SubResource("StyleBoxTexture_cshja")
+TombolHome/base_type = &"Button"
+TombolHome/styles/hover = SubResource("StyleBoxTexture_l148m")
+TombolHome/styles/normal = SubResource("StyleBoxTexture_l148m")
+TombolHome/styles/pressed = SubResource("StyleBoxTexture_7ajl1")
+TombolLanjut/base_type = &"Button"
+TombolLanjut/styles/hover = SubResource("StyleBoxTexture_5a3gw")
+TombolLanjut/styles/normal = SubResource("StyleBoxTexture_5a3gw")
+TombolLanjut/styles/pressed = SubResource("StyleBoxTexture_ldsmr")
 TombolPlay/base_type = &"Button"
 TombolPlay/colors/font_color = Color(0, 0, 0, 1)
 TombolPlay/font_sizes/font_size = 32
@@ -1821,6 +1922,10 @@ TombolPlay/fonts/font = ExtResource("4_8gp6t")
 TombolPlay/styles/hover = SubResource("StyleBoxTexture_a6oad")
 TombolPlay/styles/normal = SubResource("StyleBoxTexture_a6oad")
 TombolPlay/styles/pressed = SubResource("StyleBoxTexture_m8dn0")
+TombolRetry/base_type = &"Button"
+TombolRetry/styles/hover = SubResource("StyleBoxTexture_q40dc")
+TombolRetry/styles/normal = SubResource("StyleBoxTexture_q40dc")
+TombolRetry/styles/pressed = SubResource("StyleBoxTexture_hsysp")
 VScrollBar/icons/decrement = ExtResource("4_r7k1h")
 VScrollBar/icons/increment = ExtResource("5_2ptkn")
 VScrollBar/styles/grabber = SubResource("StyleBoxTexture_54tym")

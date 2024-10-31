@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v3rklep6qe7s"
-path="res://.godot/imported/Border_.png-a03ab02d24bd5c0c6347b5b8fb3b55b7.ctex"
+uid="uid://byu31x1gksyxg"
+path="res://.godot/imported/buttonplay1-export.png-6c5edec531d8fd827e885c94cb20caf0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI Asset/Sprite/fajar_assets/Border_.png"
-dest_files=["res://.godot/imported/Border_.png-a03ab02d24bd5c0c6347b5b8fb3b55b7.ctex"]
+source_file="res://UI Asset/Sprite/fajar_assets/buttonplay1-export.png"
+dest_files=["res://.godot/imported/buttonplay1-export.png-6c5edec531d8fd827e885c94cb20caf0.ctex"]
 
 [params]
 
