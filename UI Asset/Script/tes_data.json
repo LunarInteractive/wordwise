@@ -1,0 +1,20 @@
+{
+	"grupA":
+	{
+	   "opsi1":"Dialog A_1",
+	   "opsi2":"Dialog A_2",
+	   "opsi3":"Dialog A_3"
+	},
+ 	"grupB":
+	{
+	   "opsi1":"Dialog B_1",
+	   "opsi2":"Dialog B_2",
+	   "opsi3":"Dialog B_3"
+	},
+ 	"grupC":
+	{
+	   "opsi1":"Dialog C_1",
+	   "opsi2":"Dialog C_2",
+	   "opsi3":"Dialog C_3"
+	}
+}

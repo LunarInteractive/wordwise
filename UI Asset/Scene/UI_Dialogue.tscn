@@ -1,6 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://dlkjulndtiubl"]
+[gd_scene load_steps=26 format=3 uid="uid://dlkjulndtiubl"]
 
-[ext_resource type="Texture2D" path="res://UI Asset/Sprite/Bubble_Text.tres" id="1_tcqec"]
+[ext_resource type="Texture2D" uid="uid://be8ovik6e657" path="res://UI Asset/Sprite/Bubble_Text.tres" id="1_tcqec"]
 [ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="2_wogvg"]
 [ext_resource type="Texture2D" uid="uid://cmu07715hl87m" path="res://UI Asset/Sprite/profile pixel.png" id="3_tma15"]
 [ext_resource type="Script" path="res://UI Asset/Script/panel_skor.gd" id="4_d6tmc"]
@@ -8,6 +8,14 @@
 [ext_resource type="Theme" uid="uid://la05b3bnexvl" path="res://UI Asset/Shader/theme_fajar/theme_fajar.tres" id="6_4w10n"]
 [ext_resource type="Theme" uid="uid://bi2yom4nqtt2b" path="res://UI Asset/Shader/TestTheme.tres" id="7_u8g8m"]
 [ext_resource type="Script" path="res://UI Asset/Script/skor_tester.gd" id="8_vnkre"]
+[ext_resource type="FontFile" uid="uid://dlfcvrx0tug2e" path="res://UI Asset/Font/Pixel Dogica/dogicapixel.ttf" id="9_y8g4i"]
+[ext_resource type="Texture2D" uid="uid://drbsoeopxmaq1" path="res://UI Asset/Sprite/fajar_assets/buttonvolume66.png" id="10_iintk"]
+[ext_resource type="Texture2D" uid="uid://bb5jk1v2djet7" path="res://UI Asset/Sprite/fajar_assets/buttonvolume166.png" id="11_ost8d"]
+[ext_resource type="Texture2D" uid="uid://d0klpxk3ph3my" path="res://UI Asset/Sprite/fajar_assets/buttonfile1.png" id="12_w154g"]
+[ext_resource type="Texture2D" uid="uid://retst22p5b64" path="res://UI Asset/Sprite/fajar_assets/buttonoff2.png" id="13_otv6q"]
+[ext_resource type="Texture2D" uid="uid://cfjiap3cxtgvb" path="res://UI Asset/Sprite/fajar_assets/buttonplay1.png" id="14_wlvux"]
+[ext_resource type="Texture2D" uid="uid://kgr2l0uhc5su" path="res://UI Asset/Sprite/fajar_assets/buttonplay3.png" id="15_qqu8f"]
+[ext_resource type="Texture2D" uid="uid://bpwbcxu41gp67" path="res://UI Asset/Sprite/fajar_assets/Border_NO BG_.png" id="16_dy82l"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_73wql"]
 content_margin_left = 40.0
@@ -26,6 +34,26 @@ content_margin_right = 40.0
 texture = ExtResource("1_tcqec")
 region_rect = Rect2(0, 0, 46, 14)
 modulate_color = Color(0.647977, 0.72051, 0.881403, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dg7o0"]
+bg_color = Color(0, 0, 0, 0.701961)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxo4u"]
+bg_color = Color(0.380392, 0.333333, 0.537255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jyd21"]
+bg_color = Color(0.619608, 0.466667, 0.74902, 1)
+border_width_bottom = 10
+border_color = Color(0.490196, 0.423529, 0.709804, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1vval"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_etpn7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v38g3"]
+content_margin_left = 69.0
+content_margin_right = 69.0
+bg_color = Color(0.815686, 0.380392, 0.937255, 0)
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -491,6 +519,179 @@ offset_bottom = 876.0
 theme = ExtResource("6_4w10n")
 theme_type_variation = &"TombolLanjut"
 script = ExtResource("8_vnkre")
+
+[node name="Popup_Speech" type="Control" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/Popup_Speech"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dg7o0")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Popup_Speech/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_top = 215
+theme_override_constants/margin_right = 300
+theme_override_constants/margin_bottom = 215
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/Popup_Speech/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qxo4u")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jyd21")
+
+[node name="Label" type="Label" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 7
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("9_y8g4i")
+theme_override_font_sizes/font_size = 75
+text = "Speech Checker"
+horizontal_alignment = 1
+
+[node name="PanelContainer2" type="PanelContainer" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1vval")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_etpn7")
+
+[node name="Label" type="Label" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer"]
+custom_minimum_size = Vector2(200, 160)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wogvg")
+theme_override_font_sizes/font_size = 101
+theme_override_styles/normal = SubResource("StyleBoxFlat_v38g3")
+text = "lorem ipsum apalah gatau yang penting text biar panjang "
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PanelContainer2" type="PanelContainer" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_etpn7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 160
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(180, 140.07)
+layout_mode = 2
+texture_normal = ExtResource("10_iintk")
+texture_pressed = ExtResource("11_ost8d")
+texture_hover = ExtResource("11_ost8d")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer/TextureButton"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -123.0
+offset_top = -87.0
+offset_right = 125.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_wogvg")
+theme_override_font_sizes/font_size = 66
+text = "Play Audio"
+horizontal_alignment = 1
+
+[node name="TextureButton2" type="TextureButton" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(180, 140.07)
+layout_mode = 2
+texture_normal = ExtResource("12_w154g")
+texture_pressed = ExtResource("13_otv6q")
+texture_hover = ExtResource("13_otv6q")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer/TextureButton2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -111.0
+offset_top = -87.0
+offset_right = 112.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_wogvg")
+theme_override_font_sizes/font_size = 66
+text = "Try Speak"
+horizontal_alignment = 1
+
+[node name="TextureButton3" type="TextureButton" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(180, 140.07)
+layout_mode = 2
+texture_normal = ExtResource("14_wlvux")
+texture_pressed = ExtResource("15_qqu8f")
+texture_hover = ExtResource("15_qqu8f")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer/TextureButton3"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -98.0
+offset_top = -87.0
+offset_right = 100.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_wogvg")
+theme_override_font_sizes/font_size = 66
+text = "Continue"
+horizontal_alignment = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control/Popup_Speech/PanelContainer/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("16_dy82l")
+region_rect = Rect2(810, 810, 320, 320)
+patch_margin_left = 80
+patch_margin_top = 159
+patch_margin_right = 80
+patch_margin_bottom = 159
+
+[node name="Topbar" type="MarginContainer" parent="Control/Popup_Speech/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 415
 
 [connection signal="kata_error_berubah" from="Control/PanelContainerSkor" to="Control/PanelContainerSkor" method="_on_kata_error_berubah"]
 [connection signal="persenan_berubah" from="Control/PanelContainerSkor" to="Control/PanelContainerSkor" method="_on_persenan_berubah"]

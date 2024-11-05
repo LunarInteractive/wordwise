@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kgr2l0uhc5su"
-path="res://.godot/imported/buttonplay3.png-173e4d750d70c06b81a70b9bcbe374d8.ctex"
+uid="uid://3htuqytf61n3"
+path="res://.godot/imported/bubbletext2.png-c9b0511fdf4bf3a3e1fca46db1118130.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI Asset/Sprite/fajar_assets/buttonplay3.png"
-dest_files=["res://.godot/imported/buttonplay3.png-173e4d750d70c06b81a70b9bcbe374d8.ctex"]
+source_file="res://UI Asset/Sprite/UI_Wordwise/Bubble_Text/bubbletext2.png"
+dest_files=["res://.godot/imported/bubbletext2.png-c9b0511fdf4bf3a3e1fca46db1118130.ctex"]
 
 [params]
 

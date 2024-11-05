@@ -24,6 +24,9 @@ driver/enable_input=true
 [autoload]
 
 SceneTransition="*res://UI Asset/Scene/Scene_Transition.tscn"
+ANIMA="*res://addons/anima/core/constants.gd"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
 
 [display]
 
@@ -35,6 +38,10 @@ window/size/extend_to_title=true
 [dotnet]
 
 project/assembly_name="wordwise"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/anima/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/godot_whisper/plugin.cfg", "res://addons/phantom_camera/plugin.cfg")
 
 [input_devices]
 
