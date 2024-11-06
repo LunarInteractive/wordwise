@@ -1,0 +1,6 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://b4ocsghn6qo1s"]
+
+[ext_resource type="Texture2D" uid="uid://o13oytll7qjl" path="res://UI Asset/Sprite/UI_Wordwise/buble_text.tres" id="1_x0a80"]
+
+[resource]
+texture = ExtResource("1_x0a80")

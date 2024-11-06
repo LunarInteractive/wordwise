@@ -1,8 +1,8 @@
 [gd_scene load_steps=24 format=3 uid="uid://dlkjulndtiubl"]
 
 [ext_resource type="FontFile" uid="uid://dclwgnpvy23n7" path="res://UI Asset/Font/Pixel Dogica/dogicapixelbold.ttf" id="1_0egma"]
-[ext_resource type="Texture2D" uid="uid://be8ovik6e657" path="res://UI Asset/Sprite/GUI/Bubble_Text.tres" id="1_h01be"]
 [ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="2_lysqd"]
+[ext_resource type="Texture2D" uid="uid://o13oytll7qjl" path="res://UI Asset/Sprite/UI_Wordwise/buble_text.tres" id="2_mh8c4"]
 [ext_resource type="Texture2D" uid="uid://cmu07715hl87m" path="res://UI Asset/Sprite/GUI/profile pixel.png" id="3_j1f7k"]
 [ext_resource type="Texture2D" uid="uid://ee0pg8gnkqox" path="res://UI Asset/Sprite/UI_Wordwise/Bubble_Text/bubbletext2.png" id="5_7frkw"]
 [ext_resource type="Texture2D" uid="uid://xi644bcblbuu" path="res://UI Asset/Sprite/UI_Wordwise/Border/Border_NO BG_.png" id="6_0ad1s"]
@@ -21,8 +21,8 @@ content_margin_left = 40.0
 content_margin_top = 0.0
 content_margin_right = 40.0
 content_margin_bottom = 0.0
-texture = ExtResource("1_h01be")
-region_rect = Rect2(0, 0, 46, 14)
+texture = ExtResource("2_mh8c4")
+region_rect = Rect2(0, 0, 490, 240)
 modulate_color = Color(0.960784, 0.941176, 1, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w1u2e"]
