@@ -63,7 +63,7 @@ func _on_button_lanjut_button_up():
 	hide()
 	
 func pesen_angka():
-	persenan = randi_range(40,100)
+	persenan = randi_range(60,100)
 	
 func pesen_angka_total():
 	total_error = randi_range(0,400)
@@ -85,17 +85,26 @@ func uji_lulus(nilainyah:int):
 
 	if nilainyah < batas_lulus:
 		label_cobalagi.show()
+		angka_persen.add_theme_font_size_override("font_size", 100)
 		angka_persen.add_theme_color_override("font_color", Color.FIREBRICK)
+		angka_persen.add_theme_color_override("font_shadow_color", Color.DARK_RED)
+		angka_persen.add_theme_color_override("font_outline_color", Color.INDIAN_RED)
 	else:
 		
 		label_lulus.show()
-		angka_persen.add_theme_color_override("font_color", Color8(255,234,75,255))
+		angka_persen.add_theme_font_size_override("font_size", 100)
+		angka_persen.add_theme_color_override("font_color", Color(1.0,0.91,0.29,1.0))
+		angka_persen.add_theme_color_override("font_shadow_color", Color(0.72,0.63,0.16,1.0))
+		angka_persen.add_theme_color_override("font_outline_color", Color(1.0,1.0,0.31,1.0))
 		tombol_lanjut.show()
 	
 	
 	
 func reset_gaya():
-	angka_persen.add_theme_color_override("font_color", Color.WHITE)
+	angka_persen.add_theme_color_override("font_color", Color(1.0,1.0,1.0,1.0))
+	angka_persen.add_theme_color_override("font_shadow_color", Color(0.0,0.0,0.0,0.7))
+	angka_persen.add_theme_color_override("font_outline_color", Color(0.0,0.0,0.0,1.0))
+	angka_persen.add_theme_font_size_override("font_size", 64)
 	label_lulus.hide()
 	label_cobalagi.hide()
 	tombol_lanjut.hide()

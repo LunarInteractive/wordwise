@@ -1,9 +1,9 @@
-[gd_resource type="Theme" load_steps=12 format=3 uid="uid://bi2yom4nqtt2b"]
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://bi2yom4nqtt2b"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0pyey"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qvhyj"]
-bg_color = Color(0.6, 0.941176, 0.376471, 1)
+bg_color = Color(0.804743, 0.804743, 0.804743, 1)
 border_width_bottom = 4
 border_color = Color(0.589096, 0.589096, 0.589095, 1)
 corner_radius_top_left = 4
@@ -22,18 +22,6 @@ corner_radius_bottom_left = 4
 shadow_color = Color(0, 0, 0, 0.254902)
 shadow_size = 1
 shadow_offset = Vector2(0, 3)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ky4v"]
-bg_color = Color(1, 1, 0.596078, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_color = Color(1, 0.913725, 0.572549, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sd3ad"]
 bg_color = Color(0.330363, 0.709207, 0.96012, 1)
@@ -54,77 +42,6 @@ shadow_color = Color(0, 0, 0, 0.211765)
 shadow_size = 5
 shadow_offset = Vector2(6, 6)
 
-[sub_resource type="ImageTexture" id="ImageTexture_51aao"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbr2f"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(1, 0.227451, 1, 0.4)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-corner_detail = 6
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_00o8q"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(1, 1, 1, 0.75)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-corner_detail = 6
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1le34"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0.75, 0.75, 0.75, 0.75)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-corner_detail = 6
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1wxwj"]
-content_margin_left = 4.0
-content_margin_top = 0.0
-content_margin_right = 4.0
-content_margin_bottom = 0.0
-bg_color = Color(0.1, 0.1, 0.1, 0.6)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-corner_detail = 6
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i5uyi"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(1, 1, 1, 0.75)
-draw_center = false
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-corner_detail = 5
-expand_margin_left = 2.0
-expand_margin_top = 2.0
-expand_margin_right = 2.0
-expand_margin_bottom = 2.0
-
 [resource]
 Button/colors/font_color = Color(0, 0, 0, 1)
 Button/colors/font_focus_color = Color(0, 0, 0, 1)
@@ -135,16 +52,4 @@ Button/styles/focus = SubResource("StyleBoxEmpty_0pyey")
 Button/styles/hover = SubResource("StyleBoxFlat_qvhyj")
 Button/styles/normal = SubResource("StyleBoxFlat_qvhyj")
 Button/styles/pressed = SubResource("StyleBoxFlat_yksrs")
-Panel/styles/panel = SubResource("StyleBoxFlat_3ky4v")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_sd3ad")
-VScrollBar/icons/decrement = SubResource("ImageTexture_51aao")
-VScrollBar/icons/decrement_highlight = SubResource("ImageTexture_51aao")
-VScrollBar/icons/decrement_pressed = SubResource("ImageTexture_51aao")
-VScrollBar/icons/increment = SubResource("ImageTexture_51aao")
-VScrollBar/icons/increment_highlight = SubResource("ImageTexture_51aao")
-VScrollBar/icons/increment_pressed = SubResource("ImageTexture_51aao")
-VScrollBar/styles/grabber = SubResource("StyleBoxFlat_tbr2f")
-VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_00o8q")
-VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_1le34")
-VScrollBar/styles/scroll = SubResource("StyleBoxFlat_1wxwj")
-VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_i5uyi")

@@ -1,13 +1,11 @@
 [gd_scene load_steps=19 format=3 uid="uid://dru6beado57f8"]
 
 [ext_resource type="Script" path="res://UI Asset/Script/task_item.gd" id="1_6xfpo"]
-[ext_resource type="Texture2D" uid="uid://v3rklep6qe7s" path="res://UI Asset/Sprite/fajar_assets/Border_.png" id="1_pqrfq"]
 [ext_resource type="Texture2D" uid="uid://lnx6onv3ycd5" path="res://UI Asset/Sprite/two-coins.svg" id="2_ig6cp"]
-[ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="2_m8p31"]
-[ext_resource type="Texture2D" uid="uid://deuywd1hv7tcv" path="res://UI Asset/Sprite/fajar_assets/Progress2_BAR_rebag_under.png" id="4_kxrab"]
-[ext_resource type="Texture2D" uid="uid://dlic8rukktmnl" path="res://UI Asset/Sprite/fajar_assets/Progress2_BAR_rebag_progress.png" id="5_y355l"]
+[ext_resource type="Texture2D" uid="uid://6mam1x45sjhb" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Progress3_BAR.png" id="5_nuwxt"]
 [ext_resource type="Theme" uid="uid://la05b3bnexvl" path="res://UI Asset/Shader/theme_fajar/theme_fajar.tres" id="6_diqdm"]
 [ext_resource type="AudioStream" uid="uid://deesmb07s1up7" path="res://UI Asset/Audio/SFX/zapsplat_multimedia_game_sound_coins_collect_several_at_once_002_40813.mp3" id="8_3dbft"]
+[ext_resource type="Texture2D" uid="uid://crcm6qx3hyusk" path="res://UI Asset/Sprite/Border/Border_NO BG_.png" id="8_grj4t"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8vfva"]
 
@@ -16,7 +14,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Control/Panel:modulate")
+tracks/0/path = NodePath("GrupTaskItem/PanelEfekKlaim:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -52,7 +50,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Control:position")
+tracks/3/path = NodePath("GrupTaskItem:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -64,7 +62,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Control:modulate")
+tracks/4/path = NodePath("GrupTaskItem:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -81,7 +79,7 @@ step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Control/Panel:modulate")
+tracks/0/path = NodePath("GrupTaskItem/PanelEfekKlaim:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -107,7 +105,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Control:position")
+tracks/2/path = NodePath("GrupTaskItem:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -148,7 +146,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Control:modulate")
+tracks/2/path = NodePath("GrupTaskItem:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -160,7 +158,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Control:position")
+tracks/3/path = NodePath("GrupTaskItem:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -179,12 +177,25 @@ _data = {
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u6lrl"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8c846"]
-texture = ExtResource("2_ig6cp")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8lnrj"]
+content_margin_top = 8.0
+bg_color = Color(0.384314, 0.333333, 0.541176, 1)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4iq6d"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5f57h"]
+atlas = ExtResource("5_nuwxt")
+region = Rect2(160, 1610, 960, 120)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7nt6x"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2h3mx"]
+atlas = ExtResource("5_nuwxt")
+region = Rect2(160, 1340, 960, 120)
+margin = Rect2(0, 0, 2, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agbaa"]
+atlas = ExtResource("5_nuwxt")
+region = Rect2(160, 1490, 960, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6vqp"]
+atlas = ExtResource("8_grj4t")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4rl0t"]
 bg_color = Color(1, 1, 0.776471, 1)
@@ -194,15 +205,15 @@ custom_minimum_size = Vector2(0, 200)
 anchors_preset = 10
 anchor_right = 1.0
 offset_top = 3.0
-offset_bottom = 203.0
+offset_bottom = 389.0
 grow_horizontal = 2
 size_flags_horizontal = 3
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8vfva")
 script = ExtResource("1_6xfpo")
-progress = NodePath("Control/MarginContainer/PaneltaskItem/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/WadahProgress/ProgressTask")
-tombolPlay = NodePath("Control/MarginContainer/PaneltaskItem/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/WadahTombol/TombolPlay")
-tombolClaim = NodePath("Control/MarginContainer/PaneltaskItem/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/WadahTombol/TombolClaim")
+progress = NodePath("GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginProgress/ProgressTask")
+tombolPlay = NodePath("GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolPlay")
+tombolClaim = NodePath("GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolClaim")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -213,56 +224,45 @@ libraries = {
 stream = ExtResource("8_3dbft")
 bus = &"SFX"
 
-[node name="Control" type="PanelContainer" parent="."]
+[node name="GrupTaskItem" type="PanelContainer" parent="."]
 layout_mode = 2
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxEmpty_u6lrl")
 
-[node name="MarginContainer" type="MarginContainer" parent="Control"]
+[node name="MarginPanelTask" type="MarginContainer" parent="GrupTaskItem"]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 25
 theme_override_constants/margin_bottom = 10
 
-[node name="PaneltaskItem" type="NinePatchRect" parent="Control/MarginContainer"]
+[node name="IsiPanel" type="PanelContainer" parent="GrupTaskItem/MarginPanelTask"]
 layout_mode = 2
 mouse_filter = 1
-texture = ExtResource("1_pqrfq")
-region_rect = Rect2(156, 483, 310, 314)
-patch_margin_left = 54
-patch_margin_top = 57
-patch_margin_right = 56
-patch_margin_bottom = 57
+theme = ExtResource("6_diqdm")
+theme_override_styles/panel = SubResource("StyleBoxFlat_8lnrj")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/PaneltaskItem"]
+[node name="HBoxContainer" type="HBoxContainer" parent="GrupTaskItem/MarginPanelTask/IsiPanel"]
 custom_minimum_size = Vector2(700, 0)
-layout_mode = 1
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -138.5
-offset_right = 138.5
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
 size_flags_horizontal = 4
 size_flags_stretch_ratio = 0.5
+theme_override_constants/separation = 20
 
-[node name="MarginIcon" type="MarginContainer" parent="Control/MarginContainer/PaneltaskItem/HBoxContainer"]
+[node name="MarginIcon" type="MarginContainer" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 
-[node name="IconReward" type="PanelContainer" parent="Control/MarginContainer/PaneltaskItem/HBoxContainer/MarginIcon"]
-custom_minimum_size = Vector2(140, 140)
+[node name="IconReward" type="TextureRect" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIcon"]
+custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
-size_flags_horizontal = 4
 size_flags_vertical = 4
-mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxTexture_8c846")
+texture = ExtResource("2_ig6cp")
+expand_mode = 4
+stretch_mode = 5
 
-[node name="MarginIsiTask" type="MarginContainer" parent="Control/MarginContainer/PaneltaskItem/HBoxContainer"]
+[node name="MarginIsiTask" type="MarginContainer" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 8.0
@@ -271,130 +271,142 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 30
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/PaneltaskItem/HBoxContainer/MarginIsiTask"]
+[node name="VBoxContainer" type="VBoxContainer" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 8.0
-theme_override_constants/separation = 5
+theme_override_constants/separation = 15
 
-[node name="DeskripsiTask" type="RichTextLabel" parent="Control/MarginContainer/PaneltaskItem/HBoxContainer/MarginIsiTask/VBoxContainer"]
+[node name="MarginDeskripsi" type="MarginContainer" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+
+[node name="DeskripsiTask" type="Label" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/MarginDeskripsi"]
+custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
 mouse_filter = 1
-theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0.194349, 0.194349, 0.194349, 1)
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/shadow_offset_x = 2
-theme_override_fonts/normal_font = ExtResource("2_m8p31")
-theme_override_font_sizes/normal_font_size = 36
+theme = ExtResource("6_diqdm")
 text = "LOREM IPSUM DOLOR SIT AMET-AMET BELALANG KUPU-KUPU"
+vertical_alignment = 1
+autowrap_mode = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/PaneltaskItem/HBoxContainer/MarginIsiTask/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.5
 theme_override_constants/separation = 15
 
-[node name="WadahProgress" type="PanelContainer" parent="Control/MarginContainer/PaneltaskItem/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer"]
+[node name="MarginProgress" type="MarginContainer" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer"]
 clip_contents = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 8.0
-mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxEmpty_4iq6d")
 
-[node name="ProgressTask" type="TextureProgressBar" parent="Control/MarginContainer/PaneltaskItem/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/WadahProgress"]
-custom_minimum_size = Vector2(0, 40)
+[node name="ProgressTask" type="TextureProgressBar" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginProgress"]
+custom_minimum_size = Vector2(960, 120)
 layout_mode = 2
 size_flags_vertical = 4
+theme = ExtResource("6_diqdm")
 value = 100.0
 nine_patch_stretch = true
-texture_under = ExtResource("4_kxrab")
-texture_progress = ExtResource("5_y355l")
+texture_under = SubResource("AtlasTexture_5f57h")
+texture_over = SubResource("AtlasTexture_2h3mx")
+texture_progress = SubResource("AtlasTexture_agbaa")
 texture_progress_offset = Vector2(-1, 0)
 
-[node name="WadahTombol" type="PanelContainer" parent="Control/MarginContainer/PaneltaskItem/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer"]
+[node name="MarginTombol" type="MarginContainer" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 6
+size_flags_vertical = 4
 size_flags_stretch_ratio = 2.0
-mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxEmpty_7nt6x")
 
-[node name="TombolClaim" type="Button" parent="Control/MarginContainer/PaneltaskItem/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/WadahTombol"]
-visible = false
-custom_minimum_size = Vector2(80, 45)
+[node name="TombolClaim" type="Button" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol"]
+custom_minimum_size = Vector2(200, 120)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-size_flags_stretch_ratio = 2.0
 focus_mode = 0
 mouse_filter = 1
 theme = ExtResource("6_diqdm")
 theme_type_variation = &"TombolClaim"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/MarginContainer/PaneltaskItem/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/WadahTombol/TombolClaim"]
-custom_minimum_size = Vector2(60, 30)
+[node name="LabelClaim" type="Label" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolClaim"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 14
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -0.5
-offset_top = -13.0
-offset_right = 0.5
-offset_bottom = 13.0
+offset_top = -25.5
+offset_bottom = 25.5
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
-theme_override_colors/font_shadow_color = Color(0.25098, 0.25098, 0.25098, 0.74902)
-theme_override_constants/shadow_offset_y = 1
-theme_override_constants/shadow_offset_x = 1
-theme_override_fonts/normal_font = ExtResource("2_m8p31")
-theme_override_font_sizes/normal_font_size = 32
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+mouse_filter = 1
+theme = ExtResource("6_diqdm")
+theme_type_variation = &"LabelTombol"
 text = "CLAIM"
-fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
-[node name="TombolPlay" type="Button" parent="Control/MarginContainer/PaneltaskItem/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/WadahTombol"]
-custom_minimum_size = Vector2(80, 45)
+[node name="TombolPlay" type="Button" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol"]
+visible = false
+custom_minimum_size = Vector2(200, 120)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-size_flags_stretch_ratio = 2.0
 focus_mode = 0
 mouse_filter = 1
 theme = ExtResource("6_diqdm")
 theme_type_variation = &"TombolPlay"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/MarginContainer/PaneltaskItem/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/WadahTombol/TombolPlay"]
-custom_minimum_size = Vector2(48, 30)
+[node name="LabelPlay" type="Label" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolPlay"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 14
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -0.5
-offset_top = -13.0
-offset_right = 0.5
-offset_bottom = 13.0
+offset_top = -25.5
+offset_bottom = 25.5
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
-theme_override_colors/default_color = Color(0.28485, 0.28485, 0.28485, 1)
-theme_override_colors/font_shadow_color = Color(0.25098, 0.25098, 0.25098, 0.74902)
-theme_override_constants/shadow_offset_y = 1
-theme_override_constants/shadow_offset_x = 1
-theme_override_fonts/normal_font = ExtResource("2_m8p31")
-theme_override_font_sizes/normal_font_size = 32
-text = "PLAY"
-fit_content = true
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+mouse_filter = 1
+theme = ExtResource("6_diqdm")
+theme_type_variation = &"LabelTombol"
+text = "PLAY
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
-[node name="Panel" type="Panel" parent="Control"]
+[node name="BorderPanel" type="NinePatchRect" parent="GrupTaskItem/MarginPanelTask"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_m6vqp")
+region_rect = Rect2(156, 483, 310, 314)
+patch_margin_left = 54
+patch_margin_top = 57
+patch_margin_right = 56
+patch_margin_bottom = 57
+
+[node name="PanelEfekKlaim" type="Panel" parent="GrupTaskItem"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_4rl0t")
 
-[connection signal="button_up" from="Control/MarginContainer/PaneltaskItem/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/WadahTombol/TombolClaim" to="." method="_on_tombol_claim_button_up"]
+[connection signal="button_down" from="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolClaim" to="." method="_on_tombol_claim_button_down"]
+[connection signal="button_up" from="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolClaim" to="." method="_on_tombol_claim_button_up"]
+[connection signal="mouse_entered" from="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolClaim" to="." method="_on_tombol_claim_mouse_entered"]
+[connection signal="mouse_exited" from="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolClaim" to="." method="_on_tombol_claim_mouse_exited"]
+[connection signal="pressed" from="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolClaim" to="." method="_on_tombol_claim_pressed"]
+[connection signal="button_down" from="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolPlay" to="." method="_on_tombol_play_button_down"]
+[connection signal="button_up" from="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolPlay" to="." method="_on_tombol_play_button_up"]
+[connection signal="mouse_entered" from="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolPlay" to="." method="_on_tombol_play_mouse_entered"]
+[connection signal="mouse_exited" from="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolPlay" to="." method="_on_tombol_play_mouse_exited"]
+[connection signal="pressed" from="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolPlay" to="." method="_on_tombol_play_pressed"]

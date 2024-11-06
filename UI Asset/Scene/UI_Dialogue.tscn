@@ -1,63 +1,82 @@
-[gd_scene load_steps=26 format=3 uid="uid://dlkjulndtiubl"]
+[gd_scene load_steps=34 format=3 uid="uid://dlkjulndtiubl"]
 
-[ext_resource type="Texture2D" uid="uid://be8ovik6e657" path="res://UI Asset/Sprite/Bubble_Text.tres" id="1_tcqec"]
-[ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="2_wogvg"]
-[ext_resource type="Texture2D" uid="uid://cmu07715hl87m" path="res://UI Asset/Sprite/profile pixel.png" id="3_tma15"]
-[ext_resource type="Script" path="res://UI Asset/Script/panel_skor.gd" id="4_d6tmc"]
-[ext_resource type="Texture2D" uid="uid://v3rklep6qe7s" path="res://UI Asset/Sprite/fajar_assets/Border_.png" id="5_6lgsv"]
-[ext_resource type="Theme" uid="uid://la05b3bnexvl" path="res://UI Asset/Shader/theme_fajar/theme_fajar.tres" id="6_4w10n"]
-[ext_resource type="Theme" uid="uid://bi2yom4nqtt2b" path="res://UI Asset/Shader/TestTheme.tres" id="7_u8g8m"]
-[ext_resource type="Script" path="res://UI Asset/Script/skor_tester.gd" id="8_vnkre"]
-[ext_resource type="FontFile" uid="uid://dlfcvrx0tug2e" path="res://UI Asset/Font/Pixel Dogica/dogicapixel.ttf" id="9_y8g4i"]
-[ext_resource type="Texture2D" uid="uid://drbsoeopxmaq1" path="res://UI Asset/Sprite/fajar_assets/buttonvolume66.png" id="10_iintk"]
-[ext_resource type="Texture2D" uid="uid://bb5jk1v2djet7" path="res://UI Asset/Sprite/fajar_assets/buttonvolume166.png" id="11_ost8d"]
-[ext_resource type="Texture2D" uid="uid://d0klpxk3ph3my" path="res://UI Asset/Sprite/fajar_assets/buttonfile1.png" id="12_w154g"]
-[ext_resource type="Texture2D" uid="uid://retst22p5b64" path="res://UI Asset/Sprite/fajar_assets/buttonoff2.png" id="13_otv6q"]
-[ext_resource type="Texture2D" uid="uid://cfjiap3cxtgvb" path="res://UI Asset/Sprite/fajar_assets/buttonplay1.png" id="14_wlvux"]
-[ext_resource type="Texture2D" uid="uid://kgr2l0uhc5su" path="res://UI Asset/Sprite/fajar_assets/buttonplay3.png" id="15_qqu8f"]
-[ext_resource type="Texture2D" uid="uid://bpwbcxu41gp67" path="res://UI Asset/Sprite/fajar_assets/Border_NO BG_.png" id="16_dy82l"]
+[ext_resource type="FontFile" uid="uid://dlfcvrx0tug2e" path="res://UI Asset/Font/Pixel Dogica/dogicapixel.ttf" id="1_8aqr1"]
+[ext_resource type="Texture2D" uid="uid://be8ovik6e657" path="res://UI Asset/Sprite/Bubble_Text.tres" id="2_1q7va"]
+[ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="3_k66wq"]
+[ext_resource type="Texture2D" uid="uid://cmu07715hl87m" path="res://UI Asset/Sprite/profile pixel.png" id="4_x2yll"]
+[ext_resource type="Script" path="res://UI Asset/Script/panel_prompt.gd" id="5_yntm3"]
+[ext_resource type="Texture2D" uid="uid://bpwbcxu41gp67" path="res://UI Asset/Sprite/fajar_assets/Border_NO BG_.png" id="6_0buv0"]
+[ext_resource type="Texture2D" uid="uid://drbsoeopxmaq1" path="res://UI Asset/Sprite/fajar_assets/buttonvolume66.png" id="7_doxs2"]
+[ext_resource type="Texture2D" uid="uid://bb5jk1v2djet7" path="res://UI Asset/Sprite/fajar_assets/buttonvolume166.png" id="8_kjwax"]
+[ext_resource type="Texture2D" uid="uid://d0klpxk3ph3my" path="res://UI Asset/Sprite/fajar_assets/buttonfile1.png" id="9_c0f1a"]
+[ext_resource type="Texture2D" uid="uid://retst22p5b64" path="res://UI Asset/Sprite/fajar_assets/buttonoff2.png" id="10_2mg8d"]
+[ext_resource type="Texture2D" uid="uid://cfjiap3cxtgvb" path="res://UI Asset/Sprite/fajar_assets/buttonplay1.png" id="11_03rhc"]
+[ext_resource type="Texture2D" uid="uid://kgr2l0uhc5su" path="res://UI Asset/Sprite/fajar_assets/buttonplay3.png" id="12_pitns"]
+[ext_resource type="Theme" uid="uid://la05b3bnexvl" path="res://UI Asset/Shader/theme_fajar/theme_fajar.tres" id="13_6x2wi"]
+[ext_resource type="Script" path="res://UI Asset/Script/panel_skor.gd" id="14_kjkxj"]
+[ext_resource type="Texture2D" uid="uid://crcm6qx3hyusk" path="res://UI Asset/Sprite/Border/Border_NO BG_.png" id="15_c2jw2"]
+[ext_resource type="Script" path="res://UI Asset/Script/skor_tester.gd" id="17_0f6nc"]
+[ext_resource type="Script" path="res://UI Asset/Script/dialog_tester.gd" id="18_8vflh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oxhju"]
+bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_73wql"]
 content_margin_left = 40.0
 content_margin_top = 0.0
 content_margin_right = 40.0
 content_margin_bottom = 0.0
-texture = ExtResource("1_tcqec")
+texture = ExtResource("2_1q7va")
 region_rect = Rect2(0, 0, 46, 14)
 modulate_color = Color(0.960784, 0.941176, 1, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w1u2e"]
+content_margin_left = 57.0
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q20ct"]
-content_margin_left = 40.0
-content_margin_right = 40.0
-texture = ExtResource("1_tcqec")
-region_rect = Rect2(0, 0, 46, 14)
-modulate_color = Color(0.647977, 0.72051, 0.881403, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wir23"]
+bg_color = Color(0.619608, 0.466667, 0.74902, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dg7o0"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6hjb"]
 bg_color = Color(0, 0, 0, 0.701961)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxo4u"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_astq6"]
 bg_color = Color(0.380392, 0.333333, 0.537255, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jyd21"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gv5ab"]
 bg_color = Color(0.619608, 0.466667, 0.74902, 1)
 border_width_bottom = 10
 border_color = Color(0.490196, 0.423529, 0.709804, 1)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1vval"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8npsy"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_etpn7"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nfoc4"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v38g3"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6oayh"]
 content_margin_left = 69.0
 content_margin_right = 69.0
 bg_color = Color(0.815686, 0.380392, 0.937255, 0)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pilcr"]
+bg_color = Color(0, 0, 0, 0.701961)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mg0jk"]
+bg_color = Color(0.384314, 0.333333, 0.541176, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yd43m"]
+atlas = ExtResource("15_c2jw2")
+region = Rect2(0, 0, 1280, 1280)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nftyb"]
+bg_color = Color(0.490196, 0.419608, 0.709804, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1yhgp"]
+atlas = ExtResource("15_c2jw2")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dp3lr"]
+
 [node name="CanvasLayer" type="CanvasLayer"]
 
-[node name="Control" type="Control" parent="."]
+[node name="Dialog_Panel" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -65,7 +84,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="Control"]
+[node name="PanelContainer" type="PanelContainer" parent="Dialog_Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -73,7 +92,40 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+[node name="MarginContainer" type="MarginContainer" parent="Dialog_Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_bottom = 1015
+
+[node name="PanelContainer" type="PanelContainer" parent="Dialog_Panel/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_oxhju")
+
+[node name="MarginContainer2" type="MarginContainer" parent="Dialog_Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 85.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 160
+theme_override_constants/margin_top = 45
+
+[node name="Label" type="Label" parent="Dialog_Panel/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_outline_size = 15
+theme_override_fonts/font = ExtResource("1_8aqr1")
+theme_override_font_sizes/font_size = 75
+text = "Level 1"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Dialog_Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -82,535 +134,194 @@ grow_horizontal = 2
 grow_vertical = 2
 rotation = 0.0006803
 
-[node name="NpcPanel" type="MarginContainer" parent="Control/HBoxContainer"]
+[node name="NpcPanel" type="MarginContainer" parent="Dialog_Panel/HBoxContainer"]
 custom_minimum_size = Vector2(700, 700)
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/NpcPanel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Dialog_Panel/HBoxContainer/NpcPanel"]
 layout_mode = 2
 alignment = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Control/HBoxContainer/NpcPanel/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Dialog_Panel/HBoxContainer/NpcPanel/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 90
 theme_override_constants/margin_bottom = 25
 
-[node name="PanelContainer" type="PanelContainer" parent="Control/HBoxContainer/NpcPanel/VBoxContainer/MarginContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="Dialog_Panel/HBoxContainer/NpcPanel/VBoxContainer/MarginContainer"]
 custom_minimum_size = Vector2(0, 130)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_73wql")
 
-[node name="Label" type="Label" parent="Control/HBoxContainer/NpcPanel/VBoxContainer/MarginContainer/PanelContainer"]
+[node name="Label" type="Label" parent="Dialog_Panel/HBoxContainer/NpcPanel/VBoxContainer/MarginContainer/PanelContainer"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_wogvg")
+theme_override_fonts/font = ExtResource("3_k66wq")
 theme_override_font_sizes/font_size = 111
-text = "Sebuah Texts"
+text = "Sebuah Text"
 autowrap_mode = 3
 
-[node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer/NpcPanel/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="Dialog_Panel/HBoxContainer/NpcPanel/VBoxContainer"]
 custom_minimum_size = Vector2(350, 350)
 layout_mode = 2
-size_flags_horizontal = 0
-texture = ExtResource("3_tma15")
+size_flags_horizontal = 4
+texture = ExtResource("4_x2yll")
 stretch_mode = 5
 
-[node name="AwnserPanel" type="MarginContainer" parent="Control/HBoxContainer"]
+[node name="AwnserPanel" type="MarginContainer" parent="Dialog_Panel/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 100
 theme_override_constants/margin_top = 80
-theme_override_constants/margin_right = 100
-theme_override_constants/margin_bottom = 15
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Control/HBoxContainer/AwnserPanel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Dialog_Panel/HBoxContainer/AwnserPanel"]
 layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Dialog_Panel/HBoxContainer/AwnserPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxEmpty_w1u2e")
 follow_focus = true
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Dialog_Panel/HBoxContainer/AwnserPanel/VBoxContainer/ScrollContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_constants/separation = 45
 
-[node name="PanelContainer" type="PanelContainer" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(1000, 130)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_q20ct")
-
-[node name="Label" type="Label" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer/PanelContainer"]
-custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_wogvg")
-theme_override_font_sizes/font_size = 111
-text = "Sebuah Text"
-autowrap_mode = 3
-
-[node name="PanelContainer2" type="PanelContainer" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(1000, 130)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_q20ct")
-
-[node name="Label" type="Label" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer/PanelContainer2"]
-custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_wogvg")
-theme_override_font_sizes/font_size = 111
-text = "Sebuah Text"
-autowrap_mode = 3
-
-[node name="PanelContainer3" type="PanelContainer" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(1000, 130)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_q20ct")
-
-[node name="Label" type="Label" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer/PanelContainer3"]
-custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_wogvg")
-theme_override_font_sizes/font_size = 111
-text = "Sebuah Text"
-autowrap_mode = 3
-
-[node name="PanelContainer4" type="PanelContainer" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(1000, 130)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_q20ct")
-
-[node name="Label" type="Label" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer/PanelContainer4"]
-custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_wogvg")
-theme_override_font_sizes/font_size = 111
-text = "Sebuah Text"
-autowrap_mode = 3
-
-[node name="PanelContainer5" type="PanelContainer" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(1000, 130)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_q20ct")
-
-[node name="Label" type="Label" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer/PanelContainer5"]
-custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_wogvg")
-theme_override_font_sizes/font_size = 111
-text = "Sebuah Text"
-autowrap_mode = 3
-
-[node name="PanelContainer6" type="PanelContainer" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(1000, 130)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_q20ct")
-
-[node name="Label" type="Label" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer/PanelContainer6"]
-custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_wogvg")
-theme_override_font_sizes/font_size = 111
-text = "Sebuah Text"
-autowrap_mode = 3
-
-[node name="PanelContainer7" type="PanelContainer" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(1000, 130)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_q20ct")
-
-[node name="Label" type="Label" parent="Control/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer/PanelContainer7"]
-custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_wogvg")
-theme_override_font_sizes/font_size = 111
-text = "Sebuah Text"
-autowrap_mode = 3
-
-[node name="PanelContainerSkor" type="PanelContainer" parent="Control" node_paths=PackedStringArray("angka_persen", "angka_total_error", "angka_kata_eror", "label_lulus", "label_cobalagi", "label_desc_error", "label_desc_kata", "tombol_lanjut")]
+[node name="PanelPrompt" type="PanelContainer" parent="Dialog_Panel/HBoxContainer/AwnserPanel/VBoxContainer"]
 visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("4_d6tmc")
-angka_persen = NodePath("MarginContainer/NinePatchRect/MarginScore/TotalScore/MarginContainer/Persentase")
-angka_total_error = NodePath("MarginContainer/NinePatchRect/VBoxContainer/MarginBadanPanel/VBoxContainer/TotalError/TotalErrorLabel")
-angka_kata_eror = NodePath("MarginContainer/NinePatchRect/VBoxContainer/MarginBadanPanel/VBoxContainer/WordsError/WordsErrorLabel")
-label_lulus = NodePath("MarginContainer/NinePatchRect/MarginScore/MarginLabel/Passed")
-label_cobalagi = NodePath("MarginContainer/NinePatchRect/MarginScore/MarginLabel/TryAgain")
-label_desc_error = NodePath("MarginContainer/NinePatchRect/VBoxContainer/MarginBadanPanel/VBoxContainer/TotalError")
-label_desc_kata = NodePath("MarginContainer/NinePatchRect/VBoxContainer/MarginBadanPanel/VBoxContainer/WordsError")
-batas_lulus = 80
-tombol_lanjut = NodePath("MarginContainer/NinePatchRect/VBoxContainer/MarginBadanPanel/VBoxContainer/Tombols/ButtonLanjut2/ButtonLanjut")
-
-[node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainerSkor"]
+custom_minimum_size = Vector2(0, 187.665)
 layout_mode = 2
-theme_override_constants/margin_left = 100
-theme_override_constants/margin_top = 100
-theme_override_constants/margin_right = 100
-theme_override_constants/margin_bottom = 100
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_wir23")
+script = ExtResource("5_yntm3")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Control/PanelContainerSkor/MarginContainer"]
-custom_minimum_size = Vector2(1250, 750)
+[node name="MarginContainer" type="MarginContainer" parent="Dialog_Panel/HBoxContainer/AwnserPanel/VBoxContainer/PanelPrompt"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("5_6lgsv")
-region_rect = Rect2(810, 150, 320, 320)
-patch_margin_left = 80
-patch_margin_top = 90
-patch_margin_right = 110
-patch_margin_bottom = 80
+theme_override_constants/margin_left = 75
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 75
 
-[node name="MarginScore" type="MarginContainer" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_top = 145
-
-[node name="TotalScore" type="HBoxContainer" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect/MarginScore"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Dialog_Panel/HBoxContainer/AwnserPanel/VBoxContainer/PanelPrompt/MarginContainer"]
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_constants/separation = 50
-alignment = 1
+theme_override_constants/separation = 5
 
-[node name="Keterangan" type="Label" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect/MarginScore/TotalScore"]
+[node name="Label" type="Label" parent="Dialog_Panel/HBoxContainer/AwnserPanel/VBoxContainer/PanelPrompt/MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 10
-size_flags_stretch_ratio = 1.47
-theme = ExtResource("6_4w10n")
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0.29219, 0.29219, 0.29219, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/outline_size = 21
-theme_override_font_sizes/font_size = 120
-text = "TOTAL SCORE:"
-
-[node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect/MarginScore/TotalScore"]
-layout_mode = 2
-size_flags_horizontal = 2
-
-[node name="Persentase" type="Label" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect/MarginScore/TotalScore/MarginContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-theme = ExtResource("6_4w10n")
-theme_override_colors/font_color = Color(1, 0.917647, 0.294118, 1)
-theme_override_colors/font_shadow_color = Color(0.723403, 0.633952, 0.168933, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/shadow_offset_x = 3
-theme_override_constants/shadow_offset_y = 3
-theme_override_constants/outline_size = 2
-theme_override_font_sizes/font_size = 240
-text = "80%"
-
-[node name="MarginLabel" type="MarginContainer" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect/MarginScore"]
-layout_mode = 2
-theme_override_constants/margin_left = 750
-theme_override_constants/margin_bottom = 200
-
-[node name="Passed" type="Label" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect/MarginScore/MarginLabel"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 0
-theme = ExtResource("6_4w10n")
-theme_override_colors/font_color = Color(0, 1, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 2
-theme_override_font_sizes/font_size = 120
-text = "PASSED!"
-
-[node name="TryAgain" type="Label" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect/MarginScore/MarginLabel"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 0
-theme = ExtResource("6_4w10n")
-theme_override_colors/font_color = Color(0.98733, 0.522725, 0.502244, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 2
-theme_override_font_sizes/font_size = 108
-text = "TRY AGAIN"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="HeaderPanelSkor" type="NinePatchRect" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect/VBoxContainer"]
-custom_minimum_size = Vector2(0, 120)
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.1
-theme = ExtResource("6_4w10n")
-theme_type_variation = &"PanelHeaderTask"
-texture = ExtResource("5_6lgsv")
-region_rect = Rect2(150, 810, 320, 320)
-patch_margin_left = 61
-patch_margin_top = 90
-patch_margin_right = 60
-patch_margin_bottom = 90
-axis_stretch_horizontal = 2
-axis_stretch_vertical = 1
-
-[node name="MarginHeader" type="MarginContainer" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect/VBoxContainer/HeaderPanelSkor"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 20
-
-[node name="TitlePanelSkor" type="Label" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect/VBoxContainer/HeaderPanelSkor/MarginHeader"]
-custom_minimum_size = Vector2(250, 90)
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("7_u8g8m")
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/shadow_outline_size = 5
-theme_override_fonts/font = ExtResource("2_wogvg")
-theme_override_font_sizes/font_size = 111
-text = "LEVEL REPORT"
+theme_override_fonts/font = ExtResource("3_k66wq")
+theme_override_font_sizes/font_size = 76
+text = "Your Word"
 horizontal_alignment = 1
-vertical_alignment = 1
 
-[node name="MarginBadanPanel" type="MarginContainer" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect/VBoxContainer"]
+[node name="TextEdit" type="TextEdit" parent="Dialog_Panel/HBoxContainer/AwnserPanel/VBoxContainer/PanelPrompt/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 69.995)
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/margin_left = 60
-theme_override_constants/margin_top = 80
-theme_override_constants/margin_right = 60
-theme_override_constants/margin_bottom = 60
+editable = false
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect/VBoxContainer/MarginBadanPanel"]
+[node name="NinePatchRect" type="NinePatchRect" parent="Dialog_Panel/HBoxContainer/AwnserPanel/VBoxContainer/PanelPrompt"]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/separation = 0
+texture = ExtResource("6_0buv0")
+region_rect = Rect2(150, 480, 320, 320)
+patch_margin_left = 60
+patch_margin_top = 60
+patch_margin_right = 60
+patch_margin_bottom = 60
 
-[node name="TotalError" type="HBoxContainer" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect/VBoxContainer/MarginBadanPanel/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 10
-
-[node name="Keterangan3" type="Label" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect/VBoxContainer/MarginBadanPanel/VBoxContainer/TotalError"]
-layout_mode = 2
-size_flags_horizontal = 10
-theme = ExtResource("6_4w10n")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0.29219, 0.29219, 0.29219, 1)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 2
-theme_override_font_sizes/font_size = 64
-text = "TOTAL ERROR:"
-
-[node name="TotalErrorLabel" type="Label" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect/VBoxContainer/MarginBadanPanel/VBoxContainer/TotalError"]
-layout_mode = 2
-size_flags_horizontal = 2
-theme = ExtResource("6_4w10n")
-theme_override_colors/font_color = Color(1, 0.917647, 0.294118, 1)
-theme_override_colors/font_shadow_color = Color(0.723403, 0.633952, 0.168933, 1)
-theme_override_constants/shadow_offset_x = 1
-theme_override_constants/shadow_offset_y = 1
-theme_override_font_sizes/font_size = 64
-text = "234"
-
-[node name="WordsError" type="HBoxContainer" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect/VBoxContainer/MarginBadanPanel/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 2
-
-[node name="Keterangan2" type="Label" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect/VBoxContainer/MarginBadanPanel/VBoxContainer/WordsError"]
-layout_mode = 2
-size_flags_horizontal = 10
-theme = ExtResource("6_4w10n")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0.29219, 0.29219, 0.29219, 1)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 2
-theme_override_font_sizes/font_size = 64
-text = "WORDS ERROR:"
-
-[node name="WordsErrorLabel" type="Label" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect/VBoxContainer/MarginBadanPanel/VBoxContainer/WordsError"]
-layout_mode = 2
-size_flags_horizontal = 2
-theme = ExtResource("6_4w10n")
-theme_override_colors/font_color = Color(1, 0.917647, 0.294118, 1)
-theme_override_colors/font_shadow_color = Color(0.723403, 0.633952, 0.168933, 1)
-theme_override_constants/shadow_offset_x = 1
-theme_override_constants/shadow_offset_y = 1
-theme_override_font_sizes/font_size = 64
-text = "232"
-
-[node name="Tombols" type="HBoxContainer" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect/VBoxContainer/MarginBadanPanel/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/separation = 30
-
-[node name="ButtonHome" type="Button" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect/VBoxContainer/MarginBadanPanel/VBoxContainer/Tombols"]
-custom_minimum_size = Vector2(220, 220)
-layout_mode = 2
-size_flags_horizontal = 10
-size_flags_vertical = 4
-theme = ExtResource("6_4w10n")
-theme_type_variation = &"TombolHome"
-
-[node name="ButtonRetry" type="Button" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect/VBoxContainer/MarginBadanPanel/VBoxContainer/Tombols"]
-custom_minimum_size = Vector2(220, 220)
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 4
-theme = ExtResource("6_4w10n")
-theme_type_variation = &"TombolRetry"
-
-[node name="ButtonLanjut2" type="Button" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect/VBoxContainer/MarginBadanPanel/VBoxContainer/Tombols"]
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(220, 220)
-layout_mode = 2
-size_flags_horizontal = 2
-size_flags_vertical = 4
-mouse_filter = 2
-theme = ExtResource("6_4w10n")
-theme_type_variation = &"TombolLanjut"
-
-[node name="ButtonLanjut" type="Button" parent="Control/PanelContainerSkor/MarginContainer/NinePatchRect/VBoxContainer/MarginBadanPanel/VBoxContainer/Tombols/ButtonLanjut2"]
-custom_minimum_size = Vector2(220, 220)
-layout_mode = 2
-offset_right = 220.0
-offset_bottom = 220.0
-size_flags_horizontal = 2
-size_flags_vertical = 4
-theme = ExtResource("6_4w10n")
-theme_type_variation = &"TombolLanjut"
-
-[node name="TesSkor" type="Button" parent="Control"]
-layout_mode = 0
-offset_left = 108.0
-offset_top = 697.0
-offset_right = 300.0
-offset_bottom = 876.0
-theme = ExtResource("6_4w10n")
-theme_type_variation = &"TombolLanjut"
-script = ExtResource("8_vnkre")
-
-[node name="Popup_Speech" type="Control" parent="Control"]
+[node name="Popup_Speech" type="Control" parent="."]
 visible = false
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="Control/Popup_Speech"]
+[node name="PanelContainer" type="PanelContainer" parent="Popup_Speech"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_dg7o0")
+theme_override_styles/panel = SubResource("StyleBoxFlat_o6hjb")
 
-[node name="MarginContainer" type="MarginContainer" parent="Control/Popup_Speech/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Popup_Speech/PanelContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 300
 theme_override_constants/margin_top = 215
 theme_override_constants/margin_right = 300
 theme_override_constants/margin_bottom = 215
 
-[node name="PanelContainer" type="PanelContainer" parent="Control/Popup_Speech/PanelContainer/MarginContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="Popup_Speech/PanelContainer/MarginContainer"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_qxo4u")
+theme_override_styles/panel = SubResource("StyleBoxFlat_astq6")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer"]
 layout_mode = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_jyd21")
+theme_override_styles/panel = SubResource("StyleBoxFlat_gv5ab")
 
-[node name="Label" type="Label" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer"]
+[node name="Label" type="Label" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer"]
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 8
 theme_override_constants/shadow_offset_y = 7
 theme_override_constants/outline_size = 18
-theme_override_fonts/font = ExtResource("9_y8g4i")
+theme_override_fonts/font = ExtResource("1_8aqr1")
 theme_override_font_sizes/font_size = 75
 text = "Speech Checker"
 horizontal_alignment = 1
 
-[node name="PanelContainer2" type="PanelContainer" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
+[node name="PanelContainer2" type="PanelContainer" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxEmpty_1vval")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8npsy")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2"]
 layout_mode = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_etpn7")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_nfoc4")
 
-[node name="Label" type="Label" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer"]
+[node name="Label" type="Label" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer"]
 custom_minimum_size = Vector2(200, 160)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_wogvg")
+theme_override_fonts/font = ExtResource("3_k66wq")
 theme_override_font_sizes/font_size = 101
-theme_override_styles/normal = SubResource("StyleBoxFlat_v38g3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6oayh")
 text = "lorem ipsum apalah gatau yang penting text biar panjang "
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="PanelContainer2" type="PanelContainer" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+[node name="PanelContainer2" type="PanelContainer" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxEmpty_etpn7")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_nfoc4")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2"]
 layout_mode = 2
 theme_override_constants/separation = 160
 alignment = 1
 
-[node name="TextureButton" type="TextureButton" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer"]
+[node name="TextureButton" type="TextureButton" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer"]
 custom_minimum_size = Vector2(180, 140.07)
 layout_mode = 2
-texture_normal = ExtResource("10_iintk")
-texture_pressed = ExtResource("11_ost8d")
-texture_hover = ExtResource("11_ost8d")
+texture_normal = ExtResource("7_doxs2")
+texture_pressed = ExtResource("8_kjwax")
+texture_hover = ExtResource("8_kjwax")
 stretch_mode = 4
 
-[node name="Label" type="Label" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer/TextureButton"]
+[node name="Label" type="Label" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer/TextureButton"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -623,20 +334,20 @@ offset_right = 125.0
 offset_bottom = -34.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/font = ExtResource("2_wogvg")
+theme_override_fonts/font = ExtResource("3_k66wq")
 theme_override_font_sizes/font_size = 66
 text = "Play Audio"
 horizontal_alignment = 1
 
-[node name="TextureButton2" type="TextureButton" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer"]
+[node name="TextureButton2" type="TextureButton" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer"]
 custom_minimum_size = Vector2(180, 140.07)
 layout_mode = 2
-texture_normal = ExtResource("12_w154g")
-texture_pressed = ExtResource("13_otv6q")
-texture_hover = ExtResource("13_otv6q")
+texture_normal = ExtResource("9_c0f1a")
+texture_pressed = ExtResource("10_2mg8d")
+texture_hover = ExtResource("10_2mg8d")
 stretch_mode = 4
 
-[node name="Label" type="Label" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer/TextureButton2"]
+[node name="Label" type="Label" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer/TextureButton2"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -649,20 +360,20 @@ offset_right = 112.0
 offset_bottom = -34.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/font = ExtResource("2_wogvg")
+theme_override_fonts/font = ExtResource("3_k66wq")
 theme_override_font_sizes/font_size = 66
 text = "Try Speak"
 horizontal_alignment = 1
 
-[node name="TextureButton3" type="TextureButton" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer"]
+[node name="TextureButton3" type="TextureButton" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer"]
 custom_minimum_size = Vector2(180, 140.07)
 layout_mode = 2
-texture_normal = ExtResource("14_wlvux")
-texture_pressed = ExtResource("15_qqu8f")
-texture_hover = ExtResource("15_qqu8f")
+texture_normal = ExtResource("11_03rhc")
+texture_pressed = ExtResource("12_pitns")
+texture_hover = ExtResource("12_pitns")
 stretch_mode = 4
 
-[node name="Label" type="Label" parent="Control/Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer/TextureButton3"]
+[node name="Label" type="Label" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer/TextureButton3"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -675,29 +386,370 @@ offset_right = 100.0
 offset_bottom = -34.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/font = ExtResource("2_wogvg")
+theme_override_fonts/font = ExtResource("3_k66wq")
 theme_override_font_sizes/font_size = 66
 text = "Continue"
 horizontal_alignment = 1
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Control/Popup_Speech/PanelContainer/MarginContainer"]
+[node name="NinePatchRect" type="NinePatchRect" parent="Popup_Speech/PanelContainer/MarginContainer"]
 layout_mode = 2
-texture = ExtResource("16_dy82l")
+texture = ExtResource("6_0buv0")
 region_rect = Rect2(810, 810, 320, 320)
 patch_margin_left = 80
 patch_margin_top = 159
 patch_margin_right = 80
 patch_margin_bottom = 159
 
-[node name="Topbar" type="MarginContainer" parent="Control/Popup_Speech/PanelContainer/MarginContainer"]
+[node name="Topbar" type="MarginContainer" parent="Popup_Speech/PanelContainer/MarginContainer"]
 layout_mode = 2
 theme_override_constants/margin_bottom = 415
 
-[connection signal="kata_error_berubah" from="Control/PanelContainerSkor" to="Control/PanelContainerSkor" method="_on_kata_error_berubah"]
-[connection signal="persenan_berubah" from="Control/PanelContainerSkor" to="Control/PanelContainerSkor" method="_on_persenan_berubah"]
-[connection signal="total_error_berubah" from="Control/PanelContainerSkor" to="Control/PanelContainerSkor" method="_on_total_error_berubah"]
-[connection signal="button_up" from="Control/PanelContainerSkor/MarginContainer/NinePatchRect/VBoxContainer/MarginBadanPanel/VBoxContainer/Tombols/ButtonHome" to="Control/PanelContainerSkor" method="_on_button_home_button_up"]
-[connection signal="button_up" from="Control/PanelContainerSkor/MarginContainer/NinePatchRect/VBoxContainer/MarginBadanPanel/VBoxContainer/Tombols/ButtonRetry" to="Control/PanelContainerSkor" method="_on_button_retry_button_up"]
-[connection signal="button_up" from="Control/PanelContainerSkor/MarginContainer/NinePatchRect/VBoxContainer/MarginBadanPanel/VBoxContainer/Tombols/ButtonLanjut2" to="Control/PanelContainerSkor" method="_on_button_lanjut_button_up"]
-[connection signal="button_up" from="Control/PanelContainerSkor/MarginContainer/NinePatchRect/VBoxContainer/MarginBadanPanel/VBoxContainer/Tombols/ButtonLanjut2/ButtonLanjut" to="Control/PanelContainerSkor" method="_on_button_lanjut_button_up"]
-[connection signal="button_up" from="Control/TesSkor" to="Control/TesSkor" method="_on_button_up"]
+[node name="PanelContainerSkor" type="PanelContainer" parent="." node_paths=PackedStringArray("angka_persen", "angka_total_error", "angka_kata_eror", "label_lulus", "label_cobalagi", "label_desc_error", "label_desc_kata", "tombol_lanjut")]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("13_6x2wi")
+theme_override_styles/panel = SubResource("StyleBoxFlat_pilcr")
+script = ExtResource("14_kjkxj")
+angka_persen = NodePath("MarginContainer/PanelSkorIsi/MarginSkor/TotalScore/VBoxContainer/MarginPersen/Persentase")
+angka_total_error = NodePath("MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTotalError/TotalError/TotalErrorLabel")
+angka_kata_eror = NodePath("MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginWordError/WordsError/WordsErrorLabel")
+label_lulus = NodePath("MarginContainer/PanelSkorIsi/MarginSkor/TotalScore/VBoxContainer/MarginLabel/Passed")
+label_cobalagi = NodePath("MarginContainer/PanelSkorIsi/MarginSkor/TotalScore/VBoxContainer/MarginLabel/TryAgain")
+label_desc_error = NodePath("MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTotalError/TotalError")
+label_desc_kata = NodePath("MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginWordError/WordsError")
+batas_lulus = 80
+tombol_lanjut = NodePath("MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTombol/Tombols/ButtonLanjut2/ButtonLanjut")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainerSkor"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="PanelSkorIsi" type="PanelContainer" parent="PanelContainerSkor/MarginContainer"]
+custom_minimum_size = Vector2(1500, 800)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+
+[node name="MarginBGPanel" type="MarginContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="BGPanel" type="Panel" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/MarginBGPanel"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_mg0jk")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi"]
+custom_minimum_size = Vector2(1250, 750)
+layout_mode = 2
+mouse_filter = 1
+texture = SubResource("AtlasTexture_yd43m")
+region_rect = Rect2(480, 480, 320, 320)
+patch_margin_left = 150
+patch_margin_top = 140
+patch_margin_right = 150
+patch_margin_bottom = 140
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi"]
+layout_mode = 2
+
+[node name="HeaderReport" type="PanelContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer"]
+custom_minimum_size = Vector2(0, 220)
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("13_6x2wi")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nftyb")
+
+[node name="HeaderPanelSkor" type="NinePatchRect" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/HeaderReport"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+mouse_filter = 1
+theme = ExtResource("13_6x2wi")
+theme_type_variation = &"PanelHeaderTask"
+texture = SubResource("AtlasTexture_1yhgp")
+region_rect = Rect2(480, 810, 320, 320)
+patch_margin_left = 60
+patch_margin_top = 60
+patch_margin_right = 60
+patch_margin_bottom = 60
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 1
+
+[node name="MarginHeader" type="MarginContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/HeaderReport"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 20
+
+[node name="TitlePanelSkor" type="Label" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/HeaderReport/MarginHeader"]
+custom_minimum_size = Vector2(250, 90)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("13_6x2wi")
+theme_type_variation = &"LabelTombol"
+theme_override_colors/font_color = Color(0.384314, 0.333333, 0.541176, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.866667)
+theme_override_colors/font_outline_color = Color(0.878431, 0.878431, 0.878431, 1)
+theme_override_constants/shadow_offset_x = 13
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 30
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 111
+text = "LEVEL REPORT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginBadanPanel" type="MarginContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 60
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="MarginTotalError" type="MarginContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TotalError" type="HBoxContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTotalError"]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="Keterangan3" type="Label" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTotalError/TotalError"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme = ExtResource("13_6x2wi")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "TOTAL ERROR:"
+
+[node name="TotalErrorLabel" type="Label" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTotalError/TotalError"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_stretch_ratio = 1.6
+theme = ExtResource("13_6x2wi")
+text = "234"
+
+[node name="MarginWordError" type="MarginContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="WordsError" type="HBoxContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginWordError"]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="Keterangan2" type="Label" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginWordError/WordsError"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme = ExtResource("13_6x2wi")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "WORDS ERROR:"
+
+[node name="WordsErrorLabel" type="Label" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginWordError/WordsError"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_stretch_ratio = 1.6
+theme = ExtResource("13_6x2wi")
+text = "232"
+
+[node name="MarginTombol" type="MarginContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="Tombols" type="HBoxContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTombol"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 30
+
+[node name="ButtonHome" type="Button" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTombol/Tombols"]
+custom_minimum_size = Vector2(220, 220)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme = ExtResource("13_6x2wi")
+theme_type_variation = &"TombolHome"
+
+[node name="ButtonRetry" type="Button" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTombol/Tombols"]
+custom_minimum_size = Vector2(220, 220)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+theme = ExtResource("13_6x2wi")
+theme_type_variation = &"TombolRetry"
+
+[node name="ButtonLanjut2" type="Button" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTombol/Tombols"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(220, 220)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme = ExtResource("13_6x2wi")
+theme_type_variation = &"TombolLanjut"
+
+[node name="ButtonLanjut" type="Button" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTombol/Tombols/ButtonLanjut2"]
+custom_minimum_size = Vector2(220, 220)
+layout_mode = 2
+offset_right = 220.0
+offset_bottom = 220.0
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme = ExtResource("13_6x2wi")
+theme_type_variation = &"TombolLanjut"
+
+[node name="MarginSkor" type="MarginContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 240
+
+[node name="TotalScore" type="HBoxContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/MarginSkor"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Keterangan" type="Label" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/MarginSkor/TotalScore"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 0
+size_flags_stretch_ratio = 1.1
+mouse_filter = 1
+theme = ExtResource("13_6x2wi")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 7
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 120
+text = "TOTAL SCORE:"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/MarginSkor/TotalScore"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginPersen" type="MarginContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/MarginSkor/TotalScore/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 20
+
+[node name="Persentase" type="Label" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/MarginSkor/TotalScore/VBoxContainer/MarginPersen"]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+theme = ExtResource("13_6x2wi")
+theme_type_variation = &"LabelTombol"
+theme_override_colors/font_color = Color(1, 0.917647, 0.294118, 1)
+theme_override_colors/font_shadow_color = Color(0.723403, 0.633952, 0.168933, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 0.313726, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 120
+text = "100%"
+vertical_alignment = 1
+
+[node name="MarginLabel" type="MarginContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/MarginSkor/TotalScore/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_right = 20
+
+[node name="Passed" type="Label" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/MarginSkor/TotalScore/VBoxContainer/MarginLabel"]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+theme = ExtResource("13_6x2wi")
+theme_override_colors/font_color = Color(0, 0.86269, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.341176, 0, 0.666667)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 3
+theme_override_font_sizes/font_size = 120
+text = "PASSED!"
+
+[node name="TryAgain" type="Label" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/MarginSkor/TotalScore/VBoxContainer/MarginLabel"]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+theme = ExtResource("13_6x2wi")
+theme_override_colors/font_color = Color(0.858824, 0.0784314, 0.0745098, 1)
+theme_override_colors/font_shadow_color = Color(0.423529, 0, 0, 0.85098)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 3
+theme_override_font_sizes/font_size = 108
+text = "TRY AGAIN"
+
+[node name="Tester" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_dp3lr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tester"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="TesSkor" type="Button" parent="Tester/VBoxContainer"]
+custom_minimum_size = Vector2(220, 220)
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("13_6x2wi")
+theme_type_variation = &"TombolLanjut"
+script = ExtResource("17_0f6nc")
+
+[node name="Label" type="Label" parent="Tester/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("13_6x2wi")
+theme_override_font_sizes/font_size = 64
+text = "TES MASUKIN SCORE"
+
+[node name="TesDialog" type="Button" parent="Tester/VBoxContainer"]
+custom_minimum_size = Vector2(220, 220)
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("13_6x2wi")
+theme_type_variation = &"TombolLanjut"
+script = ExtResource("18_8vflh")
+
+[node name="Label2" type="Label" parent="Tester/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("13_6x2wi")
+theme_override_font_sizes/font_size = 64
+text = "TES MASUKIN DIALOG"
+
+[connection signal="kata_error_berubah" from="PanelContainerSkor" to="PanelContainerSkor" method="_on_kata_error_berubah"]
+[connection signal="persenan_berubah" from="PanelContainerSkor" to="PanelContainerSkor" method="_on_persenan_berubah"]
+[connection signal="total_error_berubah" from="PanelContainerSkor" to="PanelContainerSkor" method="_on_total_error_berubah"]
+[connection signal="button_up" from="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTombol/Tombols/ButtonHome" to="PanelContainerSkor" method="_on_button_home_button_up"]
+[connection signal="button_up" from="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTombol/Tombols/ButtonRetry" to="PanelContainerSkor" method="_on_button_retry_button_up"]
+[connection signal="button_up" from="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTombol/Tombols/ButtonLanjut2" to="PanelContainerSkor" method="_on_button_lanjut_button_up"]
+[connection signal="button_up" from="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTombol/Tombols/ButtonLanjut2/ButtonLanjut" to="PanelContainerSkor" method="_on_button_lanjut_button_up"]
+[connection signal="button_up" from="Tester/VBoxContainer/TesSkor" to="Tester/VBoxContainer/TesSkor" method="_on_button_up"]
+[connection signal="button_up" from="Tester/VBoxContainer/TesDialog" to="Tester/VBoxContainer/TesDialog" method="_on_button_up"]

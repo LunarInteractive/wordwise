@@ -1,5 +1,5 @@
 extends Control
-@onready var v_box_container = $MarginPanelTask/PanelTask/VBoxContainer/MarginBadanPanel/ScrollContainer/VBoxContainer
+@onready var v_box_container = %VBoxContainer
 var task_res = load("res://UI Asset/Scene/task_item.tscn")
 
 var task_items:  Array[TaskItem] = []

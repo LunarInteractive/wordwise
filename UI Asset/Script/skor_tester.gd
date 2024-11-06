@@ -1,6 +1,6 @@
 extends Button
 
-@onready var panel_container_skor = $"../../../Dialog_Panel/PanelContainerSkor"
+@onready var panel_container_skor = %PanelContainerSkor 
 
 
 

@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://bh5coce6rjsyw"]
+[gd_scene load_steps=10 format=3 uid="uid://bh5coce6rjsyw"]
 
 [ext_resource type="Script" path="res://UI Asset/Script/dialog_button.gd" id="1_vxp4b"]
-[ext_resource type="Texture2D" uid="uid://byu31x1gksyxg" path="res://UI Asset/Sprite/fajar_assets/buttonplay1-export.png" id="1_yk8lv"]
+[ext_resource type="Texture2D" uid="uid://duhxdsydyaa4b" path="res://UI Asset/Sprite/GUI/Button And Others.png" id="2_qxq84"]
 [ext_resource type="Theme" uid="uid://la05b3bnexvl" path="res://UI Asset/Shader/theme_fajar/theme_fajar.tres" id="2_sj5f7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2l0aa"]
@@ -13,6 +13,9 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_877ks"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dj4d2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u01l0"]
+atlas = ExtResource("2_qxq84")
 
 [node name="DialogItem" type="Control" node_paths=PackedStringArray("button_identity")]
 custom_minimum_size = Vector2(0, 200)
@@ -58,7 +61,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
 mouse_filter = 1
-texture = ExtResource("1_yk8lv")
+texture = SubResource("AtlasTexture_u01l0")
 region_rect = Rect2(2060, 10, 490, 240)
 patch_margin_left = 40
 patch_margin_top = 30
@@ -85,8 +88,6 @@ mouse_filter = 1
 theme = ExtResource("2_sj5f7")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.333333, 0.333333, 0.333333, 0.776471)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 2
 theme_override_font_sizes/font_size = 72
 text = "Sample textnya qaqa"
 horizontal_alignment = 1
