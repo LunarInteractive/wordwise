@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c4pbtkd0malj7"]
+[gd_scene load_steps=25 format=3 uid="uid://c4pbtkd0malj7"]
 
 [ext_resource type="Script" path="res://Objects/Characters/Player/Player.gd" id="1_e3iis"]
 [ext_resource type="Texture2D" uid="uid://cjys0nqej126x" path="res://Objects/Characters/Villagers/chara_0_normal.png" id="3_47rd1"]
@@ -45,7 +45,149 @@ frustum_offset = Vector2(0, 0)
 near = 0.05
 far = 4000.0
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pdqpg"]
+[sub_resource type="Animation" id="Animation_pc8y5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_25vav"]
+_data = {
+"RESET": SubResource("Animation_pc8y5")
+}
+
+[sub_resource type="Animation" id="Animation_hv5ay"]
+resource_name = "walk_back"
+length = 0.6
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [9, 10, 11]
+}
+
+[sub_resource type="Animation" id="Animation_0iewh"]
+resource_name = "walk_front"
+length = 0.6
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_osuuu"]
+resource_name = "walk_left"
+length = 0.6
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_4eugd"]
+resource_name = "walk_right"
+length = 0.6
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [6, 7, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3qm5f"]
+_data = {
+"walk_back": SubResource("Animation_hv5ay"),
+"walk_front": SubResource("Animation_0iewh"),
+"walk_left": SubResource("Animation_osuuu"),
+"walk_right": SubResource("Animation_4eugd")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_voc0l"]
+animation = &"Standard/walk_front"
+use_custom_timeline = true
+timeline_length = 0.4
+stretch_time_scale = true
+start_offset = 0.1
+loop_mode = 2
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ecrjc"]
+animation = &"Standard/walk_back"
+use_custom_timeline = true
+timeline_length = 0.4
+stretch_time_scale = true
+start_offset = 0.1
+loop_mode = 2
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1lg4v"]
+animation = &"Standard/walk_right"
+use_custom_timeline = true
+timeline_length = 0.4
+stretch_time_scale = true
+start_offset = 0.1
+loop_mode = 2
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5tf2k"]
+animation = &"Standard/walk_left"
+use_custom_timeline = true
+timeline_length = 0.4
+stretch_time_scale = true
+start_offset = 0.1
+loop_mode = 2
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_f3rit"]
+animation = &"RESET"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_7xcmx"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_voc0l")
+blend_point_0/pos = Vector2(0, -0.9)
+blend_point_1/node = SubResource("AnimationNodeAnimation_ecrjc")
+blend_point_1/pos = Vector2(0, 1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_1lg4v")
+blend_point_2/pos = Vector2(1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_5tf2k")
+blend_point_3/pos = Vector2(-1, 0)
+blend_point_4/node = SubResource("AnimationNodeAnimation_f3rit")
+blend_point_4/pos = Vector2(0, 0)
+blend_mode = 1
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_e3iis")
@@ -59,18 +201,17 @@ texture_filter = 4
 texture = ExtResource("6_1s4o3")
 hframes = 3
 vframes = 4
-frame = 3
+frame = 1
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.062479, 0, 0)
 shape = SubResource("BoxShape3D_gyv17")
 
-[node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target", "look_at_target")]
+[node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target")]
 transform = Transform3D(0.999995, 9.96386e-13, -1.98138e-12, -4.92095e-13, 0.970799, 0.239836, 2.16254e-12, -0.239836, 0.970799, -0.0668819, 2.99894, 8.31489)
 script = ExtResource("3_frnkn")
 follow_mode = 6
 follow_target = NodePath("../Sprite3D")
-look_at_target = NodePath("..")
 tween_resource = SubResource("Resource_7kp2x")
 camera_3d_resource = SubResource("Resource_yfcde")
 attributes = ExtResource("6_r7s6h")
@@ -80,5 +221,13 @@ follow_distance = 8.565
 spring_length = 8.565
 look_at_damping = true
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_25vav"),
+"Standard": SubResource("AnimationLibrary_3qm5f")
+}
+
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource("AnimationNodeAnimation_pdqpg")
+tree_root = SubResource("AnimationNodeBlendSpace2D_7xcmx")
+anim_player = NodePath("../AnimationPlayer")
+parameters/blend_position = Vector2(0.000885725, -0.0226245)

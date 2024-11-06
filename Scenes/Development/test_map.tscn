@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://ewck2sucefpr"]
+[gd_scene load_steps=13 format=3 uid="uid://ewck2sucefpr"]
 
 [ext_resource type="Texture2D" uid="uid://cjpqncrnplppv" path="res://Resources/PostProcessing/dirt.png" id="1_sinej"]
 [ext_resource type="Texture2D" uid="uid://blw08u8v25ulj" path="res://addons/kenney_prototype_textures/dark/texture_03.png" id="2_kxqkq"]
 [ext_resource type="PackedScene" uid="uid://cf2ebhsxe2ls" path="res://Objects/Environtment/Houses/House_1.tscn" id="3_1ddf6"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_n8qci"]
 [ext_resource type="PackedScene" uid="uid://c4pbtkd0malj7" path="res://Objects/Characters/Player/Player.tscn" id="5_3nwyx"]
+[ext_resource type="Script" path="res://Scenes/Development/test_script.gd" id="6_3mwcj"]
+[ext_resource type="PackedScene" uid="uid://dibqfutwftm8j" path="res://samples/godot_whisper/mic_transcribe.tscn" id="6_ui7xw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tp6cc"]
 ground_bottom_color = Color(0.384314, 0.454902, 0.54902, 1)
@@ -37,7 +39,7 @@ albedo_texture = ExtResource("2_kxqkq")
 uv1_triplanar = true
 texture_filter = 5
 
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_7jo1i"]
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_xh62a"]
 auto_exposure_scale = 0.06
 auto_exposure_speed = 0.01
 dof_blur_far_enabled = true
@@ -45,6 +47,7 @@ dof_blur_far_transition = 15.0
 dof_blur_near_enabled = true
 dof_blur_near_distance = 5.45
 dof_blur_near_transition = 3.0
+dof_blur_amount = 0.3
 
 [node name="TestMap" type="Node3D"]
 
@@ -126,12 +129,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2819, 1.02367, -0.468869)
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.999995, 9.96386e-13, -1.98138e-12, -4.92095e-13, 0.970799, 0.239836, 2.16254e-12, -0.239836, 0.970799, 9.27341, 3.6402, 8.94978)
-attributes = SubResource("CameraAttributesPractical_7jo1i")
+transform = Transform3D(1, 9.96399e-13, -1.98141e-12, -4.92097e-13, 0.970813, 0.239839, 2.16255e-12, -0.239839, 0.970813, 9.27341, 3.6402, 8.94978)
+attributes = SubResource("CameraAttributesPractical_xh62a")
 fov = 45.0
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
+process_priority = 300
+process_physics_priority = 300
 script = ExtResource("4_n8qci")
 
 [node name="Player" parent="." instance=ExtResource("5_3nwyx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.34029, 0.641255, 0.634889)
+
+[node name="CaptureStreamToText" parent="." instance=ExtResource("6_ui7xw")]
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("6_3mwcj")
