@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://d1uh4wfy1cr1n"]
+
+[ext_resource type="Texture2D" uid="uid://cl2my1idfxno6" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/Slider_BAR.png" id="1_asfp7"]
+
+[resource]
+atlas = ExtResource("1_asfp7")
+region = Rect2(1056, 1336, 168, 168)
