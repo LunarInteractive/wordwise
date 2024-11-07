@@ -1,4 +1,4 @@
-extends Control
+extends DialogicLayoutLayer
 @onready var nine_patch_rect = $MarginContainer/PanelContainer/Button/NinePatchRect
 @onready var label = $MarginContainer/PanelContainer/Button/MarginContainer/Label
 
@@ -9,6 +9,7 @@ signal disable_other(pesan1, pesan2)
 signal disable_self
 
 @export var button_identity : Button
+
 var is_toggled := false:
 	set(toggle_button):
 		is_toggled = toggle_button

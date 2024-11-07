@@ -16,7 +16,12 @@ var dialog_hold: Node
 var dialog_idx: int = -1
 
 @onready var bank_teks:Array[Control] = []
+@onready var npc_panel = $"../../../Dialog_Panel/HBoxContainer/NpcPanel/VBoxContainer/MarginContainer/PanelContainer/Label"
+@onready var dialog_panel = $"../../../Dialog_Panel/HBoxContainer/AwnserPanel/VBoxContainer/ScrollContainer/VBoxContainer"
+@onready var ngeteh = Dialogic.preload_timeline("res://Resources/Timeline/test.dtl")
 
+const CHARACTER = preload("res://UI Asset/Dialog/character.dch")
+const CHARACTER_2 = preload("res://UI Asset/Dialog/character2.dch")
 
 func _ready():
 	coba_ambil = read_json_file("res://UI Asset/Script/tes_data.json")
@@ -25,14 +30,32 @@ func _ready():
 	
 
 func _on_button_up():
-	if dialog_items.size() < 3:
-		dialog_idx +=1
+	
+	
+	#if Dialogic.current_timeline != null:
+		#return
+		
+	#ngeteh.register_character(CHARACTER,npc_panel)
+	#ngeteh.register_character(CHARACTER_2,dialog_panel)
+	#print(ngeteh.events)
+	npc_panel.text = ngeteh.as_text_alter(0)
+	reset_dialog()
+	for n in range(0,3):
+	#if dialog_items.size() == 0:
+		#
+		#
+	#elif dialog_items.size() > 0 and dialog_items.size() <= 4:
+		
+		#dialog_idx +=1
 		dialog_hold = dialog_res.instantiate()
 		#dialog_hold.inisialisasi(rand2)
-		dialog_items.insert(dialog_idx, dialog_hold)
-		v_box_container.add_child(dialog_items[dialog_idx])
+		dialog_items.insert(n, dialog_hold)
+		v_box_container.add_child(dialog_items[n])
 		#dialog_items[dialog_idx].set_rect(dialog_idx)
-		dialog_items[dialog_idx].isi_label(coba_ambil[grup_aktif].values()[dialog_idx])
+		#dialog_items[dialog_idx].isi_label(coba_ambil[grup_aktif].values()[dialog_idx])
+		var event_idx := (n*2)+1
+		
+		dialog_items[dialog_idx].isi_label(ngeteh.as_text_alter(event_idx))
 		dialog_items[dialog_idx].connect("munculkan_prompt", showkan)
 		dialog_items[dialog_idx].connect("disable_other", disablekan)
 		#dialog_items[dialog_idx].disable_other.connect(disablekan.bind([toggle_button, button_identity]))
@@ -78,3 +101,9 @@ func parse_json(teks_isi:String):
 			#print("Unexpected data")
 	#else:
 		#print("JSON Parse Error: ", json.get_error_message(), " in ", dialog_teks_res, " at line ", json.get_error_line())
+func reset_dialog():
+	if dialog_items.size() !=0:
+		for i in dialog_items:
+			i.queue_free()
+		
+		dialog_items = []

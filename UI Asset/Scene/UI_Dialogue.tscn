@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dlkjulndtiubl"]
+[gd_scene load_steps=35 format=3 uid="uid://dlkjulndtiubl"]
 
 [ext_resource type="FontFile" uid="uid://dlfcvrx0tug2e" path="res://UI Asset/Font/Pixel Dogica/dogicapixel.ttf" id="1_8aqr1"]
 [ext_resource type="Texture2D" uid="uid://be8ovik6e657" path="res://UI Asset/Sprite/Bubble_Text.tres" id="2_1q7va"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://crcm6qx3hyusk" path="res://UI Asset/Sprite/Border/Border_NO BG_.png" id="15_c2jw2"]
 [ext_resource type="Script" path="res://UI Asset/Script/skor_tester.gd" id="17_0f6nc"]
 [ext_resource type="Script" path="res://UI Asset/Script/dialog_tester.gd" id="18_8vflh"]
+[ext_resource type="FontFile" uid="uid://dclwgnpvy23n7" path="res://UI Asset/Font/Pixel Dogica/dogicapixelbold.ttf" id="18_kdyg0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oxhju"]
 bg_color = Color(0, 0, 0, 1)
@@ -502,15 +503,7 @@ custom_minimum_size = Vector2(250, 90)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("13_6x2wi")
-theme_type_variation = &"LabelTombol"
-theme_override_colors/font_color = Color(0.384314, 0.333333, 0.541176, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.866667)
-theme_override_colors/font_outline_color = Color(0.878431, 0.878431, 0.878431, 1)
-theme_override_constants/shadow_offset_x = 13
-theme_override_constants/shadow_offset_y = 10
-theme_override_constants/outline_size = 30
-theme_override_constants/shadow_outline_size = 10
-theme_override_font_sizes/font_size = 111
+theme_type_variation = &"LabelTitle"
 text = "LEVEL REPORT"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -663,9 +656,9 @@ size_flags_horizontal = 0
 mouse_filter = 1
 theme = ExtResource("13_6x2wi")
 theme_type_variation = &"LabelTombol"
-theme_override_colors/font_color = Color(1, 0.917647, 0.294118, 1)
-theme_override_colors/font_shadow_color = Color(0.723403, 0.633952, 0.168933, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 0.313726, 1)
+theme_override_colors/font_color = Color(1, 0.784314, 0.227451, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 10
 theme_override_constants/shadow_offset_y = 10
 theme_override_constants/outline_size = 20
@@ -676,6 +669,7 @@ vertical_alignment = 1
 [node name="MarginLabel" type="MarginContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/MarginSkor/TotalScore/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 
 [node name="Passed" type="Label" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/MarginSkor/TotalScore/VBoxContainer/MarginLabel"]
@@ -683,11 +677,15 @@ layout_mode = 2
 size_flags_horizontal = 0
 mouse_filter = 1
 theme = ExtResource("13_6x2wi")
-theme_override_colors/font_color = Color(0, 0.86269, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0.341176, 0, 0.666667)
+theme_override_colors/font_color = Color(1, 0.784314, 0.227451, 1)
+theme_override_colors/font_shadow_color = Color(0.0901961, 0.0941176, 0.113725, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 5
-theme_override_constants/shadow_offset_y = 3
-theme_override_font_sizes/font_size = 120
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("18_kdyg0")
+theme_override_font_sizes/font_size = 48
 text = "PASSED!"
 
 [node name="TryAgain" type="Label" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/MarginSkor/TotalScore/VBoxContainer/MarginLabel"]
@@ -695,11 +693,15 @@ layout_mode = 2
 size_flags_horizontal = 0
 mouse_filter = 1
 theme = ExtResource("13_6x2wi")
-theme_override_colors/font_color = Color(0.858824, 0.0784314, 0.0745098, 1)
-theme_override_colors/font_shadow_color = Color(0.423529, 0, 0, 0.85098)
+theme_override_colors/font_color = Color(0.509804, 0.509804, 0.509804, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 5
-theme_override_constants/shadow_offset_y = 3
-theme_override_font_sizes/font_size = 108
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("18_kdyg0")
+theme_override_font_sizes/font_size = 42
 text = "TRY AGAIN"
 
 [node name="Tester" type="PanelContainer" parent="."]

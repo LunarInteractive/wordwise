@@ -95,9 +95,12 @@ tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(2),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(1.1, 2),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
+"args": [],
+"method": &"signal_to_move"
+}, {
 "args": [],
 "method": &"queue_free"
 }]
@@ -204,8 +207,7 @@ bg_color = Color(1, 1, 0.776471, 1)
 custom_minimum_size = Vector2(0, 200)
 anchors_preset = 10
 anchor_right = 1.0
-offset_top = 3.0
-offset_bottom = 389.0
+offset_bottom = 386.0
 grow_horizontal = 2
 size_flags_horizontal = 3
 mouse_filter = 1
@@ -388,11 +390,11 @@ autowrap_mode = 3
 [node name="BorderPanel" type="NinePatchRect" parent="GrupTaskItem/MarginPanelTask"]
 layout_mode = 2
 texture = SubResource("AtlasTexture_m6vqp")
-region_rect = Rect2(156, 483, 310, 314)
-patch_margin_left = 54
-patch_margin_top = 57
-patch_margin_right = 56
-patch_margin_bottom = 57
+region_rect = Rect2(150, 480, 320, 320)
+patch_margin_left = 60
+patch_margin_top = 60
+patch_margin_right = 60
+patch_margin_bottom = 60
 
 [node name="PanelEfekKlaim" type="Panel" parent="GrupTaskItem"]
 modulate = Color(1, 1, 1, 0)
