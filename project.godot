@@ -45,8 +45,8 @@ directories/dtl_directory={
 "test": "res://Resources/Timeline/test.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://UI Asset/Testing/New_File.tres"]
-layout/default_style="res://UI Asset/Testing/New_File.tres"
+layout/style_list=[""]
+layout/default_style=""
 variables={}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
@@ -82,6 +82,7 @@ portraits/default_portrait=""
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=2
+window/size/always_on_top=true
 window/size/extend_to_title=true
 
 [dotnet]
