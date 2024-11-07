@@ -51,16 +51,18 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(50, 50)
+custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 size_flags_horizontal = 8
+size_flags_vertical = 4
 theme_override_constants/outline_size = 0
 theme_override_constants/h_separation = 0
 theme_override_constants/icon_max_width = 0
 theme_override_constants/align_to_largest_stylebox = 0
 theme_override_fonts/font = ExtResource("3_7x5ol")
 icon = ExtResource("3_72psf")
-icon_alignment = 2
+flat = true
+icon_alignment = 1
 expand_icon = true
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
