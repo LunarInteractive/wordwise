@@ -1,12 +1,12 @@
-extends Button
+extends Control
 
 
-@onready var panel_prompt = $"../../../Dialog_Panel/HBoxContainer/AwnserPanel/VBoxContainer/PanelPrompt"
-@onready var v_box_container = $"../../../Dialog_Panel/HBoxContainer/AwnserPanel/VBoxContainer/ScrollContainer/VBoxContainer"
+@export var panel_prompt : PanelContainer
+@export var v_box_container : VBoxContainer
 #@onready var v_box_container = $"../../../Dialog_Panel/HBoxContainer/AwnserPanel/ScrollContainer/VBoxContainer"
 var dialog_res = load("res://UI Asset/Scene/dialog_item.tscn")
 #var dialog_teks_res = load("res://UI Asset/Script/tes_data.tres")
-
+#@export var kode_soal:= 0
 #var json = JSON.new()
 
 var coba_ambil : Dictionary
@@ -16,9 +16,9 @@ var dialog_hold: Node
 var dialog_idx: int = -1
 
 @onready var bank_teks:Array[Control] = []
-@onready var npc_panel = $"../../../Dialog_Panel/HBoxContainer/NpcPanel/VBoxContainer/MarginContainer/PanelContainer/Label"
-@onready var dialog_panel = $"../../../Dialog_Panel/HBoxContainer/AwnserPanel/VBoxContainer/ScrollContainer/VBoxContainer"
-@onready var ngeteh = Dialogic.preload_timeline("res://Resources/Timeline/test.dtl")
+@export var npc_panel : Node
+#@export var dialog_panel : Node
+@onready var ngeteh = Dialogic.preload_timeline("res://Resources/Timeline/chapter_1.dtl")
 
 const CHARACTER = preload("res://UI Asset/Dialog/character.dch")
 const CHARACTER_2 = preload("res://UI Asset/Dialog/character2.dch")
@@ -29,17 +29,19 @@ func _ready():
 	grup_aktif = coba_ambil.keys()[randi_range(0,2)]
 	
 
-func _on_button_up():
+func tiap_button(kode:int):
 	
-	
+	var kode_soal:int = kode
 	#if Dialogic.current_timeline != null:
 		#return
-		
+	print(kode)
 	#ngeteh.register_character(CHARACTER,npc_panel)
 	#ngeteh.register_character(CHARACTER_2,dialog_panel)
-	#print(ngeteh.events)
-	npc_panel.text = ngeteh.as_text_alter(0)
+	print(ngeteh.events)
+	var yea := 7 * kode_soal
 	reset_dialog()
+	#if ngeteh
+	npc_panel.text = ngeteh.events[yea].text
 	for n in range(0,3):
 	#if dialog_items.size() == 0:
 		#
@@ -51,15 +53,17 @@ func _on_button_up():
 		#dialog_hold.inisialisasi(rand2)
 		dialog_items.insert(n, dialog_hold)
 		v_box_container.add_child(dialog_items[n])
+		print(dialog_items[n])
 		#dialog_items[dialog_idx].set_rect(dialog_idx)
 		#dialog_items[dialog_idx].isi_label(coba_ambil[grup_aktif].values()[dialog_idx])
-		var event_idx := (n*2)+1
+		var event_idx := yea + (n*2)+1
 		
-		dialog_items[dialog_idx].isi_label(ngeteh.as_text_alter(event_idx))
-		dialog_items[dialog_idx].connect("munculkan_prompt", showkan)
-		dialog_items[dialog_idx].connect("disable_other", disablekan)
+		dialog_items[n].isi_label(ngeteh.events[event_idx].text)
+		dialog_items[n].connect("munculkan_prompt", showkan)
+		dialog_items[n].connect("disable_other", disablekan)
 		#dialog_items[dialog_idx].disable_other.connect(disablekan.bind([toggle_button, button_identity]))
 		#print(dialog_items[dialog_idx].button_identity)
+	print(dialog_items.size())
 			
 func showkan(pesan: bool):
 
@@ -102,8 +106,23 @@ func parse_json(teks_isi:String):
 	#else:
 		#print("JSON Parse Error: ", json.get_error_message(), " in ", dialog_teks_res, " at line ", json.get_error_line())
 func reset_dialog():
+	#print(dialog_items.size())
 	if dialog_items.size() !=0:
-		for i in dialog_items:
-			i.queue_free()
 		
+		for i in dialog_items:
+			print(i)
+			i.queue_free()
+
 		dialog_items = []
+
+
+func _on_tes_dialog_1_button_up(extra_arg_0):
+	tiap_button(extra_arg_0) # Replace with function body.
+
+
+func _on_tes_dialog_2_button_up(extra_arg_0):
+	tiap_button(extra_arg_0) # Replace with function body.
+
+
+func _on_tes_dialog_3_button_up(extra_arg_0):
+	tiap_button(extra_arg_0) # Replace with function body.

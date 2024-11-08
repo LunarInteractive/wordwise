@@ -704,7 +704,7 @@ theme_override_fonts/font = ExtResource("18_kdyg0")
 theme_override_font_sizes/font_size = 42
 text = "TRY AGAIN"
 
-[node name="Tester" type="PanelContainer" parent="."]
+[node name="Tester" type="PanelContainer" parent="." node_paths=PackedStringArray("panel_prompt", "v_box_container", "npc_panel")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -712,8 +712,13 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_dp3lr")
+script = ExtResource("18_8vflh")
+panel_prompt = NodePath("../Dialog_Panel/HBoxContainer/AwnserPanel/VBoxContainer/PanelPrompt")
+v_box_container = NodePath("../Dialog_Panel/HBoxContainer/AwnserPanel/VBoxContainer/ScrollContainer/VBoxContainer")
+npc_panel = NodePath("../Dialog_Panel/HBoxContainer/NpcPanel/VBoxContainer/MarginContainer/PanelContainer/Label")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Tester"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
@@ -732,19 +737,66 @@ theme = ExtResource("13_6x2wi")
 theme_override_font_sizes/font_size = 64
 text = "TES MASUKIN SCORE"
 
-[node name="TesDialog" type="Button" parent="Tester/VBoxContainer"]
+[node name="TesDialog1" type="Button" parent="Tester/VBoxContainer"]
 custom_minimum_size = Vector2(220, 220)
 layout_mode = 2
 size_flags_horizontal = 0
 theme = ExtResource("13_6x2wi")
 theme_type_variation = &"TombolLanjut"
-script = ExtResource("18_8vflh")
 
 [node name="Label2" type="Label" parent="Tester/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("13_6x2wi")
 theme_override_font_sizes/font_size = 64
-text = "TES MASUKIN DIALOG"
+text = "TES 1"
+
+[node name="VBoxContainer2" type="HBoxContainer" parent="Tester"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="TesDialog1" type="Button" parent="Tester/VBoxContainer2"]
+custom_minimum_size = Vector2(220, 220)
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("13_6x2wi")
+theme_type_variation = &"TombolLanjut"
+metadata/kode = 0
+
+[node name="Label2" type="Label" parent="Tester/VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("13_6x2wi")
+theme_override_font_sizes/font_size = 64
+text = "TES 1"
+
+[node name="TesDialog2" type="Button" parent="Tester/VBoxContainer2"]
+custom_minimum_size = Vector2(220, 220)
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("13_6x2wi")
+theme_type_variation = &"TombolLanjut"
+metadata/kode = 1
+
+[node name="Label3" type="Label" parent="Tester/VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("13_6x2wi")
+theme_override_font_sizes/font_size = 64
+text = "TES 2
+"
+
+[node name="TesDialog3" type="Button" parent="Tester/VBoxContainer2"]
+custom_minimum_size = Vector2(220, 220)
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("13_6x2wi")
+theme_type_variation = &"TombolLanjut"
+metadata/kode = 2
+
+[node name="Label4" type="Label" parent="Tester/VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("13_6x2wi")
+theme_override_font_sizes/font_size = 64
+text = "TES 3"
 
 [connection signal="kata_error_berubah" from="PanelContainerSkor" to="PanelContainerSkor" method="_on_kata_error_berubah"]
 [connection signal="persenan_berubah" from="PanelContainerSkor" to="PanelContainerSkor" method="_on_persenan_berubah"]
@@ -754,4 +806,7 @@ text = "TES MASUKIN DIALOG"
 [connection signal="button_up" from="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTombol/Tombols/ButtonLanjut2" to="PanelContainerSkor" method="_on_button_lanjut_button_up"]
 [connection signal="button_up" from="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTombol/Tombols/ButtonLanjut2/ButtonLanjut" to="PanelContainerSkor" method="_on_button_lanjut_button_up"]
 [connection signal="button_up" from="Tester/VBoxContainer/TesSkor" to="Tester/VBoxContainer/TesSkor" method="_on_button_up"]
-[connection signal="button_up" from="Tester/VBoxContainer/TesDialog" to="Tester/VBoxContainer/TesDialog" method="_on_button_up"]
+[connection signal="button_up" from="Tester/VBoxContainer/TesDialog1" to="Tester/VBoxContainer/TesDialog1" method="_on_button_up"]
+[connection signal="button_up" from="Tester/VBoxContainer2/TesDialog1" to="Tester" method="_on_tes_dialog_1_button_up" binds= [0]]
+[connection signal="button_up" from="Tester/VBoxContainer2/TesDialog2" to="Tester" method="_on_tes_dialog_2_button_up" binds= [1]]
+[connection signal="button_up" from="Tester/VBoxContainer2/TesDialog3" to="Tester" method="_on_tes_dialog_3_button_up" binds= [2]]

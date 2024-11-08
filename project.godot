@@ -36,7 +36,7 @@ directories/dch_directory={
 "character2": "res://UI Asset/Dialog/character2.dch"
 }
 directories/dtl_directory={
-"test": "res://Resources/Timeline/test.dtl"
+"chapter_1": "res://Resources/Timeline/chapter_1.dtl"
 }
 layout/style_list=["res://UI Asset/Dialog/custom_A.tres", "res://UI Asset/Dialog/premade_VN.tres"]
 layout/default_style="res://UI Asset/Dialog/custom_A.tres"
