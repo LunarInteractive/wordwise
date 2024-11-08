@@ -1,9 +1,27 @@
 extends CharacterBody3D
 
 
-const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
+var SPEED: float = 5.0
+var JUMP_VELOCITY: float = 4.5: set = set_jump_velocity, get = get_jump_velocity
+var angle: Array = ["rawr", "juga"]
+var drawer: ImDrawListPtr
 
+@onready var animation_tree: AnimationTree = $AnimationTree
+
+func _ready() -> void:
+	LimboConsole.register_command(jump, "jump", "jump")
+	LimboConsole.register_command(set_jump_velocity, "set_jump_velocity", "set jump velocity")
+	Dialogic.start("test")
+
+
+func _process(_delta: float) -> void:
+	animation_tree.set("parameters/blend_position", Vector2(velocity.x, velocity.z * -1))
+	ImGui.Begin("Player")
+	ImGui.Text("FPS: " + str(Engine.get_frames_per_second()))
+	ImGui.Text("Position: " + str(global_transform.origin))
+	ImGui.Text("Velocity: " + str(velocity))
+
+	ImGui.End()
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -12,7 +30,7 @@ func _physics_process(delta: float) -> void:
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+		velocity.y = JUMP_VELOCITY * 2
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -21,8 +39,22 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
+		#handle directional walk
+		animation_tree.set("parameters/Blend2/blend_amount", input_dir.length())
+
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+func jump():
+	LimboConsole.info("Jump!")
+	velocity.y = JUMP_VELOCITY
+
+func set_jump_velocity(value: float) -> void:
+	LimboConsole.info("Set jump velocity to: " + str(value))
+	JUMP_VELOCITY = value
+
+func get_jump_velocity() -> float:
+	return JUMP_VELOCITY

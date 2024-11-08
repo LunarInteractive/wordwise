@@ -1,12 +1,12 @@
 
 extends Control
 
-@onready var exit: Button = $MarginContainer/VBoxContainer/Exit as Button
-@onready var sign_out: Button = $"MarginContainer/VBoxContainer2/HBoxContainer/VBoxContainer3/Sign Out" as Button
+@onready var out: Button = $MarginContainer/VBoxContainer/HBoxContainer2/Out as Button
+@onready var sign_out: Button = $"MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3/Sign Out" as Button
 
 func _ready() -> void:
 	sign_out.button_down.connect(on_signout_pressed)
-	exit.button_down.connect(on_exit_pressed)
+	out.button_down.connect(on_exit_pressed)
 	set_process(false)
 	
 func on_signout_pressed():

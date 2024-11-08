@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://c0351o5fxp3s4"]
+
+[ext_resource type="Texture2D" uid="uid://dt020orj7el21" path="res://UI Asset/Sprite/UI_Wordwise/Button And Others.png" id="1_hoku5"]
+
+[resource]
+atlas = ExtResource("1_hoku5")
+region = Rect2(1560, 10, 490, 240)

@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbwlp7lbt04kn"]
+
+[ext_resource type="Theme" uid="uid://la05b3bnexvl" path="res://UI Asset/Shader/theme_fajar/theme_fajar.tres" id="1_g85tn"]
+[ext_resource type="Script" path="res://UI Asset/Script/task_tester.gd" id="1_xggq6"]
+[ext_resource type="Texture2D" uid="uid://duhxdsydyaa4b" path="res://UI Asset/Sprite/GUI/Button And Others.png" id="3_55pwg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oylwr"]
+atlas = ExtResource("3_55pwg")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_avinm"]
+texture = SubResource("AtlasTexture_oylwr")
+texture_margin_left = 40.0
+texture_margin_top = 70.0
+texture_margin_right = 100.0
+texture_margin_bottom = 40.0
+region_rect = Rect2(1880, 750, 660, 220)
+
+[node name="TaskTester" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1920.0
+offset_bottom = -1080.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xggq6")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+show_behind_parent = true
+top_level = true
+layout_mode = 0
+offset_left = 112.0
+offset_top = 481.0
+offset_right = 362.0
+offset_bottom = 731.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_g85tn")
+theme_type_variation = &"TombolClaim"
+text = "TASK PANEL"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_g85tn")
+theme_type_variation = &"TombolClaim"
+theme_override_styles/disabled = SubResource("StyleBoxTexture_avinm")
+disabled = true
+text = "TAMBAH ITEM"
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_g85tn")
+theme_type_variation = &"TombolPlay"
+text = "KELUAR"
+
+[connection signal="button_up" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/Button2" to="." method="_on_button_2_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/Button3" to="." method="_on_button_3_button_up"]

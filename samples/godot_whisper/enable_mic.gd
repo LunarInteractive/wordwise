@@ -7,6 +7,7 @@ extends CheckBox
 func _ready():
 	if ProjectSettings.get("audio/driver/enable_input"):
 		mic_label.text = ""
+	_on_toggled(true)
 
 func _on_toggled(toggled_on: bool):
 	if toggled_on:

@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=3 uid="uid://dqo3vmbw7m0ar"]
 
 [ext_resource type="Script" path="res://Objects/Environtment/UI/profile.gd" id="1_woprc"]
-[ext_resource type="FontFile" uid="uid://dlfcvrx0tug2e" path="res://UI Asset/Font/Pixel Dogica/dogicapixel.ttf" id="3_7x5ol"]
-[ext_resource type="Texture2D" uid="uid://gdkc4lyqx8us" path="res://Objects/Environtment/UI/Assets/Button/whitex.tres" id="3_72psf"]
-[ext_resource type="Texture2D" uid="uid://cmu07715hl87m" path="res://UI Asset/Sprite/profile pixel.png" id="4_mio6h"]
+[ext_resource type="Texture2D" uid="uid://nop14tpltyv" path="res://UI Asset/Background/Background_sementara.png" id="2_uv63j"]
+[ext_resource type="Texture2D" uid="uid://nywdk2wpv1yr" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/Button And Others.png" id="4_kt7qd"]
+[ext_resource type="Texture2D" uid="uid://cmu07715hl87m" path="res://UI Asset/Sprite/GUI/profile pixel.png" id="4_mio6h"]
 [ext_resource type="FontFile" uid="uid://c7mvg73i0pnen" path="res://UI Asset/Font/Pixel Dogica/dogicabold.ttf" id="5_1tmfv"]
 [ext_resource type="FontFile" uid="uid://dhrbi74qi4lpc" path="res://UI Asset/Font/Pixel Dogica/dogica.ttf" id="6_a35rn"]
 [ext_resource type="Texture2D" uid="uid://x4ruv8xt1qxv" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/whitprog.tres" id="7_4a0du"]
@@ -11,9 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://c3bwdc7825qnk" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/purpleprog.tres" id="9_3bgqx"]
 [ext_resource type="FontFile" uid="uid://c4oi6yeb8dvyl" path="res://UI Asset/Font/Fredoka-VariableFont_wdth,wght.ttf" id="10_5eywy"]
 
-[sub_resource type="SystemFont" id="SystemFont_a26wf"]
-font_names = PackedStringArray("Impact")
-subpixel_positioning = 0
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dg5o"]
+atlas = ExtResource("4_kt7qd")
+region = Rect2(472, 472, 216, 216)
 
 [node name="Profile" type="Control"]
 layout_mode = 3
@@ -36,81 +36,75 @@ theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 12
 
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_uv63j")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = -48
+theme_override_constants/separation = 375
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 12
-theme_override_fonts/font = SubResource("SystemFont_a26wf")
-theme_override_font_sizes/font_size = 32
+theme_override_constants/separation = 650
+alignment = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_1tmfv")
+theme_override_font_sizes/font_size = 50
 text = "ACCOUNT"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(75, 75)
+[node name="Out" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-theme_override_constants/outline_size = 0
-theme_override_constants/h_separation = 0
-theme_override_constants/icon_max_width = 0
-theme_override_constants/align_to_largest_stylebox = 0
-theme_override_fonts/font = ExtResource("3_7x5ol")
-icon = ExtResource("3_72psf")
+theme_override_constants/icon_max_width = 100
+icon = SubResource("AtlasTexture_4dg5o")
 flat = true
-icon_alignment = 1
-expand_icon = true
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer2/HBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer2/HBoxContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("4_mio6h")
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer2/HBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer2/HBoxContainer/VBoxContainer2"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_1tmfv")
 theme_override_font_sizes/font_size = 30
 text = "Angele"
 
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer2/HBoxContainer/VBoxContainer2"]
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("6_a35rn")
 theme_override_font_sizes/font_size = 25
 text = "SISWA"
 
-[node name="ProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer2/HBoxContainer/VBoxContainer2"]
+[node name="ProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 value = 80.0
 texture_under = ExtResource("7_4a0du")
 texture_over = ExtResource("8_8065e")
 texture_progress = ExtResource("9_3bgqx")
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/VBoxContainer2/HBoxContainer"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 
-[node name="Sign Out" type="Button" parent="MarginContainer/VBoxContainer2/HBoxContainer/VBoxContainer3"]
+[node name="Sign Out" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("10_5eywy")
 theme_override_font_sizes/font_size = 25

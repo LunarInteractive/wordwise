@@ -1,0 +1,412 @@
+[gd_scene load_steps=19 format=3 uid="uid://dru6beado57f8"]
+
+[ext_resource type="Script" path="res://UI Asset/Script/task_item.gd" id="1_6xfpo"]
+[ext_resource type="Texture2D" uid="uid://lnx6onv3ycd5" path="res://UI Asset/Sprite/two-coins.svg" id="2_ig6cp"]
+[ext_resource type="Texture2D" uid="uid://6mam1x45sjhb" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Progress3_BAR.png" id="5_nuwxt"]
+[ext_resource type="Theme" uid="uid://la05b3bnexvl" path="res://UI Asset/Shader/theme_fajar/theme_fajar.tres" id="6_diqdm"]
+[ext_resource type="AudioStream" uid="uid://deesmb07s1up7" path="res://UI Asset/Audio/SFX/zapsplat_multimedia_game_sound_coins_collect_several_at_once_002_40813.mp3" id="8_3dbft"]
+[ext_resource type="Texture2D" uid="uid://crcm6qx3hyusk" path="res://UI Asset/Sprite/Border/Border_NO BG_.png" id="8_grj4t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8vfva"]
+
+[sub_resource type="Animation" id="Animation_ia2n8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GrupTaskItem/PanelEfekKlaim:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GrupTaskItem:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GrupTaskItem:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gv7ir"]
+resource_name = "claimed"
+length = 2.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GrupTaskItem/PanelEfekKlaim:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.143333, 1),
+"transitions": PackedFloat32Array(0.25, 0.143588, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GrupTaskItem:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7, 2),
+"transitions": PackedFloat32Array(1, 0.203063, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(1920, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xcyja"]
+resource_name = "created"
+length = 0.5
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.241484, 1),
+"update": 0,
+"values": [Vector2(0, 114), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GrupTaskItem:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.466517, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GrupTaskItem:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.329877, 1),
+"update": 0,
+"values": [Vector2(0, 114), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sh4wv"]
+_data = {
+"RESET": SubResource("Animation_ia2n8"),
+"claimed": SubResource("Animation_gv7ir"),
+"created": SubResource("Animation_xcyja")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u6lrl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8lnrj"]
+content_margin_top = 8.0
+bg_color = Color(0.384314, 0.333333, 0.541176, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5f57h"]
+atlas = ExtResource("5_nuwxt")
+region = Rect2(160, 1610, 960, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2h3mx"]
+atlas = ExtResource("5_nuwxt")
+region = Rect2(160, 1340, 960, 120)
+margin = Rect2(0, 0, 2, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agbaa"]
+atlas = ExtResource("5_nuwxt")
+region = Rect2(160, 1490, 960, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6vqp"]
+atlas = ExtResource("8_grj4t")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4rl0t"]
+bg_color = Color(1, 1, 0.776471, 1)
+
+[node name="TaskItem" type="PanelContainer" node_paths=PackedStringArray("progress", "tombolPlay", "tombolClaim")]
+custom_minimum_size = Vector2(0, 200)
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 3.0
+offset_bottom = 389.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8vfva")
+script = ExtResource("1_6xfpo")
+progress = NodePath("GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginProgress/ProgressTask")
+tombolPlay = NodePath("GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolPlay")
+tombolClaim = NodePath("GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolClaim")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_sh4wv")
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_3dbft")
+bus = &"SFX"
+
+[node name="GrupTaskItem" type="PanelContainer" parent="."]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxEmpty_u6lrl")
+
+[node name="MarginPanelTask" type="MarginContainer" parent="GrupTaskItem"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 10
+
+[node name="IsiPanel" type="PanelContainer" parent="GrupTaskItem/MarginPanelTask"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("6_diqdm")
+theme_override_styles/panel = SubResource("StyleBoxFlat_8lnrj")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GrupTaskItem/MarginPanelTask/IsiPanel"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_stretch_ratio = 0.5
+theme_override_constants/separation = 20
+
+[node name="MarginIcon" type="MarginContainer" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="IconReward" type="TextureRect" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIcon"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("2_ig6cp")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="MarginIsiTask" type="MarginContainer" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 8.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 8.0
+theme_override_constants/separation = 15
+
+[node name="MarginDeskripsi" type="MarginContainer" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+
+[node name="DeskripsiTask" type="Label" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/MarginDeskripsi"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+mouse_filter = 1
+theme = ExtResource("6_diqdm")
+text = "LOREM IPSUM DOLOR SIT AMET-AMET BELALANG KUPU-KUPU"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 15
+
+[node name="MarginProgress" type="MarginContainer" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 8.0
+
+[node name="ProgressTask" type="TextureProgressBar" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginProgress"]
+custom_minimum_size = Vector2(960, 120)
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("6_diqdm")
+value = 100.0
+nine_patch_stretch = true
+texture_under = SubResource("AtlasTexture_5f57h")
+texture_over = SubResource("AtlasTexture_2h3mx")
+texture_progress = SubResource("AtlasTexture_agbaa")
+texture_progress_offset = Vector2(-1, 0)
+
+[node name="MarginTombol" type="MarginContainer" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+size_flags_stretch_ratio = 2.0
+
+[node name="TombolClaim" type="Button" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol"]
+custom_minimum_size = Vector2(200, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+mouse_filter = 1
+theme = ExtResource("6_diqdm")
+theme_type_variation = &"TombolClaim"
+
+[node name="LabelClaim" type="Label" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolClaim"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -25.5
+offset_bottom = 25.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+mouse_filter = 1
+theme = ExtResource("6_diqdm")
+theme_type_variation = &"LabelTombol"
+text = "CLAIM"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TombolPlay" type="Button" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol"]
+visible = false
+custom_minimum_size = Vector2(200, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+mouse_filter = 1
+theme = ExtResource("6_diqdm")
+theme_type_variation = &"TombolPlay"
+
+[node name="LabelPlay" type="Label" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolPlay"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -25.5
+offset_bottom = 25.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+mouse_filter = 1
+theme = ExtResource("6_diqdm")
+theme_type_variation = &"LabelTombol"
+text = "PLAY
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="BorderPanel" type="NinePatchRect" parent="GrupTaskItem/MarginPanelTask"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_m6vqp")
+region_rect = Rect2(156, 483, 310, 314)
+patch_margin_left = 54
+patch_margin_top = 57
+patch_margin_right = 56
+patch_margin_bottom = 57
+
+[node name="PanelEfekKlaim" type="Panel" parent="GrupTaskItem"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4rl0t")
+
+[connection signal="button_down" from="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolClaim" to="." method="_on_tombol_claim_button_down"]
+[connection signal="button_up" from="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolClaim" to="." method="_on_tombol_claim_button_up"]
+[connection signal="mouse_entered" from="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolClaim" to="." method="_on_tombol_claim_mouse_entered"]
+[connection signal="mouse_exited" from="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolClaim" to="." method="_on_tombol_claim_mouse_exited"]
+[connection signal="pressed" from="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolClaim" to="." method="_on_tombol_claim_pressed"]
+[connection signal="button_down" from="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolPlay" to="." method="_on_tombol_play_button_down"]
+[connection signal="button_up" from="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolPlay" to="." method="_on_tombol_play_button_up"]
+[connection signal="mouse_entered" from="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolPlay" to="." method="_on_tombol_play_mouse_entered"]
+[connection signal="mouse_exited" from="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolPlay" to="." method="_on_tombol_play_mouse_exited"]
+[connection signal="pressed" from="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolPlay" to="." method="_on_tombol_play_pressed"]

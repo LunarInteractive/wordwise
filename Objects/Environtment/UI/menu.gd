@@ -1,11 +1,13 @@
 class_name Menu
 extends Control
-@onready var mode: Button = $"MarginContainer/HBoxContainer/VBC NEXT/Mode"as Button
+
 
 @onready var task: Button = $"MarginContainer/HBoxContainer/VBC Profile and Task/HBoxContainer/Task" as Button
+@onready var mode: Button = $"MarginContainer/HBoxContainer/VBC Setting and Play/HBoxContainer/Mode" as Button
+@onready var play: Button = $"MarginContainer/HBoxContainer/VBC Setting and Play/HBoxContainer/Play" as Button
 
 @onready var setting: Button = $"MarginContainer/HBoxContainer/VBC Setting and Play/Setting" as Button
-@onready var play: Button = $"MarginContainer/HBoxContainer/VBC Setting and Play/Play" as Button
+
 @onready var settings: Settings = $Settings as Settings
 @onready var margin_container: MarginContainer = $MarginContainer as MarginContainer
 @onready var avatar: Button = $"MarginContainer/HBoxContainer/VBC Profile and Task/HBC Profile/TextureRect2/Avatar" as Button
@@ -22,6 +24,9 @@ func on_ava_pressed():
 	
 func on_play_pressed():
 	get_tree().change_scene_to_file("res://Objects/Environtment/UI/play.tscn")
+
+func on_task_pressed():
+	get_tree().change_scene_to_file("res://UI Asset/Scene/task_panel.tscn")
 	
 func on_setting_pressed() -> void:
 	margin_container.visible = false
@@ -47,6 +52,7 @@ func handle_connecting_signal() -> void:
 	
 	avatar.button_down.connect(on_ava_pressed)
 	play.button_down.connect(on_play_pressed)
+	task.button_down.connect(on_task_pressed)
 	
 	custom.button_down.connect(on_custom_pressed)
 	customize.confirm_confirm.connect(on_confirm_on_custom)

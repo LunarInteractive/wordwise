@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://cf3w88e7q78qd"]
 
 [ext_resource type="Script" path="res://Objects/Environtment/UI/menu.gd" id="1_xit0o"]
-[ext_resource type="Texture2D" uid="uid://ce6uyu0k3jgov" path="res://UI Asset/Sprite/Screenshot 2024-10-23 015005.png" id="2_8qd0f"]
+[ext_resource type="Texture2D" uid="uid://nop14tpltyv" path="res://UI Asset/Background/Background_sementara.png" id="2_kx8mq"]
 [ext_resource type="Texture2D" uid="uid://byib156txob2h" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/Border_.png" id="3_uwgme"]
 [ext_resource type="PackedScene" uid="uid://7m43aipf46oo" path="res://Objects/Environtment/UI/settings.tscn" id="4_ijbmb"]
 [ext_resource type="Texture2D" uid="uid://x4ruv8xt1qxv" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/whitprog.tres" id="5_4qexl"]
@@ -13,18 +13,22 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jnio7"]
 atlas = ExtResource("3_uwgme")
-region = Rect2(480, 152, 320, 320)
+region = Rect2(480, 808, 320, 320)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f4hy4"]
 atlas = ExtResource("11_e038j")
-region = Rect2(232, 1848, 232, 224)
+region = Rect2(8, 1848, 224, 224)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fucby"]
 atlas = SubResource("AtlasTexture_f4hy4")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gol3v"]
 atlas = ExtResource("11_e038j")
-region = Rect2(232, 464, 232, 232)
+region = Rect2(8, 464, 224, 232)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_thowd"]
+atlas = ExtResource("11_e038j")
+region = Rect2(8, 696, 224, 224)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2mdkk"]
 atlas = ExtResource("11_e038j")
@@ -33,13 +37,9 @@ region = Rect2(472, 1616, 216, 224)
 [sub_resource type="AtlasTexture" id="AtlasTexture_3oq5s"]
 atlas = SubResource("AtlasTexture_2mdkk")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_thowd"]
-atlas = ExtResource("11_e038j")
-region = Rect2(240, 696, 224, 224)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_c8o3v"]
 atlas = ExtResource("11_e038j")
-region = Rect2(240, 8, 224, 224)
+region = Rect2(8, 8, 224, 224)
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -57,7 +57,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_8qd0f")
+texture = ExtResource("2_kx8mq")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -66,70 +66,60 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 12
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 60
-
-[node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 800
 alignment = 1
 
 [node name="VBC Profile and Task" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
-theme_override_constants/separation = 415
+theme_override_constants/separation = 550
 alignment = 1
 
 [node name="HBC Profile" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBC Profile and Task"]
-custom_minimum_size = Vector2(300, 125)
+custom_minimum_size = Vector2(600, 250)
 layout_mode = 2
 theme_override_constants/separation = 100
 
 [node name="TextureRect2" type="NinePatchRect" parent="MarginContainer/HBoxContainer/VBC Profile and Task/HBC Profile"]
-custom_minimum_size = Vector2(300, 150)
+custom_minimum_size = Vector2(500, 150)
 layout_mode = 2
 texture = SubResource("AtlasTexture_jnio7")
 region_rect = Rect2(0, 0, 320, 320)
-patch_margin_left = 60
-patch_margin_top = 60
-patch_margin_right = 60
-patch_margin_bottom = 60
+patch_margin_left = 64
+patch_margin_top = 64
+patch_margin_right = 64
+patch_margin_bottom = 64
 
 [node name="Avatar" type="Button" parent="MarginContainer/HBoxContainer/VBC Profile and Task/HBC Profile/TextureRect2"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-offset_left = 45.0
-offset_top = 33.0
-offset_right = 145.0
-offset_bottom = 133.0
+offset_left = 61.0
+offset_top = 49.0
+offset_right = 265.0
+offset_bottom = 243.0
 scale = Vector2(0.8, 0.8)
 text = "AVATAR"
 
 [node name="Nama" type="Label" parent="MarginContainer/HBoxContainer/VBC Profile and Task/HBC Profile/TextureRect2"]
 layout_mode = 2
-offset_left = 135.0
-offset_top = 45.0
-offset_right = 292.0
-offset_bottom = 66.0
+offset_left = 249.5
+offset_top = 86.0
+offset_right = 429.5
+offset_bottom = 113.0
 theme_override_fonts/font = ExtResource("5_643lq")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 text = "ANGELE"
 vertical_alignment = 2
 
 [node name="ProgressBar" type="TextureProgressBar" parent="MarginContainer/HBoxContainer/VBC Profile and Task/HBC Profile/TextureRect2"]
 layout_mode = 2
-offset_left = 135.0
-offset_top = 77.0
-offset_right = 268.0
-offset_bottom = 102.0
+offset_left = 238.5
+offset_top = 131.0
+offset_right = 462.5
+offset_bottom = 169.0
 scale = Vector2(0.9, 0.9)
 value = 55.0
 nine_patch_stretch = true
@@ -138,19 +128,14 @@ texture_over = ExtResource("6_m4ken")
 texture_progress = ExtResource("7_ktxwi")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBC Profile and Task"]
-custom_minimum_size = Vector2(0, 150)
+custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
-alignment = 1
 
 [node name="Task" type="Button" parent="MarginContainer/HBoxContainer/VBC Profile and Task/HBoxContainer"]
-custom_minimum_size = Vector2(150, 150)
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-theme_override_colors/font_hover_pressed_color = Color(0.286275, 0.219608, 0.439216, 1)
-theme_override_colors/font_pressed_color = Color(0.286275, 0.219608, 0.439216, 1)
-theme_override_colors/font_focus_color = Color(0.286275, 0.219608, 0.439216, 1)
-theme_override_colors/font_color = Color(0.287792, 0.219095, 0.440122, 1)
 theme_override_constants/outline_size = 5
-theme_override_constants/icon_max_width = 135
+theme_override_constants/icon_max_width = 200
 theme_override_fonts/font = ExtResource("5_643lq")
 theme_override_font_sizes/font_size = 35
 icon = SubResource("AtlasTexture_fucby")
@@ -160,14 +145,10 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="Custom" type="Button" parent="MarginContainer/HBoxContainer/VBC Profile and Task/HBoxContainer"]
-custom_minimum_size = Vector2(150, 100)
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-theme_override_colors/font_hover_pressed_color = Color(0.286275, 0.219608, 0.439216, 1)
-theme_override_colors/font_pressed_color = Color(0.286275, 0.219608, 0.439216, 1)
-theme_override_colors/font_focus_color = Color(0.286275, 0.219608, 0.439216, 1)
-theme_override_colors/font_color = Color(0.287792, 0.219095, 0.440122, 1)
 theme_override_constants/outline_size = 5
-theme_override_constants/icon_max_width = 135
+theme_override_constants/icon_max_width = 200
 theme_override_fonts/font = ExtResource("5_643lq")
 theme_override_font_sizes/font_size = 35
 icon = SubResource("AtlasTexture_gol3v")
@@ -175,40 +156,14 @@ flat = true
 alignment = 0
 icon_alignment = 1
 
-[node name="VBC Mode" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(650, 0)
-layout_mode = 2
-alignment = 1
-
-[node name="VBC NEXT" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-alignment = 1
-
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/VBC NEXT"]
-layout_mode = 2
-theme_override_constants/separation = 550
-
-[node name="Mode" type="Button" parent="MarginContainer/HBoxContainer/VBC NEXT"]
-custom_minimum_size = Vector2(135, 135)
-layout_mode = 2
-theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
-theme_override_constants/icon_max_width = 150
-theme_override_fonts/font = ExtResource("5_643lq")
-theme_override_font_sizes/font_size = 31
-icon = SubResource("AtlasTexture_3oq5s")
-flat = true
-icon_alignment = 2
-expand_icon = true
-
 [node name="VBC Setting and Play" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-theme_override_constants/separation = 400
+theme_override_constants/separation = 550
 alignment = 1
 
 [node name="Setting" type="Button" parent="MarginContainer/HBoxContainer/VBC Setting and Play"]
-custom_minimum_size = Vector2(135, 135)
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
@@ -218,10 +173,27 @@ flat = true
 icon_alignment = 2
 expand_icon = true
 
-[node name="Play" type="Button" parent="MarginContainer/HBoxContainer/VBC Setting and Play"]
-custom_minimum_size = Vector2(175, 175)
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBC Setting and Play"]
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-size_flags_horizontal = 4
+alignment = 2
+
+[node name="Mode" type="Button" parent="MarginContainer/HBoxContainer/VBC Setting and Play/HBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_constants/icon_max_width = 200
+theme_override_fonts/font = ExtResource("5_643lq")
+theme_override_font_sizes/font_size = 31
+icon = SubResource("AtlasTexture_3oq5s")
+flat = true
+icon_alignment = 2
+expand_icon = true
+
+[node name="Play" type="Button" parent="MarginContainer/HBoxContainer/VBC Setting and Play/HBoxContainer"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 0
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0.286275, 0.219608, 0.439216, 1)
 theme_override_constants/outline_size = 5

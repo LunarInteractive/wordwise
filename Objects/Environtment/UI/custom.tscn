@@ -93,7 +93,7 @@ custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
 theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("4_rddeh")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 50
 text = "CHOOSE YOUR CHARACTER!"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -103,7 +103,7 @@ layout_mode = 2
 alignment = 1
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(500, 500)
+custom_minimum_size = Vector2(1000, 750)
 layout_mode = 2
 
 [node name="Main" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer"]
@@ -118,11 +118,11 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/separation = 250
+theme_override_constants/separation = 600
 alignment = 1
 
 [node name="PREV" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/Main/HBoxContainer"]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
@@ -135,7 +135,7 @@ alignment = 0
 expand_icon = true
 
 [node name="Node2D" type="Node2D" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/Main/HBoxContainer"]
-position = Vector2(125, -150)
+position = Vector2(344, -127)
 
 [node name="Sprite" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/Main/HBoxContainer/Node2D"]
 scale = Vector2(10, 10)
@@ -145,7 +145,7 @@ hframes = 2
 region_rect = Rect2(0, 88, 110, 132)
 
 [node name="NEXT" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/Main/HBoxContainer"]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -158,7 +158,7 @@ alignment = 0
 expand_icon = true
 
 [node name="Confirm" type="Button" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(180, 50)
+custom_minimum_size = Vector2(250, 100)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
@@ -166,7 +166,7 @@ theme_override_colors/font_pressed_color = Color(0.384314, 0.333333, 0.541176, 1
 theme_override_colors/font_focus_color = Color(0.384314, 0.333333, 0.541176, 1)
 theme_override_colors/font_color = Color(0.384314, 0.333333, 0.541176, 1)
 theme_override_fonts/font = ExtResource("4_rddeh")
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 25
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_k8in3")
 theme_override_styles/hover = SubResource("StyleBoxTexture_tr24x")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_21f4h")

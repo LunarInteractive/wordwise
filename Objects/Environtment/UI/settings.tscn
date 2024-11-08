@@ -1,12 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://7m43aipf46oo"]
+[gd_scene load_steps=4 format=3 uid="uid://7m43aipf46oo"]
 
 [ext_resource type="Script" path="res://Objects/Environtment/UI/settings.gd" id="1_craxr"]
 [ext_resource type="PackedScene" uid="uid://d7rkg7ufvq46" path="res://Objects/Environtment/UI/setting_tab.tscn" id="2_3q7h0"]
-[ext_resource type="FontFile" uid="uid://dlfcvrx0tug2e" path="res://UI Asset/Font/Pixel Dogica/dogicapixel.ttf" id="3_jseu0"]
-
-[sub_resource type="SystemFont" id="SystemFont_a26wf"]
-font_names = PackedStringArray("Impact")
-subpixel_positioning = 0
+[ext_resource type="FontFile" uid="uid://c7mvg73i0pnen" path="res://UI Asset/Font/Pixel Dogica/dogicabold.ttf" id="2_cuehy"]
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -31,13 +27,14 @@ theme_override_constants/margin_bottom = 12
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 0
+alignment = 1
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.623529, 0.466667, 0.745098, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
-theme_override_fonts/font = SubResource("SystemFont_a26wf")
+theme_override_fonts/font = ExtResource("2_cuehy")
 theme_override_font_sizes/font_size = 32
 text = "SETTINGS"
 horizontal_alignment = 1
@@ -52,11 +49,12 @@ size_flags_vertical = 3
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.623529, 0.466667, 0.745098, 1)
 theme_override_constants/outline_size = 12
 theme_override_constants/h_separation = 12
 theme_override_constants/icon_max_width = 12
 theme_override_constants/align_to_largest_stylebox = 12
-theme_override_fonts/font = ExtResource("3_jseu0")
+theme_override_fonts/font = ExtResource("2_cuehy")
 theme_override_font_sizes/font_size = 14
 text = "EXIT SETTINGS"
 icon_alignment = 2

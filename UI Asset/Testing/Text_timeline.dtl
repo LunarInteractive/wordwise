@@ -1,0 +1,11 @@
+text_character: contoh text 1
+- pilihan 1
+	jump Text_timeline/dialog 2
+- pilihan 2
+	text_character: kamu pilih text 2
+- pilihan 3
+label dialog 2
+unit_test_character: saya testing
+- 
+- 
+- 
