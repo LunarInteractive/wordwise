@@ -1,0 +1,88 @@
+label Level 1 - Cafe
+character: Hi! Can you bring me the menu?
+- Please your menu. I take your order now can?
+- Your menu please, can I now take your order?
+- Here’s your menu. May I take your order now?
+character: I’ll go with a cheesecake and a cup of tea.
+- A cheese cake and a cup of tea. Would you like anything else?
+- A cheese cake and a cup of tea. Anything further?
+- A cheese cake and a cup of tea. Is there anything more?
+character: Can I have a glass of water, please?
+- I’ll be right back with your drink sure.
+- Sure, be I’ll right back with drink your.
+- Sure, I will return shortly with your drink.
+label Level 2 - Hospital
+character: Hello, I need to see the doctor. Can I make an appointment, please?
+- Of course. Which is your name, and what time would you like to arrive?
+- Of course. Please tell me your name and the best time to visit.
+- Of course. What’s your name and when would you like to come in?
+character: My name is Sarah. Do you have any availability tomorrow morning?
+- Yes, we have a slot at 10 AM. Does that work for you?
+- Yes, we have a slot at 10 AM. Does that suit your needs?
+- Yes, we have a slot at 10 AM. Are you able to use that?
+character: That’s perfect. Thank you!
+- My pleasure.
+- It is my pleasure.
+- With pleasure, I say.
+label Level 3 - Clothing Store
+character:  Excuse me. Can I help you? 
+- What is the price of this dress? I like the color.
+- How much is this dress? I like the color.
+- What is the cost of this dress? The color appeals to me.
+character: That’s $100.
+- Please, could you reduce the price?
+- Would you kindly reduce the price?
+- Can you lower the price, please?
+character: I’ll give you a 10% discount.
+- Can you give me a 20% discount?
+- Could you please discount me by 20%?
+- Please give me a discount of 20%.
+character: Hmm, $85. That’s my best deal.
+- Great. I’ll take it. Thanks.
+- I'll accept it. Much thanks.
+- Okay, I'll take it. Thank you.
+label Level 4 - Trip
+character: Hi! I’d like to book a Pulau Seribu Trip, please. 
+- When would you like to go on a trip?
+- When want you to go on a trip?
+- You want to go when on a trip?
+character: It will be on Friday this week.
+- You will be trip how long?
+- How long will your trip be?
+- How long will be you trip?
+character: For three days.
+- How many people is the reservation for and?
+- And how many people for is the reservation?
+- And how many people did you make the reservation for?
+character: There will be two people.
+- Could you please provide your name for the reservation?
+- May I your name for the reservation have, please?
+- Your name may I have for the reservation, please?
+character: Sure, it’s Sarah Rahmani.
+- Great, thank you, Ms. Rahmani. Booked your trip has been, and an email you’ll receive with the booking details shortly.
+- Great, thank you, Ms. Rahmani. I have booked your trip, and you will receive an email with the booking details shortly.
+- Thank you, Ms. Rahmani, great. Your trip has been booked, and email with the booking details you’ll receive shortly.
+label Level 5 - Hotel
+- Greetings for the morning! Hotel ABC. In what way can I assist you?
+- Good morning! ABC Hotel. How can I help you?
+- Good morning! Hotel ABC. How am I able to support you?
+character: Hi! I’d like to book a double room, please.
+- When would you like to check-in?
+- What time would you like to arrive?
+- What time is best for you to check-in?
+character: It will be on Friday this week. 
+- What is the duration of your stay?
+- How long will you be staying?
+- When are you going to be here?
+character: For two nights.
+- What is the size of the reservation for?
+- For what number of people is the reservation made?
+- And how many people is the reservation for?
+character: There will be two people.
+- May I have your name for reservation, please?
+- Please provide your name so I can make the reservation.
+- For reservations, could I please have your name?
+character: Sure, it’s Sarah Rahmani.
+- Fantastic, many thanks. We have reserved your room. It is recommended that you check out by noon on Sunday, and you can check in at 2 p.m. on Friday. Till then, bye.
+- Great, thank you. Your room is reserved. You could check in at 2 p.m. on Friday, and you should check out before noon on Sunday. See you later.
+- Excellent, many thanks. I have reserved your room. On Friday, you could check in at 2:00 PM, and on Sunday, you should check out by 12:00 PM. Until later.

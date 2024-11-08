@@ -761,7 +761,6 @@ layout_mode = 2
 size_flags_horizontal = 0
 theme = ExtResource("13_6x2wi")
 theme_type_variation = &"TombolLanjut"
-metadata/kode = 0
 
 [node name="Label2" type="Label" parent="Tester/VBoxContainer2"]
 layout_mode = 2
@@ -775,7 +774,6 @@ layout_mode = 2
 size_flags_horizontal = 0
 theme = ExtResource("13_6x2wi")
 theme_type_variation = &"TombolLanjut"
-metadata/kode = 1
 
 [node name="Label3" type="Label" parent="Tester/VBoxContainer2"]
 layout_mode = 2
@@ -790,7 +788,6 @@ layout_mode = 2
 size_flags_horizontal = 0
 theme = ExtResource("13_6x2wi")
 theme_type_variation = &"TombolLanjut"
-metadata/kode = 2
 
 [node name="Label4" type="Label" parent="Tester/VBoxContainer2"]
 layout_mode = 2
