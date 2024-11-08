@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://bh5coce6rjsyw"]
+[gd_scene load_steps=10 format=3 uid="uid://yl7knbhs5oae"]
 
-[ext_resource type="Script" path="res://UI Asset/Script/dialog_button.gd" id="1_vxp4b"]
-[ext_resource type="Texture2D" uid="uid://duhxdsydyaa4b" path="res://UI Asset/Sprite/GUI/Button And Others.png" id="2_qxq84"]
-[ext_resource type="Theme" uid="uid://la05b3bnexvl" path="res://UI Asset/Shader/theme_fajar/theme_fajar.tres" id="2_sj5f7"]
+[ext_resource type="Script" path="res://UI Asset/Script/dialog_button.gd" id="1_jo8fs"]
+[ext_resource type="Texture2D" uid="uid://duhxdsydyaa4b" path="res://UI Asset/Sprite/GUI/Button And Others.png" id="2_cojno"]
+[ext_resource type="Theme" uid="uid://la05b3bnexvl" path="res://UI Asset/Shader/theme_fajar/theme_fajar.tres" id="3_hogis"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2l0aa"]
 
@@ -15,17 +15,16 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dj4d2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u01l0"]
-atlas = ExtResource("2_qxq84")
+atlas = ExtResource("2_cojno")
 
 [node name="DialogItem" type="Control" node_paths=PackedStringArray("button_identity")]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 3
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 200.0
 grow_horizontal = 2
 size_flags_horizontal = 3
-script = ExtResource("1_vxp4b")
+script = ExtResource("1_jo8fs")
 button_identity = NodePath("MarginContainer/PanelContainer/Button")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -84,10 +83,9 @@ theme_override_constants/margin_bottom = 75
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/Button/MarginContainer"]
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
-size_flags_horizontal = 4
 size_flags_vertical = 1
 mouse_filter = 1
-theme = ExtResource("2_sj5f7")
+theme = ExtResource("3_hogis")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.333333, 0.333333, 0.333333, 0.776471)
 theme_override_font_sizes/font_size = 72
