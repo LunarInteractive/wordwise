@@ -1,0 +1,14 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://cl4o4remkk8bv"]
+
+[ext_resource type="Texture2D" uid="uid://c0351o5fxp3s4" path="res://UI Asset/Sprite/UI_Wordwise/Bubble_Text/Right/Bubble_Text_Blue.tres" id="1_nj3xb"]
+
+[resource]
+content_margin_left = 50.0
+content_margin_top = 50.0
+content_margin_right = 40.0
+content_margin_bottom = 85.0
+texture = ExtResource("1_nj3xb")
+texture_margin_left = 40.0
+texture_margin_top = 30.0
+texture_margin_right = 140.0
+texture_margin_bottom = 90.0

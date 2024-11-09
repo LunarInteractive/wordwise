@@ -35,17 +35,29 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Player": "res://Objects/Characters/Player/Player.dch",
+"Villager": "res://Objects/Characters/Villagers/Villager.dch",
 "character": "res://UI Asset/Dialog/character.dch",
-"character2": "res://UI Asset/Dialog/character2.dch"
+"character2": "res://UI Asset/Dialog/character2.dch",
+"text_character": "res://UI Asset/Testing/text_character.dch",
+"unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"Text_timeline": "res://UI Asset/Testing/Text_timeline.dtl",
 "chapter_1": "res://Resources/Timeline/chapter_1.dtl",
 "chapter_5": "res://Scenes/Dialog/chapter_5.dtl",
-"chapter_6": "res://Scenes/Dialog/chapter_6.dtl"
+"chapter_6": "res://Scenes/Dialog/chapter_6.dtl",
+"test": "res://Resources/Timeline/test.dtl"
 }
-layout/style_list=["res://UI Asset/Dialog/custom_A.tres", "res://UI Asset/Dialog/premade_VN.tres"]
-layout/default_style="res://UI Asset/Dialog/custom_A.tres"
-variables={}
+glossary/default_case_sensitive=true
+layout/style_list=["res://UI Asset/Testing/Test_Dialog Scene.tres"]
+layout/default_style=""
+variables={
+"Folder": {
+"Error": 0.0,
+"Score": 0.0
+}
+}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -79,9 +91,10 @@ portraits/default_portrait=""
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=2
 window/size/always_on_top=true
 window/size/extend_to_title=true
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [dotnet]
 
