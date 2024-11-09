@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bw2hn21c6id43" path="res://UI Asset/Sprite/UI_Wordwise/Icons/Icon_Back_White.tres" id="3_8ctsx"]
 [ext_resource type="Texture2D" uid="uid://c4jihgqj5boch" path="res://UI Asset/Sprite/UI_Wordwise/Icons/Icon_Continue_White.tres" id="4_4c7dj"]
 [ext_resource type="FontFile" uid="uid://dlfcvrx0tug2e" path="res://UI Asset/Font/Pixel Dogica/dogicapixel.ttf" id="5_8nfns"]
-[ext_resource type="Texture2D" uid="uid://di38t0vbusjgv" path="res://UI Asset/Sprite/UI_Wordwise/Button/Button_Pause_Purple.tres" id="6_t2ohb"]
+[ext_resource type="Texture2D" uid="uid://dsio3haf1d18a" path="res://UI Asset/Sprite/UI_Wordwise/Button/Button_Back_Purple.tres" id="6_5b1ag"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_slx4u"]
 
@@ -171,6 +171,6 @@ offset_left = 27.0
 offset_top = 21.0
 offset_right = 155.0
 offset_bottom = 149.0
-texture_normal = ExtResource("6_t2ohb")
+texture_normal = ExtResource("6_5b1ag")
 ignore_texture_size = true
 stretch_mode = 5

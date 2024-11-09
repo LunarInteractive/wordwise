@@ -95,4 +95,4 @@ script = ExtResource("10_2jp6g")
 name = "Test_Dialog Scene"
 base_overrides = {}
 layers = Array[ExtResource("1_o0es7")]([SubResource("Resource_64nlb"), SubResource("Resource_bacgu"), SubResource("Resource_lyep2"), SubResource("Resource_ftba3"), SubResource("Resource_vtl6i"), SubResource("Resource_7peqk"), SubResource("Resource_w1ap3"), SubResource("Resource_itoce")])
-metadata/_latest_layer = 2
+metadata/_latest_layer = 1
