@@ -37,7 +37,15 @@ albedo_texture = ExtResource("2_kxqkq")
 uv1_triplanar = true
 texture_filter = 5
 
+<<<<<<< HEAD:test_map.tscn
+<<<<<<< Updated upstream
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_5fywf"]
+=======
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_qbjqa"]
+>>>>>>> Stashed changes
+=======
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_pppng"]
+>>>>>>> ed0c0c5a547236311a99d4ffc91df1fc3cf3aef2:Scenes/Development/tes49F1.tmp
 auto_exposure_scale = 0.06
 auto_exposure_speed = 0.01
 dof_blur_far_enabled = true
@@ -122,8 +130,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.01485, 0.0175399, -4.26115)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.31438, 0.0175399, -4.26115)
 
 [node name="Camera3D" type="Camera3D" parent="."]
+<<<<<<< HEAD:test_map.tscn
+<<<<<<< Updated upstream
+transform = Transform3D(0.999995, 9.25164e-13, -1.82097e-12, -4.6298e-13, 0.970998, 0.239053, 1.98902e-12, -0.239051, 0.970992, -0.942234, 5.69855, 935.597)
+attributes = SubResource("CameraAttributesPractical_5fywf")
+=======
+transform = Transform3D(0.999995, 9.96386e-13, -1.98138e-12, -4.92095e-13, 0.970799, 0.239836, 2.16254e-12, -0.239836, 0.970799, -0.942234, 3.76018, 9.9155)
+attributes = SubResource("CameraAttributesPractical_qbjqa")
+>>>>>>> Stashed changes
+=======
 transform = Transform3D(0.999995, 9.96386e-13, -1.98138e-12, -4.92095e-13, 0.970799, 0.239836, 2.16254e-12, -0.239836, 0.970799, 13.6784, 3.69545, 9.91833)
 attributes = SubResource("CameraAttributesPractical_pppng")
+>>>>>>> ed0c0c5a547236311a99d4ffc91df1fc3cf3aef2:Scenes/Development/tes49F1.tmp
 fov = 45.0
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]

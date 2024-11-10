@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://bxefct3ha1r1q"]
+[gd_scene load_steps=14 format=3 uid="uid://bxefct3ha1r1q"]
 
 [ext_resource type="Script" path="res://UI Asset/Script/task_panel.gd" id="1_p11hn"]
 [ext_resource type="Theme" uid="uid://la05b3bnexvl" path="res://UI Asset/Shader/theme_fajar/theme_fajar.tres" id="2_cofrg"]
 [ext_resource type="Texture2D" uid="uid://crcm6qx3hyusk" path="res://UI Asset/Sprite/Border/Border_NO BG_.png" id="3_efe1o"]
 [ext_resource type="Texture2D" uid="uid://duhxdsydyaa4b" path="res://UI Asset/Sprite/GUI/Button And Others.png" id="4_gcsp4"]
 [ext_resource type="Script" path="res://UI Asset/Script/scroll_container.gd" id="5_laakp"]
+[ext_resource type="PackedScene" uid="uid://dru6beado57f8" path="res://UI Asset/Scene/task_item.tscn" id="6_3cuee"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_05j14"]
 bg_color = Color(0, 0, 0, 0.807843)
@@ -190,6 +191,9 @@ custom_minimum_size = Vector2(1600, 0)
 layout_mode = 2
 size_flags_horizontal = 2
 size_flags_vertical = 3
+
+[node name="TaskItem" parent="MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginBadanPanel/ScrollContainer/VBoxContainer" instance=ExtResource("6_3cuee")]
+layout_mode = 2
 
 [connection signal="button_up" from="MarginPanelTask/PanelContainer/VBoxContainer/HeaderPanel/MarginHeader/MarginClose/CloseButton2" to="." method="_on_button_2_button_up"]
 [connection signal="button_up" from="MarginPanelTask/PanelContainer/VBoxContainer/HeaderPanel/MarginHeader/MarginClose2/CloseButton" to="." method="_on_button_2_button_up"]

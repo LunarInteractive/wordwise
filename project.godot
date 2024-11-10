@@ -48,6 +48,8 @@ directories/dtl_directory={
 "chapter_1": "res://Scenes/Dialog/chapter_1.dtl",
 "chapter_5": "res://Scenes/Dialog/chapter_5.dtl",
 "chapter_6": "res://Scenes/Dialog/chapter_6.dtl",
+"chapter_3": "res://Scenes/Dialogue/chapter_3.dtl",
+"chapter_4": "res://Scenes/Dialogue/chapter_4.dtl",
 "test": "res://Resources/Timeline/test.dtl"
 }
 glossary/default_case_sensitive=true
