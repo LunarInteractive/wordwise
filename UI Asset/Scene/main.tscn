@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b4e2ffvd0430m"]
+[gd_scene load_steps=20 format=3 uid="uid://b4e2ffvd0430m"]
 
 [ext_resource type="Theme" uid="uid://bi2yom4nqtt2b" path="res://UI Asset/Shader/TestTheme.tres" id="1_k7uvr"]
 [ext_resource type="Script" path="res://UI Asset/Script/main.gd" id="2_bg10g"]
@@ -7,8 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://lnx6onv3ycd5" path="res://UI Asset/Sprite/two-coins.svg" id="5_yy2ga"]
 [ext_resource type="Script" path="res://UI Asset/Script/BtnAnimation.gd" id="6_ccbp1"]
 [ext_resource type="Script" path="res://UI Asset/Script/SaveMaterial.gd" id="6_iihjy"]
+[ext_resource type="Texture2D" uid="uid://dsio3haf1d18a" path="res://UI Asset/Sprite/UI_Wordwise/Button/Button_Back_Purple.tres" id="7_8yvl6"]
 [ext_resource type="Script" path="res://UI Asset/Script/CollectCoin.gd" id="7_w3xda"]
 [ext_resource type="AudioStream" uid="uid://deesmb07s1up7" path="res://UI Asset/Audio/SFX/zapsplat_multimedia_game_sound_coins_collect_several_at_once_002_40813.mp3" id="8_lykks"]
+[ext_resource type="Texture2D" uid="uid://1kcdmjeu0nhx" path="res://UI Asset/Sprite/UI_Wordwise/Button/Button_Back_White.tres" id="8_rpddc"]
 [ext_resource type="AudioStream" uid="uid://cuh4bmn6ib2df" path="res://UI Asset/Audio/SFX/zapsplat_multimedia_game_sound_simple_retro_coin_or_point_collect_001_73255.mp3" id="9_bnv3b"]
 [ext_resource type="AudioStream" uid="uid://bu5vw0k231nhq" path="res://UI Asset/Audio/Music/Rolemusic - The White Frame.mp3" id="10_m70fx"]
 
@@ -229,6 +231,17 @@ text = "Reset Coins
 "
 
 [node name="Node2" type="Node" parent="ButtonBox/ResetCoinButton"]
+script = ExtResource("6_ccbp1")
+hover_scale = Vector2(1.1, 1.1)
+transition_type = 11
+
+[node name="TextureButton" type="TextureButton" parent="ButtonBox"]
+layout_mode = 2
+texture_normal = ExtResource("7_8yvl6")
+texture_pressed = ExtResource("8_rpddc")
+texture_hover = ExtResource("8_rpddc")
+
+[node name="Node2" type="Node" parent="ButtonBox/TextureButton"]
 script = ExtResource("6_ccbp1")
 hover_scale = Vector2(1.1, 1.1)
 transition_type = 11

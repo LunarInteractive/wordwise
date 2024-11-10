@@ -144,6 +144,7 @@ layout_mode = 2
 alignment = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="Dialog_Panel/HBoxContainer/NpcPanel/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 90
 theme_override_constants/margin_bottom = 25
@@ -403,6 +404,7 @@ patch_margin_bottom = 159
 
 [node name="Topbar" type="MarginContainer" parent="Popup_Speech/PanelContainer/MarginContainer"]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/margin_bottom = 415
 
 [node name="PanelContainerSkor" type="PanelContainer" parent="." node_paths=PackedStringArray("angka_persen", "angka_total_error", "angka_kata_eror", "label_lulus", "label_cobalagi", "label_desc_error", "label_desc_kata", "tombol_lanjut")]
@@ -705,6 +707,7 @@ theme_override_font_sizes/font_size = 42
 text = "TRY AGAIN"
 
 [node name="Tester" type="PanelContainer" parent="." node_paths=PackedStringArray("panel_prompt", "v_box_container", "npc_panel")]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

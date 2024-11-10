@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 
 
 func _on_texture_button_pressed() -> void:
-	SceneTransition.Change_scene("res://UI Asset/Scene/LevelSelection.tscn")
+	.Change_scene("res://UI Asset/Scene/LevelSelection.tscn")

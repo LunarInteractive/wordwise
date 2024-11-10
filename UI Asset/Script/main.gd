@@ -31,6 +31,7 @@ func _on_reset_coin_button_pressed() -> void:
 	Coins_value = 0
 	print(Coins_value)
 	coin_values.text = str(Coins_value)
+	get_tree().change_scene_to_file("res://UI Asset/Scene/LevelSelection.tscn")
 
 
 func _on_music_slider_value_changed(value: float) -> void:

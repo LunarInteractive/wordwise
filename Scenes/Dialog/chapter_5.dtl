@@ -1,80 +1,80 @@
 label Level 1 - Lesson
 character: This biology lesson is very difficult for me to understand, can you teach me?
 - Which one are you about still confused, okay?
-- Okay, which one still confused are you about?
 - Okay, which one are you still unsure about?
 character: I'm still confused about the respiratory system material.
 - Well then, we schedule a study session together how about?
 - How about we arrange a study session together?
 - How about we together schedule a study session then, well?
-character: Good idea, thank you for helping me.
-- I’ll let later you know, no problem!
-- Problem no! Let you know I’ll later.
-- It’s no problem! I will inform you later.
-character: Okay.
-label Level 2 - Selling
-character: I'm tired of selling alone, I haven't reached my target yet.
-- There is no one else to help you?
-- Is there no anyone else to help you?
-- Isn’t there anyone else who can help you?
-character: It's not my intention to sell alone, but it turns out you can't do it.
-- Like you would me to help with selling you?
-- Do you want me to help you with selling?
-- You would like me to help you selling with?
-character: Ah, don't bother. I'm just complaining.
-- I help you want; you’re friend my.
-- Want I to help you; my friend you’re.
-- I want to help you because you are my friend.
-character: I'm so uncomfortable. It's fine if that's what you want, thank you very much.
-- At all no problem, to help I’m happy.
-- No problem at all, happy I’m to help.
-- It’s no problem at all, I’m happy to offer my help.
-label Level 3 - Supermarket
-character: Uhhhh, it's so high I can't reach it.
-- How can help you I, hello?
-- Hello, help I can how you?
-- Hello, how may I assist you?
-character: I want that toy but it's too high.
-- For you I’ll get it. Alone you are here?
-- I will fetch it for you. Are you here by yourself?
-- I’ll get it you for. Here are you alone?
-character: No, I'm with my mom here, she's buying kitchen ingredients.
-- Would you me like to take your mom to?
-- Like you would me to take you to your mom?
-- Do you want me to take you to your mom?
-character: Yes, I'm confused about the direction, this place is very big.
-- Haha! Well, go see your mom let’s.
-- Haha! Well, let’s go see mom your.
-- Haha! Alright, let’s go visit your mom.
-label Level 4 - Traffic Lights
-- Hello Grandma, it seems you want to the road cross. Help you let me.
-- Hello, Grandma. Want you to cross the road it seems like. Help you let me.
-- Hello, Grandma. I see that you want to cross the road. Let me help you.
-character: Ah no need, I can be alone.
-- Help you it’s okay for me to.
-- Okay for me it is to help you.
-- I’m happy to help you.
-character: Wow you're such a good kid. Well, let's cross together.
-- I’ve arrived, Grandma, so time to say goodbye it is.
-- I have arrived, Grandma, so now it’s time to say goodbye.
-- Arrived I have, Grandma, so it’s time to say goodbye.
-character: Thank you. May your deeds be rewarded with good.
-- Grandma, it’s pleasure my.
-- My pleasure it is, Grandma.
-- I’m happy to help, Grandma.
-label Level 5 - Hospital
-- Sir, excuse me. You’re having walking trouble; assist you let me.
-- Excuse me, sir. Trouble walking you’re having; assist let me you.
-- Excuse me, sir. You seem to be having trouble walking, I will assist you.
-character: Well nurse thank you for helping, my leg hurts a lot.
-- I’d be happy, sir, to. Your room take you I’ll.
-- Happy I’d be to, sir. Take you to your room I’ll.
-- I would be happy to do that, sir. I will take you to your room.
-character: Can you help me to get my phone? I want to call my family.
-- Alright, retrieve I’ll it for you.
-- Okay, I will get it for you.
-- I’ll retrieve for you it alright.
-character: Sorry for the trouble.
-- It’s no problem, sir at all. Part of my job is helping you.
-- No problem at all, sir, is it. Helping you part of my job is.
-- There is no problem at all, sir. Assisting you is part of my job.
+	- Okay, which one still confused are you about?
+	character: Good idea, thank you for helping me.
+	- I’ll let later you know, no problem!
+	- Problem no! Let you know I’ll later.
+	- It’s no problem! I will inform you later.
+	character: Okay.
+	label Level 2 - Selling
+	character: I'm tired of selling alone, I haven't reached my target yet.
+	- There is no one else to help you?
+	- Is there no anyone else to help you?
+	- Isn’t there anyone else who can help you?
+	character: It's not my intention to sell alone, but it turns out you can't do it.
+	- Like you would me to help with selling you?
+	- Do you want me to help you with selling?
+	- You would like me to help you selling with?
+	character: Ah, don't bother. I'm just complaining.
+	- I help you want; you’re friend my.
+	- Want I to help you; my friend you’re.
+	- I want to help you because you are my friend.
+	character: I'm so uncomfortable. It's fine if that's what you want, thank you very much.
+	- At all no problem, to help I’m happy.
+	- No problem at all, happy I’m to help.
+	- It’s no problem at all, I’m happy to offer my help.
+	label Level 3 - Supermarket
+	character: Uhhhh, it's so high I can't reach it.
+	- How can help you I, hello?
+	- Hello, help I can how you?
+	- Hello, how may I assist you?
+	character: I want that toy but it's too high.
+	- For you I’ll get it. Alone you are here?
+	- I will fetch it for you. Are you here by yourself?
+	- I’ll get it you for. Here are you alone?
+	character: No, I'm with my mom here, she's buying kitchen ingredients.
+	- Would you me like to take your mom to?
+	- Like you would me to take you to your mom?
+	- Do you want me to take you to your mom?
+	character: Yes, I'm confused about the direction, this place is very big.
+	- Haha! Well, go see your mom let’s.
+	- Haha! Well, let’s go see mom your.
+	- Haha! Alright, let’s go visit your mom.
+	label Level 4 - Traffic Lights
+	- Hello Grandma, it seems you want to the road cross. Help you let me.
+	- Hello, Grandma. Want you to cross the road it seems like. Help you let me.
+	- Hello, Grandma. I see that you want to cross the road. Let me help you.
+	character: Ah no need, I can be alone.
+	- Help you it’s okay for me to.
+	- Okay for me it is to help you.
+	- I’m happy to help you.
+	character: Wow you're such a good kid. Well, let's cross together.
+	- I’ve arrived, Grandma, so time to say goodbye it is.
+	- I have arrived, Grandma, so now it’s time to say goodbye.
+	- Arrived I have, Grandma, so it’s time to say goodbye.
+	character: Thank you. May your deeds be rewarded with good.
+	- Grandma, it’s pleasure my.
+	- My pleasure it is, Grandma.
+	- I’m happy to help, Grandma.
+	label Level 5 - Hospital
+	- Sir, excuse me. You’re having walking trouble; assist you let me.
+	- Excuse me, sir. Trouble walking you’re having; assist let me you.
+	- Excuse me, sir. You seem to be having trouble walking, I will assist you.
+	character: Well nurse thank you for helping, my leg hurts a lot.
+	- I’d be happy, sir, to. Your room take you I’ll.
+	- Happy I’d be to, sir. Take you to your room I’ll.
+	- I would be happy to do that, sir. I will take you to your room.
+	character: Can you help me to get my phone? I want to call my family.
+	- Alright, retrieve I’ll it for you.
+	- Okay, I will get it for you.
+	- I’ll retrieve for you it alright.
+	character: Sorry for the trouble.
+	- It’s no problem, sir at all. Part of my job is helping you.
+	- No problem at all, sir, is it. Helping you part of my job is.
+	- There is no problem at all, sir. Assisting you is part of my job.
