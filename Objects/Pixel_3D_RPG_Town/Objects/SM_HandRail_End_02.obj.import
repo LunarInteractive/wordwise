@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bopdr7ohitd6i"
+path="res://.godot/imported/SM_HandRail_End_02.obj-7af48611df46e0cfd62ab31ed0061be5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SM_HandRail_End_02.obj-7af48611df46e0cfd62ab31ed0061be5.mesh"]
+
+source_file="res://Objects/Pixel_3D_RPG_Town/Objects/SM_HandRail_End_02.obj"
+dest_files=["res://.godot/imported/SM_HandRail_End_02.obj-7af48611df46e0cfd62ab31ed0061be5.mesh", "res://.godot/imported/SM_HandRail_End_02.obj-7af48611df46e0cfd62ab31ed0061be5.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

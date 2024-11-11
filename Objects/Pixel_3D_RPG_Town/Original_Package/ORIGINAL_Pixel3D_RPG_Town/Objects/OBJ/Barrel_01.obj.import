@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://mob217j38ibe"
+path="res://.godot/imported/Barrel_01.obj-f1b9def675c22e5bee6ce6c10175b5b7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Barrel_01.obj-f1b9def675c22e5bee6ce6c10175b5b7.mesh"]
+
+source_file="res://Objects/Pixel_3D_RPG_Town/Original_Package/ORIGINAL_Pixel3D_RPG_Town/Objects/OBJ/Barrel_01.obj"
+dest_files=["res://.godot/imported/Barrel_01.obj-f1b9def675c22e5bee6ce6c10175b5b7.mesh", "res://.godot/imported/Barrel_01.obj-f1b9def675c22e5bee6ce6c10175b5b7.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dgwhyk0ynp4sl"
+path="res://.godot/imported/SM_Market_Fruitbox_02.obj-b17c4f6c9e967a9c5547bafa9092562d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SM_Market_Fruitbox_02.obj-b17c4f6c9e967a9c5547bafa9092562d.mesh"]
+
+source_file="res://Objects/Pixel_3D_RPG_Town/Objects/SM_Market_Fruitbox_02.obj"
+dest_files=["res://.godot/imported/SM_Market_Fruitbox_02.obj-b17c4f6c9e967a9c5547bafa9092562d.mesh", "res://.godot/imported/SM_Market_Fruitbox_02.obj-b17c4f6c9e967a9c5547bafa9092562d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

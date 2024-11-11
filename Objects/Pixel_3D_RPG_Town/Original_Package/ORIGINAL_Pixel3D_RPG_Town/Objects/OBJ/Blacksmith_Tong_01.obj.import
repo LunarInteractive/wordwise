@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cwa4swdgnquxw"
+path="res://.godot/imported/Blacksmith_Tong_01.obj-5059a869c62260fb88b4f4852eb2c526.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Blacksmith_Tong_01.obj-5059a869c62260fb88b4f4852eb2c526.mesh"]
+
+source_file="res://Objects/Pixel_3D_RPG_Town/Original_Package/ORIGINAL_Pixel3D_RPG_Town/Objects/OBJ/Blacksmith_Tong_01.obj"
+dest_files=["res://.godot/imported/Blacksmith_Tong_01.obj-5059a869c62260fb88b4f4852eb2c526.mesh", "res://.godot/imported/Blacksmith_Tong_01.obj-5059a869c62260fb88b4f4852eb2c526.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

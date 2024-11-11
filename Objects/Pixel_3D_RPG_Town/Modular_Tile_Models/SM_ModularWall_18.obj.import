@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://crktt5k3wgyy6"
+path="res://.godot/imported/SM_ModularWall_18.obj-8a03537ce28be9e32799822a7bd0775a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SM_ModularWall_18.obj-8a03537ce28be9e32799822a7bd0775a.mesh"]
+
+source_file="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularWall_18.obj"
+dest_files=["res://.godot/imported/SM_ModularWall_18.obj-8a03537ce28be9e32799822a7bd0775a.mesh", "res://.godot/imported/SM_ModularWall_18.obj-8a03537ce28be9e32799822a7bd0775a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ceh7kfbitebpd"
+path="res://.godot/imported/Market_Armour_03.obj-e5c9f2faca8d94791cb9b1baf4617e26.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Market_Armour_03.obj-e5c9f2faca8d94791cb9b1baf4617e26.mesh"]
+
+source_file="res://Objects/Pixel_3D_RPG_Town/Original_Package/ORIGINAL_Pixel3D_RPG_Town/Objects/OBJ/Market_Armour_03.obj"
+dest_files=["res://.godot/imported/Market_Armour_03.obj-e5c9f2faca8d94791cb9b1baf4617e26.mesh", "res://.godot/imported/Market_Armour_03.obj-e5c9f2faca8d94791cb9b1baf4617e26.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

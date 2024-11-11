@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://u22613vhalgx"
+path="res://.godot/imported/BlackSmith_Shop_sign_01.obj-8ba29dcbefc03b62ba64c47c1102eb2f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/BlackSmith_Shop_sign_01.obj-8ba29dcbefc03b62ba64c47c1102eb2f.mesh"]
+
+source_file="res://Objects/Pixel_3D_RPG_Town/Original_Package/ORIGINAL_Pixel3D_RPG_Town/Objects/OBJ/BlackSmith_Shop_sign_01.obj"
+dest_files=["res://.godot/imported/BlackSmith_Shop_sign_01.obj-8ba29dcbefc03b62ba64c47c1102eb2f.mesh", "res://.godot/imported/BlackSmith_Shop_sign_01.obj-8ba29dcbefc03b62ba64c47c1102eb2f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

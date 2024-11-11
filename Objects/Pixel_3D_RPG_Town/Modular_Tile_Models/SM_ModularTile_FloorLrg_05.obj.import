@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://die1i6ojcud0h"
+path="res://.godot/imported/SM_ModularTile_FloorLrg_05.obj-e6013505021b563bb2309255ba8fbf35.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SM_ModularTile_FloorLrg_05.obj-e6013505021b563bb2309255ba8fbf35.mesh"]
+
+source_file="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorLrg_05.obj"
+dest_files=["res://.godot/imported/SM_ModularTile_FloorLrg_05.obj-e6013505021b563bb2309255ba8fbf35.mesh", "res://.godot/imported/SM_ModularTile_FloorLrg_05.obj-e6013505021b563bb2309255ba8fbf35.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

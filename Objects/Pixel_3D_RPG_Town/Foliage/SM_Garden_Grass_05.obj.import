@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cos05l46vk3iq"
+path="res://.godot/imported/SM_Garden_Grass_05.obj-514e4a4988847eca8afaed34cef9378e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SM_Garden_Grass_05.obj-514e4a4988847eca8afaed34cef9378e.mesh"]
+
+source_file="res://Objects/Pixel_3D_RPG_Town/Foliage/SM_Garden_Grass_05.obj"
+dest_files=["res://.godot/imported/SM_Garden_Grass_05.obj-514e4a4988847eca8afaed34cef9378e.mesh", "res://.godot/imported/SM_Garden_Grass_05.obj-514e4a4988847eca8afaed34cef9378e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

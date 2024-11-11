@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://chp1l7cmsnp5p"
+path="res://.godot/imported/Blacksmith_Unfinished_Sword_01.obj-33ff697e80d2c11aa3403f47f0c95c99.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Blacksmith_Unfinished_Sword_01.obj-33ff697e80d2c11aa3403f47f0c95c99.mesh"]
+
+source_file="res://Objects/Pixel_3D_RPG_Town/Original_Package/ORIGINAL_Pixel3D_RPG_Town/Objects/OBJ/Blacksmith_Unfinished_Sword_01.obj"
+dest_files=["res://.godot/imported/Blacksmith_Unfinished_Sword_01.obj-33ff697e80d2c11aa3403f47f0c95c99.mesh", "res://.godot/imported/Blacksmith_Unfinished_Sword_01.obj-33ff697e80d2c11aa3403f47f0c95c99.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

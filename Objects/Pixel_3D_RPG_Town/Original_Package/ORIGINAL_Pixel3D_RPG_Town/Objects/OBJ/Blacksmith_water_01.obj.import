@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bcwu6dsgv52uv"
+path="res://.godot/imported/Blacksmith_water_01.obj-bf8d8b667b7f1ef51e68954d1d5b9198.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Blacksmith_water_01.obj-bf8d8b667b7f1ef51e68954d1d5b9198.mesh"]
+
+source_file="res://Objects/Pixel_3D_RPG_Town/Original_Package/ORIGINAL_Pixel3D_RPG_Town/Objects/OBJ/Blacksmith_water_01.obj"
+dest_files=["res://.godot/imported/Blacksmith_water_01.obj-bf8d8b667b7f1ef51e68954d1d5b9198.mesh", "res://.godot/imported/Blacksmith_water_01.obj-bf8d8b667b7f1ef51e68954d1d5b9198.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dq3xl6i48glg2"
+path="res://.godot/imported/SM_HouseAddon_Chimney_02.obj-264a8dd6f2ad7ff412df3ff6907e2f76.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SM_HouseAddon_Chimney_02.obj-264a8dd6f2ad7ff412df3ff6907e2f76.mesh"]
+
+source_file="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Chimney_02.obj"
+dest_files=["res://.godot/imported/SM_HouseAddon_Chimney_02.obj-264a8dd6f2ad7ff412df3ff6907e2f76.mesh", "res://.godot/imported/SM_HouseAddon_Chimney_02.obj-264a8dd6f2ad7ff412df3ff6907e2f76.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

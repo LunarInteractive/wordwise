@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cn28lorae5tjc"
+path="res://.godot/imported/Garden_03.obj-a9e7cebf6c68f16b1f6ed103cfb8a0bc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Garden_03.obj-a9e7cebf6c68f16b1f6ed103cfb8a0bc.mesh"]
+
+source_file="res://Objects/Pixel_3D_RPG_Town/Original_Package/ORIGINAL_Pixel3D_RPG_Town/Objects/OBJ/Garden_03.obj"
+dest_files=["res://.godot/imported/Garden_03.obj-a9e7cebf6c68f16b1f6ed103cfb8a0bc.mesh", "res://.godot/imported/Garden_03.obj-a9e7cebf6c68f16b1f6ed103cfb8a0bc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

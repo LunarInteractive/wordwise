@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bui207pvt2bid"
+path="res://.godot/imported/SM_ModularHouse_Roof_01.obj-3d507982ca596db798e423b907d165ce.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SM_ModularHouse_Roof_01.obj-3d507982ca596db798e423b907d165ce.mesh"]
+
+source_file="res://Objects/Pixel_3D_RPG_Town/Modular_Houses/SM_ModularHouse_Roof_01.obj"
+dest_files=["res://.godot/imported/SM_ModularHouse_Roof_01.obj-3d507982ca596db798e423b907d165ce.mesh", "res://.godot/imported/SM_ModularHouse_Roof_01.obj-3d507982ca596db798e423b907d165ce.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

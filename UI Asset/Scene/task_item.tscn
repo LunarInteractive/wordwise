@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://UI Asset/Script/task_item.gd" id="1_6xfpo"]
 [ext_resource type="Texture2D" uid="uid://lnx6onv3ycd5" path="res://UI Asset/Sprite/two-coins.svg" id="2_ig6cp"]
-[ext_resource type="Texture2D" uid="uid://6mam1x45sjhb" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Progress3_BAR.png" id="5_nuwxt"]
+[ext_resource type="Texture2D" uid="uid://clqvscxff8680" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Progress3_BAR.png" id="5_nuwxt"]
 [ext_resource type="Theme" uid="uid://la05b3bnexvl" path="res://UI Asset/Shader/theme_fajar/theme_fajar.tres" id="6_diqdm"]
 [ext_resource type="AudioStream" uid="uid://deesmb07s1up7" path="res://UI Asset/Audio/SFX/zapsplat_multimedia_game_sound_coins_collect_several_at_once_002_40813.mp3" id="8_3dbft"]
 [ext_resource type="Texture2D" uid="uid://crcm6qx3hyusk" path="res://UI Asset/Sprite/Border/Border_NO BG_.png" id="8_grj4t"]
