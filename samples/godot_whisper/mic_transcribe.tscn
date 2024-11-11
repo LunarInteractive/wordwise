@@ -26,10 +26,10 @@ script = ExtResource("1_d8spe")
 
 [node name="MicPlayer" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamMicrophone_rhq81")
+bus = &"Record"
 
 [node name="AudioPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_qetor")
-autoplay = true
 
 [node name="Panel" type="Panel" parent="."]
 custom_minimum_size = Vector2(400, 400)
@@ -76,6 +76,7 @@ text = "Enable Microphone in Project Settings -> audio/driver/enable_input"
 [node name="CaptureStreamToText" type="SpeechToText" parent="."]
 language_model = ExtResource("6_1ttbt")
 script = ExtResource("5_c8lup")
+recording = false
 maximum_sentence_time = 10
 
 [connection signal="toggled" from="HBoxContainer/MicToggle" to="HBoxContainer/MicToggle" method="_on_toggled"]

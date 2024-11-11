@@ -1,10 +1,8 @@
 extends PanelContainer
+@onready var audio_stream_player = $MarginContainer/VBoxContainer/AudioStreamPlayer
+@onready var speech_to_text = $MarginContainer/VBoxContainer/SpeechToText
+@onready var rich_text_label = $MarginContainer/VBoxContainer/RichTextLabel
 
 
-# Called when the node enters the scene tree for the first time.
-
-	
-
-
-func _on_tes_dialog_1_button_up(extra_arg_0):
-	pass # Replace with function body.
+# Isinya variable children agar mudah diakses
+#TODO: menambahkan tombol close

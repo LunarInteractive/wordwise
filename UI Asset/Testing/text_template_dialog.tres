@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=8 format=3 uid="uid://dqukxprroc8uy"]
+
+[ext_resource type="PackedScene" uid="uid://syki6k0e6aac" path="res://addons/dialogic/Modules/DefaultLayoutParts/Base_TextBubble/text_bubble_base.tscn" id="1_62xp5"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_3258o"]
+[ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="3_n83q6"]
+[ext_resource type="PackedScene" uid="uid://d2it0xiap3gnt" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Textbubble/text_bubble_layer.tscn" id="4_c8h78"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="5_nv1yf"]
+
+[sub_resource type="Resource" id="Resource_yr0wl"]
+script = ExtResource("2_3258o")
+scene = ExtResource("3_n83q6")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_anw4m"]
+script = ExtResource("2_3258o")
+scene = ExtResource("4_c8h78")
+overrides = {
+"choices_base_theme": "\"res://UI Asset/Sprite/GUI/Bubble_Text.tres\""
+}
+
+[resource]
+script = ExtResource("5_nv1yf")
+name = "text_template_dialog"
+base_scene = ExtResource("1_62xp5")
+base_overrides = {}
+layers = Array[ExtResource("2_3258o")]([SubResource("Resource_yr0wl"), SubResource("Resource_anw4m")])
+metadata/_latest_layer = 1

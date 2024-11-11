@@ -18,10 +18,13 @@ var dialog_idx: int = -1
 @onready var bank_teks:Array[Control] = []
 @export var npc_panel : Node
 #@export var dialog_panel : Node
-@onready var ngeteh = Dialogic.preload_timeline("res://Resources/Timeline/chapter_1.dtl")
+@export var path : DialogicTimeline
+@onready var ngeteh = Dialogic.preload_timeline(path)
 
-const CHARACTER = preload("res://UI Asset/Dialog/character.dch")
-const CHARACTER_2 = preload("res://UI Asset/Dialog/character2.dch")
+#sinyal untuk mengabari ada choices baru yang di load (setelah load timeline/level?)
+signal lapor_atasan
+#const CHARACTER = preload("res://UI Asset/Dialog/character.dch")
+#const CHARACTER_2 = preload("res://UI Asset/Dialog/character2.dch")
 
 func _ready():
 	coba_ambil = read_json_file("res://UI Asset/Script/tes_data.json")
@@ -34,10 +37,12 @@ func tiap_button(kode:int):
 	var kode_soal:int = kode
 	#if Dialogic.current_timeline != null:
 		#return
-	print(kode)
+	#print(kode)
 	#ngeteh.register_character(CHARACTER,npc_panel)
 	#ngeteh.register_character(CHARACTER_2,dialog_panel)
-	print(ngeteh.events)
+	
+	
+	
 	var yea := 7 * kode_soal
 	reset_dialog()
 	#if ngeteh
@@ -63,7 +68,7 @@ func tiap_button(kode:int):
 		dialog_items[n].connect("disable_other", disablekan)
 		#dialog_items[dialog_idx].disable_other.connect(disablekan.bind([toggle_button, button_identity]))
 		#print(dialog_items[dialog_idx].button_identity)
-	print(dialog_items.size())
+	#print(dialog_items.size())
 			
 func showkan(pesan: bool):
 
@@ -126,3 +131,9 @@ func _on_tes_dialog_2_button_up(extra_arg_0):
 
 func _on_tes_dialog_3_button_up(extra_arg_0):
 	tiap_button(extra_arg_0) # Replace with function body.
+
+
+func _on_tes_dialogic_button_up():
+	var dialogic = Dialogic.start(path) # Replace with function body.
+	#print("klik")
+	lapor_atasan.emit(true)

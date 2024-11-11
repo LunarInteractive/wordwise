@@ -22,18 +22,21 @@ custom_minimum_size = Vector2(0, 200)
 layout_mode = 3
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 200.0
 grow_horizontal = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_vxp4b")
 button_identity = NodePath("MarginContainer/PanelContainer/Button")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 custom_minimum_size = Vector2(0, 250)
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = 15
 anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 50.0
 grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 10
@@ -41,11 +44,14 @@ theme_override_constants/margin_bottom = 20
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxEmpty_2l0aa")
 
 [node name="Button" type="Button" parent="MarginContainer/PanelContainer"]
+custom_minimum_size = Vector2(340, 195)
 layout_mode = 2
+size_flags_vertical = 4
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_04d7y")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_7k12a")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_877ks")
@@ -67,7 +73,7 @@ region_rect = Rect2(2060, 10, 490, 240)
 patch_margin_left = 40
 patch_margin_top = 30
 patch_margin_right = 140
-patch_margin_bottom = 89
+patch_margin_bottom = 90
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/Button"]
 layout_mode = 1
@@ -77,23 +83,22 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 15
+theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 40
-theme_override_constants/margin_bottom = 75
+theme_override_constants/margin_bottom = 80
 
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/Button/MarginContainer"]
-custom_minimum_size = Vector2(500, 0)
+clip_contents = true
+custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 1
 mouse_filter = 1
 theme = ExtResource("2_sj5f7")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.333333, 0.333333, 0.333333, 0.776471)
-theme_override_font_sizes/font_size = 72
-text = "Sample textnya qaqa"
+text = "Sample"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 text_direction = 2
 
 [connection signal="disable_self" from="." to="." method="_on_disable_self"]

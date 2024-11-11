@@ -1,4 +1,4 @@
-extends Control
+extends DialogicLayoutLayer
 
 
 #Mengatur perilaku objek Dialog Button tunggal
@@ -33,7 +33,7 @@ func _ready():
 	var margin_at = button_identity.get_node("MarginContainer").get_theme_constant("margin_top")
 	var margin_ka = button_identity.get_node("MarginContainer").get_theme_constant("margin_right")
 	var margin_ba = button_identity.get_node("MarginContainer").get_theme_constant("margin_bottom")
-	max_width = [size.x * 0.5,size.x * 0.75, size.x]
+	max_width = [500.0,750.0, 1000.0]
 	margin_x = margin_ki + margin_ka
 	margin_y = margin_at + margin_ba
 
