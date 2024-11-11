@@ -1,41 +1,38 @@
-[gd_scene load_steps=19 format=3 uid="uid://cf3w88e7q78qd"]
+[gd_scene load_steps=22 format=3 uid="uid://cf3w88e7q78qd"]
 
 [ext_resource type="Script" path="res://Objects/Environtment/UI/menu.gd" id="1_xit0o"]
 [ext_resource type="Texture2D" uid="uid://nop14tpltyv" path="res://UI Asset/Background/Background_sementara.png" id="2_kx8mq"]
 [ext_resource type="Texture2D" uid="uid://byib156txob2h" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/Border_.png" id="3_uwgme"]
 [ext_resource type="PackedScene" uid="uid://7m43aipf46oo" path="res://Objects/Environtment/UI/settings.tscn" id="4_ijbmb"]
-[ext_resource type="Texture2D" uid="uid://x4ruv8xt1qxv" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/whitprog.tres" id="5_4qexl"]
 [ext_resource type="FontFile" uid="uid://c7mvg73i0pnen" path="res://UI Asset/Font/Pixel Dogica/dogicabold.ttf" id="5_643lq"]
-[ext_resource type="Texture2D" uid="uid://4bthiqt45xgn" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/bingkaiprog.tres" id="6_m4ken"]
-[ext_resource type="Texture2D" uid="uid://c3bwdc7825qnk" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/purpleprog.tres" id="7_ktxwi"]
+[ext_resource type="Texture2D" uid="uid://bs74yandslari" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Background_PB.tres" id="5_px2gh"]
+[ext_resource type="Texture2D" uid="uid://dssx6m2tldaab" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Border_PB.tres" id="6_kknnn"]
+[ext_resource type="Texture2D" uid="uid://uag7r1uiulaf" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Fill_PB.tres" id="7_h4wwf"]
+[ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="8_tocdd"]
+[ext_resource type="FontFile" uid="uid://dclwgnpvy23n7" path="res://UI Asset/Font/Pixel Dogica/dogicapixelbold.ttf" id="9_ax0wb"]
 [ext_resource type="Script" path="res://UI Asset/Script/BtnAnimation.gd" id="9_cedgc"]
-[ext_resource type="Texture2D" uid="uid://btqt1bq6mvx54" path="res://UI Asset/Sprite/UI_Wordwise/Icons/Icon_Lock_White.tres" id="10_1k2yo"]
-[ext_resource type="Texture2D" uid="uid://nywdk2wpv1yr" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/Button And Others.png" id="11_e038j"]
+[ext_resource type="Texture2D" uid="uid://8kr16c27k78h" path="res://UI Asset/Sprite/UI_Wordwise/Button_Text/ButtonText_Purple_Border.tres" id="10_322vs"]
+[ext_resource type="Texture2D" uid="uid://xox3jbw1ua0k" path="res://UI Asset/Sprite/UI_Wordwise/Icons/Icon_Task_Purple.tres" id="11_diobg"]
 [ext_resource type="PackedScene" uid="uid://caltpti6fey3v" path="res://Objects/Environtment/UI/custom.tscn" id="12_pap1w"]
+[ext_resource type="Texture2D" uid="uid://52f3gfsxtjmn" path="res://UI Asset/Sprite/UI_Wordwise/Button/Button_Hanger_Purple.tres" id="13_3t0dv"]
+[ext_resource type="Texture2D" uid="uid://ntpb47mhxg0e" path="res://UI Asset/Sprite/UI_Wordwise/Button/Button_Hamburger_Purple.tres" id="14_dj4mf"]
+[ext_resource type="Texture2D" uid="uid://d1rvd4b6r0gqi" path="res://UI Asset/Sprite/UI_Wordwise/Button/Button_Setting_Purple.tres" id="15_t0n6j"]
+[ext_resource type="Texture2D" uid="uid://oxstr365hodm" path="res://UI Asset/Sprite/UI_Wordwise/Icons/Icon_Play_Purple.tres" id="16_bh2uq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jnio7"]
 atlas = ExtResource("3_uwgme")
-region = Rect2(480, 808, 320, 320)
+region = Rect2(480, 150, 320, 320)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x2r10"]
-atlas = ExtResource("11_e038j")
-region = Rect2(8, 1848, 224, 224)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5oa8e"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jd218"]
-atlas = ExtResource("11_e038j")
-region = Rect2(464, 1616, 232, 224)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p6lpo"]
-atlas = ExtResource("11_e038j")
-region = Rect2(8, 696, 224, 224)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_apimn"]
-atlas = ExtResource("11_e038j")
-region = Rect2(464, 1384, 232, 224)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_djves"]
-atlas = ExtResource("11_e038j")
-region = Rect2(8, 8, 224, 224)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lw3dn"]
+content_margin_left = 47.0
+content_margin_right = 49.0
+texture = ExtResource("10_322vs")
+texture_margin_left = 40.0
+texture_margin_top = 40.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -55,21 +52,29 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_kx8mq")
 
-[node name="Profile_Tab" type="NinePatchRect" parent="."]
+[node name="Container" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Profile_Tab" type="NinePatchRect" parent="Container"]
 custom_minimum_size = Vector2(500, 150)
 layout_mode = 2
-offset_left = 9.0
-offset_top = 28.0
-offset_right = 509.0
-offset_bottom = 278.0
+offset_left = 19.0
+offset_top = 17.0
+offset_right = 595.0
+offset_bottom = 267.0
 texture = SubResource("AtlasTexture_jnio7")
 region_rect = Rect2(0, 0, 320, 320)
-patch_margin_left = 60
-patch_margin_top = 62
-patch_margin_right = 60
-patch_margin_bottom = 58
+patch_margin_left = 70
+patch_margin_top = 70
+patch_margin_right = 70
+patch_margin_bottom = 70
 
-[node name="MarginContainer" type="MarginContainer" parent="Profile_Tab"]
+[node name="MarginContainer" type="MarginContainer" parent="Container/Profile_Tab"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -77,147 +82,168 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 55
-theme_override_constants/margin_top = 45
+theme_override_constants/margin_top = 55
 theme_override_constants/margin_right = 55
-theme_override_constants/margin_bottom = 45
+theme_override_constants/margin_bottom = 55
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Profile_Tab/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Container/Profile_Tab/MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 20
 
-[node name="Avatar" type="Button" parent="Profile_Tab/MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(150, 150)
+[node name="Avatar" type="Button" parent="Container/Profile_Tab/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(135, 135)
 layout_mode = 2
 text = "AVATAR"
 
-[node name="Desc" type="PanelContainer" parent="Profile_Tab/MarginContainer/HBoxContainer"]
+[node name="Desc" type="PanelContainer" parent="Container/Profile_Tab/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5oa8e")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Profile_Tab/MarginContainer/HBoxContainer/Desc"]
+[node name="MarginContainer" type="MarginContainer" parent="Container/Profile_Tab/MarginContainer/HBoxContainer/Desc"]
+layout_mode = 2
+theme_override_constants/margin_top = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container/Profile_Tab/MarginContainer/HBoxContainer/Desc/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 25
-alignment = 1
 
-[node name="Nama" type="Label" parent="Profile_Tab/MarginContainer/HBoxContainer/Desc/VBoxContainer"]
+[node name="Nama" type="Label" parent="Container/Profile_Tab/MarginContainer/HBoxContainer/Desc/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_643lq")
 theme_override_font_sizes/font_size = 30
 text = "ANGELE"
 vertical_alignment = 2
 
-[node name="ProgressBar" type="TextureProgressBar" parent="Profile_Tab/MarginContainer/HBoxContainer/Desc/VBoxContainer"]
+[node name="ProgressBar" type="TextureProgressBar" parent="Container/Profile_Tab/MarginContainer/HBoxContainer/Desc/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
-value = 55.0
+value = 39.0
 nine_patch_stretch = true
-texture_under = ExtResource("5_4qexl")
-texture_over = ExtResource("6_m4ken")
-texture_progress = ExtResource("7_ktxwi")
+texture_under = ExtResource("5_px2gh")
+texture_over = ExtResource("6_kknnn")
+texture_progress = ExtResource("7_h4wwf")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="Label" type="Label" parent="Container/Profile_Tab/MarginContainer/HBoxContainer/Desc/MarginContainer/VBoxContainer/ProgressBar"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = -92.0
+offset_bottom = 49.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("8_tocdd")
+theme_override_font_sizes/font_size = 61
+text = "40 %"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 750
-alignment = 1
-
-[node name="VBC Profile and Task" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(500, 0)
-layout_mode = 2
-theme_override_constants/separation = 550
-alignment = 1
-
-[node name="HBC Profile" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBC Profile and Task"]
-custom_minimum_size = Vector2(600, 250)
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBC Profile and Task"]
+[node name="Bottom_Left_Buttons" type="HBoxContainer" parent="Container"]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -244.0
+offset_right = 705.0
+offset_bottom = -20.0
+grow_vertical = 0
 theme_override_constants/separation = 20
 
-[node name="Task" type="TextureButton" parent="MarginContainer/HBoxContainer/VBC Profile and Task/HBoxContainer"]
-custom_minimum_size = Vector2(200, 200)
+[node name="Button_Task" type="Button" parent="Container/Bottom_Left_Buttons"]
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_x2r10")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/h_separation = 15
+theme_override_fonts/font = ExtResource("9_ax0wb")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/hover = SubResource("StyleBoxTexture_lw3dn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lw3dn")
+theme_override_styles/normal = SubResource("StyleBoxTexture_lw3dn")
+text = "TASK"
+icon = ExtResource("11_diobg")
 
-[node name="Node" type="Node" parent="MarginContainer/HBoxContainer/VBC Profile and Task/HBoxContainer/Task"]
+[node name="Node" type="Node" parent="Container/Bottom_Left_Buttons/Button_Task"]
 script = ExtResource("9_cedgc")
 hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
-[node name="Custom" type="TextureButton" parent="MarginContainer/HBoxContainer/VBC Profile and Task/HBoxContainer"]
+[node name="Custom" type="TextureButton" parent="Container/Bottom_Left_Buttons"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_jd218")
+texture_normal = ExtResource("13_3t0dv")
+texture_pressed = ExtResource("13_3t0dv")
+texture_hover = ExtResource("13_3t0dv")
 
-[node name="Node" type="Node" parent="MarginContainer/HBoxContainer/VBC Profile and Task/HBoxContainer/Custom"]
+[node name="Node" type="Node" parent="Container/Bottom_Left_Buttons/Custom"]
 script = ExtResource("9_cedgc")
 hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
-[node name="VBC Setting and Play" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 2
-theme_override_constants/separation = 550
-alignment = 1
-
-[node name="Setting" type="TextureButton" parent="MarginContainer/HBoxContainer/VBC Setting and Play"]
+[node name="Setting_Button" type="TextureButton" parent="Container"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -244.0
+offset_top = 24.0
+offset_right = -20.0
+offset_bottom = 248.0
+grow_horizontal = 0
 size_flags_horizontal = 8
 size_flags_vertical = 0
-texture_normal = SubResource("AtlasTexture_p6lpo")
+texture_normal = ExtResource("14_dj4mf")
+texture_pressed = ExtResource("14_dj4mf")
+texture_hover = ExtResource("14_dj4mf")
 
-[node name="Node" type="Node" parent="MarginContainer/HBoxContainer/VBC Setting and Play/Setting"]
+[node name="Node" type="Node" parent="Container/Setting_Button"]
 script = ExtResource("9_cedgc")
 hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBC Setting and Play"]
-custom_minimum_size = Vector2(200, 200)
+[node name="Bottom_Right_Buttons" type="HBoxContainer" parent="Container"]
+custom_minimum_size = Vector2(200, 150)
 layout_mode = 2
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -694.0
+offset_top = -244.0
+offset_right = -21.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
 theme_override_constants/separation = 20
 alignment = 2
 
-[node name="Mode" type="TextureButton" parent="MarginContainer/HBoxContainer/VBC Setting and Play/HBoxContainer"]
+[node name="Mode" type="TextureButton" parent="Container/Bottom_Right_Buttons"]
+modulate = Color(0.564962, 0.564962, 0.564962, 1)
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-size_flags_vertical = 4
+size_flags_vertical = 8
 disabled = true
-texture_normal = SubResource("AtlasTexture_apimn")
+texture_normal = ExtResource("15_t0n6j")
+texture_pressed = ExtResource("15_t0n6j")
+texture_hover = ExtResource("15_t0n6j")
+texture_disabled = ExtResource("15_t0n6j")
 
-[node name="LockIcon" type="TextureRect" parent="MarginContainer/HBoxContainer/VBC Setting and Play/HBoxContainer/Mode"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -48.0
-offset_top = -53.0
-offset_right = 52.0
-offset_bottom = 72.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("10_1k2yo")
-stretch_mode = 5
-
-[node name="Play" type="TextureButton" parent="MarginContainer/HBoxContainer/VBC Setting and Play/HBoxContainer"]
-custom_minimum_size = Vector2(300, 300)
+[node name="Button_Play" type="Button" parent="Container/Bottom_Right_Buttons"]
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 6
-texture_normal = SubResource("AtlasTexture_djves")
-stretch_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/h_separation = 25
+theme_override_fonts/font = ExtResource("9_ax0wb")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/hover = SubResource("StyleBoxTexture_lw3dn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lw3dn")
+theme_override_styles/normal = SubResource("StyleBoxTexture_lw3dn")
+text = "PLAY"
+icon = ExtResource("16_bh2uq")
+icon_alignment = 2
 
-[node name="Node" type="Node" parent="MarginContainer/HBoxContainer/VBC Setting and Play/HBoxContainer/Play"]
+[node name="Node" type="Node" parent="Container/Bottom_Right_Buttons/Button_Play"]
 script = ExtResource("9_cedgc")
 hover_scale = Vector2(0.9, 0.9)
 transition_type = 4

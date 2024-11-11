@@ -219,11 +219,10 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_roqom")
 theme_override_styles/tab_selected = SubResource("StyleBoxFlat_4tv6q")
 theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_wexuw")
 tab_alignment = 1
-current_tab = 1
+current_tab = 0
 tabs_position = 1
 
 [node name="Chapter 1" type="PanelContainer" parent="CanvasLayer/Control/TabContainer"]
-visible = false
 layout_mode = 2
 script = ExtResource("1_4bxj1")
 metadata/_tab_index = 0
@@ -518,17 +517,8 @@ grow_vertical = 2
 texture = ExtResource("13_khga1")
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1"]
-custom_minimum_size = Vector2(0, 150)
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("10_s8e21")
-theme_override_font_sizes/font_size = 111
-text = "  Chapter 1"
-vertical_alignment = 1
-
 [node name="Chapter 2" type="PanelContainer" parent="CanvasLayer/Control/TabContainer"]
+visible = false
 layout_mode = 2
 script = ExtResource("1_4bxj1")
 metadata/_tab_index = 1

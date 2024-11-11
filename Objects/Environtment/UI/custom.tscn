@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://caltpti6fey3v"]
+[gd_scene load_steps=25 format=3 uid="uid://caltpti6fey3v"]
 
 [ext_resource type="Script" path="res://Objects/Environtment/UI/custom.gd" id="1_4iqr0"]
 [ext_resource type="Texture2D" uid="uid://nywdk2wpv1yr" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/Button And Others.png" id="1_lj0vv"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bkwb07exquxq0" path="res://Objects/Environtment/UI/Assets/Chara/chara40x40-removebg-preview.png" id="3_bd6pm"]
 [ext_resource type="FontFile" uid="uid://c7mvg73i0pnen" path="res://UI Asset/Font/Pixel Dogica/dogicabold.ttf" id="4_rddeh"]
 [ext_resource type="Script" path="res://UI Asset/Script/BtnAnimation.gd" id="6_cqyr2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nhfu6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ldgrm"]
 atlas = ExtResource("1_lj0vv")
@@ -45,6 +47,11 @@ region = Rect2(1880, 520, 664, 224)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k8in3"]
 texture = SubResource("AtlasTexture_k6366")
+texture_margin_left = 40.0
+texture_margin_top = 40.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
+region_rect = Rect2(0, 0, 660, 220)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n2xxp"]
 atlas = ExtResource("1_lj0vv")
@@ -52,6 +59,10 @@ region = Rect2(1872, 512, 672, 232)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tr24x"]
 texture = SubResource("AtlasTexture_n2xxp")
+texture_margin_left = 48.0
+texture_margin_top = 48.0
+texture_margin_right = 44.0
+texture_margin_bottom = 43.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5pcoj"]
 atlas = ExtResource("1_lj0vv")
@@ -59,6 +70,10 @@ region = Rect2(1880, 520, 664, 224)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_21f4h"]
 texture = SubResource("AtlasTexture_5pcoj")
+texture_margin_left = 40.0
+texture_margin_top = 40.0
+texture_margin_right = 44.0
+texture_margin_bottom = 44.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nhbgg"]
 atlas = ExtResource("1_lj0vv")
@@ -66,6 +81,11 @@ region = Rect2(1872, 744, 680, 232)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c2jjl"]
 texture = SubResource("AtlasTexture_nhbgg")
+texture_margin_left = 40.0
+texture_margin_top = 41.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
+region_rect = Rect2(8, 6, 660, 220)
 
 [node name="Customize" type="Control"]
 layout_mode = 3
@@ -119,7 +139,7 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/separation = 600
+theme_override_constants/separation = 455
 alignment = 1
 
 [node name="PREV" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/Main/HBoxContainer"]
@@ -128,6 +148,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 31
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nhfu6")
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_prb5r")
 theme_override_styles/hover = SubResource("StyleBoxTexture_mkc11")
 icon = ExtResource("2_n2xul")
@@ -136,9 +157,10 @@ alignment = 0
 expand_icon = true
 
 [node name="Node2D" type="Node2D" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/Main/HBoxContainer"]
-position = Vector2(344, -127)
+position = Vector2(276.055, -127)
 
 [node name="Sprite" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/Main/HBoxContainer/Node2D"]
+texture_filter = 1
 scale = Vector2(10, 10)
 texture = ExtResource("3_bd6pm")
 centered = false
@@ -151,6 +173,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 31
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nhfu6")
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_hk6ol")
 theme_override_styles/hover = SubResource("StyleBoxTexture_5qnx5")
 icon = SubResource("AtlasTexture_n4d7n")
@@ -159,7 +182,7 @@ alignment = 0
 expand_icon = true
 
 [node name="Confirm" type="Button" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(250, 100)
+custom_minimum_size = Vector2(303.82, 129.665)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
@@ -168,6 +191,7 @@ theme_override_colors/font_focus_color = Color(0.384314, 0.333333, 0.541176, 1)
 theme_override_colors/font_color = Color(0.384314, 0.333333, 0.541176, 1)
 theme_override_fonts/font = ExtResource("4_rddeh")
 theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nhfu6")
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_k8in3")
 theme_override_styles/hover = SubResource("StyleBoxTexture_tr24x")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_21f4h")

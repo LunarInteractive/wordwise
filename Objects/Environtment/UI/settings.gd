@@ -1,7 +1,7 @@
 class_name Settings
 extends Control
 
-@onready var exit: TextureButton = $MarginContainer/VBoxContainer/HBoxContainer/Exit as TextureButton
+@onready var exit: TextureButton = $MarginContainer/Exit as TextureButton
 
 
 signal exit_setting

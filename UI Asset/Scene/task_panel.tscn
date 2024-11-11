@@ -104,11 +104,11 @@ size_flags_stretch_ratio = 0.1
 theme = ExtResource("2_cofrg")
 theme_type_variation = &"PanelHeaderTask"
 texture = SubResource("AtlasTexture_1lugm")
-region_rect = Rect2(530, 810, 270, 320)
-patch_margin_left = 10
-patch_margin_top = 60
+region_rect = Rect2(150, 150, 320, 320)
+patch_margin_left = 70
+patch_margin_top = 70
 patch_margin_right = 60
-patch_margin_bottom = 60
+patch_margin_bottom = 61
 
 [node name="MarginHeader" type="MarginContainer" parent="MarginPanelTask/PanelContainer/VBoxContainer/HeaderPanel"]
 layout_mode = 2
@@ -119,14 +119,14 @@ theme_override_constants/margin_bottom = 5
 
 [node name="MarginClose" type="MarginContainer" parent="MarginPanelTask/PanelContainer/VBoxContainer/HeaderPanel/MarginHeader"]
 layout_mode = 2
-theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 30
 
 [node name="CloseButton2" type="TextureButton" parent="MarginPanelTask/PanelContainer/VBoxContainer/HeaderPanel/MarginHeader/MarginClose"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 8
 size_flags_vertical = 4
 focus_mode = 0
 texture_normal = SubResource("AtlasTexture_8xlog")

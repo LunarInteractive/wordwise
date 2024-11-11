@@ -2,18 +2,18 @@ class_name Menu
 extends Control
 
 
-@onready var task: TextureButton = $"MarginContainer/HBoxContainer/VBC Profile and Task/HBoxContainer/Task" as TextureButton
-@onready var mode: TextureButton = $"MarginContainer/HBoxContainer/VBC Setting and Play/HBoxContainer/Mode" as TextureButton
-@onready var play: TextureButton = $"MarginContainer/HBoxContainer/VBC Setting and Play/HBoxContainer/Play" as TextureButton
+@onready var task: Button = $Container/Bottom_Left_Buttons/Button_Task as Button
+@onready var mode: TextureButton = $Container/Bottom_Right_Buttons/Mode as TextureButton
+@onready var play: Button = $Container/Bottom_Right_Buttons/Button_Play as Button
 
-@onready var setting: TextureButton = $"MarginContainer/HBoxContainer/VBC Setting and Play/Setting" as TextureButton
+@onready var setting: TextureButton = $Container/Setting_Button as TextureButton
 
 @onready var settings: Settings = $Settings as Settings
-@onready var margin_container: MarginContainer = $MarginContainer as MarginContainer
-@onready var avatar: Button = $"MarginContainer/HBoxContainer/VBC Profile and Task/HBC Profile/TextureRect2/Avatar" as Button
+@onready var margin_container: Control = $Container as Control
+@onready var avatar: Button = $Container/Profile_Tab/MarginContainer/HBoxContainer/Avatar as Button
 
 @onready var customize: Custom = $Customize as Custom
-@onready var custom: TextureButton = $"MarginContainer/HBoxContainer/VBC Profile and Task/HBoxContainer/Custom" as TextureButton
+@onready var custom: TextureButton = $Container/Bottom_Left_Buttons/Custom as TextureButton
 
 var charvalue = 0
 func _ready() :

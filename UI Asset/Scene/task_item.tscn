@@ -1,9 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://dru6beado57f8"]
+[gd_scene load_steps=18 format=3 uid="uid://dru6beado57f8"]
 
 [ext_resource type="Script" path="res://UI Asset/Script/task_item.gd" id="1_6xfpo"]
 [ext_resource type="Texture2D" uid="uid://lnx6onv3ycd5" path="res://UI Asset/Sprite/two-coins.svg" id="2_ig6cp"]
-[ext_resource type="Texture2D" uid="uid://clqvscxff8680" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Progress3_BAR.png" id="5_nuwxt"]
+[ext_resource type="Texture2D" uid="uid://bs74yandslari" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Background_PB.tres" id="5_35yir"]
+[ext_resource type="Texture2D" uid="uid://dssx6m2tldaab" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Border_PB.tres" id="6_4egw0"]
 [ext_resource type="Theme" uid="uid://la05b3bnexvl" path="res://UI Asset/Shader/theme_fajar/theme_fajar.tres" id="6_diqdm"]
+[ext_resource type="Texture2D" uid="uid://uag7r1uiulaf" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Fill_PB.tres" id="7_dff38"]
 [ext_resource type="AudioStream" uid="uid://deesmb07s1up7" path="res://UI Asset/Audio/SFX/zapsplat_multimedia_game_sound_coins_collect_several_at_once_002_40813.mp3" id="8_3dbft"]
 [ext_resource type="Texture2D" uid="uid://crcm6qx3hyusk" path="res://UI Asset/Sprite/Border/Border_NO BG_.png" id="8_grj4t"]
 
@@ -184,19 +186,6 @@ _data = {
 content_margin_top = 8.0
 bg_color = Color(0.384314, 0.333333, 0.541176, 1)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5f57h"]
-atlas = ExtResource("5_nuwxt")
-region = Rect2(160, 1610, 960, 120)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2h3mx"]
-atlas = ExtResource("5_nuwxt")
-region = Rect2(160, 1340, 960, 120)
-margin = Rect2(0, 0, 2, 0)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_agbaa"]
-atlas = ExtResource("5_nuwxt")
-region = Rect2(160, 1490, 960, 120)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_m6vqp"]
 atlas = ExtResource("8_grj4t")
 
@@ -249,7 +238,7 @@ custom_minimum_size = Vector2(700, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_stretch_ratio = 0.5
-theme_override_constants/separation = 20
+theme_override_constants/separation = 80
 
 [node name="MarginIcon" type="MarginContainer" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer"]
 layout_mode = 2
@@ -311,11 +300,11 @@ custom_minimum_size = Vector2(960, 120)
 layout_mode = 2
 size_flags_vertical = 4
 theme = ExtResource("6_diqdm")
-value = 100.0
+value = 41.0
 nine_patch_stretch = true
-texture_under = SubResource("AtlasTexture_5f57h")
-texture_over = SubResource("AtlasTexture_2h3mx")
-texture_progress = SubResource("AtlasTexture_agbaa")
+texture_under = ExtResource("5_35yir")
+texture_over = ExtResource("6_4egw0")
+texture_progress = ExtResource("7_dff38")
 texture_progress_offset = Vector2(-1, 0)
 
 [node name="MarginTombol" type="MarginContainer" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer"]

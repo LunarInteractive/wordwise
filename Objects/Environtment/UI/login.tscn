@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://1wjpkwwq28sm" path="res://UI Asset/Font/Pixel Monogram/monogram.ttf" id="3_6v8e8"]
 [ext_resource type="Texture2D" uid="uid://nywdk2wpv1yr" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/Button And Others.png" id="4_n4gb6"]
 [ext_resource type="FontFile" uid="uid://dclwgnpvy23n7" path="res://UI Asset/Font/Pixel Dogica/dogicapixelbold.ttf" id="4_obcwn"]
-[ext_resource type="PackedScene" uid="uid://buo4w7s3xueoo" path="res://Objects/Environtment/UI/sign_up.tscn" id="5_b1vyv"]
+[ext_resource type="PackedScene" uid="uid://cnscptbqqwfkh" path="res://Objects/Environtment/UI/sign_up.tscn" id="5_b1vyv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_618q5"]
 atlas = ExtResource("4_n4gb6")

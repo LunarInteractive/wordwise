@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://uag7r1uiulaf"]
+
+[ext_resource type="Texture2D" uid="uid://clqvscxff8680" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Progress3_BAR.png" id="1_la8ym"]
+
+[resource]
+atlas = ExtResource("1_la8ym")
+region = Rect2(40, 1440, 940, 100)

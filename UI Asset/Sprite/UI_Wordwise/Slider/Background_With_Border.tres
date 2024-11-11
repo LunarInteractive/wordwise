@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://b82ia1s35nh0h"]
+
+[ext_resource type="Texture2D" uid="uid://b7ufo8gycppf8" path="res://UI Asset/Sprite/UI_Wordwise/Slider/Slider_BAR.png" id="1_pybku"]
+
+[resource]
+atlas = ExtResource("1_pybku")
+region = Rect2(1330, 1440, 960, 40)
