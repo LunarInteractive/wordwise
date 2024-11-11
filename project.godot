@@ -43,13 +43,13 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"Dialog/chapter_5": "res://Scenes/Dialog/chapter_5.dtl",
+"Dialog/chapter_6": "res://Scenes/Dialog/chapter_6.dtl",
 "Text_timeline": "res://UI Asset/Testing/Text_timeline.dtl",
 "chapter_1": "res://Resources/Timeline/chapter_1.dtl",
 "chapter_10": "res://Scenes/Dialogue/chapter_10.dtl",
 "chapter_3": "res://Scenes/Dialogue/chapter_3.dtl",
 "chapter_4": "res://Scenes/Dialogue/chapter_4.dtl",
-"chapter_5": "res://Scenes/Dialog/chapter_5.dtl",
-"chapter_6": "res://Scenes/Dialog/chapter_6.dtl",
 "chapter_7": "res://Scenes/Dialogue/chapter_7.dtl",
 "chapter_8": "res://Scenes/Dialogue/chapter_8.dtl",
 "chapter_9": "res://Scenes/Dialogue/chapter_9.dtl",

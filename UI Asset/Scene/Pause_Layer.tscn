@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://csnkmsil5if7x"]
+[gd_scene load_steps=12 format=3 uid="uid://bikmskv6luara"]
 
 [ext_resource type="Texture2D" uid="uid://c4jw26urqkiks" path="res://UI Asset/Sprite/GUI/Pause_Button.tres" id="1_nn73v"]
 [ext_resource type="Script" path="res://UI Asset/Script/BtnAnimation.gd" id="2_um2ye"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://belmwjvr1b8ry" path="res://UI Asset/Sprite/GUI/GUI.png" id="4_mtoud"]
 [ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="5_1e2xi"]
 [ext_resource type="Texture2D" uid="uid://sxhvr34dg82b" path="res://UI Asset/Sprite/GUI/button_Resume.tres" id="6_n3qcf"]
-[ext_resource type="Texture2D" uid="uid://xi644bcblbuu" path="res://UI Asset/Sprite/UI_Wordwise/Border/Border_NO BG_.png" id="7_2u3np"]
+[ext_resource type="Texture2D" uid="uid://dipvpycl4yeb6" path="res://UI Asset/Sprite/UI_Wordwise/Border/Border_NO BG_.png" id="7_2u3np"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_88aun"]
 bg_color = Color(0.380392, 0.333333, 0.537255, 1)

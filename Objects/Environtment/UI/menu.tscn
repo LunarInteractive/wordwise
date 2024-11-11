@@ -55,6 +55,65 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_kx8mq")
 
+[node name="Profile_Tab" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(500, 150)
+layout_mode = 2
+offset_left = 9.0
+offset_top = 28.0
+offset_right = 509.0
+offset_bottom = 278.0
+texture = SubResource("AtlasTexture_jnio7")
+region_rect = Rect2(0, 0, 320, 320)
+patch_margin_left = 60
+patch_margin_top = 62
+patch_margin_right = 60
+patch_margin_bottom = 58
+
+[node name="MarginContainer" type="MarginContainer" parent="Profile_Tab"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 55
+theme_override_constants/margin_top = 45
+theme_override_constants/margin_right = 55
+theme_override_constants/margin_bottom = 45
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Profile_Tab/MarginContainer"]
+layout_mode = 2
+
+[node name="Avatar" type="Button" parent="Profile_Tab/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+text = "AVATAR"
+
+[node name="Desc" type="PanelContainer" parent="Profile_Tab/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Profile_Tab/MarginContainer/HBoxContainer/Desc"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Nama" type="Label" parent="Profile_Tab/MarginContainer/HBoxContainer/Desc/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_643lq")
+theme_override_font_sizes/font_size = 30
+text = "ANGELE"
+vertical_alignment = 2
+
+[node name="ProgressBar" type="TextureProgressBar" parent="Profile_Tab/MarginContainer/HBoxContainer/Desc/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+value = 55.0
+nine_patch_stretch = true
+texture_under = ExtResource("5_4qexl")
+texture_over = ExtResource("6_m4ken")
+texture_progress = ExtResource("7_ktxwi")
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -77,51 +136,6 @@ alignment = 1
 [node name="HBC Profile" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBC Profile and Task"]
 custom_minimum_size = Vector2(600, 250)
 layout_mode = 2
-theme_override_constants/separation = 100
-
-[node name="TextureRect2" type="NinePatchRect" parent="MarginContainer/HBoxContainer/VBC Profile and Task/HBC Profile"]
-custom_minimum_size = Vector2(500, 150)
-layout_mode = 2
-texture = SubResource("AtlasTexture_jnio7")
-region_rect = Rect2(0, 0, 320, 320)
-patch_margin_left = 64
-patch_margin_top = 64
-patch_margin_right = 64
-patch_margin_bottom = 64
-
-[node name="Avatar" type="Button" parent="MarginContainer/HBoxContainer/VBC Profile and Task/HBC Profile/TextureRect2"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-offset_left = 61.0
-offset_top = 49.0
-offset_right = 265.0
-offset_bottom = 243.0
-scale = Vector2(0.8, 0.8)
-text = "AVATAR"
-
-[node name="Nama" type="Label" parent="MarginContainer/HBoxContainer/VBC Profile and Task/HBC Profile/TextureRect2"]
-layout_mode = 2
-offset_left = 249.5
-offset_top = 86.0
-offset_right = 429.5
-offset_bottom = 113.0
-theme_override_fonts/font = ExtResource("5_643lq")
-theme_override_font_sizes/font_size = 30
-text = "ANGELE"
-vertical_alignment = 2
-
-[node name="ProgressBar" type="TextureProgressBar" parent="MarginContainer/HBoxContainer/VBC Profile and Task/HBC Profile/TextureRect2"]
-layout_mode = 2
-offset_left = 238.5
-offset_top = 131.0
-offset_right = 462.5
-offset_bottom = 169.0
-scale = Vector2(0.9, 0.9)
-value = 55.0
-nine_patch_stretch = true
-texture_under = ExtResource("5_4qexl")
-texture_over = ExtResource("6_m4ken")
-texture_progress = ExtResource("7_ktxwi")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBC Profile and Task"]
 custom_minimum_size = Vector2(0, 200)

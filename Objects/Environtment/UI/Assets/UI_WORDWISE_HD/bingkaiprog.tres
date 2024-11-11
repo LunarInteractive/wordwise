@@ -4,4 +4,4 @@
 
 [resource]
 atlas = ExtResource("1_cimga")
-region = Rect2(48, 448, 328, 40)
+region = Rect2(160, 1290, 960, 120)

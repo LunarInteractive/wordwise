@@ -1,6 +1,6 @@
-[gd_scene load_steps=17 format=3 uid="uid://k63nlyb3nnj0"]
+[gd_scene load_steps=17 format=3 uid="uid://b5gud0ukm7ed4"]
 
-[ext_resource type="Texture2D" uid="uid://b4h65moa8nd7o" path="res://UI Asset/Sprite/fajar_assets/Border_.png" id="2_41jqo"]
+[ext_resource type="Texture2D" uid="uid://v3rklep6qe7s" path="res://UI Asset/Sprite/fajar_assets/Border_.png" id="2_41jqo"]
 [ext_resource type="Texture2D" uid="uid://lnx6onv3ycd5" path="res://UI Asset/Sprite/two-coins.svg" id="3_rh5pd"]
 [ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="4_f6ikg"]
 [ext_resource type="Texture2D" uid="uid://deuywd1hv7tcv" path="res://UI Asset/Sprite/fajar_assets/Progress2_BAR_rebag_under.png" id="5_n5cm3"]
