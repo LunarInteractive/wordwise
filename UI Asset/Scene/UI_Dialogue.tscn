@@ -1,7 +1,8 @@
-[gd_scene load_steps=40 format=3 uid="uid://dlkjulndtiubl"]
+[gd_scene load_steps=41 format=3 uid="uid://dlkjulndtiubl"]
 
 [ext_resource type="FontFile" uid="uid://dlfcvrx0tug2e" path="res://UI Asset/Font/Pixel Dogica/dogicapixel.ttf" id="1_8aqr1"]
 [ext_resource type="Script" path="res://UI Asset/Script/ui_dialogue_root.gd" id="1_m7fjj"]
+[ext_resource type="Resource" path="res://Resources/Timeline/chapter_1.dtl" id="2_n5yuk"]
 [ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="3_k66wq"]
 [ext_resource type="Script" path="res://UI Asset/Script/panel_prompt.gd" id="6_dxpit"]
 [ext_resource type="Texture2D" uid="uid://duhxdsydyaa4b" path="res://UI Asset/Sprite/GUI/Button And Others.png" id="7_5p73u"]
@@ -87,7 +88,7 @@ atlas = ExtResource("15_c2jw2")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dp3lr"]
 
-[node name="CanvasLayer" type="CanvasLayer" node_paths=PackedStringArray("prompto", "result", "result_text", "lisen", "judul_level")]
+[node name="CanvasLayer" type="CanvasLayer" node_paths=PackedStringArray("prompto", "result", "result_text", "lisen", "judul_level", "skor_akhir")]
 layer = 4
 script = ExtResource("1_m7fjj")
 prompto = NodePath("Dialog_Panel/MarginContainer/PanelPrompt")
@@ -95,7 +96,8 @@ result = NodePath("Popup_Speech")
 result_text = NodePath("Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer/Label")
 lisen = NodePath("Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/comparison")
 judul_level = NodePath("Dialog_Panel/Judul Level/Label")
-path = ExtResource("11_bblf8")
+skor_akhir = NodePath("PanelContainerSkor")
+path = ExtResource("2_n5yuk")
 
 [node name="Dialog_Panel" type="Control" parent="."]
 layout_mode = 3
@@ -686,7 +688,7 @@ theme_override_fonts/font = ExtResource("18_kdyg0")
 theme_override_font_sizes/font_size = 42
 text = "TRY AGAIN"
 
-[node name="Tester" type="PanelContainer" parent="." node_paths=PackedStringArray("panel_prompt", "v_box_container", "npc_panel")]
+[node name="Tester" type="PanelContainer" parent="." node_paths=PackedStringArray("panel_prompt")]
 visible = false
 anchors_preset = 15
 anchor_right = 1.0
@@ -697,8 +699,6 @@ mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_dp3lr")
 script = ExtResource("18_8vflh")
 panel_prompt = NodePath("../Dialog_Panel/MarginContainer/PanelPrompt")
-v_box_container = NodePath("")
-npc_panel = NodePath("")
 path = ExtResource("11_bblf8")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Tester"]

@@ -4,7 +4,6 @@ character: This biology lesson is very difficult for me to understand, can you t
 - Okay, which one still confused are you about?
 - Okay, which one are you still unsure about?
 character: I'm still confused about the respiratory system material.
-label perimeter
 - Well then, we schedule a study session together how about?
 - How about we arrange a study session together?
 - How about we together schedule a study session then, well?
@@ -79,3 +78,4 @@ character: Sorry for the trouble.
 - It’s no problem, sir at all. Part of my job is helping you.
 - No problem at all, sir, is it. Helping you part of my job is.
 - There is no problem at all, sir. Assisting you is part of my job.
+[end_timeline]

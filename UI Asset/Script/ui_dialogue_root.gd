@@ -5,6 +5,7 @@ extends CanvasLayer
 @export var result_text : Label
 @export var lisen : ComparisonModule
 @export var judul_level : Label
+@export var skor_akhir : Control
 
 @onready var choices : Dictionary
 #@onready var tester = $Tester
@@ -83,24 +84,23 @@ func _on_texture_button_3_button_up():
 	Dialogic.handle_next_event()
 
 func cek_even_jalan(even:DialogicEvent):
-	#print(even.event_name)
+	print(even.event_name)
 	if even.event_name == "Label":
 		var isi_label = even.to_text().substr(even.event_name.length()+1)
 		Dialogic.get_subsystem("Text").hide_textbox(true)
 		judul_level.text = isi_label
+	elif even.event_name == "End":
+		skor_akhir.show()
 	#print(Dialogic.current_timeline_events[Dialogic.current_event_idx])
-
 
 func _on_texture_button_2_button_up():
 		
 	result.hide()
 	tampilkan_prompt(choices)
 
-
 func _on_texture_button_button_up():
 	DisplayServer.tts_stop()
 	DisplayServer.tts_speak(choices['text'], voice_id) # Replace with function body.
-
 
 func _on_comparison_kirim_nilai(nilai):
 	if nilai >= 80:

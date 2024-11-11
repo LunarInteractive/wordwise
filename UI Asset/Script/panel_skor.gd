@@ -60,7 +60,7 @@ func _on_button_home_button_up():
 	get_tree().change_scene_to_file("res://UI Asset/Scene/Main_Menu.tscn")
 	
 func _on_button_lanjut_button_up():
-	hide()
+	get_tree().reload_current_scene()
 	
 func pesen_angka():
 	persenan = randi_range(60,100)
