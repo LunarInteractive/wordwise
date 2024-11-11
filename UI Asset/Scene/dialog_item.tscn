@@ -22,6 +22,7 @@ custom_minimum_size = Vector2(0, 200)
 layout_mode = 3
 anchors_preset = 10
 anchor_right = 1.0
+offset_bottom = 200.0
 grow_horizontal = 2
 size_flags_horizontal = 3
 script = ExtResource("1_vxp4b")
@@ -83,6 +84,7 @@ theme_override_constants/margin_bottom = 75
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/Button/MarginContainer"]
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 1
 mouse_filter = 1
 theme = ExtResource("2_sj5f7")

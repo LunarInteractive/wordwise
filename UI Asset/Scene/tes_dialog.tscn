@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bcwm1diwdjr0l"]
+[gd_scene load_steps=3 format=3 uid="uid://cjjsk3wr4t6gw"]
 
 [ext_resource type="Theme" uid="uid://la05b3bnexvl" path="res://UI Asset/Shader/theme_fajar/theme_fajar.tres" id="1_4ddid"]
 [ext_resource type="Texture2D" uid="uid://caxpl2w8wpky2" path="res://UI Asset/Sprite/fajar_assets/bubbletext2.png" id="2_ddtap"]

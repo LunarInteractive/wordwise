@@ -44,4 +44,28 @@ func add_task():
 	task_hold = task_res.instantiate()
 	task_hold.inisialisasi(rand2)
 	task_items.insert(task_idx, task_hold)
+	task_items[task_idx].connect("item_claimed", delete_task)
+	
 	v_box_container.add_child(task_items[task_idx])
+	
+	
+func delete_task(item_task : TaskItem):
+	var cari := task_items.find(item_task)
+	
+	for n in range(cari,task_items.size()-1):
+		var prev_y = task_items[n].position.y
+		if n+1 < task_items.size():
+			var tween = create_tween()
+			tween.tween_property(task_items[n+1], "position:y", prev_y,0.5)
+		#if n+1 == cari:
+			#await tween.finished
+			#if item_task:
+				#task_items.remove_at(cari)
+				#print(item_task)
+				#item_task.queue_free()
+				#print(item_task)
+				#task_idx -= 1
+	task_items.remove_at(cari)
+	print(item_task)
+	task_idx -= 1
+	

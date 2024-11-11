@@ -57,6 +57,33 @@ func as_text() -> String:
 
 	return result.strip_edges()
 
+## Stores all events in their text format and returns them as a string
+func as_text_alter(idx: int) -> String:
+	var result := ""
+
+	if events_processed:
+		var indent := 0
+		
+		var event: DialogicEvent = events[idx]
+
+		
+
+		if event != null:
+			for i in event.empty_lines_above:
+				result += "\t".repeat(indent)+"\n"
+			result += "\t".repeat(indent)+event.event_node_as_text.replace('\n', "\n"+"\t".repeat(indent)) + "\n"
+		if event.can_contain_events:
+			indent += 1
+		if indent < 0:
+			indent = 0
+	else:
+		for event in events:
+			result += str(event)+"\n"
+
+		result.trim_suffix('\n')
+
+	return result.strip_edges()
+
 
 ## Method that loads all the event resources from the strings, if it wasn't done before
 func process() -> void:

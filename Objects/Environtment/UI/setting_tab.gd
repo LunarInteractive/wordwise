@@ -1,6 +1,6 @@
 extends Control
 
-@onready var advancey: Button = $TabContainer/Visual/MarginContainer/VBoxContainer/Advanced/advancey as Button
+@onready var advancey: TextureButton = $TabContainer/Visual/MarginContainer/VBoxContainer/Advanced/advancey as TextureButton
 @onready var mc_advanced: MarginContainer = $"TabContainer/Visual/MarginContainer/VBoxContainer/Advanced/MC Advanced"
 var is_visible = false
 # Called when the node enters the scene tree for the first time.

@@ -2,18 +2,18 @@ class_name Menu
 extends Control
 
 
-@onready var task: Button = $"MarginContainer/HBoxContainer/VBC Profile and Task/HBoxContainer/Task" as Button
-@onready var mode: Button = $"MarginContainer/HBoxContainer/VBC Setting and Play/HBoxContainer/Mode" as Button
-@onready var play: Button = $"MarginContainer/HBoxContainer/VBC Setting and Play/HBoxContainer/Play" as Button
+@onready var task: TextureButton = $"MarginContainer/HBoxContainer/VBC Profile and Task/HBoxContainer/Task" as TextureButton
+@onready var mode: TextureButton = $"MarginContainer/HBoxContainer/VBC Setting and Play/HBoxContainer/Mode" as TextureButton
+@onready var play: TextureButton = $"MarginContainer/HBoxContainer/VBC Setting and Play/HBoxContainer/Play" as TextureButton
 
-@onready var setting: Button = $"MarginContainer/HBoxContainer/VBC Setting and Play/Setting" as Button
+@onready var setting: TextureButton = $"MarginContainer/HBoxContainer/VBC Setting and Play/Setting" as TextureButton
 
 @onready var settings: Settings = $Settings as Settings
 @onready var margin_container: MarginContainer = $MarginContainer as MarginContainer
 @onready var avatar: Button = $"MarginContainer/HBoxContainer/VBC Profile and Task/HBC Profile/TextureRect2/Avatar" as Button
 
 @onready var customize: Custom = $Customize as Custom
-@onready var custom: Button = $"MarginContainer/HBoxContainer/VBC Profile and Task/HBoxContainer/Custom" as Button
+@onready var custom: TextureButton = $"MarginContainer/HBoxContainer/VBC Profile and Task/HBoxContainer/Custom" as TextureButton
 
 var charvalue = 0
 func _ready() :
@@ -23,7 +23,7 @@ func on_ava_pressed():
 	get_tree().change_scene_to_file("res://Objects/Environtment/UI/profile.tscn")
 	
 func on_play_pressed():
-	get_tree().change_scene_to_file("res://Objects/Environtment/UI/play.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Level/Chapter_1/level_selection.tscn")
 
 func on_task_pressed():
 	get_tree().change_scene_to_file("res://UI Asset/Scene/task_panel.tscn")

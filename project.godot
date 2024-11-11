@@ -37,19 +37,33 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 directories/dch_directory={
 "Player": "res://Objects/Characters/Player/Player.dch",
 "Villager": "res://Objects/Characters/Villagers/Villager.dch",
+"character": "res://UI Asset/Dialog/character.dch",
+"character2": "res://UI Asset/Dialog/character2.dch",
 "text_character": "res://UI Asset/Testing/text_character.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
 "Text_timeline": "res://UI Asset/Testing/Text_timeline.dtl",
+"chapter_1": "res://Resources/Timeline/chapter_1.dtl",
+"chapter_10": "res://Scenes/Dialogue/chapter_10.dtl",
 "chapter_3": "res://Scenes/Dialogue/chapter_3.dtl",
 "chapter_4": "res://Scenes/Dialogue/chapter_4.dtl",
+"chapter_5": "res://Scenes/Dialog/chapter_5.dtl",
+"chapter_6": "res://Scenes/Dialog/chapter_6.dtl",
+"chapter_7": "res://Scenes/Dialogue/chapter_7.dtl",
+"chapter_8": "res://Scenes/Dialogue/chapter_8.dtl",
+"chapter_9": "res://Scenes/Dialogue/chapter_9.dtl",
 "test": "res://Resources/Timeline/test.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=[""]
+layout/style_list=["res://UI Asset/Testing/Test_Dialog Scene.tres"]
 layout/default_style=""
-variables={}
+variables={
+"Folder": {
+"Error": 0.0,
+"Score": 0.0
+}
+}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -62,9 +76,9 @@ animations/join_default_wait=true
 animations/leave_default_length=0.5
 animations/leave_default_wait=true
 animations/cross_fade_default_length=0.5
-choices/autofocus_first=true
+choices/autofocus_first=false
 choices/delay=0.2
-choices/reveal_delay=0
+choices/reveal_delay=0.2
 choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
@@ -78,6 +92,7 @@ timer/process_in_physics=false
 history/simple_history_enabled=false
 history/simple_history_save=false
 portraits/default_portrait=""
+text/autocolor_names=false
 
 [display]
 
@@ -85,7 +100,7 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/always_on_top=true
 window/size/extend_to_title=true
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
 [dotnet]

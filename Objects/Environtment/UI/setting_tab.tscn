@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://d7rkg7ufvq46"]
+[gd_scene load_steps=30 format=3 uid="uid://d7rkg7ufvq46"]
 
 [ext_resource type="Script" path="res://Objects/Environtment/UI/setting_tab.gd" id="1_2qfkc"]
 [ext_resource type="PackedScene" uid="uid://c1nrexm1chsfu" path="res://Objects/Environtment/UI/audio_setting.tscn" id="1_vpx88"]
@@ -7,9 +7,29 @@
 [ext_resource type="ButtonGroup" uid="uid://2jvi4fn66lbj" path="res://Objects/Environtment/UI/ButtonGroup/difficulty.tres" id="4_kd500"]
 [ext_resource type="FontFile" uid="uid://c7mvg73i0pnen" path="res://UI Asset/Font/Pixel Dogica/dogicabold.ttf" id="4_xtybj"]
 [ext_resource type="ButtonGroup" uid="uid://bkglfjlji23uf" path="res://Objects/Environtment/UI/ButtonGroup/LA.tres" id="5_ffd8a"]
+[ext_resource type="Script" path="res://UI Asset/Script/BtnAnimation.gd" id="5_q8d6k"]
 [ext_resource type="ButtonGroup" uid="uid://luvlh3xspwgi" path="res://Objects/Environtment/UI/ButtonGroup/LC.tres" id="6_7odi5"]
 [ext_resource type="ButtonGroup" uid="uid://cli1yb1lwlly7" path="res://Objects/Environtment/UI/ButtonGroup/graphics.tres" id="8_k8euw"]
 [ext_resource type="ButtonGroup" uid="uid://d1wbn633uxvcp" path="res://Objects/Environtment/UI/ButtonGroup/blur.tres" id="10_uoh5b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1fus7"]
+bg_color = Color(0.623529, 0.466667, 0.745098, 0.682353)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dp8sk"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bkknq"]
+bg_color = Color(0.623529, 0.466667, 0.745098, 1)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(0.623529, 0.466667, 0.745098, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yjg5w"]
 atlas = ExtResource("3_338wa")
@@ -53,16 +73,17 @@ region = Rect2(1872, 744, 680, 232)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uxq1f"]
 texture = SubResource("AtlasTexture_xc72o")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8yvwo"]
-atlas = ExtResource("3_338wa")
-region = Rect2(1152, 344, 104, 112)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yvpyl"]
-texture = SubResource("AtlasTexture_8yvwo")
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r14pf"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_msc1p"]
 atlas = ExtResource("3_338wa")
 region = Rect2(1160, 344, 96, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5anh"]
+atlas = ExtResource("3_338wa")
+region = Rect2(1000, 344, 96, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhngn"]
+atlas = ExtResource("3_338wa")
+region = Rect2(1000, 344, 96, 112)
 
 [node name="Setting_Tab" type="Control"]
 layout_mode = 3
@@ -76,26 +97,28 @@ size_flags_vertical = 4
 script = ExtResource("1_2qfkc")
 
 [node name="TabContainer" type="TabContainer" parent="."]
-custom_minimum_size = Vector2(0, 100)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 570.0
-offset_top = 89.0
-offset_right = -550.0
-offset_bottom = -91.0
+offset_left = 615.0
+offset_top = 60.0
+offset_right = -515.0
+offset_bottom = -137.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_unselected_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hovered_color = Color(0.623529, 0.466667, 0.745098, 1)
 theme_override_colors/font_selected_color = Color(0.623529, 0.466667, 0.745098, 1)
-theme_override_constants/outline_size = 5
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("4_xtybj")
 theme_override_font_sizes/font_size = 25
+theme_override_styles/panel = SubResource("StyleBoxFlat_1fus7")
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_dp8sk")
+theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_bkknq")
 tab_alignment = 1
-current_tab = 2
+current_tab = 1
 
 [node name="Gameplay" type="TabBar" parent="TabContainer"]
 visible = false
@@ -111,10 +134,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 35
-theme_override_constants/margin_top = 35
-theme_override_constants/margin_right = 35
-theme_override_constants/margin_bottom = 35
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 60
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Gameplay/MarginContainer"]
 layout_mode = 2
@@ -151,6 +174,11 @@ toggle_mode = true
 button_group = ExtResource("4_kd500")
 text = "EASY"
 
+[node name="Node" type="Node" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/Difficulty/HBoxContainer/EASY"]
+script = ExtResource("5_q8d6k")
+hover_scale = Vector2(0.9, 0.9)
+transition_type = 4
+
 [node name="MED" type="Button" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/Difficulty/HBoxContainer"]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
@@ -166,6 +194,11 @@ toggle_mode = true
 button_group = ExtResource("4_kd500")
 text = "MEDIUM"
 
+[node name="Node" type="Node" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/Difficulty/HBoxContainer/MED"]
+script = ExtResource("5_q8d6k")
+hover_scale = Vector2(0.9, 0.9)
+transition_type = 4
+
 [node name="HARD" type="Button" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/Difficulty/HBoxContainer"]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
@@ -180,6 +213,11 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_rik8o")
 toggle_mode = true
 button_group = ExtResource("4_kd500")
 text = "HARD"
+
+[node name="Node" type="Node" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/Difficulty/HBoxContainer/HARD"]
+script = ExtResource("5_q8d6k")
+hover_scale = Vector2(0.9, 0.9)
+transition_type = 4
 
 [node name="Listen Accuracy" type="Label" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -235,6 +273,11 @@ toggle_mode = true
 button_group = ExtResource("5_ffd8a")
 text = "SMALL"
 
+[node name="Node" type="Node" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/Listen Accuracy/HBoxContainer/SMALL"]
+script = ExtResource("5_q8d6k")
+hover_scale = Vector2(0.9, 0.9)
+transition_type = 4
+
 [node name="MED" type="Button" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/Listen Accuracy/HBoxContainer"]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
@@ -249,6 +292,11 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_rik8o")
 toggle_mode = true
 button_group = ExtResource("5_ffd8a")
 text = "MEDIUM"
+
+[node name="Node" type="Node" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/Listen Accuracy/HBoxContainer/MED"]
+script = ExtResource("5_q8d6k")
+hover_scale = Vector2(0.9, 0.9)
+transition_type = 4
 
 [node name="BIG" type="Button" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/Listen Accuracy/HBoxContainer"]
 custom_minimum_size = Vector2(150, 0)
@@ -265,6 +313,11 @@ toggle_mode = true
 button_group = ExtResource("5_ffd8a")
 text = "BIG
 "
+
+[node name="Node" type="Node" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/Listen Accuracy/HBoxContainer/BIG"]
+script = ExtResource("5_q8d6k")
+hover_scale = Vector2(0.9, 0.9)
+transition_type = 4
 
 [node name="Listen Control" type="Label" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -339,6 +392,11 @@ toggle_mode = true
 button_group = ExtResource("6_7odi5")
 text = "AUTO"
 
+[node name="Node" type="Node" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/Listen Control/HBoxContainer/AUTO"]
+script = ExtResource("5_q8d6k")
+hover_scale = Vector2(0.9, 0.9)
+transition_type = 4
+
 [node name="HOLD" type="Button" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/Listen Control/HBoxContainer"]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
@@ -354,8 +412,12 @@ toggle_mode = true
 button_group = ExtResource("6_7odi5")
 text = "HOLD"
 
+[node name="Node" type="Node" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/Listen Control/HBoxContainer/HOLD"]
+script = ExtResource("5_q8d6k")
+hover_scale = Vector2(0.9, 0.9)
+transition_type = 4
+
 [node name="Visual" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_xtybj")
 theme_override_font_sizes/font_size = 20
@@ -368,10 +430,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 35
-theme_override_constants/margin_top = 35
-theme_override_constants/margin_right = 35
-theme_override_constants/margin_bottom = 35
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 60
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Visual/MarginContainer"]
 layout_mode = 2
@@ -408,6 +470,11 @@ toggle_mode = true
 button_group = ExtResource("8_k8euw")
 text = "LOW"
 
+[node name="Node" type="Node" parent="TabContainer/Visual/MarginContainer/VBoxContainer/Graphics/HBoxContainer/LOW"]
+script = ExtResource("5_q8d6k")
+hover_scale = Vector2(0.9, 0.9)
+transition_type = 4
+
 [node name="MED" type="Button" parent="TabContainer/Visual/MarginContainer/VBoxContainer/Graphics/HBoxContainer"]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
@@ -422,6 +489,11 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_uxq1f")
 toggle_mode = true
 button_group = ExtResource("8_k8euw")
 text = "MEDIUM"
+
+[node name="Node" type="Node" parent="TabContainer/Visual/MarginContainer/VBoxContainer/Graphics/HBoxContainer/MED"]
+script = ExtResource("5_q8d6k")
+hover_scale = Vector2(0.9, 0.9)
+transition_type = 4
 
 [node name="HARD" type="Button" parent="TabContainer/Visual/MarginContainer/VBoxContainer/Graphics/HBoxContainer"]
 custom_minimum_size = Vector2(150, 0)
@@ -438,6 +510,11 @@ toggle_mode = true
 button_group = ExtResource("8_k8euw")
 text = "HARD"
 
+[node name="Node" type="Node" parent="TabContainer/Visual/MarginContainer/VBoxContainer/Graphics/HBoxContainer/HARD"]
+script = ExtResource("5_q8d6k")
+hover_scale = Vector2(0.9, 0.9)
+transition_type = 4
+
 [node name="Advanced" type="Label" parent="TabContainer/Visual/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -446,7 +523,7 @@ theme_override_font_sizes/font_size = 25
 text = "Advanced"
 horizontal_alignment = 1
 
-[node name="advancey" type="Button" parent="TabContainer/Visual/MarginContainer/VBoxContainer/Advanced"]
+[node name="advancey" type="TextureButton" parent="TabContainer/Visual/MarginContainer/VBoxContainer/Advanced"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -454,14 +531,15 @@ anchor_top = 2.333
 anchor_right = 0.5
 anchor_bottom = 2.333
 offset_left = -15.0
-offset_top = -19.326
+offset_top = -21.326
 offset_right = 89.0
-offset_bottom = 100.674
+offset_bottom = 98.674
 scale = Vector2(0.2, 0.2)
-theme_override_styles/pressed = SubResource("StyleBoxTexture_yvpyl")
 toggle_mode = true
-icon = SubResource("AtlasTexture_r14pf")
-flat = true
+texture_normal = SubResource("AtlasTexture_msc1p")
+texture_pressed = SubResource("AtlasTexture_g5anh")
+texture_hover = SubResource("AtlasTexture_hhngn")
+stretch_mode = 0
 
 [node name="MC Advanced" type="MarginContainer" parent="TabContainer/Visual/MarginContainer/VBoxContainer/Advanced"]
 custom_minimum_size = Vector2(500, 380)
@@ -546,6 +624,11 @@ toggle_mode = true
 button_group = ExtResource("10_uoh5b")
 text = "LOW"
 
+[node name="Node" type="Node" parent="TabContainer/Visual/MarginContainer/VBoxContainer/Advanced/MC Advanced/VBoxContainer/Blur/HBoxContainer/LOW3"]
+script = ExtResource("5_q8d6k")
+hover_scale = Vector2(0.9, 0.9)
+transition_type = 4
+
 [node name="MED3" type="Button" parent="TabContainer/Visual/MarginContainer/VBoxContainer/Advanced/MC Advanced/VBoxContainer/Blur/HBoxContainer"]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
@@ -561,6 +644,11 @@ toggle_mode = true
 button_group = ExtResource("10_uoh5b")
 text = "MEDIUM"
 
+[node name="Node" type="Node" parent="TabContainer/Visual/MarginContainer/VBoxContainer/Advanced/MC Advanced/VBoxContainer/Blur/HBoxContainer/MED3"]
+script = ExtResource("5_q8d6k")
+hover_scale = Vector2(0.9, 0.9)
+transition_type = 4
+
 [node name="HARD2" type="Button" parent="TabContainer/Visual/MarginContainer/VBoxContainer/Advanced/MC Advanced/VBoxContainer/Blur/HBoxContainer"]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
@@ -575,6 +663,11 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_uxq1f")
 toggle_mode = true
 button_group = ExtResource("10_uoh5b")
 text = "HARD"
+
+[node name="Node" type="Node" parent="TabContainer/Visual/MarginContainer/VBoxContainer/Advanced/MC Advanced/VBoxContainer/Blur/HBoxContainer/HARD2"]
+script = ExtResource("5_q8d6k")
+hover_scale = Vector2(0.9, 0.9)
+transition_type = 4
 
 [node name="Label" type="Label" parent="TabContainer/Visual/MarginContainer/VBoxContainer/Advanced/MC Advanced/VBoxContainer"]
 layout_mode = 2
@@ -597,6 +690,7 @@ offset_bottom = 62.0
 scale = Vector2(1.3, 1.3)
 
 [node name="Audio" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_xtybj")
 theme_override_font_sizes/font_size = 20
@@ -609,10 +703,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 35
-theme_override_constants/margin_top = 35
-theme_override_constants/margin_right = 35
-theme_override_constants/margin_bottom = 35
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 60
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Audio/MarginContainer"]
 layout_mode = 2

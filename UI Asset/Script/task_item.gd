@@ -8,6 +8,7 @@ extends PanelContainer
 @export var tombolClaim: Button
 var nilai: float = 100
 
+signal item_claimed(item_task)
 
 #func _init(nilai:float = 100.0):
 #func _ready():
@@ -23,6 +24,7 @@ var nilai: float = 100
 
 func _on_tombol_claim_button_up():
 	sfx.play()
+	#item_claimed.emit(self)
 	get_node("AnimationPlayer").play("claimed")
 	tombolClaim.get_node("LabelClaim").add_theme_color_override("font_color", Color.WHITE)
 
@@ -77,3 +79,5 @@ func _on_tombol_play_mouse_entered():
 	if tombolPlay.button_pressed:
 		tombolPlay.get_node("LabelPlay").add_theme_color_override("font_color", Color.DIM_GRAY)
 		
+func signal_to_move():
+	item_claimed.emit(self)

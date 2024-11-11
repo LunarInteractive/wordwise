@@ -2,7 +2,8 @@ extends MarginContainer
 
 @onready var margin_container :MarginContainer = $ScrollContainer/MarginContainer
 @onready var scroll_container : ScrollContainer = $ScrollContainer
-@onready var scroll_bar : HScrollBar = $"../PanelContainer/HScrollBar"
+@onready var scroll_bar: HScrollBar = $"../PanelContainer2/HScrollBar"
+
 @onready var chapter_labels :Array[Label] = [ $"../PanelContainer/HBoxContainer/Label", $"../PanelContainer/HBoxContainer/Label2", $"../PanelContainer/HBoxContainer/Label3" ]
 
 @onready var total_chapters : int = chapter_labels.size()

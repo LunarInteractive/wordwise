@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://dqo3vmbw7m0ar"]
+[gd_scene load_steps=13 format=3 uid="uid://dqo3vmbw7m0ar"]
 
 [ext_resource type="Script" path="res://Objects/Environtment/UI/profile.gd" id="1_woprc"]
-[ext_resource type="Texture2D" uid="uid://nop14tpltyv" path="res://UI Asset/Background/Background_sementara.png" id="2_uv63j"]
+[ext_resource type="VideoStream" path="res://UI Asset/Background/WORDWISE_BG.ogv" id="2_rjkkh"]
 [ext_resource type="Texture2D" uid="uid://nywdk2wpv1yr" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/Button And Others.png" id="4_kt7qd"]
 [ext_resource type="Texture2D" uid="uid://cmu07715hl87m" path="res://UI Asset/Sprite/GUI/profile pixel.png" id="4_mio6h"]
 [ext_resource type="FontFile" uid="uid://c7mvg73i0pnen" path="res://UI Asset/Font/Pixel Dogica/dogicabold.ttf" id="5_1tmfv"]
+[ext_resource type="Script" path="res://UI Asset/Script/BtnAnimation.gd" id="5_acem0"]
 [ext_resource type="FontFile" uid="uid://dhrbi74qi4lpc" path="res://UI Asset/Font/Pixel Dogica/dogica.ttf" id="6_a35rn"]
 [ext_resource type="Texture2D" uid="uid://x4ruv8xt1qxv" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/whitprog.tres" id="7_4a0du"]
 [ext_resource type="Texture2D" uid="uid://4bthiqt45xgn" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/bingkaiprog.tres" id="8_8065e"]
@@ -36,9 +37,12 @@ theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 12
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+[node name="TextureRect" type="VideoStreamPlayer" parent="MarginContainer"]
 layout_mode = 2
-texture = ExtResource("2_uv63j")
+stream = ExtResource("2_rjkkh")
+autoplay = true
+expand = true
+loop = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -62,6 +66,11 @@ layout_mode = 2
 theme_override_constants/icon_max_width = 100
 icon = SubResource("AtlasTexture_4dg5o")
 flat = true
+
+[node name="Node" type="Node" parent="MarginContainer/VBoxContainer/HBoxContainer2/Out"]
+script = ExtResource("5_acem0")
+hover_scale = Vector2(0.9, 0.9)
+transition_type = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2

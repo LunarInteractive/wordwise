@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://drc8wtxtts16l"]
+
+[ext_resource type="Texture2D" uid="uid://ce31scw05h0sh" path="res://UI Asset/Sprite/UI_Wordwise/Bubble_Text/BBUBBLE TAMBAHAN..png" id="1_7bp8w"]
+
+[resource]
+atlas = ExtResource("1_7bp8w")
+region = Rect2(520, 270, 490, 240)

@@ -1,0 +1,75 @@
+label Level 1 - Study
+character: Do you plan to take any courses or study something this year?
+- Yes, I want to try learn Korean. It’s fun watch dramas without subtitles.
+- Yes, I want try learning Korean. It’ll be fun to watch drama without subtitles.
+- Yes, I want to try learning Korean. It’ll be fun to watch dramas without subtitles.
+character:  Wow, that sounds exciting! I’m planning to take UI/UX design classes.
+- Is that your passion?
+- That your passion?
+- Is that passion of yours?
+character: Well, I just enjoy designing as a hobby.
+- Keep up the good work!
+- Keep the good work up!
+- Keep up good work!
+label Level 2 - Graduation
+character: What are your plans after graduation?
+- I plan go hiking, but it depends with the weather. You?
+- I planning to go hiking, but it depend on the weather. What about you?
+- I plan to go hiking, but it depends on the weather. How about you?
+character:  I think I’ll just look for something to keep me busy.
+- Wow, you’re such a hardworking person!
+- Wow, you such a hardworking person, huh?
+- Wow, you’re such hardworking person, huh?
+character: Haha, not really, just trying to earn some extra income.
+- Nice! I want to go hiking just to relax for a while.
+- Nice! I want go hiking just to refresh for a while
+- Nice! I wants to go hiking just for refreshing for a while.
+character:  What are your plans after graduation?
+label Level 3 - Savings
+- Got a savings target for this year?
+- Do you have any savings goals for this year?
+- You got any savings goal this year?
+character: Yes, I’m saving up for a new motorbike.
+- That’s awesome! Hope you reach your goal fast. Me, I’m working on my emergency fund.
+- That’s great! I hope you reach your goal soon. I’m focusing on building up my emergency fund.
+- Nice! Hopefully you’ll hit your goal soon. I’m building my emergency fund.
+character: That’s important because you can rely on those savings in emergencies.
+- Yep, that’s right, but I wanna save a bit just for me.
+- Yeah, exactly, but I wanna save some to treat myself.
+- Yes, exactly, but I also want to save a little to treat myself.
+character: Haha, it’s totally fine to see it as a self-reward!
+- Haha, true that!
+- Haha, yep!
+- Haha, that’s right!
+label Level 4 - Exercise
+- You have any plans to exercise regularly?
+- Do you have any plans to exercise regularly?
+- Got any plans to exercise regularly?
+character: Yes, I'm going to start jogging every morning. They say it's good for maintaining stamina.
+- So true! I just tried yoga, and it’s pretty relaxing.
+- That’s true. I recently tried yoga, and it’s really relaxing.
+- Yep, I tried yoga recently, and it’s super relaxing.
+character:  I'll try yoga sometime.
+- You totally should! My yoga class is at 2 p.m. tomorrow—interested?
+- You should! I’ve got a yoga class tomorrow at 2 —wanna come?
+- You should! I have a yoga class tomorrow at 2 p.m. —would you like to join?
+character:  I’d love to! Let me know.
+- Got it, I’ll let you know!
+- Okay, will do!
+- I will!
+label Level 5 - Summer Holidays
+- Summer holiday is coming up. Do we got any plans?
+- Summer holidays are coming up. Do we have any plans yet?
+- Summer holidays coming, we planning go anywhere?
+character: Definitely! We've worked hard on school assignments, so we deserve a reward. 
+- Haha, just look at you show how stressed you are.
+- Haha, just looking at you makes it clear how stressed you’ve been.
+- Haha, looking at you it shows how much stressed you been.
+character: Haha, so where should we go? How about the beach? I’d love to see the sea and play in the sand.
+- Great idea! I already picture us sip coconut water and sunbathing.
+- Great idea! Can picture we sipping coconut water and lay in sun.
+- Great idea! I can already picture us sipping coconut water and relaxing under the sun.
+character: Let’s invite the others. They might want to join us too.
+- It’ll be more fun if more people coming
+- It more fun if more people come.
+- It’ll be more fun if more people join us.

@@ -1,14 +1,19 @@
 extends Control
+
+
+#Mengatur perilaku objek Dialog Button tunggal
 @onready var nine_patch_rect = $MarginContainer/PanelContainer/Button/NinePatchRect
 @onready var label = $MarginContainer/PanelContainer/Button/MarginContainer/Label
+
 
 var tipe_balon : Rect2
 
 signal munculkan_prompt
 signal disable_other(pesan1, pesan2)
-signal disable_self
+signal disable_self 
 
 @export var button_identity : Button
+
 var is_toggled := false:
 	set(toggle_button):
 		is_toggled = toggle_button
@@ -35,7 +40,7 @@ func _on_button_toggled(toggled_on):
 		is_toggled = false
 		
 
-
+#mengembalikan warna teks dan balon dialog
 func reset_panel_dialog():
 	nine_patch_rect.region_rect = Rect2(2060.0, 10.0, 490.0, 240.0)
 	label.add_theme_color_override("font_color", Color.BLACK)
@@ -67,5 +72,6 @@ func _on_disable_self(pesan1:bool):
 	else:
 		pass
 
+#Fungsi dipanggil dari luar untuk mengisi teks dialog
 func isi_label(dialog:String):
 	label.text = dialog
