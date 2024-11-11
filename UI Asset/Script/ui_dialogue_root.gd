@@ -39,11 +39,12 @@ func tampilkan_prompt(info: Dictionary) -> void:
 	if !prompto.visible:
 		prompto.show()
 	
-	prompto.audio_stream_player.play()
+		prompto.audio_stream_player.play()
+		prompto.speech_to_text.recording = true
 	
 	prompto.rich_text_label.partial_text = ""
 	prompto.rich_text_label.completed_text = ""
-	prompto.speech_to_text.recording = true
+
 	
 	#Baris buat debug comparison, langsung kasih teks tanpa lewat whisper	
 	#test_array = info["text"].split(" ")
