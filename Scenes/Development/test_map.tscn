@@ -1,6 +1,5 @@
-[gd_scene load_steps=13 format=3 uid="uid://ewck2sucefpr"]
+[gd_scene load_steps=12 format=3 uid="uid://ewck2sucefpr"]
 
-[ext_resource type="Texture2D" uid="uid://cjpqncrnplppv" path="res://Resources/PostProcessing/dirt.png" id="1_sinej"]
 [ext_resource type="Texture2D" uid="uid://blw08u8v25ulj" path="res://addons/kenney_prototype_textures/dark/texture_03.png" id="2_kxqkq"]
 [ext_resource type="PackedScene" uid="uid://cf2ebhsxe2ls" path="res://Objects/Environtment/Houses/House_1.tscn" id="3_1ddf6"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_n8qci"]
@@ -25,7 +24,6 @@ glow_intensity = 1.75
 glow_strength = 1.41
 glow_blend_mode = 1
 glow_hdr_threshold = 1.05
-glow_map = ExtResource("1_sinej")
 fog_enabled = true
 fog_light_color = Color(0.494968, 0.569624, 0.549717, 1)
 fog_sun_scatter = 0.48
@@ -39,7 +37,7 @@ albedo_texture = ExtResource("2_kxqkq")
 uv1_triplanar = true
 texture_filter = 5
 
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_180yv"]
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_xx6e7"]
 auto_exposure_scale = 0.06
 auto_exposure_speed = 0.01
 dof_blur_far_enabled = true
@@ -130,7 +128,7 @@ shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 9.96399e-13, -1.98141e-12, -4.92097e-13, 0.970813, 0.239839, 2.16255e-12, -0.239839, 0.970813, 9.27341, 3.6402, 8.94978)
-attributes = SubResource("CameraAttributesPractical_180yv")
+attributes = SubResource("CameraAttributesPractical_xx6e7")
 fov = 45.0
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]

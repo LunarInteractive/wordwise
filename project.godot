@@ -19,7 +19,9 @@ config/icon="res://icon.svg"
 [audio]
 
 buses/default_bus_layout="res://samples/godot_whisper/sample_bus_layout.tres"
+general/text_to_speech=true
 driver/enable_input=true
+driver/mix_rate=16000
 
 [autoload]
 
@@ -31,6 +33,11 @@ SceneTransition="*res://UI Asset/Scene/Scene_Transition.tscn"
 ImGuiRoot="*res://addons/imgui-godot/data/ImGuiRoot.tscn"
 LisenBus="*res://Scripts/LISEN/LisenBus.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+
+[debug]
+
+file_logging/enable_file_logging=true
+file_logging/log_path="res://Resources/godot.log"
 
 [dialogic]
 
@@ -98,6 +105,7 @@ text/autocolor_names=false
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=2
 window/size/always_on_top=true
 window/size/extend_to_title=true
 window/stretch/mode="canvas_items"

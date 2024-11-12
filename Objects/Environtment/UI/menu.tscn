@@ -1,13 +1,13 @@
-[gd_scene load_steps=22 format=3 uid="uid://cf3w88e7q78qd"]
+[gd_scene load_steps=23 format=3 uid="uid://cf3w88e7q78qd"]
 
 [ext_resource type="Script" path="res://Objects/Environtment/UI/menu.gd" id="1_xit0o"]
 [ext_resource type="Texture2D" uid="uid://nop14tpltyv" path="res://UI Asset/Background/Background_sementara.png" id="2_kx8mq"]
 [ext_resource type="Texture2D" uid="uid://byib156txob2h" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/Border_.png" id="3_uwgme"]
 [ext_resource type="PackedScene" uid="uid://7m43aipf46oo" path="res://Objects/Environtment/UI/settings.tscn" id="4_ijbmb"]
 [ext_resource type="FontFile" uid="uid://c7mvg73i0pnen" path="res://UI Asset/Font/Pixel Dogica/dogicabold.ttf" id="5_643lq"]
-[ext_resource type="Texture2D" uid="uid://bs74yandslari" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Background_PB.tres" id="5_px2gh"]
-[ext_resource type="Texture2D" uid="uid://dssx6m2tldaab" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Border_PB.tres" id="6_kknnn"]
-[ext_resource type="Texture2D" uid="uid://uag7r1uiulaf" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Fill_PB.tres" id="7_h4wwf"]
+[ext_resource type="Texture2D" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Background_PB.tres" id="5_px2gh"]
+[ext_resource type="Texture2D" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Border_PB.tres" id="6_kknnn"]
+[ext_resource type="Texture2D" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Fill_PB.tres" id="7_h4wwf"]
 [ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="8_tocdd"]
 [ext_resource type="FontFile" uid="uid://dclwgnpvy23n7" path="res://UI Asset/Font/Pixel Dogica/dogicapixelbold.ttf" id="9_ax0wb"]
 [ext_resource type="Script" path="res://UI Asset/Script/BtnAnimation.gd" id="9_cedgc"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://ntpb47mhxg0e" path="res://UI Asset/Sprite/UI_Wordwise/Button/Button_Hamburger_Purple.tres" id="14_dj4mf"]
 [ext_resource type="Texture2D" uid="uid://d1rvd4b6r0gqi" path="res://UI Asset/Sprite/UI_Wordwise/Button/Button_Setting_Purple.tres" id="15_t0n6j"]
 [ext_resource type="Texture2D" uid="uid://oxstr365hodm" path="res://UI Asset/Sprite/UI_Wordwise/Icons/Icon_Play_Purple.tres" id="16_bh2uq"]
+[ext_resource type="PackedScene" uid="uid://bxefct3ha1r1q" path="res://UI Asset/Scene/task_panel.tscn" id="19_necf6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jnio7"]
 atlas = ExtResource("3_uwgme")
@@ -93,6 +94,7 @@ theme_override_constants/separation = 20
 [node name="Avatar" type="Button" parent="Container/Profile_Tab/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(135, 135)
 layout_mode = 2
+disabled = true
 text = "AVATAR"
 
 [node name="Desc" type="PanelContainer" parent="Container/Profile_Tab/MarginContainer/HBoxContainer"]
@@ -118,7 +120,6 @@ vertical_alignment = 2
 [node name="ProgressBar" type="TextureProgressBar" parent="Container/Profile_Tab/MarginContainer/HBoxContainer/Desc/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
-value = 39.0
 nine_patch_stretch = true
 texture_under = ExtResource("5_px2gh")
 texture_over = ExtResource("6_kknnn")
@@ -137,7 +138,7 @@ grow_horizontal = 0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("8_tocdd")
 theme_override_font_sizes/font_size = 61
-text = "40 %"
+text = "0 %"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -253,5 +254,9 @@ visible = false
 layout_mode = 1
 
 [node name="Customize" parent="." instance=ExtResource("12_pap1w")]
+visible = false
+layout_mode = 1
+
+[node name="TaskPanel" parent="." instance=ExtResource("19_necf6")]
 visible = false
 layout_mode = 1

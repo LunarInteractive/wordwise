@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://UI Asset/Script/task_item.gd" id="1_6xfpo"]
 [ext_resource type="Texture2D" uid="uid://lnx6onv3ycd5" path="res://UI Asset/Sprite/two-coins.svg" id="2_ig6cp"]
-[ext_resource type="Texture2D" uid="uid://bs74yandslari" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Background_PB.tres" id="5_35yir"]
-[ext_resource type="Texture2D" uid="uid://dssx6m2tldaab" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Border_PB.tres" id="6_4egw0"]
+[ext_resource type="Texture2D" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Background_PB.tres" id="5_35yir"]
+[ext_resource type="Texture2D" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Border_PB.tres" id="6_4egw0"]
 [ext_resource type="Theme" uid="uid://la05b3bnexvl" path="res://UI Asset/Shader/theme_fajar/theme_fajar.tres" id="6_diqdm"]
-[ext_resource type="Texture2D" uid="uid://uag7r1uiulaf" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Fill_PB.tres" id="7_dff38"]
+[ext_resource type="Texture2D" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Fill_PB.tres" id="7_dff38"]
 [ext_resource type="AudioStream" uid="uid://deesmb07s1up7" path="res://UI Asset/Audio/SFX/zapsplat_multimedia_game_sound_coins_collect_several_at_once_002_40813.mp3" id="8_3dbft"]
 [ext_resource type="Texture2D" uid="uid://crcm6qx3hyusk" path="res://UI Asset/Sprite/Border/Border_NO BG_.png" id="8_grj4t"]
 
@@ -238,7 +238,7 @@ custom_minimum_size = Vector2(700, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_stretch_ratio = 0.5
-theme_override_constants/separation = 80
+theme_override_constants/separation = 35
 
 [node name="MarginIcon" type="MarginContainer" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer"]
 layout_mode = 2

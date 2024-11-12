@@ -12,4 +12,3 @@ func _ready() -> void:
 	
 func on_exit_pressed () -> void:
 	exit_setting.emit()
-	set_process(false)

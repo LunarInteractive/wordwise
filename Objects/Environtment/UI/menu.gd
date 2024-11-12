@@ -8,6 +8,7 @@ extends Control
 
 @onready var setting: TextureButton = $Container/Setting_Button as TextureButton
 
+@onready var tasks: Tasks = $TaskPanel as Tasks
 @onready var settings: Settings = $Settings as Settings
 @onready var margin_container: Control = $Container as Control
 @onready var avatar: Button = $Container/Profile_Tab/MarginContainer/HBoxContainer/Avatar as Button
@@ -25,8 +26,13 @@ func on_ava_pressed():
 func on_play_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Level/Chapter_1/level_selection.tscn")
 
-func on_task_pressed():
-	get_tree().change_scene_to_file("res://UI Asset/Scene/task_panel.tscn")
+func on_task_pressed() -> void:
+	margin_container.visible = false
+	tasks.visible = true
+	
+func on_exit_on_task() -> void:
+	margin_container.visible = true
+	tasks.visible = false
 	
 func on_setting_pressed() -> void:
 	margin_container.visible = false
@@ -49,6 +55,7 @@ func on_confirm_on_custom() -> void:
 func handle_connecting_signal() -> void:
 	setting.button_down.connect(on_setting_pressed)
 	settings.exit_setting.connect(on_exit_on_setting)
+	tasks.exit_task.connect(on_exit_on_task)
 	
 	avatar.button_down.connect(on_ava_pressed)
 	play.button_down.connect(on_play_pressed)

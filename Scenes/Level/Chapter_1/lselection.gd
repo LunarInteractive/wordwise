@@ -1,74 +1,72 @@
 extends Node2D
 
 #CH1
-@onready var c_1l_1: Button = $"CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/C1L1"
-@onready var c_1l_2: Button = $"CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/C1L2"
-@onready var c_1l_3: Button = $"CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/C1L3"
-@onready var c_1l_4: Button = $"CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/C1L4"
-@onready var c_1l_5: Button = $"CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/C1L5"
+@onready var c_1l_1: Button = $"CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/Control/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/C1L1"
+@onready var c_1l_2: Button = $"CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/Control/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/C1L2"
+@onready var c_1l_3: Button = $"CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/Control/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/C1L3"
+@onready var c_1l_4: Button = $"CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/Control/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/C1L4"
+@onready var c_1l_5: Button = $"CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/Control/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/C1L5"
 
 #CH2
-@onready var c_2l_1: Button = $"CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 2/C2L1"
-@onready var c_2l_2: Button = $"CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 2/C2L2"
-@onready var c_2l_3: Button = $"CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 2/C2L3"
-@onready var c_2l_4: Button = $"CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 2/C2L4"
-@onready var c_2l_5: Button = $"CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 2/C2L5"
+@onready var c_2l_1: Button = $"CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 2/MarginContainer/Chapter 2/C2L1"
+@onready var c_2l_2: Button = $"CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 2/MarginContainer/Chapter 2/C2L2"
+@onready var c_2l_3: Button = $"CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 2/MarginContainer/Chapter 2/C2L3"
+@onready var c_2l_4: Button = $"CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 2/MarginContainer/Chapter 2/C2L4"
+@onready var c_2l_5: Button = $"CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 2/MarginContainer/Chapter 2/C2L5"
 
 #CH3
-@onready var c_3l_1: Button = $"CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 3/C3L1"
-@onready var c_3l_2: Button = $"CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 3/C3L2"
-@onready var c_3l_3: Button = $"CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 3/C3L3"
-@onready var c_3l_4: Button = $"CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 3/C3L4"
-@onready var c_3l_5: Button = $"CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 3/C3L5"
-
+@onready var c_3l_1: Button = $"CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 3/MarginContainer/Chapter 3/C2L1"
+@onready var c_3l_2: Button = $"CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 3/MarginContainer/Chapter 3/C2L2"
+@onready var c_3l_3: Button = $"CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 3/MarginContainer/Chapter 3/C2L3"
+@onready var c_3l_4: Button = $"CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 3/MarginContainer/Chapter 3/C2L4"
+@onready var c_3l_5: Button = $"CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 3/MarginContainer/Chapter 3/C2L5"
 #CH4
-@onready var c_4l_1: Button = $"CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 4/C4L1"
-@onready var c_4l_2: Button = $"CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 4/C4L2"
-@onready var c_4l_3: Button = $"CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 4/C4L3"
-@onready var c_4l_4: Button = $"CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 4/C4L4"
-@onready var c_4l_5: Button = $"CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 4/C4L5"
-
+@onready var c_4l_1: Button = $"CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 4/MarginContainer/Chapter 4/C2L1"
+@onready var c_4l_2: Button = $"CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 4/MarginContainer/Chapter 4/C2L2"
+@onready var c_4l_3: Button = $"CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 4/MarginContainer/Chapter 4/C2L3"
+@onready var c_4l_4: Button = $"CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 4/MarginContainer/Chapter 4/C2L4"
+@onready var c_4l_5: Button = $"CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 4/MarginContainer/Chapter 4/C2L5"
 #CH5
-@onready var c_5l_1: Button = $"CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 5/C5L1"
-@onready var c_5l_2: Button = $"CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 5/C5L2"
-@onready var c_5l_3: Button = $"CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 5/C5L3"
-@onready var c_5l_4: Button = $"CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 5/C5L4"
-@onready var c_5l_5: Button = $"CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 5/C5L5"
+@onready var c_5l_1: Button = $"CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L1"
+@onready var c_5l_2: Button = $"CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L2"
+@onready var c_5l_3: Button = $"CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L3"
+@onready var c_5l_4: Button = $"CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L4"
+@onready var c_5l_5: Button = $"CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L5"
 
 #CH6
-@onready var c_6l_1: Button = $"CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 6/C6L1"
-@onready var c_6l_2: Button = $"CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 6/C6L2"
-@onready var c_6l_3: Button = $"CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 6/C6L3"
-@onready var c_6l_4: Button = $"CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 6/C6L4"
-@onready var c_6l_5: Button = $"CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 6/C6L5"
+@onready var c_6l_1: Button = $"CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 6/MarginContainer/Chapter 6/C2L1"
+@onready var c_6l_2: Button = $"CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 6/MarginContainer/Chapter 6/C2L2"
+@onready var c_6l_3: Button = $"CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 6/MarginContainer/Chapter 6/C2L3"
+@onready var c_6l_4: Button = $"CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 6/MarginContainer/Chapter 6/C2L4"
+@onready var c_6l_5: Button = $"CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 6/MarginContainer/Chapter 6/C2L5"
 
 #CH7
-@onready var c_7l_1: Button = $"CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 7/C7L1"
-@onready var c_7l_2: Button = $"CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 7/C7L2"
-@onready var c_7l_3: Button = $"CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 7/C7L3"
-@onready var c_7l_4: Button = $"CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 7/C7L4"
-@onready var c_7l_5: Button = $"CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 7/C7L5"
+@onready var c_7l_1: Button = $"CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 7/MarginContainer/Chapter 7/C2L1"
+@onready var c_7l_2: Button = $"CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 7/MarginContainer/Chapter 7/C2L2"
+@onready var c_7l_3: Button = $"CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 7/MarginContainer/Chapter 7/C2L3"
+@onready var c_7l_4: Button = $"CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 7/MarginContainer/Chapter 7/C2L4"
+@onready var c_7l_5: Button = $"CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 7/MarginContainer/Chapter 7/C2L5"
 
 #CH8
-@onready var c_8l_1: Button = $"CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 8/C8L1"
-@onready var c_8l_2: Button = $"CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 8/C8L2"
-@onready var c_8l_3: Button = $"CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 8/C8L3"
-@onready var c_8l_4: Button = $"CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 8/C8L4"
-@onready var c_8l_5: Button = $"CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 8/C8L5"
+@onready var c_8l_1: Button = $"CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 8/MarginContainer/Chapter 8/C2L1"
+@onready var c_8l_2: Button = $"CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 8/MarginContainer/Chapter 8/C2L2"
+@onready var c_8l_3: Button = $"CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 8/MarginContainer/Chapter 8/C2L3"
+@onready var c_8l_4: Button = $"CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 8/MarginContainer/Chapter 8/C2L4"
+@onready var c_8l_5: Button = $"CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 8/MarginContainer/Chapter 8/C2L5"
 
 #CH9
-@onready var c_9l_1: Button = $"CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 9/C9L1"
-@onready var c_9l_2: Button = $"CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 9/C9L2"
-@onready var c_9l_3: Button = $"CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 9/C9L3"
-@onready var c_9l_4: Button = $"CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 9/C9L4"
-@onready var c_9l_5: Button = $"CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 9/C9L5"
+@onready var c_9l_1: Button = $"CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 9/MarginContainer/Chapter 9/C2L1"
+@onready var c_9l_2: Button = $"CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 9/MarginContainer/Chapter 9/C2L2"
+@onready var c_9l_3: Button = $"CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 9/MarginContainer/Chapter 9/C2L3"
+@onready var c_9l_4: Button = $"CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 9/MarginContainer/Chapter 9/C2L4"
+@onready var c_9l_5: Button = $"CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 9/MarginContainer/Chapter 9/C2L5"
 
 #CH10
-@onready var c_10l_1: Button = $"CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 10/C10L1"
-@onready var c_10l_2: Button = $"CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 10/C10L2"
-@onready var c_10l_3: Button = $"CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 10/C10L3"
-@onready var c_10l_4: Button = $"CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 10/C10L4"
-@onready var c_10l_5: Button = $"CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/HBoxContainer2/ScrollContainer/MarginContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 10/C10L5"
+@onready var c_10l_1: Button = $"CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 10/MarginContainer/Chapter 10/C2L1"
+@onready var c_10l_2: Button = $"CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 10/MarginContainer/Chapter 10/C2L2"
+@onready var c_10l_3: Button = $"CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 10/MarginContainer/Chapter 10/C2L3"
+@onready var c_10l_4: Button = $"CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 10/MarginContainer/Chapter 10/C2L4"
+@onready var c_10l_5: Button = $"CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 10/MarginContainer/Chapter 10/C2L5"
 
 
 # Called when the node enters the scene tree for the first time.

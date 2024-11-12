@@ -19,7 +19,7 @@ func _ready() -> void:
 func connect_signals() -> void:
 	target.mouse_entered.connect(on_hover)
 	target.mouse_exited.connect(off_hover)
-
+ 
 func setup() -> void:
 	if from_center:
 		target.pivot_offset = target.size / 2

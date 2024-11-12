@@ -1,8 +1,11 @@
+class_name Tasks
 extends Control
 @onready var v_box_container = %VBoxContainer
+@onready var exit: TextureButton = $MarginPanelTask/PanelContainer/VBoxContainer/HeaderPanel/MarginHeader/MarginClose/CloseButton2 as TextureButton
 #@onready var close_button_2: TextureButton = $MarginPanelTask/PanelContainer/VBoxContainer/HeaderPanel/MarginHeader/MarginClose/CloseButton2 as TextureButton
 
 var task_res = load("res://UI Asset/Scene/task_item.tscn")
+
 
 var task_items:  Array[TaskItem] = []
 var task_hold: Node
@@ -10,24 +13,24 @@ var task_idx: int
 var rand1: int
 var rand2: float
 
+
+
+signal exit_task
+
+func on_exit_pressed () -> void:
+	exit_task.emit()
+	set_process(false)
+
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _ready() -> void:
+	exit.button_down.connect(on_exit_pressed)
+	set_process(false)
 	#close_button_2.button_down.connect(_on_button_2_button_up)
-	pass # Replace with function body.
 
 func _init():
 	#task_idx = clampi(task_items.size()-1,0,99)
 	task_idx = task_items.size()-1
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-	
-
-
-func _on_button_2_button_up():
-	#get_tree().change_scene_to_file("res://Objects/Environtment/UI/menu.tscn")
-	queue_free()
 	
 func add_task():
 	task_idx +=1
