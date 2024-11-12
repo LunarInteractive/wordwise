@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://4x5n02iygntq"
+path="res://.godot/imported/SM_ModularHouse_04.obj-f3d6a96195a3d99226e071ea1203124c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SM_ModularHouse_04.obj-f3d6a96195a3d99226e071ea1203124c.mesh"]
+
+source_file="res://Objects/Pixel_3D_RPG_Town/Modular_Houses/SM_ModularHouse_04.obj"
+dest_files=["res://.godot/imported/SM_ModularHouse_04.obj-f3d6a96195a3d99226e071ea1203124c.mesh", "res://.godot/imported/SM_ModularHouse_04.obj-f3d6a96195a3d99226e071ea1203124c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

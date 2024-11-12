@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://y5t8olo6v0l2"
+path="res://.godot/imported/SM_Weapon_ShopSign_01.obj-e6a4e78b77ab1149d1d543cb4b870aef.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SM_Weapon_ShopSign_01.obj-e6a4e78b77ab1149d1d543cb4b870aef.mesh"]
+
+source_file="res://Objects/Pixel_3D_RPG_Town/Objects/SM_Weapon_ShopSign_01.obj"
+dest_files=["res://.godot/imported/SM_Weapon_ShopSign_01.obj-e6a4e78b77ab1149d1d543cb4b870aef.mesh", "res://.godot/imported/SM_Weapon_ShopSign_01.obj-e6a4e78b77ab1149d1d543cb4b870aef.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

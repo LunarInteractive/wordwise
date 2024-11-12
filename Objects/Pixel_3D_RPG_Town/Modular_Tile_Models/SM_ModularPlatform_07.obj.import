@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cbxm3v8f8txju"
+path="res://.godot/imported/SM_ModularPlatform_07.obj-d16460ec0372acc714b0dec65f564b2c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SM_ModularPlatform_07.obj-d16460ec0372acc714b0dec65f564b2c.mesh"]
+
+source_file="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularPlatform_07.obj"
+dest_files=["res://.godot/imported/SM_ModularPlatform_07.obj-d16460ec0372acc714b0dec65f564b2c.mesh", "res://.godot/imported/SM_ModularPlatform_07.obj-d16460ec0372acc714b0dec65f564b2c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,88 @@
+label Level 1 - Tourist
+character: Excuse me, can you help me?
+- Sure, how I help can you?
+- Sure, help you I can how?
+- Sure, how may I assist you?
+character: I’m new here, and I’d like to know some good places to visit. Could you recommend any?
+- Sure! You should visit theCity Museum, it's only about a 10 minute walk from here.
+- Sure! Visit the City Museum you can. About a10 minute walk from here it is.
+- Sure! The City Museum you can visit. It’s walk 10 minute about from here.
+character: If I may know how much is the entrance ticket price?
+- The price for an entrance ticket is 10,000 rupiah.
+- The ticket entrance price is 10,000 rupiah.
+- 10,000 rupiah is the entrance ticket price.
+character: That sounds great. Thank you so much
+- You’re welcome! Enjoy your time in the city!
+- Very welcome you are! Time in the city enjoy your!
+- You’re welcome very! Enjoy city your time!
+[end_timeline]
+label Level 2 - Airport
+- Bye! Enjoy your day!
+character: Pardon me. Could you help me find Gate 3, please?
+- Certainly! Gate 3 is just a short walk away. Keep going straight, make a right turn, and you'll spot it.
+- Of course! It's only a short stroll to Gate 3. Proceed straight ahead, turn right, and you will see it.
+- Sure! It's a short walk to Gate 3. You'll see it if you continue straight and turn right.
+character: Thanks! Is it far?
+- Not at all. Just a short stroll, about two or three minutes.
+- Not at all. It was only a quick walk, perhaps two or three minutes.
+- Absolutely not. Just a quick walk of two or three minutes.
+character: Great! Thanks a lot for your help.
+- You're welcome! If you need more assistance, there's an Information Desk near Gate 3.
+	character: OK, observed. Thank you again!
+- You're welcome! Near Gate 3 is an Information Desk if you need further help.
+	character: Alright, observed. Again, thank you!
+- You're welcome! There's an Information Desk next to Gate 3 if you need further help.
+	character: Okay, noted. Thanks again!
+[end_timeline]
+label Level 3 - Station
+character: Hi there! Sorry to bother you. Do you know where Paltform 5 is?
+- Absolutely! You can find Platform 5 right nearby. Just head straight ahead, take a right turn, and it will be there.
+- Absolutely! Nearby right is platform 5. Head straight ahead, take a turn right, and there it will be
+- Absolutely! Platform 5 is right nearby. Head ahead straight, take right a turn, and it will be there.
+character: Okay, got it. How far is it?
+- It is quite close, requiring justa brief walk of maybe a minute or two.
+- Quite close it is. Just brief walk a, maybe or two minute
+- It’s close quite. Maybe a walk brief, minute or two
+character: Fantastic! Thanks for your assistance.
+- No problem! If you have any further questions, you can find an Information Desk near platform 5.
+	character: Okay, I will bear that in mind. Once again, thank you!
+- No problem! Near platform 5 is an Information Desk if you have any further questions.
+	character: Alright, I'll keep that in mind. Thanks again!
+- No problem! If any further questions you have, there is an Information Desk near platform 5.
+	character: Okay, I will remember that. Once more, thank you!
+[end_timeline]
+label Level 4 - Campus
+character: Excuse me, can you tell me where the extra classes are held?
+- Sure! You can usually find the extra classes in Room 204 of the Science Building.
+- Sure! Usually in Room 204 of the Science Building are the extra classes.
+- Sure! The extra classes in Room 204 usually are Science Building of.
+character: Great! What subjects do you offer for the extra classes?
+- This semester, we provide classes in math, science, and English.
+- We classes in math, science, and English offer this semester.
+- Offer we math, science, and English classes this semester.
+character: That sounds helpful. When do these classes start?
+- Next Monday at 4 PM, the classes will start.
+- Start the classes next Monday at 4 PM.
+- Next Monday at 4 PM, start the classes
+character: Thank you for the information! Do I need to register in advance?
+- Yes, you should register at the Student Services desk before the classes start.
+- Yes, register please at the Student Services desk before the classes starts.
+- Yes, please at the Student Services desk register before classes the start
+[end_timeline]
+label Level 5 - Garden
+character: Excuse me, do you know where I can find the butterfly garden?
+- Yes, it is just past rose bushes the. A sign pointing to it you’ll see.
+- Yes, just past the rose bushes it is. A sign you’ll see pointing to it
+- Yes, you will find it just past the rose bushes, where you’ll see a sign pointing to it.
+character: Great! How long does it usually take to walk through the garden?
+- You will take about 30 minutes if you stop to take pictures, but it can take longer if you want to explore.
+- About 30 minutes it takes if you stop to take pictures, but longer can be if you want to explore.
+- It takes if you stop to take pictures about 30 minutes, but can longer be if you want to explore.
+character: Thanks! Are there any special events happening in the park today?
+- Yes, a free guided nature walk will start in about 15 minutes near the main entrance.
+- Yes, near the main entrance starting is a free guided nature walk in about 15 minutes
+- Yes, there's starting in about 15 minutes a free guided nature walk near the main entrance.
+character: Thank you for the Information
+- You're welcome! I'm happy to have been able to help.
+- Welcome you are! Glad I could help you
+- You’re welcome! Help I could glad you

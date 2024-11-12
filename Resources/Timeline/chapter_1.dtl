@@ -1,13 +1,70 @@
-label Level1
-character: Pertanyaan 1
-- Jawaban 1-A
-- Jawaban 1-B
-- Jawaban 1-C
-character: Pertanyaan 2
-- Jawaban 2-A
-- Jawaban 2-B
-- Jawaban 2-C
-character: Pertanyaan 3	
-- Jawaban 3-A
-- Jawaban 3-B
-- Jawaban 3-C
+label Level 1 - School
+character: Hi! Good morning!
+- Good morning! How are you feeling today?
+- Good morning! How you are today?
+- Good morning everyone! How are you today?
+character: I’m good! By the way, when is the deadline for this biology assignment?
+- We need to finish everything by next Friday
+- The deadline is next Friday.
+- The deadline is on the next Friday
+character: Okey Thank you for the information!
+- You're welcome! Just let me know if you need anything else.
+- You're welcome! Let me know if you needing anything else.
+- You're welcome! Let me know if you need anything else.
+[signal arg="level ended"]
+[end_timeline]
+label Level 2 - Neighboor
+character: Hi there! It's been a while! How have you been?
+- Oh, hi! I’m doing okay, thanks. I was sick for awhile, but I’m feeling better now.
+- Oh, hi! I've been okay, thank you. I was out sick for while, but I'm better now
+- Oh, hi! I'm fine, thanks. I was sick for a while, but I'm better now.
+character: By the way, the janitor will come today at 4 o'clock, right?
+- Yes, you’re right.
+- Yes, that correct
+- Yes, that’s correctly
+character: Oke. See you tomorrow!
+- Bye! Have good day.
+- Bye! Enjoy your day!
+- Bye bye! Have a nice day
+[end_timeline]
+label Level 3 - Wedding
+character: Hello there! Welcome to the wedding celebration! Isn’t it a beautiful ceremony?
+- Yes, I find it really beautiful! I’m so glad to be here.
+- Yes, it really is beautiful! I am glad to be here
+- Yes, it really is beautiful! Me so glad to be here.
+character: The bride and groom are in the ornate room, what if we meet them?
+- That sounds like a great idea! I’d love to meet them.
+- I think it is a great idea, but I am not sure.
+- It sounds great! I love to meet them.
+character: Let’s meet them together
+- Okay!
+- let’s go!
+- Alright!
+[end_timeline]
+label Level 4 - Sporting Event
+character: Hey there! Are you excited for the game today?
+- Absolutely! I am excited to see our team play!
+- Absolutely! I can't wait to see our team play
+- Absolutely! I can’t wait seeing our team play!
+character: Me too! Let’s find our seats before it gets crowded.
+- Good idea! I hope our team wins too! Celebrating would be fun.
+- Good idea! I hope our team wins! It would be fun to celebrate.
+- Good idea! I hope our team wins too! It would be fun to celebrate.
+character: Yeah, I really think they have a good chance.
+- They have a strong team this year!
+- This year, they have built a strong team!
+- Have a strong team this year!
+[end_timeline]
+label Level 5 -Workplace
+How are you today lina? I heard you're busy compiling data from the boss
+- I'm fine, I can do anything. What about you?
+- I'm fine, I can do anything. And you?
+- Ahhh yes, but just calm down, I can handle it, thanks. And How about you?
+character: hmm a little bit stress haha, by the way where is our meeting schedule today?
+- I hopes your work is going well. Today's meeting held on second floor
+- I hope your work going well. Today meeting will be held in the second floor.
+- I hope your work is going well. We will hold today’s meeting on the second floor.
+character: Okay thank’s lina have a great day!
+- Thank you! I hope you having a wonderful day as well!
+- Thank you so much! I hope you have a wonderful day too
+- Thank you! I hope you enjoy a wonderful day too!

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d2sguvsgcdlae"
+path="res://.godot/imported/SM_Stairs_03.obj-f4af078cf110fb2ac1f39d2157b01add.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SM_Stairs_03.obj-f4af078cf110fb2ac1f39d2157b01add.mesh"]
+
+source_file="res://Objects/Pixel_3D_RPG_Town/Objects/SM_Stairs_03.obj"
+dest_files=["res://.godot/imported/SM_Stairs_03.obj-f4af078cf110fb2ac1f39d2157b01add.mesh", "res://.godot/imported/SM_Stairs_03.obj-f4af078cf110fb2ac1f39d2157b01add.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

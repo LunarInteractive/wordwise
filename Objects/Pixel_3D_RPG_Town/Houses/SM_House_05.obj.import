@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://drjmwdiesqk2w"
+path="res://.godot/imported/SM_House_05.obj-185e8078876f1206539dcebfcead0282.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SM_House_05.obj-185e8078876f1206539dcebfcead0282.mesh"]
+
+source_file="res://Objects/Pixel_3D_RPG_Town/Houses/SM_House_05.obj"
+dest_files=["res://.godot/imported/SM_House_05.obj-185e8078876f1206539dcebfcead0282.mesh", "res://.godot/imported/SM_House_05.obj-185e8078876f1206539dcebfcead0282.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b2d1c38pr1wd"
+path="res://.godot/imported/SM_Garden_Bush_03.obj-98e2f2ad8733fbb65d22447937004bcb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SM_Garden_Bush_03.obj-98e2f2ad8733fbb65d22447937004bcb.mesh"]
+
+source_file="res://Objects/Pixel_3D_RPG_Town/Foliage/SM_Garden_Bush_03.obj"
+dest_files=["res://.godot/imported/SM_Garden_Bush_03.obj-98e2f2ad8733fbb65d22447937004bcb.mesh", "res://.godot/imported/SM_Garden_Bush_03.obj-98e2f2ad8733fbb65d22447937004bcb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

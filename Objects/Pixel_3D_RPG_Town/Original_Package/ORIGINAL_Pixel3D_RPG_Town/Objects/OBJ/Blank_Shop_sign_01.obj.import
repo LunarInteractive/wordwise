@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cie1o33v4ipt4"
+path="res://.godot/imported/Blank_Shop_sign_01.obj-e834c80ab7de7599b65d25e5e277cc52.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Blank_Shop_sign_01.obj-e834c80ab7de7599b65d25e5e277cc52.mesh"]
+
+source_file="res://Objects/Pixel_3D_RPG_Town/Original_Package/ORIGINAL_Pixel3D_RPG_Town/Objects/OBJ/Blank_Shop_sign_01.obj"
+dest_files=["res://.godot/imported/Blank_Shop_sign_01.obj-e834c80ab7de7599b65d25e5e277cc52.mesh", "res://.godot/imported/Blank_Shop_sign_01.obj-e834c80ab7de7599b65d25e5e277cc52.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

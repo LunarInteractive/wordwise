@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b5kcpagn87igf"
+path="res://.godot/imported/Market_Fish_Display_01.obj-2e94597e000c0643ed3e7bab6fc39001.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Market_Fish_Display_01.obj-2e94597e000c0643ed3e7bab6fc39001.mesh"]
+
+source_file="res://Objects/Pixel_3D_RPG_Town/Original_Package/ORIGINAL_Pixel3D_RPG_Town/Objects/OBJ/Market_Fish_Display_01.obj"
+dest_files=["res://.godot/imported/Market_Fish_Display_01.obj-2e94597e000c0643ed3e7bab6fc39001.mesh", "res://.godot/imported/Market_Fish_Display_01.obj-2e94597e000c0643ed3e7bab6fc39001.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

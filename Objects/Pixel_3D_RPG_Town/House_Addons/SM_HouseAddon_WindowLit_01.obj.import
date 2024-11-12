@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c5ar54ntfl16x"
+path="res://.godot/imported/SM_HouseAddon_WindowLit_01.obj-83b1c2c190fb69f4cc1eae0fa0966556.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SM_HouseAddon_WindowLit_01.obj-83b1c2c190fb69f4cc1eae0fa0966556.mesh"]
+
+source_file="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_WindowLit_01.obj"
+dest_files=["res://.godot/imported/SM_HouseAddon_WindowLit_01.obj-83b1c2c190fb69f4cc1eae0fa0966556.mesh", "res://.godot/imported/SM_HouseAddon_WindowLit_01.obj-83b1c2c190fb69f4cc1eae0fa0966556.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

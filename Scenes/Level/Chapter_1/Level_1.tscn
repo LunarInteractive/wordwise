@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c2t4cyt1u1h10"]
+[gd_scene load_steps=5 format=3 uid="uid://bm2twp74h3kjb"]
 
 [ext_resource type="Script" path="res://Scenes/Level/Chapter_1/Dialogic_Starter.gd" id="1_fb7hp"]
 [ext_resource type="PackedScene" uid="uid://dlkjulndtiubl" path="res://UI Asset/Scene/UI_Dialogue.tscn" id="1_lq8hd"]
 [ext_resource type="PackedScene" uid="uid://ddtpplryaupo3" path="res://Scenes/Development/similarity.tscn" id="2_3ts76"]
 [ext_resource type="PackedScene" uid="uid://bikmskv6luara" path="res://UI Asset/Scene/Pause_Layer.tscn" id="2_66sla"]
-[ext_resource type="ArrayMesh" path="res://Objects/Pixel_3D_RPG_Town/Houses/SM_House_01.obj" id="5_ad0bm"]
 
 [node name="Level1" type="Node2D"]
 
@@ -17,6 +16,3 @@ script = ExtResource("1_fb7hp")
 
 [node name="Pause_layer" parent="." instance=ExtResource("2_66sla")]
 layer = 5
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = ExtResource("5_ad0bm")

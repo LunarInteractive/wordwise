@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://imqq2mqwhhdt"
+path="res://.godot/imported/Anvil_01.obj-9c193c14ad562ce88e2b8e3d6562359b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Anvil_01.obj-9c193c14ad562ce88e2b8e3d6562359b.mesh"]
+
+source_file="res://Objects/Pixel_3D_RPG_Town/Original_Package/ORIGINAL_Pixel3D_RPG_Town/Objects/OBJ/Anvil_01.obj"
+dest_files=["res://.godot/imported/Anvil_01.obj-9c193c14ad562ce88e2b8e3d6562359b.mesh", "res://.godot/imported/Anvil_01.obj-9c193c14ad562ce88e2b8e3d6562359b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
