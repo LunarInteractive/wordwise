@@ -50,7 +50,6 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"Dialog/chapter_5": "res://Resources/Timeline/chapter_5.dtl",
 "Text_timeline": "res://UI Asset/Testing/Text_timeline.dtl",
 "chapter_1": "res://Resources/Timeline/chapter_1.dtl",
 "chapter_10": "res://Scenes/Dialogue/chapter_10.dtl",

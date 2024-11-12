@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://d7rkg7ufvq46"]
+[gd_scene load_steps=38 format=3 uid="uid://d7rkg7ufvq46"]
 
 [ext_resource type="Script" path="res://Objects/Environtment/UI/setting_tab.gd" id="1_2qfkc"]
 [ext_resource type="PackedScene" uid="uid://c1nrexm1chsfu" path="res://Objects/Environtment/UI/audio_setting.tscn" id="1_vpx88"]
@@ -11,9 +11,9 @@
 [ext_resource type="Script" path="res://UI Asset/Script/BtnAnimation.gd" id="5_q8d6k"]
 [ext_resource type="ButtonGroup" uid="uid://luvlh3xspwgi" path="res://Objects/Environtment/UI/ButtonGroup/LC.tres" id="6_7odi5"]
 [ext_resource type="Texture2D" uid="uid://ct671flg818rf" path="res://UI Asset/Sprite/UI_Wordwise/Button_Text/ButtonText_Border_2.tres" id="8_uyk1m"]
-[ext_resource type="Texture2D" path="res://UI Asset/Sprite/UI_Wordwise/Slider/Handle_Slider.tres" id="12_aehdc"]
-[ext_resource type="Texture2D" path="res://UI Asset/Sprite/UI_Wordwise/Slider/Background_With_Border.tres" id="13_frqtq"]
-[ext_resource type="Texture2D" path="res://UI Asset/Sprite/UI_Wordwise/Slider/Background_Slider.tres" id="13_w8the"]
+[ext_resource type="Texture2D" uid="uid://f2pxf81r3upa" path="res://UI Asset/Sprite/UI_Wordwise/Slider/Handle_Slider.tres" id="12_aehdc"]
+[ext_resource type="Texture2D" uid="uid://b82ia1s35nh0h" path="res://UI Asset/Sprite/UI_Wordwise/Slider/Background_With_Border.tres" id="13_frqtq"]
+[ext_resource type="Texture2D" uid="uid://cglwca215mx4x" path="res://UI Asset/Sprite/UI_Wordwise/Slider/Background_Slider.tres" id="13_w8the"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yyr6f"]
 
@@ -85,13 +85,6 @@ texture_margin_left = 20.0
 texture_margin_top = 20.0
 texture_margin_right = 20.0
 texture_margin_bottom = 20.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_idk6o"]
-atlas = ExtResource("3_338wa")
-region = Rect2(1872, 512, 672, 232)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hjt11"]
-texture = SubResource("AtlasTexture_idk6o")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gnaqu"]
 
@@ -460,7 +453,7 @@ theme_override_fonts/font = ExtResource("4_xtybj")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/focus = SubResource("StyleBoxEmpty_pofvj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_2354y")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_hjt11")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2354y")
 theme_override_styles/normal = SubResource("StyleBoxTexture_rik8o")
 toggle_mode = true
 button_group = ExtResource("6_7odi5")
@@ -481,7 +474,7 @@ theme_override_fonts/font = ExtResource("4_xtybj")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/focus = SubResource("StyleBoxEmpty_pofvj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_2354y")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_hjt11")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2354y")
 theme_override_styles/normal = SubResource("StyleBoxTexture_rik8o")
 toggle_mode = true
 button_group = ExtResource("6_7odi5")
