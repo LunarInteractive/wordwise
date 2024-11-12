@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjjsk3wr4t6gw"]
+
+[ext_resource type="Theme" uid="uid://la05b3bnexvl" path="res://UI Asset/Shader/theme_fajar/theme_fajar.tres" id="1_4ddid"]
+[ext_resource type="Texture2D" uid="uid://caxpl2w8wpky2" path="res://UI Asset/Sprite/fajar_assets/bubbletext2.png" id="2_ddtap"]
+
+[node name="TesDialog" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="Button" type="Button" parent="Control/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("1_4ddid")
+theme_type_variation = &"DialogOption"
+toggle_mode = true
+
+[node name="Control2" type="Control" parent="."]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 346.0
+offset_bottom = 596.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Control2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="Button" type="NinePatchRect" parent="Control2/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("1_4ddid")
+theme_type_variation = &"DialogOption"
+texture = ExtResource("2_ddtap")
+region_rect = Rect2(7, 4, 49, 24)

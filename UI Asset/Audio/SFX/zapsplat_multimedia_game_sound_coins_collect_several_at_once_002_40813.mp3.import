@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://deesmb07s1up7"
+path="res://.godot/imported/zapsplat_multimedia_game_sound_coins_collect_several_at_once_002_40813.mp3-594edc46dd564c186dd05aea100a7ea7.mp3str"
+
+[deps]
+
+source_file="res://UI Asset/Audio/SFX/zapsplat_multimedia_game_sound_coins_collect_several_at_once_002_40813.mp3"
+dest_files=["res://.godot/imported/zapsplat_multimedia_game_sound_coins_collect_several_at_once_002_40813.mp3-594edc46dd564c186dd05aea100a7ea7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

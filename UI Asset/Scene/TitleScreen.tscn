@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://btacos8t8yu20"]
+
+[ext_resource type="Script" path="res://UI Asset/Script/title_screen_Settings.gd" id="1_r7ind"]
+[ext_resource type="Texture2D" uid="uid://cjpqncrnplppv" path="res://Resources/PostProcessing/dirt.png" id="2_urr1v"]
+[ext_resource type="FontFile" uid="uid://dclwgnpvy23n7" path="res://UI Asset/Font/Pixel Dogica/dogicapixelbold.ttf" id="3_citq2"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r7ind")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureButton" type="TextureButton" parent="PanelContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_urr1v")
+texture_pressed = ExtResource("2_urr1v")
+texture_hover = ExtResource("2_urr1v")
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 70
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 65
+
+[node name="Label2" type="Label" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("3_citq2")
+theme_override_font_sizes/font_size = 70
+text = "PRESS ANYWHERE TO START"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="PanelContainer/TextureButton" to="." method="_on_texture_button_pressed"]

@@ -1,8 +1,11 @@
-[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://bdisip03skrxl"]
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://bdisip03skrxl"]
 
 [sub_resource type="AudioEffectCapture" id="AudioEffectCapture_wqkxq"]
 resource_name = "Capture"
 buffer_length = 5.0
+
+[sub_resource type="AudioEffectFilter" id="AudioEffectFilter_rwl2l"]
+resource_name = "Filter"
 
 [resource]
 bus/0/volume_db = -0.228265
@@ -14,3 +17,17 @@ bus/1/volume_db = -0.228265
 bus/1/send = &"Master"
 bus/1/effect/0/effect = SubResource("AudioEffectCapture_wqkxq")
 bus/1/effect/0/enabled = true
+bus/1/effect/1/effect = SubResource("AudioEffectFilter_rwl2l")
+bus/1/effect/1/enabled = false
+bus/2/name = &"Music"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = 0.0
+bus/2/send = &"Master"
+bus/3/name = &"SFX"
+bus/3/solo = false
+bus/3/mute = false
+bus/3/bypass_fx = false
+bus/3/volume_db = 0.0
+bus/3/send = &"Master"

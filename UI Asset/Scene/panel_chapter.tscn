@@ -1,0 +1,185 @@
+[gd_scene load_steps=6 format=3 uid="uid://bdeskka171b5u"]
+
+[ext_resource type="FontFile" uid="uid://c4oi6yeb8dvyl" path="res://UI Asset/Font/Fredoka-VariableFont_wdth,wght.ttf" id="1_78j6i"]
+[ext_resource type="Script" path="res://UI Asset/Script/BtnAnimation.gd" id="2_aw3rt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8tx5f"]
+content_margin_left = 30.0
+content_margin_top = 50.0
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_left = 20.0
+expand_margin_top = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3imvn"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lh2ki"]
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[node name="Panel Chapter 1" type="PanelContainer"]
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_8tx5f")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_78j6i")
+theme_override_font_sizes/font_size = 50
+text = "Chapter 1"
+
+[node name="Chapter 1" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="level1" type="VBoxContainer" parent="Chapter 1"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Chapter 1/level1"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_3imvn")
+
+[node name="Button" type="Button" parent="Chapter 1/level1/PanelContainer"]
+custom_minimum_size = Vector2(121.255, 110.395)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("1_78j6i")
+theme_override_font_sizes/font_size = 40
+text = "Level 1
+"
+
+[node name="Node" type="Node" parent="Chapter 1/level1/PanelContainer/Button"]
+script = ExtResource("2_aw3rt")
+hover_scale = Vector2(0.9, 0.9)
+transition_type = 4
+
+[node name="Panel" type="Panel" parent="Chapter 1/level1"]
+custom_minimum_size = Vector2(15, 47.865)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+mouse_filter = 1
+
+[node name="SideQuest" type="Button" parent="Chapter 1/level1"]
+custom_minimum_size = Vector2(150, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("1_78j6i")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_lh2ki")
+text = "Side Quest"
+autowrap_mode = 2
+
+[node name="Node" type="Node" parent="Chapter 1/level1/SideQuest"]
+script = ExtResource("2_aw3rt")
+hover_scale = Vector2(0.9, 0.9)
+transition_type = 4
+
+[node name="-" type="Panel" parent="Chapter 1"]
+custom_minimum_size = Vector2(300, 15.5)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 1
+
+[node name="level2" type="PanelContainer" parent="Chapter 1"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_3imvn")
+
+[node name="Button2" type="Button" parent="Chapter 1/level2"]
+custom_minimum_size = Vector2(121.255, 110.395)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("1_78j6i")
+theme_override_font_sizes/font_size = 40
+text = "Level 2
+"
+
+[node name="-2" type="Panel" parent="Chapter 1"]
+custom_minimum_size = Vector2(300, 15.5)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 1
+
+[node name="level3" type="PanelContainer" parent="Chapter 1"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_3imvn")
+
+[node name="Button" type="Button" parent="Chapter 1/level3"]
+custom_minimum_size = Vector2(121.255, 110.395)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("1_78j6i")
+theme_override_font_sizes/font_size = 40
+text = "Level 3
+"
+
+[node name="-3" type="Panel" parent="Chapter 1"]
+custom_minimum_size = Vector2(300, 15.5)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 1
+
+[node name="level4" type="PanelContainer" parent="Chapter 1"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_3imvn")
+
+[node name="Button2" type="Button" parent="Chapter 1/level4"]
+custom_minimum_size = Vector2(121.255, 110.395)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("1_78j6i")
+theme_override_font_sizes/font_size = 40
+text = "Level 4
+"

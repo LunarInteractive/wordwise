@@ -20,4 +20,4 @@ autoplay = true
 language_model = ExtResource("2_u7fth")
 script = ExtResource("2_v8tv2")
 audio_stream = ExtResource("1_v1n4q")
-text = " And so my fellow Americans ask not what your country can do for you ask what you can do for your country."
+text = " And so my fellow Americans ask not what your country can do for you"

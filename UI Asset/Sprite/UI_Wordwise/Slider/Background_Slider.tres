@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cglwca215mx4x"]
+
+[ext_resource type="Texture2D" uid="uid://b7ufo8gycppf8" path="res://UI Asset/Sprite/UI_Wordwise/Slider/Slider_BAR.png" id="1_rpbqc"]
+
+[resource]
+atlas = ExtResource("1_rpbqc")
+region = Rect2(30, 1440, 960, 40)

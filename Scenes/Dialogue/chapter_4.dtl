@@ -1,0 +1,87 @@
+label Level 1 - Restaurant
+character2: Your meal has arrived, sir, please enjoy.
+character: Tthank you, wow looks good, let's try it.
+- The seasoning has a perfect balance, and it absorbs the flavors well. What do you think?
+- Perfectly balanced is the seasoning, and well absorbed are the flavors. What you think?
+- The seasoning is balanced perfectly, and the flavors well are absorbed. What think you?
+character: It's good but I feel a little salty in the chicken.
+- Yes, I agree that good it tastes overall.
+- Yes, I agree, but good it tastes overall.
+- Yes, I agree that it tastes good overall.
+character: Yes, I agree that it tastes good overall.
+- My favorite fruit is apples, the sweetness is perfect. I believe this is my favorite drink.
+	character: My avocado juice is also good.
+- I really like apples, the sweetness is just right I think this my favorite drink.
+	character: Wow looks good. My avocado juice is also good.
+- I like apples very much, the sweetness just right, I think this is favorite drink.
+	character: Okay I'll try it later
+label Level 2 - Museum
+character: Well, the statues here must be made with special skills.
+- Right that's, by just anybody it can't be done.
+- That's right, only certain people can do it.
+- That is right, it can’t be done just by anybody.
+character: What do you think about the statue of a person holding an umbrella?
+- The sculpture looks strange, but I like it. What do you think?
+- Looks strange it does, but I like the sculpture. About you what?
+- It strange looks, but like I the sculpture. What about you?
+character: I like the meaning of this sculpture even though it looks weird. How about this little boy sculpture?
+- I like this, the details mesmerizing are and give it meaning.
+- I like this piece because the details are mesmerizing and provide meaning
+- Like I this, the details are mesmerizing and meaning it give.
+character: I like it too.
+- Take another look let’s inside.
+- Let’s have another look inside.
+- Let’s another look take inside.
+character: Llet's go.
+label Level 3 - Culinary
+character: How about this culinary in Bandung?
+- I love the food and drinks from Bandung, they are tasty and diverse.
+- Love I the food and drinks from Bandung; diverse and tasty they are.
+- I love the diverse and tasty food and drinks from Bandung.
+character: What food is your favorite?
+- My favorite food seblak is; very flavorful and spicy is its sauce.
+- My favorite food is seblak because its sauce is very flavorful and spicy.
+- Seblak is my favorite food; its sauce very flavorful and spicy is.
+character: If I like dumplings, very good flavor and suitable combined with peanut sauce.
+- If I like dumplings, very good flavor and suitable combined with peanut sauce
+- Explore we should more regional dishes together sometime.
+- Let’s explore more regional dishes together sometime.
+character: Come on, I heard that Jogja is no less delicious culinary.
+- I’m really eager to try the gudeg there also?
+- Really? Also eager I am to try the gudeg there.
+- Really? I am excited to try the gudeg there as well.
+label Level 4 - Library
+character: This book is very touching, telling the struggle of a father. what do you think about this book?
+- Felt I sad while it reading; brought back memories of my father it.
+- I sad felt while reading it; memories of my father brought back it.
+- Reading it made me feel sad because it brought back memories of my father.
+character: Oh yes, I remember my father too, by the way, have you ever read a horror story book?
+- I read The Mystery of the Haunted Forest, quite frightening it was.
+- I read The Mystery of the Haunted Forest, and I found it quite frightening.
+- I read The Mystery of the Haunted Forest; it quite was frightening.
+character: Oh yes, why is it scary?
+- The story is about four people who are stuck in the forest
+- About four people stuck in the forest it is.
+- It’s four people about stuck in the forest.
+character: Well it sounds scary, I have to read it too.
+- Shh! Please keep your voice down, the officer might get angry.
+- Shh! Keep it down, might the officer get angry
+- Shh! Down keep it, the officer might angry get.
+character: Alright.\
+label Level 5 - Cinema
+character: Moana's struggle to return Tefiti's heart is very challenging, what do you think about the movie Moana?
+- I enjoyed the storyline and humor, very clear the emotions of happiness and sadness are.
+- Enjoyed I the storyline and the humor; clear very are the emotions of happiness and sadness.
+- I enjoyed the storyline and the humor because the emotions of happiness and sadness come through clearly.
+character: I like the scene where Moana first sees her family heritage.
+- Enjoy I the scene where Moana faces the enemies; tense very it’s.
+- Enjoy I the scene where Moana faces the enemies; tense very it’s
+- I enjoy the scene where faces Moana the enemies; tense very it is.
+character: Yes, I also like that scene.
+- Lessons do you think from the movie can be learned what?
+- What think you lessons can learned be from the movie?
+- What lessons do you think the movie teaches?
+character: Hmm I think be brave in everything and don't be afraid to.
+- Same I feel about that.
+- Feel I the same about that.
+- I share the same feelings about that.

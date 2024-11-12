@@ -1,0 +1,11 @@
+character: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a ipsum ut nulla euismod porta. Suspendisse orci odio, facilisis vel sapien nec, hendrerit tincidunt odio. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a ipsum ut nulla euismod porta Suspendisse orci odio
+	jump Text_timeline/dialog 2
+- Suspendisse orci odio
+	character: kamu pilih text 2
+- Class aptent taciti sociosqu ad litora torquent per
+label dialog 2
+character: saya testing
+- 
+- 
+- 

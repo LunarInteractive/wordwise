@@ -1,0 +1,6 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://clt8186khxtxl"]
+
+[ext_resource type="Texture2D" uid="uid://c3bwdc7825qnk" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/purpleprog.tres" id="1_gb881"]
+
+[resource]
+atlas = ExtResource("1_gb881")

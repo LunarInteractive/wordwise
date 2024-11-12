@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=3 format=3 uid="uid://gj888nsl5j6p"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_o63co"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="2_vx0fi"]
+
+[resource]
+script = ExtResource("2_vx0fi")
+name = "testing_asset"
+base_overrides = {}
+layers = Array[ExtResource("1_o63co")]([])
+metadata/_latest_layer = -1

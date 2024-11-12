@@ -1,0 +1,8 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://c3bwdc7825qnk"]
+
+[ext_resource type="Texture2D" uid="uid://u6veuo2wew3" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/Progress2_BAR.png" id="1_aldft"]
+
+[resource]
+atlas = ExtResource("1_aldft")
+region = Rect2(170, 1450, 940, 100)
+margin = Rect2(10, 10, 15, 20)

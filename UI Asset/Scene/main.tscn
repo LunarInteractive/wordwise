@@ -1,0 +1,324 @@
+[gd_scene load_steps=18 format=3 uid="uid://b4e2ffvd0430m"]
+
+[ext_resource type="Theme" uid="uid://bi2yom4nqtt2b" path="res://UI Asset/Shader/TestTheme.tres" id="1_k7uvr"]
+[ext_resource type="Script" path="res://UI Asset/Script/main.gd" id="2_bg10g"]
+[ext_resource type="Texture2D" uid="uid://cmu07715hl87m" path="res://UI Asset/Sprite/GUI/profile pixel.png" id="3_cvt0x"]
+[ext_resource type="FontFile" uid="uid://c4oi6yeb8dvyl" path="res://UI Asset/Font/Fredoka-VariableFont_wdth,wght.ttf" id="4_csdjm"]
+[ext_resource type="Texture2D" uid="uid://lnx6onv3ycd5" path="res://UI Asset/Sprite/two-coins.svg" id="5_yy2ga"]
+[ext_resource type="Script" path="res://UI Asset/Script/BtnAnimation.gd" id="6_ccbp1"]
+[ext_resource type="Script" path="res://UI Asset/Script/SaveMaterial.gd" id="6_iihjy"]
+[ext_resource type="Script" path="res://UI Asset/Script/CollectCoin.gd" id="7_w3xda"]
+[ext_resource type="AudioStream" uid="uid://deesmb07s1up7" path="res://UI Asset/Audio/SFX/zapsplat_multimedia_game_sound_coins_collect_several_at_once_002_40813.mp3" id="8_lykks"]
+[ext_resource type="AudioStream" uid="uid://cuh4bmn6ib2df" path="res://UI Asset/Audio/SFX/zapsplat_multimedia_game_sound_simple_retro_coin_or_point_collect_001_73255.mp3" id="9_bnv3b"]
+[ext_resource type="AudioStream" uid="uid://bu5vw0k231nhq" path="res://UI Asset/Audio/Music/Rolemusic - The White Frame.mp3" id="10_m70fx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4k4xs"]
+bg_color = Color(0.203024, 0.614926, 1, 1)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0, 0, 0, 0.141176)
+shadow_size = 1
+shadow_offset = Vector2(6, 6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cqbdi"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rxquf"]
+bg_color = Color(0, 0, 0, 0.317647)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u86qy"]
+bg_color = Color(0.50474, 0.744891, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4oqxa"]
+bg_color = Color(0.93678, 0.672402, 0.244943, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 8.0
+expand_margin_right = 8.0
+shadow_color = Color(0, 0, 0, 0.145098)
+shadow_size = 1
+shadow_offset = Vector2(6, 6)
+
+[sub_resource type="Environment" id="Environment_np1xw"]
+background_mode = 3
+glow_enabled = true
+glow_bloom = 0.21
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_k7uvr")
+script = ExtResource("2_bg10g")
+
+[node name="PlayerInfoBox" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 13.0
+offset_right = 404.0
+offset_bottom = 140.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4k4xs")
+
+[node name="AvatarFrame" type="Panel" parent="PlayerInfoBox"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = -45.5
+offset_right = 113.0
+offset_bottom = 47.5
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cqbdi")
+
+[node name="Avatar" type="TextureRect" parent="PlayerInfoBox/AvatarFrame"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 38.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_cvt0x")
+expand_mode = 1
+
+[node name="Nickname" type="Label" parent="PlayerInfoBox"]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 13.0
+offset_right = 824.0
+offset_bottom = 163.0
+scale = Vector2(0.38, 0.38)
+theme_override_fonts/font = ExtResource("4_csdjm")
+theme_override_font_sizes/font_size = 123
+text = "Rymess"
+
+[node name="XpBar" type="ProgressBar" parent="PlayerInfoBox"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 127.0
+offset_top = -53.0
+offset_right = -23.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0.203922, 0.615686, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("4_csdjm")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/background = SubResource("StyleBoxFlat_rxquf")
+theme_override_styles/fill = SubResource("StyleBoxFlat_u86qy")
+value = 30.32
+
+[node name="CoinInfoBox" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -271.0
+offset_top = 12.0
+offset_right = -18.0
+offset_bottom = 85.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4oqxa")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CoinInfoBox"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 2
+
+[node name="Avatar" type="TextureRect" parent="CoinInfoBox/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_yy2ga")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="CoinText" type="Label" parent="CoinInfoBox/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_csdjm")
+theme_override_font_sizes/font_size = 50
+text = "Coins:"
+vertical_alignment = 1
+
+[node name="CoinValues" type="Label" parent="CoinInfoBox/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_csdjm")
+theme_override_font_sizes/font_size = 50
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -155.0
+offset_top = 133.0
+offset_right = 155.0
+offset_bottom = 331.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_k7uvr")
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="ButtonBox"]
+layout_mode = 2
+text = "rawr"
+
+[node name="Node2" type="Node" parent="ButtonBox/Button"]
+script = ExtResource("6_ccbp1")
+hover_scale = Vector2(1.1, 1.1)
+transition_type = 11
+
+[node name="DecreaseCoinButton" type="Button" parent="ButtonBox"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Use Coins
+"
+
+[node name="Node3" type="Node" parent="ButtonBox/DecreaseCoinButton"]
+script = ExtResource("6_ccbp1")
+hover_scale = Vector2(1.1, 1.1)
+transition_type = 11
+
+[node name="ResetCoinButton" type="Button" parent="ButtonBox"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Reset Coins
+"
+
+[node name="Node2" type="Node" parent="ButtonBox/ResetCoinButton"]
+script = ExtResource("6_ccbp1")
+hover_scale = Vector2(1.1, 1.1)
+transition_type = 11
+
+[node name="SoundSettingBox" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 750
+theme_override_constants/margin_right = 750
+theme_override_constants/margin_bottom = 500
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SoundSettingBox"]
+layout_mode = 2
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="SoundSettingBox/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 30
+columns = 2
+
+[node name="MusicLabel" type="Label" parent="SoundSettingBox/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Music"
+
+[node name="MusicSlider" type="HSlider" parent="SoundSettingBox/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 0.1
+
+[node name="SFXLabel" type="Label" parent="SoundSettingBox/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "SFX"
+
+[node name="SFXSlider" type="HSlider" parent="SoundSettingBox/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_np1xw")
+
+[node name="SpawnComponent" type="Control" parent="."]
+anchors_preset = 0
+script = ExtResource("7_w3xda")
+coin_count = 100
+
+[node name="SFX" type="Control" parent="SpawnComponent"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SpawnComponent/SFX"]
+stream = ExtResource("8_lykks")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="SpawnComponent/SFX"]
+stream = ExtResource("9_bnv3b")
+max_polyphony = 20
+bus = &"SFX"
+
+[node name="Music" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("10_m70fx")
+autoplay = true
+bus = &"Music"
+
+[node name="saveLoad" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_iihjy")
+
+[connection signal="pressed" from="ButtonBox/Button" to="." method="_on_grant_coin_button_pressed"]
+[connection signal="pressed" from="ButtonBox/Button" to="SpawnComponent" method="_on_button_pressed"]
+[connection signal="pressed" from="ButtonBox/DecreaseCoinButton" to="." method="_on_decrease_coin_button_pressed"]
+[connection signal="pressed" from="ButtonBox/ResetCoinButton" to="." method="_on_reset_coin_button_pressed"]
+[connection signal="pressed" from="ButtonBox/ResetCoinButton" to="ButtonBox" method="_on_reset_coin_button_pressed"]
+[connection signal="value_changed" from="SoundSettingBox/VBoxContainer/GridContainer/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="SoundSettingBox/VBoxContainer/GridContainer/SFXSlider" to="." method="_on_sfx_slider_value_changed"]

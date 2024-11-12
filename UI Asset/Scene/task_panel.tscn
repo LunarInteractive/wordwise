@@ -1,0 +1,199 @@
+[gd_scene load_steps=14 format=3 uid="uid://bxefct3ha1r1q"]
+
+[ext_resource type="Script" path="res://UI Asset/Script/task_panel.gd" id="1_p11hn"]
+[ext_resource type="Theme" uid="uid://la05b3bnexvl" path="res://UI Asset/Shader/theme_fajar/theme_fajar.tres" id="2_cofrg"]
+[ext_resource type="Texture2D" uid="uid://crcm6qx3hyusk" path="res://UI Asset/Sprite/Border/Border_NO BG_.png" id="3_efe1o"]
+[ext_resource type="Texture2D" uid="uid://duhxdsydyaa4b" path="res://UI Asset/Sprite/GUI/Button And Others.png" id="4_gcsp4"]
+[ext_resource type="Script" path="res://UI Asset/Script/scroll_container.gd" id="5_laakp"]
+[ext_resource type="PackedScene" uid="uid://dru6beado57f8" path="res://UI Asset/Scene/task_item.tscn" id="6_3cuee"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_05j14"]
+bg_color = Color(0, 0, 0, 0.807843)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ifak"]
+bg_color = Color(0.384314, 0.333333, 0.541176, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5nai"]
+atlas = ExtResource("3_efe1o")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kt2i8"]
+bg_color = Color(0.384314, 0.333333, 0.541176, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lugm"]
+atlas = ExtResource("3_efe1o")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8xlog"]
+atlas = ExtResource("4_gcsp4")
+region = Rect2(470, 470, 220, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vr71"]
+atlas = ExtResource("4_gcsp4")
+region = Rect2(700, 470, 220, 220)
+
+[node name="TaskPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.8
+mouse_filter = 1
+script = ExtResource("1_p11hn")
+
+[node name="OverlayPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_05j14")
+
+[node name="MarginPanelTask" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginPanelTask"]
+layout_mode = 2
+theme = ExtResource("2_cofrg")
+
+[node name="MarginBGPanel" type="MarginContainer" parent="MarginPanelTask/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="BGPanel" type="Panel" parent="MarginPanelTask/PanelContainer/MarginBGPanel"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5ifak")
+
+[node name="PanelTask" type="NinePatchRect" parent="MarginPanelTask/PanelContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_g5nai")
+region_rect = Rect2(480, 150, 321, 321)
+patch_margin_left = 70
+patch_margin_top = 70
+patch_margin_right = 70
+patch_margin_bottom = 70
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginPanelTask/PanelContainer"]
+layout_mode = 2
+
+[node name="HeaderPanel" type="PanelContainer" parent="MarginPanelTask/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_cofrg")
+theme_override_styles/panel = SubResource("StyleBoxFlat_kt2i8")
+
+[node name="BorderHeader" type="NinePatchRect" parent="MarginPanelTask/PanelContainer/VBoxContainer/HeaderPanel"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+theme = ExtResource("2_cofrg")
+theme_type_variation = &"PanelHeaderTask"
+texture = SubResource("AtlasTexture_1lugm")
+region_rect = Rect2(150, 150, 320, 320)
+patch_margin_left = 70
+patch_margin_top = 70
+patch_margin_right = 60
+patch_margin_bottom = 61
+
+[node name="MarginHeader" type="MarginContainer" parent="MarginPanelTask/PanelContainer/VBoxContainer/HeaderPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="MarginClose" type="MarginContainer" parent="MarginPanelTask/PanelContainer/VBoxContainer/HeaderPanel/MarginHeader"]
+layout_mode = 2
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 30
+
+[node name="CloseButton2" type="TextureButton" parent="MarginPanelTask/PanelContainer/VBoxContainer/HeaderPanel/MarginHeader/MarginClose"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+focus_mode = 0
+texture_normal = SubResource("AtlasTexture_8xlog")
+texture_pressed = SubResource("AtlasTexture_7vr71")
+texture_hover = SubResource("AtlasTexture_8xlog")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarginClose2" type="MarginContainer" parent="MarginPanelTask/PanelContainer/VBoxContainer/HeaderPanel/MarginHeader"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="CloseButton" type="Button" parent="MarginPanelTask/PanelContainer/VBoxContainer/HeaderPanel/MarginHeader/MarginClose2"]
+custom_minimum_size = Vector2(220, 220)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+focus_mode = 0
+theme = ExtResource("2_cofrg")
+theme_type_variation = &"CloseButton"
+icon_alignment = 1
+expand_icon = true
+
+[node name="TitlePanelTask" type="Label" parent="MarginPanelTask/PanelContainer/VBoxContainer/HeaderPanel/MarginHeader"]
+custom_minimum_size = Vector2(250, 90)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme = ExtResource("2_cofrg")
+theme_type_variation = &"LabelTitle"
+text = "TASKS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BadanPanel" type="PanelContainer" parent="MarginPanelTask/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_cofrg")
+
+[node name="MarginBadanPanel" type="MarginContainer" parent="MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 80
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginBadanPanel"]
+layout_mode = 2
+theme = ExtResource("2_cofrg")
+follow_focus = true
+horizontal_scroll_mode = 0
+script = ExtResource("5_laakp")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginBadanPanel/ScrollContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1680.63, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 3
+
+[node name="TaskItem" parent="MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginBadanPanel/ScrollContainer/VBoxContainer" instance=ExtResource("6_3cuee")]
+layout_mode = 2
+
+[connection signal="button_up" from="MarginPanelTask/PanelContainer/VBoxContainer/HeaderPanel/MarginHeader/MarginClose/CloseButton2" to="." method="_on_button_2_button_up"]
+[connection signal="button_up" from="MarginPanelTask/PanelContainer/VBoxContainer/HeaderPanel/MarginHeader/MarginClose2/CloseButton" to="." method="_on_button_2_button_up"]

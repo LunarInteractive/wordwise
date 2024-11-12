@@ -1,0 +1,70 @@
+label Level 1 - Weathers
+character: Hello Trish Which way are you going?
+- I’m going to the supermarket. What kind of weather is it?
+- I’m going to the supermarket. What’s the weather like?
+- I'm heading to the grocery store. What’s the weather like?
+character: It blows a lot. Bring your raincoat along. 
+- I will.
+- Yes, I will.
+- I'll do that.
+character: Did you miss anything?
+- I should probably pack my raincoat.
+- I think I need to bring my raincoat.
+- I believe I should pack my raincoat.
+character: It's something you really should do. The sky is cloudy.
+label Level 2 - Manage activities 
+- Trouble is being had by me in managing my time between work and study.
+- I'm having trouble managing my time between work and study.
+- I'm have trouble managing my time between work and study.
+character: Maybe you can try making a more organized daily schedule. Set a specific time to study.
+- Yes, that's a good idea. I'm often tempting to finish work first.
+- Yes, that's a good idea. I'm often tempted to finish work first.
+- Yes, that's a good idea. Work is often tempted to be finished by me first.
+character: Try to prioritize important tasks first, and make time to study in between. Don't forget to take breaks too.
+- Thanks, that will be tried by me!
+- Thanks, I try that!
+- Thanks, I'll try that!
+label Level 3 - Summer Holidays
+character:  I haven't been feeling well lately.
+- Is enough sleep and food being gotten by you?
+- Are you get enough sleep and eating well?
+- Are you getting enough sleep and eating well?
+character:  Sometimes, I often stay up late and eat irregularly.
+- Try sleep earlier and eat healthy food. Take care of your fluid intake too.
+- Try to sleep earlier and healthy food should be eaten by you. Fluid intake should be taken care of too.
+- Try to sleep earlier and eat healthy food. Take care of your fluid intake too.
+character:  Try to sleep earlier and eat healthy food. Take care of your fluid intake too.
+- I wish you speedy recovery.
+- I wish you a speedy recovery.
+- A speedy recovery is wished for you by me.
+character:  Thank you.
+label Level 4 - Priority
+- I've been really stress out lately, with a lot of work piling up.
+- I've been really stressed out lately, with a lot of work piling up.
+- Lately, a lot of work has been piling up, causing me to be really stressed out.
+character: Try making a to-do list, so you can prioritize and focus on one task at a time.
+- I usually panics when I see a lot of work.
+- I usually panic when I see a lot of work
+- When a lot of work is seen by me, panic is usually felt.
+character: Try to break down the task into smaller parts. Don't hesitate to ask for help if necessary.
+- Yes, maybe being more calm and not rushing should be done by me.
+- Yes, maybe I should be more calm and don’t rush.
+- Yes, maybe I should be calmer and not rush.
+character:  Make yourself more relaxed
+- It is okay by me.
+- Okey.
+- Okay.
+label Level 5 - Relationship
+character: I feel like my relationships with my friends are starting to fall apart. How can I stay close?
+- Time should be made by you to hang out with them, even if it's just for a casual coffee.
+- Try make time to hang out with them, even if it's just for a casual coffee.
+- Try to make time to hang out with them, even if it's just for a casual coffee.
+character: But I'm often so busy.
+- Maybe a special time each week could be scheduled by you. It could be as simple as a chat or a phone call to check in.
+- Maybe you can schedule special time each week. It could be as simple as chat or phone call to check in.
+- Maybe you can schedule a special time each week. It could be as simple as a chat or a phone call to check in.
+character: That's right, you don't always have to meet.
+- Right, at least there's time together even if it's just for one days.
+- Right, at least there's time together even if it's just for one day.
+- Right, at least time together can be had, even if it's just for one day.
+character: Well, I'll try.
