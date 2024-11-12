@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dr6po6brivg4l"]
+[gd_scene load_steps=28 format=3 uid="uid://blf5rto5wrcth"]
 
 [ext_resource type="Script" path="res://Tutorial_Script.gd" id="1_petcf"]
 [ext_resource type="Theme" uid="uid://la05b3bnexvl" path="res://UI Asset/Shader/theme_fajar/theme_fajar.tres" id="2_8vp5s"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://duhxdsydyaa4b" path="res://UI Asset/Sprite/GUI/Button And Others.png" id="4_71n1k"]
 [ext_resource type="Script" path="res://UI Asset/Script/BtnAnimation.gd" id="5_lxf15"]
 [ext_resource type="Texture2D" uid="uid://bw2hn21c6id43" path="res://UI Asset/Sprite/UI_Wordwise/Icons/Icon_Back_White.tres" id="6_4xmp3"]
+[ext_resource type="Texture2D" uid="uid://ce6uyu0k3jgov" path="res://UI Asset/Sprite/Screenshot 2024-10-23 015005.png" id="7_mq13k"]
 [ext_resource type="Texture2D" uid="uid://c4jihgqj5boch" path="res://UI Asset/Sprite/UI_Wordwise/Icons/Icon_Continue_White.tres" id="7_oga3k"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tqsxo"]
@@ -45,6 +46,10 @@ texture = ExtResource("6_4xmp3")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_etntv"]
 texture = ExtResource("6_4xmp3")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dmy50"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5t7j0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_norae"]
 
@@ -224,33 +229,227 @@ theme_override_constants/margin_bottom = 50
 
 [node name="TabContainer" type="TabContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel"]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_dmy50")
 current_tab = 0
 tabs_visible = false
 tab_focus_mode = 0
 
 [node name="PanelContainer" type="PanelContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer"]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5t7j0")
 metadata/_tab_index = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+texture = ExtResource("7_mq13k")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+text = "Tutorial ini akan menjelaskan tentang bagaimana cara bermain WORDWISE"
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="PanelContainer2" type="PanelContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer2"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer2/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+texture = ExtResource("7_mq13k")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer2/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+text = "di dalam game ini anda akan berperan sebagai lawan bicara dalam sebuah percakapan"
+horizontal_alignment = 1
+autowrap_mode = 3
+
 [node name="PanelContainer3" type="PanelContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer3/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer3/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+texture = ExtResource("7_mq13k")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer3/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer3/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+text = "ini adalah tampilan dalam sebuah level. terdapat dialog NPC, dialog Choise, dan button pause"
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="PanelContainer4" type="PanelContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 3
 
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer4"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer4/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer4/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+texture = ExtResource("7_mq13k")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer4/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer4/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+text = "setelah anda memulai sebuah level, tunggu sampai NPC selesai berbicara dan anda dapat memilih dialog yang akan dipilih"
+horizontal_alignment = 1
+autowrap_mode = 3
+
 [node name="PanelContainer5" type="PanelContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer5"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer5/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer5/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+texture = ExtResource("7_mq13k")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer5/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer5/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+text = "setelah anda memilih dialog choice, akan muncul Temporary prompt seperti digambar yang akan melihatkan kalimat yang anda ucapkan"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PanelContainer6" type="PanelContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer6"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer6/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer6/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+texture = ExtResource("7_mq13k")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer6/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer6/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+text = "sekarang anda dapat mulai berbicara sesuai dialog choice yang anda pilih. akan muncul popup word checker yang akan melihatkan akurasi berbicara anda"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PanelContainer7" type="PanelContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer7"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer7/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer7/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+texture = ExtResource("7_mq13k")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer7/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer/PanelContainer7/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+text = "di akhir level, akan muncul popup Summary yang akan melihatkan hasil anda dalam level tersebut"
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="Button_Next" type="Button" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(100, 100)
@@ -267,5 +466,6 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_hvjce")
 script = ExtResource("5_lxf15")
 hover_scale = Vector2(0.9, 0.9)
 
+[connection signal="pressed" from="Control/MarginPanelTask/PanelContainer/VBoxContainer/HeaderPanel/MarginHeader/MarginClose/CloseButton2" to="Control" method="_on_close_button_pressed"]
 [connection signal="pressed" from="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/Button_Prev" to="Control" method="_on_button_prev_pressed"]
 [connection signal="pressed" from="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/Button_Next" to="Control" method="_on_button_next_pressed"]

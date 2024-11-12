@@ -3,7 +3,6 @@
 [ext_resource type="FontFile" uid="uid://dlfcvrx0tug2e" path="res://UI Asset/Font/Pixel Dogica/dogicapixel.ttf" id="1_8aqr1"]
 [ext_resource type="Texture2D" uid="uid://be8ovik6e657" path="res://UI Asset/Sprite/GUI/Bubble_Text.tres" id="2_1q7va"]
 [ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="3_k66wq"]
-[ext_resource type="Texture2D" uid="uid://cmu07715hl87m" path="res://UI Asset/Sprite/GUI/profile pixel.png" id="4_x2yll"]
 [ext_resource type="Script" path="res://UI Asset/Script/panel_prompt.gd" id="5_yntm3"]
 [ext_resource type="Texture2D" uid="uid://bpwbcxu41gp67" path="res://UI Asset/Sprite/fajar_assets/Border_NO BG_.png" id="6_0buv0"]
 [ext_resource type="Texture2D" uid="uid://drbsoeopxmaq1" path="res://UI Asset/Sprite/fajar_assets/buttonvolume66.png" id="7_doxs2"]
@@ -15,6 +14,7 @@
 [ext_resource type="Theme" uid="uid://la05b3bnexvl" path="res://UI Asset/Shader/theme_fajar/theme_fajar.tres" id="13_6x2wi"]
 [ext_resource type="Script" path="res://UI Asset/Script/panel_skor.gd" id="14_kjkxj"]
 [ext_resource type="Texture2D" uid="uid://crcm6qx3hyusk" path="res://UI Asset/Sprite/Border/Border_NO BG_.png" id="15_c2jw2"]
+[ext_resource type="Script" path="res://UI Asset/Script/BtnAnimation.gd" id="16_88gvd"]
 [ext_resource type="Script" path="res://UI Asset/Script/skor_tester.gd" id="17_0f6nc"]
 [ext_resource type="Script" path="res://UI Asset/Script/dialog_tester.gd" id="18_8vflh"]
 [ext_resource type="FontFile" uid="uid://dclwgnpvy23n7" path="res://UI Asset/Font/Pixel Dogica/dogicapixelbold.ttf" id="18_kdyg0"]
@@ -144,6 +144,7 @@ layout_mode = 2
 alignment = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="Dialog_Panel/HBoxContainer/NpcPanel/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 90
 theme_override_constants/margin_bottom = 25
@@ -166,7 +167,6 @@ autowrap_mode = 3
 custom_minimum_size = Vector2(350, 350)
 layout_mode = 2
 size_flags_horizontal = 4
-texture = ExtResource("4_x2yll")
 stretch_mode = 5
 
 [node name="AwnserPanel" type="MarginContainer" parent="Dialog_Panel/HBoxContainer"]
@@ -233,7 +233,6 @@ patch_margin_right = 60
 patch_margin_bottom = 60
 
 [node name="Popup_Speech" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -403,6 +402,7 @@ patch_margin_bottom = 159
 
 [node name="Topbar" type="MarginContainer" parent="Popup_Speech/PanelContainer/MarginContainer"]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/margin_bottom = 415
 
 [node name="PanelContainerSkor" type="PanelContainer" parent="." node_paths=PackedStringArray("angka_persen", "angka_total_error", "angka_kata_eror", "label_lulus", "label_cobalagi", "label_desc_error", "label_desc_kata", "tombol_lanjut")]
@@ -418,12 +418,12 @@ theme = ExtResource("13_6x2wi")
 theme_override_styles/panel = SubResource("StyleBoxFlat_pilcr")
 script = ExtResource("14_kjkxj")
 angka_persen = NodePath("MarginContainer/PanelSkorIsi/MarginSkor/TotalScore/VBoxContainer/MarginPersen/Persentase")
-angka_total_error = NodePath("MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTotalError/TotalError/TotalErrorLabel")
-angka_kata_eror = NodePath("MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginWordError/WordsError/WordsErrorLabel")
+angka_total_error = NodePath("MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/Control/MarginTotalError/TotalError/TotalErrorLabel")
+angka_kata_eror = NodePath("MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/Control/MarginWordError/WordsError/WordsErrorLabel")
 label_lulus = NodePath("MarginContainer/PanelSkorIsi/MarginSkor/TotalScore/VBoxContainer/MarginLabel/Passed")
 label_cobalagi = NodePath("MarginContainer/PanelSkorIsi/MarginSkor/TotalScore/VBoxContainer/MarginLabel/TryAgain")
-label_desc_error = NodePath("MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTotalError/TotalError")
-label_desc_kata = NodePath("MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginWordError/WordsError")
+label_desc_error = NodePath("MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/Control/MarginTotalError/TotalError")
+label_desc_kata = NodePath("MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/Control/MarginWordError/WordsError")
 batas_lulus = 80
 tombol_lanjut = NodePath("MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTombol/Tombols/ButtonLanjut2/ButtonLanjut")
 
@@ -446,7 +446,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 40
-theme_override_constants/margin_bottom = 40
+theme_override_constants/margin_bottom = 25
 
 [node name="BGPanel" type="Panel" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/MarginBGPanel"]
 layout_mode = 2
@@ -513,7 +513,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_left = 60
-theme_override_constants/margin_top = 100
+theme_override_constants/margin_top = 135
 theme_override_constants/margin_right = 60
 theme_override_constants/margin_bottom = 60
 
@@ -523,44 +523,53 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 0
 
-[node name="MarginTotalError" type="MarginContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer"]
+[node name="Control" type="Control" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 224.435)
 layout_mode = 2
+
+[node name="MarginTotalError" type="MarginContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/Control"]
+layout_mode = 2
+offset_right = 1380.0
+offset_bottom = 51.0
 size_flags_vertical = 3
 
-[node name="TotalError" type="HBoxContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTotalError"]
+[node name="TotalError" type="HBoxContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/Control/MarginTotalError"]
 layout_mode = 2
 size_flags_vertical = 10
 
-[node name="Keterangan3" type="Label" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTotalError/TotalError"]
+[node name="Keterangan3" type="Label" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/Control/MarginTotalError/TotalError"]
 layout_mode = 2
 size_flags_horizontal = 10
 theme = ExtResource("13_6x2wi")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "TOTAL ERROR:"
 
-[node name="TotalErrorLabel" type="Label" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTotalError/TotalError"]
+[node name="TotalErrorLabel" type="Label" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/Control/MarginTotalError/TotalError"]
 layout_mode = 2
 size_flags_horizontal = 2
 size_flags_stretch_ratio = 1.6
 theme = ExtResource("13_6x2wi")
 text = "234"
 
-[node name="MarginWordError" type="MarginContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer"]
+[node name="MarginWordError" type="MarginContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/Control"]
 layout_mode = 2
+offset_top = 51.0
+offset_right = 1380.0
+offset_bottom = 102.0
 size_flags_vertical = 3
 
-[node name="WordsError" type="HBoxContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginWordError"]
+[node name="WordsError" type="HBoxContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/Control/MarginWordError"]
 layout_mode = 2
 size_flags_vertical = 2
 
-[node name="Keterangan2" type="Label" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginWordError/WordsError"]
+[node name="Keterangan2" type="Label" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/Control/MarginWordError/WordsError"]
 layout_mode = 2
 size_flags_horizontal = 10
 theme = ExtResource("13_6x2wi")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "WORDS ERROR:"
 
-[node name="WordsErrorLabel" type="Label" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginWordError/WordsError"]
+[node name="WordsErrorLabel" type="Label" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/Control/MarginWordError/WordsError"]
 layout_mode = 2
 size_flags_horizontal = 2
 size_flags_stretch_ratio = 1.6
@@ -575,7 +584,7 @@ mouse_filter = 2
 [node name="Tombols" type="HBoxContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTombol"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/separation = 30
+theme_override_constants/separation = 165
 
 [node name="ButtonHome" type="Button" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTombol/Tombols"]
 custom_minimum_size = Vector2(220, 220)
@@ -585,6 +594,10 @@ size_flags_vertical = 4
 theme = ExtResource("13_6x2wi")
 theme_type_variation = &"TombolHome"
 
+[node name="Node" type="Node" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTombol/Tombols/ButtonHome"]
+script = ExtResource("16_88gvd")
+hover_scale = Vector2(0.9, 0.9)
+
 [node name="ButtonRetry" type="Button" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTombol/Tombols"]
 custom_minimum_size = Vector2(220, 220)
 layout_mode = 2
@@ -593,6 +606,10 @@ size_flags_vertical = 4
 size_flags_stretch_ratio = 0.0
 theme = ExtResource("13_6x2wi")
 theme_type_variation = &"TombolRetry"
+
+[node name="Node" type="Node" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTombol/Tombols/ButtonRetry"]
+script = ExtResource("16_88gvd")
+hover_scale = Vector2(0.9, 0.9)
 
 [node name="ButtonLanjut2" type="Button" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTombol/Tombols"]
 self_modulate = Color(1, 1, 1, 0)
@@ -604,6 +621,10 @@ mouse_filter = 2
 theme = ExtResource("13_6x2wi")
 theme_type_variation = &"TombolLanjut"
 
+[node name="Node" type="Node" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTombol/Tombols/ButtonLanjut2"]
+script = ExtResource("16_88gvd")
+hover_scale = Vector2(0.9, 0.9)
+
 [node name="ButtonLanjut" type="Button" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTombol/Tombols/ButtonLanjut2"]
 custom_minimum_size = Vector2(220, 220)
 layout_mode = 2
@@ -613,6 +634,10 @@ size_flags_horizontal = 2
 size_flags_vertical = 4
 theme = ExtResource("13_6x2wi")
 theme_type_variation = &"TombolLanjut"
+
+[node name="Node" type="Node" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTombol/Tombols/ButtonLanjut2/ButtonLanjut"]
+script = ExtResource("16_88gvd")
+hover_scale = Vector2(0.9, 0.9)
 
 [node name="MarginSkor" type="MarginContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi"]
 layout_mode = 2
@@ -705,6 +730,7 @@ theme_override_font_sizes/font_size = 42
 text = "TRY AGAIN"
 
 [node name="Tester" type="PanelContainer" parent="." node_paths=PackedStringArray("panel_prompt", "v_box_container", "npc_panel")]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -718,7 +744,6 @@ v_box_container = NodePath("../Dialog_Panel/HBoxContainer/AwnserPanel/VBoxContai
 npc_panel = NodePath("../Dialog_Panel/HBoxContainer/NpcPanel/VBoxContainer/MarginContainer/PanelContainer/Label")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Tester"]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
@@ -751,6 +776,7 @@ theme_override_font_sizes/font_size = 64
 text = "TES 1"
 
 [node name="VBoxContainer2" type="HBoxContainer" parent="Tester"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cqmdf7c371v5j"]
+[gd_scene load_steps=14 format=3 uid="uid://c4o2dcp83xs45"]
 
 [ext_resource type="FontFile" uid="uid://1wjpkwwq28sm" path="res://UI Asset/Font/Pixel Monogram/monogram.ttf" id="1_n4ntq"]
 [ext_resource type="FontFile" uid="uid://dclwgnpvy23n7" path="res://UI Asset/Font/Pixel Dogica/dogicapixelbold.ttf" id="2_22nr2"]
@@ -11,8 +11,10 @@ margin = Rect2(5, 5, 5, 5)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qj5xe"]
 texture = SubResource("AtlasTexture_668e6")
-texture_margin_left = 50.0
-texture_margin_right = 50.0
+texture_margin_left = 45.0
+texture_margin_top = 51.0
+texture_margin_right = 44.0
+texture_margin_bottom = 46.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mwfpo"]
 atlas = ExtResource("3_wk8wt")
@@ -20,6 +22,11 @@ region = Rect2(1880, 744, 664, 232)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fix1t"]
 texture = SubResource("AtlasTexture_mwfpo")
+texture_margin_left = 40.0
+texture_margin_top = 46.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
+region_rect = Rect2(0, 6, 660, 220)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wj5qx"]
 atlas = ExtResource("3_wk8wt")
@@ -27,6 +34,11 @@ region = Rect2(1880, 744, 664, 232)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_twdas"]
 texture = SubResource("AtlasTexture_wj5qx")
+texture_margin_left = 40.0
+texture_margin_top = 40.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
+region_rect = Rect2(0, 6, 660, 220)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t2d48"]
 atlas = ExtResource("3_wk8wt")
@@ -34,6 +46,10 @@ region = Rect2(1880, 520, 664, 224)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vacv4"]
 texture = SubResource("AtlasTexture_t2d48")
+texture_margin_left = 40.0
+texture_margin_top = 40.0
+texture_margin_right = 44.0
+texture_margin_bottom = 44.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_674vk"]
 atlas = ExtResource("3_wk8wt")
@@ -41,6 +57,10 @@ region = Rect2(1880, 520, 664, 224)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_76mfb"]
 texture = SubResource("AtlasTexture_674vk")
+texture_margin_left = 40.0
+texture_margin_top = 40.0
+texture_margin_right = 44.0
+texture_margin_bottom = 44.0
 
 [node name="SignIn" type="Control"]
 layout_mode = 3
@@ -99,14 +119,14 @@ theme_override_font_sizes/font_size = 25
 text = "Username"
 
 [node name="Username" type="TextEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(500, 75)
+custom_minimum_size = Vector2(500, 132.61)
 layout_mode = 2
 theme_override_colors/font_placeholder_color = Color(0.623529, 0.466667, 0.745098, 1)
 theme_override_colors/font_color = Color(0.623529, 0.466667, 0.745098, 1)
 theme_override_constants/outline_size = 1
 theme_override_constants/line_spacing = 15
 theme_override_fonts/font = ExtResource("1_n4ntq")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 69
 theme_override_styles/normal = SubResource("StyleBoxTexture_qj5xe")
 placeholder_text = "Username"
 
@@ -124,16 +144,16 @@ theme_override_font_sizes/font_size = 25
 text = "Password"
 
 [node name="Password" type="TextEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(500, 75)
+custom_minimum_size = Vector2(500, 132.61)
 layout_mode = 2
 theme_override_colors/font_placeholder_color = Color(0.623529, 0.466667, 0.745098, 1)
 theme_override_colors/font_color = Color(0.623529, 0.466667, 0.745098, 1)
 theme_override_constants/outline_size = 1
 theme_override_constants/line_spacing = 15
 theme_override_fonts/font = ExtResource("1_n4ntq")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 69
 theme_override_styles/normal = SubResource("StyleBoxTexture_qj5xe")
-placeholder_text = "Username"
+placeholder_text = "Password"
 
 [node name="Seperator2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(100, 50)

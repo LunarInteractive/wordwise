@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://bm2twp74h3kjb"]
+[gd_scene load_steps=31 format=3 uid="uid://dnp04amk8k4x3"]
 
 [ext_resource type="Script" path="res://Scenes/Level/Chapter_1/level_selection.gd" id="1_4bxj1"]
 [ext_resource type="Script" path="res://Scenes/Level/Chapter_1/lselection.gd" id="1_b3sv5"]
@@ -15,6 +15,7 @@
 [ext_resource type="Script" path="res://UI Asset/Script/BtnAnimation.gd" id="12_yvty3"]
 [ext_resource type="Texture2D" uid="uid://btqt1bq6mvx54" path="res://UI Asset/Sprite/UI_Wordwise/Icons/Icon_Lock_White.tres" id="13_khga1"]
 [ext_resource type="Texture2D" uid="uid://b3owxht1nchb8" path="res://UI Asset/Sprite/UI_Wordwise/Button/Button_QuestionMark_Purple.tres" id="15_lb1m0"]
+[ext_resource type="PackedScene" uid="uid://blf5rto5wrcth" path="res://UI Asset/Scene/popup_tutorial.tscn" id="16_4wjy4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3kxsk"]
 bg_color = Color(0, 0, 0, 1)
@@ -84,7 +85,9 @@ texture_margin_left = 70.0
 texture_margin_top = 70.0
 texture_margin_right = 60.0
 texture_margin_bottom = 60.0
+expand_margin_left = 12.0
 expand_margin_top = 30.0
+expand_margin_right = 12.0
 expand_margin_bottom = 30.0
 region_rect = Rect2(150, 150, 320, 320)
 
@@ -3540,7 +3543,7 @@ layout_mode = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_2wpy5")
 
-[node name="Button" type="Button" parent="CanvasLayer/Control"]
+[node name="Button_Tutorial" type="Button" parent="CanvasLayer/Control"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -3555,7 +3558,12 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_jr6nh")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_jr6nh")
 theme_override_styles/normal = SubResource("StyleBoxTexture_jr6nh")
 
-[node name="Node" type="Node" parent="CanvasLayer/Control/Button"]
+[node name="Node" type="Node" parent="CanvasLayer/Control/Button_Tutorial"]
 script = ExtResource("12_yvty3")
 hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
+
+[node name="Popup_Tutorial" parent="." instance=ExtResource("16_4wjy4")]
+visible = false
+
+[connection signal="pressed" from="CanvasLayer/Control/Button_Tutorial" to="." method="_on_button_tutorial_pressed"]

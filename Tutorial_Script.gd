@@ -3,7 +3,7 @@ extends Control
 @onready var Tab_Container : TabContainer = $MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/MarginBadanPanel/TabContainer
 @onready var Prev_Button : Button = $MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/Button_Prev
 @onready var Next_Button : Button = $MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/Button_Next
-
+@onready var control : CanvasLayer = $".."
 
 var tab_count : int = 0
 var max_tab : int = 0
@@ -31,3 +31,7 @@ func _on_button_prev_pressed() -> void:
 func _on_button_next_pressed() -> void:
 	Tab_Container.select_next_available()
 	tab_count += 1
+
+
+func _on_close_button_pressed() -> void:
+	control.visible = false

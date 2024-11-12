@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var Tutorial_layer : CanvasLayer = $Popup_Tutorial
+
 #CH1
 @onready var c_1l_1: Button = $"CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/Control/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/C1L1"
 @onready var c_1l_2: Button = $"CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/Control/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/C1L2"
@@ -266,3 +268,7 @@ func handle_connecting_signal() -> void:
 	c_10l_3.button_down.connect(_on_c_1l_1_pressed)
 	c_10l_4.button_down.connect(_on_c_1l_1_pressed)
 	c_10l_5.button_down.connect(_on_c_1l_1_pressed)
+
+
+func _on_button_tutorial_pressed() -> void:
+	Tutorial_layer.visible = true
