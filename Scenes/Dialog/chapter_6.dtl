@@ -25,7 +25,7 @@ character: That’s perfect. Thank you!
 - It is my pleasure.
 - With pleasure, I say.
 label Level 3 - Clothing Store
-character:  Excuse me. Can I help you? 
+character: Excuse me. Can I help you?
 - What is the price of this dress? I like the color.
 - How much is this dress? I like the color.
 - What is the cost of this dress? The color appeals to me.
@@ -42,7 +42,7 @@ character: Hmm, $85. That’s my best deal.
 - I'll accept it. Much thanks.
 - Okay, I'll take it. Thank you.
 label Level 4 - Trip
-character: Hi! I’d like to book a Pulau Seribu Trip, please. 
+character: Hi! I’d like to book a Pulau Seribu Trip, please.
 - When would you like to go on a trip?
 - When want you to go on a trip?
 - You want to go when on a trip?
@@ -70,7 +70,7 @@ character: Hi! I’d like to book a double room, please.
 - When would you like to check-in?
 - What time would you like to arrive?
 - What time is best for you to check-in?
-character: It will be on Friday this week. 
+character: It will be on Friday this week.
 - What is the duration of your stay?
 - How long will you be staying?
 - When are you going to be here?
@@ -86,3 +86,4 @@ character: Sure, it’s Sarah Rahmani.
 - Fantastic, many thanks. We have reserved your room. It is recommended that you check out by noon on Sunday, and you can check in at 2 p.m. on Friday. Till then, bye.
 - Great, thank you. Your room is reserved. You could check in at 2 p.m. on Friday, and you should check out before noon on Sunday. See you later.
 - Excellent, many thanks. I have reserved your room. On Friday, you could check in at 2:00 PM, and on Sunday, you should check out by 12:00 PM. Until later.
+[end_timeline]

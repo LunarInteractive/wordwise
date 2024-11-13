@@ -57,19 +57,7 @@ If you want to set size, change the anchors or consider using set_deferred().
    at: _set_size (scene/gui/control.cpp:1448)
 Text
 Choice
-Label
-Text
-Choice
-isi_command : [2, 1, false, "Which one are you about still confused, okay?", true, false]
-Isi dialog tombol dipilih : Which one are you about still confused, okay?
 USER WARNING: A Thread object is being destroyed without its completion having been realized.
 Please call wait_to_finish() on it to ensure correct cleanup.
    at: ~Thread (core/os/thread.cpp:105)
-isi_command : [6, 3, false, "Okay, which one are you still unsure about?", true, false]
-Isi dialog tombol dipilih : Okay, which one are you still unsure about?
-isi_pesan : 'I'm... I'm... I'm... I'm... I'm... I'
-mulai hitung
-mulai copulate the maagtrix
-mau return
-Command not recognized.
 ERROR: 1 RID allocations of type 'N17RendererSceneCull6CameraE' were leaked at exit.

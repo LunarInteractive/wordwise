@@ -7,6 +7,7 @@ signal transcribed_msg(is_partial, new_text)
 # For Traditional Chinese "以下是普通話的句子。"
 # For Simplified Chinese "以下是普通话的句子。"
 @export var initial_prompt: String
+@export var LisenBus : Node
 
 func _get_configuration_warnings():
 	if language_model == null:
@@ -20,7 +21,8 @@ func _get_configuration_warnings():
 		if recording:
 			_ready()
 		else:
-			thread.wait_to_finish()
+			if thread && thread.is_alive():
+				thread.wait_to_finish()
 	get:
 		return recording
 ## The interval at which transcribing is done. Use a value bigger than the time it takes to transcribe (eg. depends on model).
@@ -50,8 +52,10 @@ func _ready():
 	if Engine.is_editor_hint():
 		return
 	if thread && thread.is_alive():
-		recording = false
+		#recording = false
+		
 		thread.wait_to_finish()
+	
 	thread = Thread.new()
 	_effect_capture.clear_buffer()
 	thread.start(transcribe_thread)
@@ -72,9 +76,13 @@ func transcribe_thread():
 			#print("no activity")
 			#continue
 		var total_time: float = (resampled.size() as float) / SpeechToText.SPEECH_SETTING_SAMPLE_RATE
-		var audio_ctx: int = total_time * 1500 / 30 + 128
+		var audio_ctx: int = clampf(total_time * 1500 / 30 + 128,0,1500)
+		#var audio_ctx: int = total_time * 1500 / 30 + 128
 		if !use_dynamic_audio_context:
 			audio_ctx = 0
+		#Sering ada eror: "audio_ctx is larger than the maximum allowed (1526>1500)
+		#Failed to process audio, returned -5"
+		# nge-clamp nilai audio_ctx di 1500 juga bikin behaviornya lebih ga stabil
 		var tokens := transcribe(resampled, initial_prompt, audio_ctx)
 		if tokens.is_empty():
 			push_warning("No tokens generated")
@@ -100,11 +108,12 @@ func transcribe_thread():
 			_accumulated_frames = _accumulated_frames.slice(_accumulated_frames.size() - (0.2 * mix_rate))
 		#if !no_activity:
 		call_deferred("emit_signal", "transcribed_msg", finish_sentence, full_text)
-		LisenBus.call_deferred("emit_signal", "recognized_string", full_text)
+		
+		#LisenBus.call_deferred("emit_signal", "recognized_string", full_text)
 		last_token_count = tokens.size()
 		#print(text)
-		print(full_text)
-		print("Transcribe " + str(time_processing / 1000.0) + " s")
+		#print(full_text)
+		#print("Transcribe " + str(time_processing / 1000.0) + " s")
 		# Sleep remaining time
 		var interval_sleep = transcribe_interval * 1000 - time_processing
 		if interval_sleep > 0:
@@ -134,6 +143,8 @@ func _remove_special_characters(message: String):
 			var begin_character := message.find(special_character)
 			var end_character = begin_character + len(special_character)
 			message = message.substr(0, begin_character) + message.substr(end_character + 1)
+
+	
 	return message
 
 func _notification(what):

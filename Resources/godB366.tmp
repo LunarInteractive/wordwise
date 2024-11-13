@@ -1,0 +1,169 @@
+Godot Engine v4.3.stable.official.77dcf97d8 - https://godotengine.org
+Vulkan 1.3.289 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 3050 Laptop GPU
+
+AVX = 0 | AVX2 = 0 | AVX512 = 0 | FMA = 0 | NEON = 0 | ARM_FMA = 0 | METAL = 0 | F16C = 0 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 0 | SSSE3 = 0 | VSX = 0 | CUDA = 0 | COREML = 0 | OPENVINO = 0 | 
+whisper_init_from_buffer_with_params_no_state: loading model from buffer
+
+whisper_model_load: loading model
+
+whisper_model_load: n_vocab       = 51864
+
+whisper_model_load: n_audio_ctx   = 1500
+
+whisper_model_load: n_audio_state = 384
+
+whisper_model_load: n_audio_head  = 6
+
+whisper_model_load: n_audio_layer = 4
+
+whisper_model_load: n_text_ctx    = 448
+
+whisper_model_load: n_text_state  = 384
+
+whisper_model_load: n_text_head   = 6
+
+whisper_model_load: n_text_layer  = 4
+
+whisper_model_load: n_mels        = 80
+
+whisper_model_load: ftype         = 1
+
+whisper_model_load: qntvr         = 0
+
+whisper_model_load: type          = 1 (tiny)
+
+whisper_model_load: adding 1607 extra tokens
+
+whisper_model_load: n_langs       = 99
+
+whisper_model_load:      CPU buffer size =    77.18 MB
+
+whisper_model_load: model size    =   77.11 MB
+
+whisper_init_state: kv self size  =    8.26 MB
+
+whisper_init_state: kv cross size =    9.22 MB
+
+whisper_init_state: compute buffer (conv)   =   12.17 MB
+
+whisper_init_state: compute buffer (encode) =   64.92 MB
+
+whisper_init_state: compute buffer (cross)  =    4.01 MB
+
+whisper_init_state: compute buffer (decode) =   96.02 MB
+
+USER WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
+If you want to set size, change the anchors or consider using set_deferred().
+   at: _set_size (scene/gui/control.cpp:1448)
+isi_command : [6, 3, false, "Okay, which one are you still unsure about?", true, false]
+Isi dialog tombol dipilih : Okay, which one are you still unsure about?
+USER WARNING: A Thread object is being destroyed without its completion having been realized.
+Please call wait_to_finish() on it to ensure correct cleanup.
+   at: ~Thread (core/os/thread.cpp:105)
+berapa kali 1
+isi_pesan : 'Okay, which one are you still unsure about? Okay, which one'
+Command not recognized.
+berapa kali 2
+isi_pesan : 'and sure about. Okay, which one are you still and sure about?'
+Command not recognized.
+berapa kali 3
+isi_pesan : 'Okay, which one are you still unsure about?'
+Command recognized: Okay, which one are you still unsure about?
+Score: 100
+isi_command : [11, 2, false, "How about we arrange a study session together?", true, false]
+Isi dialog tombol dipilih : How about we arrange a study session together?
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 continuation byte (e2 ... 20 ...)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 continuation byte (e2 ... 20 ...)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 continuation byte (e2 ... 20 ...)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 continuation byte (e2 ... 20 ...)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 continuation byte (e2 ... 20 ...)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 continuation byte (e2 ... 20 ...)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 continuation byte (e2 ... 20 ...)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 continuation byte (e2 ... 20 ...)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 continuation byte (e2 ... 20 ...)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 continuation byte (e2 ... 20 ...)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 continuation byte (e2 ... 20 ...)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 continuation byte (e2 ... 20 ...)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 continuation byte (e2 ... 20 ...)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 continuation byte (e2 ... 20 ...)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 continuation byte (e2 ... 20 ...)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+berapa kali 4
+isi_pesan : 'How about we arrange students together?'
+Command not recognized.
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 leading byte (aa)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 leading byte (aa)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 leading byte (aa)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 leading byte (aa)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 leading byte (aa)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 leading byte (aa)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 leading byte (aa)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Missing 1 UTF-8 continuation byte(s)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 leading byte (aa)
+berapa kali 5
+isi_pesan : 'How about the arrange studio to get that?'
+Command not recognized.
+berapa kali 6
+isi_pesan : 'How about the average students who get it?'
+Command not recognized.
+berapa kali 7
+isi_pesan : 'How I'm about the average students together.'
+Command not recognized.
+berapa kali 8
+isi_pesan : 'How I'm back the arrange, still together.'
+Command not recognized.
+berapa kali 9
+isi_pesan : 'How about we arrange study together?'
+Command not recognized.
+berapa kali 10
+isi_pesan : 'How about the arrange to get together?'
+Command not recognized.
+berapa kali 11
+isi_pesan : 'How about we arrange the study together?'
+Command not recognized.
+berapa kali 12
+isi_pesan : 'How a bucket of range student together?'
+Command not recognized.
+berapa kali 13
+isi_pesan : 'How about we arrange students together? How about we arrange students together? How about we'
+Command not recognized.
+berapa kali 14
+isi_pesan : 'How about the Arrange Studio together? How about the Arrange Studio'
+Command not recognized.
+berapa kali 15
+isi_pesan : 'Thank you. Thank you. Thank you.'
+Command not recognized.
+berapa kali 16
+isi_pesan : 'but we arrange a steady session together.'
+Command not recognized.
+berapa kali 17
+isi_pesan : 'How about we arrange a student session together?'
+Words comparison:
+Word different: Spoken 'student', Expected 'study'
+Error percentage: 12.5%
+Score: 88
+isi_command : [11, 2, false, "How about we arrange a study session together?", true, false]
+Isi dialog tombol dipilih : How about we arrange a study session together?

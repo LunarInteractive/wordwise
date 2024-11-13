@@ -1,5 +1,10 @@
 extends DialogicSubsystem
 
+#Mengakses root dari scene (bukan root utama game) untuk mengatur scene
+#Sebaiknya pakai signal, tapi belum tahu cara connect node choice dengan root
+var root_ui : Node
+
+
 ## Subsystem that manages showing and activating of choices.
 
 ## Emitted when a choice button was pressed. Info includes the keys 'button_index', 'text', 'event_index'.
@@ -7,6 +12,7 @@ signal choice_selected(info:Dictionary)
 ## Emitted when a set of choices is reached and shown.
 ## Info includes the keys 'choices' (an array of dictionaries with infos on all the choices).
 signal question_shown(info:Dictionary)
+
 
 ## Contains information on the latest question.
 var last_question_info := {}
@@ -53,7 +59,9 @@ func _ready() -> void:
 	autofocus_first_choice = ProjectSettings.get_setting('dialogic/choices/autofocus_first', autofocus_first_choice)
 	hotkey_behaviour = ProjectSettings.get_setting('dialogic/choices/hotkey_behaviour', hotkey_behaviour)
 	default_false_behaviour = ProjectSettings.get_setting('dialogic/choices/def_false_behaviour', default_false_behaviour)
-
+	
+	
+	
 #endregion
 
 
@@ -203,6 +211,8 @@ func get_choice_button_node(button_index:int) -> DialogicNode_ChoiceButton:
 
 
 func _on_choice_selected(choice_info := {}) -> void:
+	
+	
 	if dialogic.paused or not _choice_blocker.is_stopped():
 		return
 
@@ -215,10 +225,11 @@ func _on_choice_selected(choice_info := {}) -> void:
 		if dialogic.has_subsystem("History"):
 			dialogic.History.mark_event_as_visited(choice_info.event_index)
 	
+	#sinyal ini diterima di canvas layer (ui_dialog_root) dan comparison
 	choice_selected.emit(choice_info)
-	hide_all_choices()
-	dialogic.current_state = dialogic.States.IDLE
-	dialogic.handle_event(choice_info.event_index + 1)
+	#hide_all_choices()
+	#dialogic.current_state = dialogic.States.IDLE
+	#dialogic.handle_event(choice_info.event_index + 1)
 
 
 
@@ -243,6 +254,12 @@ func get_current_choice_indexes() -> Array:
 			ignore -= 1
 		evt_idx += 1
 	return choices
+
+func progress_dialog(choice_info := {}) -> void:
+	hide_all_choices()
+	dialogic.current_state = dialogic.States.IDLE
+	#dialogic.handle_event(choice_info.event_index + 1)
+
 
 #endregion
 

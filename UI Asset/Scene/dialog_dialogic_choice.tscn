@@ -1,0 +1,280 @@
+[gd_scene load_steps=15 format=3 uid="uid://boab8k5yf4mpa"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_layout_layer.gd" id="1_dv33w"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Choice/node_choice_button.gd" id="2_2hly1"]
+[ext_resource type="Texture2D" uid="uid://duhxdsydyaa4b" path="res://UI Asset/Sprite/GUI/Button And Others.png" id="2_gknp7"]
+[ext_resource type="Theme" uid="uid://la05b3bnexvl" path="res://UI Asset/Shader/theme_fajar/theme_fajar.tres" id="3_5eq5n"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Choice/node_button_sound.gd" id="5_lyu1c"]
+[ext_resource type="AudioStream" uid="uid://b6c1p14bc20p1" path="res://addons/dialogic/Example Assets/sound-effects/typing1.wav" id="6_7cxpa"]
+[ext_resource type="AudioStream" uid="uid://c2viukvbub6v6" path="res://addons/dialogic/Example Assets/sound-effects/typing4.wav" id="7_6mln8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2l0aa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sdwc0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ulhlo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gp0sh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_46qet"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u01l0"]
+atlas = ExtResource("2_gknp7")
+
+[sub_resource type="AudioStream" id="AudioStream_ie4xd"]
+
+[node name="DialogItem" type="Node"]
+script = ExtResource("1_dv33w")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(0, 250)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 632.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxEmpty_2l0aa")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="ButtonDialog" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer" node_paths=PackedStringArray("text_node")]
+custom_minimum_size = Vector2(340, 195)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sdwc0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ulhlo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gp0sh")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_46qet")
+toggle_mode = true
+keep_pressed_outside = true
+script = ExtResource("2_2hly1")
+text_node = NodePath("MarginContainer/Label")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/PanelContainer/VBoxContainer/ButtonDialog"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+mouse_filter = 1
+texture = SubResource("AtlasTexture_u01l0")
+region_rect = Rect2(2060, 10, 490, 240)
+patch_margin_left = 40
+patch_margin_top = 30
+patch_margin_right = 140
+patch_margin_bottom = 90
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/VBoxContainer/ButtonDialog"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 80
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/ButtonDialog/MarginContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("3_5eq5n")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.333333, 0.333333, 0.333333, 0.776471)
+text = "Sample"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+text_direction = 2
+
+[node name="ButtonDialog2" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer" node_paths=PackedStringArray("text_node")]
+custom_minimum_size = Vector2(340, 195)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sdwc0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ulhlo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gp0sh")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_46qet")
+toggle_mode = true
+keep_pressed_outside = true
+script = ExtResource("2_2hly1")
+text_node = NodePath("MarginContainer/Label")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/PanelContainer/VBoxContainer/ButtonDialog2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+mouse_filter = 1
+texture = SubResource("AtlasTexture_u01l0")
+region_rect = Rect2(2060, 10, 490, 240)
+patch_margin_left = 40
+patch_margin_top = 30
+patch_margin_right = 140
+patch_margin_bottom = 90
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/VBoxContainer/ButtonDialog2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 80
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/ButtonDialog2/MarginContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("3_5eq5n")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.333333, 0.333333, 0.333333, 0.776471)
+text = "Sample"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+text_direction = 2
+
+[node name="ButtonDialog3" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer" node_paths=PackedStringArray("text_node")]
+custom_minimum_size = Vector2(340, 195)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sdwc0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ulhlo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gp0sh")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_46qet")
+toggle_mode = true
+keep_pressed_outside = true
+script = ExtResource("2_2hly1")
+text_node = NodePath("MarginContainer/Label")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/PanelContainer/VBoxContainer/ButtonDialog3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+mouse_filter = 1
+texture = SubResource("AtlasTexture_u01l0")
+region_rect = Rect2(2060, 10, 490, 240)
+patch_margin_left = 40
+patch_margin_top = 30
+patch_margin_right = 140
+patch_margin_bottom = 90
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/VBoxContainer/ButtonDialog3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 80
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/ButtonDialog3/MarginContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("3_5eq5n")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.333333, 0.333333, 0.333333, 0.776471)
+text = "Sample"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+text_direction = 2
+
+[node name="ButtonDialog4" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer" node_paths=PackedStringArray("text_node")]
+custom_minimum_size = Vector2(340, 195)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sdwc0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ulhlo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gp0sh")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_46qet")
+toggle_mode = true
+keep_pressed_outside = true
+script = ExtResource("2_2hly1")
+text_node = NodePath("MarginContainer/Label")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/PanelContainer/VBoxContainer/ButtonDialog4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+mouse_filter = 1
+texture = SubResource("AtlasTexture_u01l0")
+region_rect = Rect2(2060, 10, 490, 240)
+patch_margin_left = 40
+patch_margin_top = 30
+patch_margin_right = 140
+patch_margin_bottom = 90
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/VBoxContainer/ButtonDialog4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 80
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/ButtonDialog4/MarginContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("3_5eq5n")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.333333, 0.333333, 0.333333, 0.776471)
+text = "Sample"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+text_direction = 2
+
+[node name="DialogicNode_ButtonSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+script = ExtResource("5_lyu1c")
+sound_pressed = ExtResource("6_7cxpa")
+sound_hover = ExtResource("7_6mln8")
+sound_focus = SubResource("AudioStream_ie4xd")
+
+[connection signal="button_up" from="MarginContainer/PanelContainer/VBoxContainer/ButtonDialog" to="." method="_on_button_dialog_button_up"]
+[connection signal="button_up" from="MarginContainer/PanelContainer/VBoxContainer/ButtonDialog2" to="." method="_on_button_dialog_button_up"]
+[connection signal="button_up" from="MarginContainer/PanelContainer/VBoxContainer/ButtonDialog3" to="." method="_on_button_dialog_button_up"]
+[connection signal="button_up" from="MarginContainer/PanelContainer/VBoxContainer/ButtonDialog4" to="." method="_on_button_dialog_button_up"]
