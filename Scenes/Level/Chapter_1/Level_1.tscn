@@ -1,15 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://bm2twp74h3kjb"]
+[gd_scene load_steps=6 format=3 uid="uid://bm2twp74h3kjb"]
 
+[ext_resource type="PackedScene" uid="uid://c5wftee0bnm31" path="res://Scenes/Development/custom_map_1.tscn" id="1_6wixu"]
 [ext_resource type="Script" path="res://Scenes/Level/Chapter_1/Dialogic_Starter.gd" id="1_fb7hp"]
-[ext_resource type="PackedScene" uid="uid://dlkjulndtiubl" path="res://UI Asset/Scene/UI_Dialogue.tscn" id="1_lq8hd"]
+[ext_resource type="PackedScene" uid="uid://dlkjulndtiubl" path="res://UI Asset/Scene/UI_Dialogue.tscn" id="2_1i744"]
 [ext_resource type="PackedScene" uid="uid://ddtpplryaupo3" path="res://Scenes/Development/similarity.tscn" id="2_3ts76"]
 [ext_resource type="PackedScene" uid="uid://bikmskv6luara" path="res://UI Asset/Scene/Pause_Layer.tscn" id="2_66sla"]
 
 [node name="Level1" type="Node2D"]
 
+[node name="CustomMap1" parent="." instance=ExtResource("1_6wixu")]
+
 [node name="Similarity" parent="." instance=ExtResource("2_3ts76")]
 
-[node name="UI_dialog" parent="." instance=ExtResource("1_lq8hd")]
+[node name="UI_Dialog" parent="." instance=ExtResource("2_1i744")]
 
 [node name="Dialogic" type="CanvasLayer" parent="."]
 script = ExtResource("1_fb7hp")

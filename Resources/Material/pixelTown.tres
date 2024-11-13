@@ -1,0 +1,23 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://go3dqlxl25uo"]
+
+[ext_resource type="Texture2D" uid="uid://dljnbre4d0sxq" path="res://Objects/Pixel_3D_RPG_Town/TileSheet/T_RPGTown_TileSheet_01_D.png" id="1_7ydk3"]
+[ext_resource type="Texture2D" uid="uid://j2618t5xr8at" path="res://Objects/Pixel_3D_RPG_Town/TileSheet/T_RPGTown_TileSheet_01_E.png" id="2_qtje5"]
+[ext_resource type="Texture2D" uid="uid://drmowixgpjlrj" path="res://Objects/Pixel_3D_RPG_Town/TileSheet/T_RPGTown_TileSheet_01_M.png" id="3_54ivr"]
+[ext_resource type="Texture2D" uid="uid://ctuicfykd5oee" path="res://Objects/Pixel_3D_RPG_Town/TileSheet/T_RPGTown_TileSheet_01_N.png" id="4_334w7"]
+[ext_resource type="Texture2D" uid="uid://bd1qedsy8425e" path="res://Objects/Pixel_3D_RPG_Town/TileSheet/T_RPGTown_TileSheet_01_R.png" id="5_2a8dv"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_7ydk3")
+metallic = 1.0
+metallic_texture = ExtResource("3_54ivr")
+metallic_texture_channel = 4
+roughness_texture = ExtResource("5_2a8dv")
+roughness_texture_channel = 4
+emission_enabled = true
+emission_texture = ExtResource("2_qtje5")
+normal_enabled = true
+normal_texture = ExtResource("4_334w7")
+texture_filter = 4

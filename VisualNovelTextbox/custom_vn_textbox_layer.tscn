@@ -229,10 +229,10 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 484.885
-offset_top = 106.675
-offset_right = 484.885
-offset_bottom = 106.675
+offset_left = 560.91
+offset_top = 29.135
+offset_right = 560.91
+offset_bottom = 29.135
 grow_vertical = 2
 
 [node name="AnimationParent" type="Control" parent="Anchor"]

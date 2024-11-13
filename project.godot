@@ -120,7 +120,7 @@ project/assembly_name="wordwise"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/anima/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/godot_whisper/plugin.cfg", "res://addons/imgui-godot/plugin.cfg", "res://addons/limbo_console/plugin.cfg", "res://addons/runtime_debug_tools/plugin.cfg")
+enabled=PackedStringArray("res://addons/anima/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/godot_whisper/plugin.cfg", "res://addons/imgui-godot/plugin.cfg", "res://addons/limbo_console/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/runtime_debug_tools/plugin.cfg")
 
 [input]
 

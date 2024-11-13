@@ -6,3 +6,5 @@ USER ERROR: Node not found: "../UI_dialog" (relative to "/root/Level1/Dialogic")
 USER WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
 If you want to set size, change the anchors or consider using set_deferred().
    at: _set_size (scene/gui/control.cpp:1448)
+USER ERROR: Parameter "data.tree" is null.
+   at: get_tree (scene/main/node.h:446)
