@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://blf5rto5wrcth"]
+[gd_scene load_steps=28 format=3 uid="uid://dueqwg188gd0l"]
 
 [ext_resource type="Script" path="res://Tutorial_Script.gd" id="1_petcf"]
 [ext_resource type="Theme" uid="uid://la05b3bnexvl" path="res://UI Asset/Shader/theme_fajar/theme_fajar.tres" id="2_8vp5s"]

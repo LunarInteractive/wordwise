@@ -11,9 +11,9 @@
 [ext_resource type="Script" path="res://UI Asset/Script/BtnAnimation.gd" id="5_q8d6k"]
 [ext_resource type="ButtonGroup" uid="uid://luvlh3xspwgi" path="res://Objects/Environtment/UI/ButtonGroup/LC.tres" id="6_7odi5"]
 [ext_resource type="Texture2D" uid="uid://ct671flg818rf" path="res://UI Asset/Sprite/UI_Wordwise/Button_Text/ButtonText_Border_2.tres" id="8_uyk1m"]
-[ext_resource type="Texture2D" uid="uid://f2pxf81r3upa" path="res://UI Asset/Sprite/UI_Wordwise/Slider/Handle_Slider.tres" id="12_aehdc"]
-[ext_resource type="Texture2D" uid="uid://b82ia1s35nh0h" path="res://UI Asset/Sprite/UI_Wordwise/Slider/Background_With_Border.tres" id="13_frqtq"]
-[ext_resource type="Texture2D" uid="uid://cglwca215mx4x" path="res://UI Asset/Sprite/UI_Wordwise/Slider/Background_Slider.tres" id="13_w8the"]
+[ext_resource type="Texture2D" path="res://UI Asset/Sprite/UI_Wordwise/Slider/Handle_Slider.tres" id="12_aehdc"]
+[ext_resource type="Texture2D" path="res://UI Asset/Sprite/UI_Wordwise/Slider/Background_With_Border.tres" id="13_frqtq"]
+[ext_resource type="Texture2D" path="res://UI Asset/Sprite/UI_Wordwise/Slider/Background_Slider.tres" id="13_w8the"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yyr6f"]
 

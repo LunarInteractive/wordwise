@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://0r5ssye3tlj8"]
+[gd_scene load_steps=26 format=3 uid="uid://dshxc0cw25y6"]
 
 [ext_resource type="VideoStream" path="res://UI Asset/Background/WORDWISE_BG.ogv" id="1_irovb"]
 [ext_resource type="FontFile" uid="uid://dclwgnpvy23n7" path="res://UI Asset/Font/Pixel Dogica/dogicapixelbold.ttf" id="2_sljck"]

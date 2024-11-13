@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://dlkjulndtiubl"]
+[gd_scene load_steps=35 format=3 uid="uid://dlkjulndtiubl"]
 
 [ext_resource type="FontFile" uid="uid://dlfcvrx0tug2e" path="res://UI Asset/Font/Pixel Dogica/dogicapixel.ttf" id="1_8aqr1"]
 [ext_resource type="Texture2D" uid="uid://be8ovik6e657" path="res://UI Asset/Sprite/GUI/Bubble_Text.tres" id="2_1q7va"]

@@ -1,0 +1,799 @@
+[gd_scene load_steps=128 format=3 uid="uid://c6qhylo02g3ms"]
+
+[ext_resource type="ArrayMesh" uid="uid://b2bebqnpbusra" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorLrg_01.obj" id="1_713py"]
+[ext_resource type="ArrayMesh" uid="uid://cga1brqc0he3f" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorLrg_02.obj" id="3_mr5hg"]
+[ext_resource type="ArrayMesh" uid="uid://cecygfy5fpep2" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorLrg_03.obj" id="4_75uvn"]
+[ext_resource type="ArrayMesh" uid="uid://c3jq1ofkovo1j" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorLrg_04.obj" id="5_ypmdj"]
+[ext_resource type="ArrayMesh" uid="uid://die1i6ojcud0h" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorLrg_05.obj" id="6_d85tn"]
+[ext_resource type="ArrayMesh" uid="uid://xcmkousfvqps" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorLrg_06.obj" id="7_hrpg1"]
+[ext_resource type="ArrayMesh" uid="uid://c4ma5iwfsj3fy" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorLrg_07.obj" id="8_atvic"]
+[ext_resource type="ArrayMesh" uid="uid://c6vrls85dyw0s" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorLrg_08.obj" id="9_uoteo"]
+[ext_resource type="ArrayMesh" uid="uid://hmoym1xpvhg7" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorLrg_09.obj" id="10_5el7v"]
+[ext_resource type="ArrayMesh" uid="uid://chch2uoyvw223" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorLrg_10.obj" id="11_m1kos"]
+[ext_resource type="ArrayMesh" uid="uid://byhg3db1n1xr0" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorLrg_11.obj" id="12_3xkke"]
+[ext_resource type="ArrayMesh" uid="uid://c1wsiej2nx3uj" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorLrg_12.obj" id="13_4c4b7"]
+[ext_resource type="ArrayMesh" uid="uid://cav0qahhaawhf" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorLrg_13.obj" id="14_lrtwk"]
+[ext_resource type="ArrayMesh" uid="uid://b4pr53ubrgjgr" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorLrg_14.obj" id="15_bhf8u"]
+[ext_resource type="ArrayMesh" uid="uid://b76c6ohyxmyfl" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorLrg_15.obj" id="16_toanu"]
+[ext_resource type="ArrayMesh" uid="uid://brk8i5qoanno" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorLrg_16.obj" id="17_g2t41"]
+[ext_resource type="ArrayMesh" uid="uid://bnllp0ox4v5eo" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorSingle_01.obj" id="18_x1m3i"]
+[ext_resource type="ArrayMesh" uid="uid://buptavjdb1thx" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorSingle_02.obj" id="19_wlgyn"]
+[ext_resource type="ArrayMesh" uid="uid://bk38tqgdros55" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorSingle_03.obj" id="20_eqno2"]
+[ext_resource type="ArrayMesh" uid="uid://cq73vnjwmqxxm" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorSingle_04.obj" id="21_ur8t3"]
+[ext_resource type="ArrayMesh" uid="uid://cnjgxf4w6fgsa" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorSingle_05.obj" id="22_63li1"]
+[ext_resource type="ArrayMesh" uid="uid://bnacxcru71x37" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorSingle_06.obj" id="23_ak88e"]
+[ext_resource type="ArrayMesh" uid="uid://j4cal11ayj66" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorSingle_07.obj" id="24_225i1"]
+[ext_resource type="ArrayMesh" uid="uid://cptra4v8qwadt" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorSingle_08.obj" id="25_kmmrg"]
+[ext_resource type="ArrayMesh" uid="uid://dc23p6m1dak5l" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorSingle_09.obj" id="26_evggb"]
+[ext_resource type="ArrayMesh" uid="uid://c4yc41f3aw8sy" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorSingle_10.obj" id="27_c644p"]
+[ext_resource type="ArrayMesh" uid="uid://cgcvur0hjai3n" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorSingle_11.obj" id="28_n5rr3"]
+[ext_resource type="ArrayMesh" uid="uid://bctjavly20i33" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorSingle_12.obj" id="29_nu8t1"]
+[ext_resource type="ArrayMesh" uid="uid://bo112dfe1tmwe" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorSingle_13.obj" id="30_8wv5t"]
+[ext_resource type="ArrayMesh" uid="uid://6sjd78m0xk6b" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorSingle_14.obj" id="31_7agex"]
+[ext_resource type="ArrayMesh" uid="uid://b0ruxr07pu1l3" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorSingle_15.obj" id="32_xmaj3"]
+[ext_resource type="ArrayMesh" uid="uid://dabdn6qk6qdao" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorSingle_16.obj" id="33_d11yb"]
+[ext_resource type="ArrayMesh" uid="uid://nnwq2ktc5ye" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorSingle_17.obj" id="34_trost"]
+[ext_resource type="ArrayMesh" uid="uid://u5su3vu8fdlr" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorSingle_18.obj" id="35_55ku5"]
+[ext_resource type="ArrayMesh" uid="uid://babd1fh1q54yt" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_Wall_01.obj" id="36_i1u32"]
+[ext_resource type="ArrayMesh" uid="uid://btmpftg2en2bu" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_Wall_02.obj" id="37_ob4fn"]
+[ext_resource type="ArrayMesh" uid="uid://nq0beeymym7g" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_Wall_03.obj" id="38_6mebj"]
+[ext_resource type="ArrayMesh" uid="uid://cfuohvxaexy8x" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_Wall_04.obj" id="39_m01k4"]
+[ext_resource type="ArrayMesh" uid="uid://dptp1rbkig1op" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularWall_01.obj" id="40_6ncr1"]
+[ext_resource type="ArrayMesh" uid="uid://dntq5lrjrhv4x" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularWall_02.obj" id="41_p7nu8"]
+[ext_resource type="ArrayMesh" uid="uid://dgwe4e6ngth8x" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularWall_03.obj" id="42_qgna0"]
+[ext_resource type="ArrayMesh" uid="uid://cgmqjpue71f2b" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularWall_04.obj" id="43_kqe8m"]
+[ext_resource type="ArrayMesh" uid="uid://bk5mnsnrgqxxs" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularWall_05.obj" id="44_n57ny"]
+[ext_resource type="ArrayMesh" uid="uid://cc0syqj27ibaw" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularWall_06.obj" id="45_3p7b1"]
+[ext_resource type="ArrayMesh" uid="uid://bnpvxrvs44n7g" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularWall_07.obj" id="46_fhnrt"]
+[ext_resource type="ArrayMesh" uid="uid://ch7y0cv765fuj" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularWall_08.obj" id="47_ds5li"]
+[ext_resource type="ArrayMesh" uid="uid://qda8rrogck78" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularWall_09.obj" id="48_k1pya"]
+[ext_resource type="ArrayMesh" uid="uid://w1g7r1dxmtfi" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularWall_10.obj" id="49_t6c3p"]
+[ext_resource type="ArrayMesh" uid="uid://0a8labj6lb61" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularWall_11.obj" id="50_83oby"]
+[ext_resource type="ArrayMesh" uid="uid://dkyvfkcealdri" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularWall_12.obj" id="51_0dofb"]
+[ext_resource type="ArrayMesh" uid="uid://ckukvv521s8sn" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularWall_13.obj" id="52_vuf4j"]
+[ext_resource type="ArrayMesh" uid="uid://btiuaikxnuemp" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularWall_14.obj" id="53_denmk"]
+[ext_resource type="ArrayMesh" uid="uid://3c24n48e7sxx" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularWall_15.obj" id="54_ybgcr"]
+[ext_resource type="ArrayMesh" uid="uid://baif3l6hv2env" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularWall_16.obj" id="55_ym0fs"]
+[ext_resource type="ArrayMesh" uid="uid://b6qc8rxyo7a6q" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularWall_17.obj" id="56_ln8sk"]
+[ext_resource type="ArrayMesh" uid="uid://crktt5k3wgyy6" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularWall_18.obj" id="57_ljsg2"]
+[ext_resource type="ArrayMesh" uid="uid://blx6j50t0lxuv" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularPlatform_Ramp_01.obj" id="58_yxf6r"]
+[ext_resource type="ArrayMesh" uid="uid://4svs8gssrbvj" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularPlatform_Ramp_02.obj" id="59_c5iv5"]
+[ext_resource type="ArrayMesh" uid="uid://cue1by85ei2y8" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularPlatform_01.obj" id="60_47i4b"]
+[ext_resource type="ArrayMesh" uid="uid://r58iiaeqw8lg" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularPlatform_02.obj" id="61_og5by"]
+[ext_resource type="ArrayMesh" uid="uid://cvd4mfwworvwy" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularPlatform_03.obj" id="62_u0pw3"]
+[ext_resource type="ArrayMesh" uid="uid://87gyn0foynxm" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularPlatform_04.obj" id="63_240lc"]
+[ext_resource type="ArrayMesh" uid="uid://1btq8ncy5klj" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularPlatform_05.obj" id="64_6bpdd"]
+[ext_resource type="ArrayMesh" uid="uid://cqhuemd1v28p5" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularPlatform_06.obj" id="65_l2hxa"]
+[ext_resource type="ArrayMesh" uid="uid://cbxm3v8f8txju" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularPlatform_07.obj" id="66_exv3w"]
+[ext_resource type="ArrayMesh" uid="uid://bnl6n4mcragtu" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularPlatform_08.obj" id="67_jc8ja"]
+[ext_resource type="ArrayMesh" uid="uid://ecuxqstdta2e" path="res://Objects/Pixel_3D_RPG_Town/Foliage/SM_Garden_Bush_01.obj" id="68_lgsw2"]
+[ext_resource type="ArrayMesh" uid="uid://bipgbindtbb3o" path="res://Objects/Pixel_3D_RPG_Town/Foliage/SM_Garden_Bush_02.obj" id="69_xclhy"]
+[ext_resource type="ArrayMesh" uid="uid://b2d1c38pr1wd" path="res://Objects/Pixel_3D_RPG_Town/Foliage/SM_Garden_Bush_03.obj" id="70_22n5c"]
+[ext_resource type="ArrayMesh" uid="uid://dyetyfg4x6t0f" path="res://Objects/Pixel_3D_RPG_Town/Foliage/SM_Garden_Bush_04.obj" id="71_fpc8o"]
+[ext_resource type="ArrayMesh" uid="uid://0u56kmb8oj12" path="res://Objects/Pixel_3D_RPG_Town/Foliage/SM_Garden_Grass_01.obj" id="72_cy272"]
+[ext_resource type="ArrayMesh" uid="uid://d0pl14k1gpvpa" path="res://Objects/Pixel_3D_RPG_Town/Foliage/SM_Garden_Grass_02.obj" id="73_b5efu"]
+[ext_resource type="ArrayMesh" uid="uid://bw11jhdwf6v3j" path="res://Objects/Pixel_3D_RPG_Town/Foliage/SM_Garden_Grass_03.obj" id="74_t807n"]
+[ext_resource type="ArrayMesh" uid="uid://diwuu2q1xrwym" path="res://Objects/Pixel_3D_RPG_Town/Foliage/SM_Garden_Grass_04.obj" id="75_0nx6j"]
+[ext_resource type="ArrayMesh" uid="uid://cos05l46vk3iq" path="res://Objects/Pixel_3D_RPG_Town/Foliage/SM_Garden_Grass_05.obj" id="76_x63oe"]
+[ext_resource type="ArrayMesh" uid="uid://dlsthop8dq8vj" path="res://Objects/Pixel_3D_RPG_Town/Foliage/SM_Garden_Grass_06.obj" id="77_clg5i"]
+[ext_resource type="ArrayMesh" uid="uid://b18w10tdx7bq5" path="res://Objects/Pixel_3D_RPG_Town/Houses/SM_House_01.obj" id="78_gq3gj"]
+[ext_resource type="ArrayMesh" uid="uid://bfkbk0rf1xmfd" path="res://Objects/Pixel_3D_RPG_Town/Houses/SM_House_02.obj" id="79_myadh"]
+[ext_resource type="ArrayMesh" uid="uid://bs40y7amhry0f" path="res://Objects/Pixel_3D_RPG_Town/Houses/SM_House_03.obj" id="80_u4kso"]
+[ext_resource type="ArrayMesh" uid="uid://d2l2xtusybj42" path="res://Objects/Pixel_3D_RPG_Town/Houses/SM_House_04.obj" id="81_ohg74"]
+[ext_resource type="ArrayMesh" uid="uid://drjmwdiesqk2w" path="res://Objects/Pixel_3D_RPG_Town/Houses/SM_House_05.obj" id="82_27sa0"]
+[ext_resource type="ArrayMesh" uid="uid://c2vaoseomdbbc" path="res://Objects/Pixel_3D_RPG_Town/Houses/SM_House_06.obj" id="83_b4o5b"]
+[ext_resource type="ArrayMesh" uid="uid://iihavpbcj70q" path="res://Objects/Pixel_3D_RPG_Town/Houses/SM_House_07.obj" id="84_hu8fl"]
+[ext_resource type="ArrayMesh" uid="uid://b8sjvtk5rwkxy" path="res://Objects/Pixel_3D_RPG_Town/Houses/SM_Market_01.obj" id="85_utd1n"]
+[ext_resource type="ArrayMesh" uid="uid://bjp1qr5kbslle" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Chimney_01.obj" id="86_5ev6j"]
+[ext_resource type="ArrayMesh" uid="uid://dq3xl6i48glg2" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Chimney_02.obj" id="87_2b30g"]
+[ext_resource type="ArrayMesh" uid="uid://cnbwagd4se3f6" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Chimney_03.obj" id="88_8g6n2"]
+[ext_resource type="ArrayMesh" uid="uid://djbipwsjfjcbe" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Chimney_04.obj" id="89_kd3vq"]
+[ext_resource type="ArrayMesh" uid="uid://biolwoauhalbx" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Chimney_05.obj" id="90_ajmoe"]
+[ext_resource type="ArrayMesh" uid="uid://bpsji0mu6n3hu" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Door_01.obj" id="91_1qstk"]
+[ext_resource type="ArrayMesh" uid="uid://b88w0n1tc4w13" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Door_02.obj" id="92_hopol"]
+[ext_resource type="ArrayMesh" uid="uid://qk366j0tor2u" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Door_03.obj" id="93_qxkss"]
+[ext_resource type="ArrayMesh" uid="uid://bjt8rwytq6p85" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Forge_01.obj" id="94_7ptoj"]
+[ext_resource type="ArrayMesh" uid="uid://buap802c4o54s" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Roof_01.obj" id="95_gjgae"]
+[ext_resource type="ArrayMesh" uid="uid://cd210le1lx5ny" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Side_01.obj" id="96_kyooq"]
+[ext_resource type="ArrayMesh" uid="uid://d0d72h7i48qud" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_WindowGarden_01.obj" id="97_2ljpf"]
+[ext_resource type="ArrayMesh" uid="uid://3rxkbnu3nm6s" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_WindowGarden_02.obj" id="98_0eu6m"]
+[ext_resource type="ArrayMesh" uid="uid://c5ar54ntfl16x" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_WindowLit_01.obj" id="99_tse6k"]
+[ext_resource type="ArrayMesh" uid="uid://dbnlmx5kt0fap" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_WindowLit_02.obj" id="100_yd1yn"]
+[ext_resource type="ArrayMesh" uid="uid://dc8w7h5hjv3qy" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_WindowLit_03.obj" id="101_ddw8a"]
+[ext_resource type="ArrayMesh" uid="uid://hcv48nkn6qtw" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_WindowLit_04.obj" id="102_5m2lc"]
+[ext_resource type="ArrayMesh" uid="uid://dgq5cdvmwcpik" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Window_01.obj" id="103_kj3ko"]
+[ext_resource type="ArrayMesh" uid="uid://cchvsd87yas2o" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Window_02.obj" id="104_t0qpg"]
+[ext_resource type="ArrayMesh" uid="uid://d10d2vjo7rda1" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Window_03.obj" id="105_m7f5m"]
+[ext_resource type="ArrayMesh" uid="uid://vr37hor7d35s" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Window_04.obj" id="106_42v7e"]
+[ext_resource type="ArrayMesh" uid="uid://dblpuo25p83y0" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Window_05.obj" id="107_7r4lk"]
+[ext_resource type="ArrayMesh" uid="uid://dkcchyepjij21" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Window_06.obj" id="108_17n3v"]
+[ext_resource type="ArrayMesh" uid="uid://ckuw6hy2s0kg3" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Window_07.obj" id="109_s6u43"]
+[ext_resource type="ArrayMesh" uid="uid://bwqx7lit5rn5f" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Window_08.obj" id="110_ffs8v"]
+[ext_resource type="ArrayMesh" uid="uid://chlg2n0lgtt7f" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Window_09.obj" id="111_7e30p"]
+[ext_resource type="ArrayMesh" uid="uid://c75nc2yvamuie" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Window_10.obj" id="112_8ld44"]
+[ext_resource type="ArrayMesh" uid="uid://11i261bqgjtr" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Window_11.obj" id="113_u78gu"]
+[ext_resource type="ArrayMesh" uid="uid://c046b40521rf6" path="res://Objects/Pixel_3D_RPG_Town/Modular_Houses/SM_ModularHouse_01.obj" id="114_qct5x"]
+[ext_resource type="ArrayMesh" uid="uid://bjbaehsgvln3g" path="res://Objects/Pixel_3D_RPG_Town/Modular_Houses/SM_ModularHouse_02.obj" id="115_md3wb"]
+[ext_resource type="ArrayMesh" uid="uid://dbx8q7hrtbb2t" path="res://Objects/Pixel_3D_RPG_Town/Modular_Houses/SM_ModularHouse_03.obj" id="116_y4an4"]
+[ext_resource type="ArrayMesh" uid="uid://4x5n02iygntq" path="res://Objects/Pixel_3D_RPG_Town/Modular_Houses/SM_ModularHouse_04.obj" id="117_a8l2h"]
+[ext_resource type="ArrayMesh" uid="uid://bux4v2wtywxeg" path="res://Objects/Pixel_3D_RPG_Town/Modular_Houses/SM_ModularHouse_05.obj" id="118_yuhxl"]
+[ext_resource type="ArrayMesh" uid="uid://xa2p0546inv4" path="res://Objects/Pixel_3D_RPG_Town/Modular_Houses/SM_ModularHouse_06.obj" id="119_fxenb"]
+[ext_resource type="ArrayMesh" uid="uid://hxgmitox2bc4" path="res://Objects/Pixel_3D_RPG_Town/Modular_Houses/SM_ModularHouse_Base_01.obj" id="120_6n4kg"]
+[ext_resource type="ArrayMesh" uid="uid://chy08de37oheq" path="res://Objects/Pixel_3D_RPG_Town/Modular_Houses/SM_ModularHouse_Mid_01.obj" id="121_ywav0"]
+[ext_resource type="ArrayMesh" uid="uid://f3dds53mlf8f" path="res://Objects/Pixel_3D_RPG_Town/Modular_Houses/SM_ModularHouse_Mid_02.obj" id="122_axlem"]
+[ext_resource type="ArrayMesh" uid="uid://b6n86wvqqi801" path="res://Objects/Pixel_3D_RPG_Town/Modular_Houses/SM_ModularHouse_Mid_03.obj" id="123_mvk18"]
+[ext_resource type="ArrayMesh" uid="uid://drcswnolq032a" path="res://Objects/Pixel_3D_RPG_Town/Modular_Houses/SM_ModularHouse_Mid_04.obj" id="124_swp63"]
+[ext_resource type="ArrayMesh" uid="uid://bui207pvt2bid" path="res://Objects/Pixel_3D_RPG_Town/Modular_Houses/SM_ModularHouse_Roof_01.obj" id="125_m5ol1"]
+[ext_resource type="ArrayMesh" uid="uid://d3fkdpw82i3xl" path="res://Objects/Pixel_3D_RPG_Town/Modular_Houses/SM_ModularHouse_Roof_02.obj" id="126_0guqr"]
+[ext_resource type="ArrayMesh" uid="uid://lih5yctd8ssm" path="res://Objects/Pixel_3D_RPG_Town/Modular_Houses/SM_ModularHouse_Roof_03.obj" id="127_m4m8k"]
+[ext_resource type="ArrayMesh" uid="uid://c5gvkcg3ptluy" path="res://Objects/Pixel_3D_RPG_Town/Modular_Houses/SM_ModularHouse_Roof_04.obj" id="128_wnder"]
+
+[node name="EnviPixelTown" type="Node2D"]
+
+[node name="Big_Tiles" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 24)
+
+[node name="Floor_1" type="Node3D" parent="Big_Tiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.92122, 0.112103, 3.11208)
+
+[node name="SmModularTileFloorLrg01" type="MeshInstance3D" parent="Big_Tiles/Floor_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.00289, 0, 1.99281)
+mesh = ExtResource("1_713py")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg02" type="MeshInstance3D" parent="Big_Tiles/Floor_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+mesh = ExtResource("3_mr5hg")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg03" type="MeshInstance3D" parent="Big_Tiles/Floor_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+mesh = ExtResource("4_75uvn")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg04" type="MeshInstance3D" parent="Big_Tiles/Floor_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+mesh = ExtResource("5_ypmdj")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg05" type="MeshInstance3D" parent="Big_Tiles/Floor_1"]
+mesh = ExtResource("6_d85tn")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg06" type="MeshInstance3D" parent="Big_Tiles/Floor_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+mesh = ExtResource("7_hrpg1")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg07" type="MeshInstance3D" parent="Big_Tiles/Floor_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+mesh = ExtResource("8_atvic")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg08" type="MeshInstance3D" parent="Big_Tiles/Floor_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+mesh = ExtResource("9_uoteo")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg09" type="MeshInstance3D" parent="Big_Tiles/Floor_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
+mesh = ExtResource("10_5el7v")
+skeleton = NodePath("../../..")
+
+[node name="Floor_2" type="Node3D" parent="Big_Tiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -3)
+
+[node name="SmModularTileFloorLrg10" type="MeshInstance3D" parent="Big_Tiles/Floor_2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+mesh = ExtResource("11_m1kos")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg11" type="MeshInstance3D" parent="Big_Tiles/Floor_2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+mesh = ExtResource("12_3xkke")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg12" type="MeshInstance3D" parent="Big_Tiles/Floor_2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
+mesh = ExtResource("13_4c4b7")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg13" type="MeshInstance3D" parent="Big_Tiles/Floor_2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+mesh = ExtResource("14_lrtwk")
+skeleton = NodePath("../../..")
+
+[node name="Floor_Single" type="Node3D" parent="Big_Tiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 3)
+
+[node name="SmModularTileFloorLrg14" type="MeshInstance3D" parent="Big_Tiles/Floor_Single"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+mesh = ExtResource("15_bhf8u")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg15" type="MeshInstance3D" parent="Big_Tiles/Floor_Single"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2)
+mesh = ExtResource("16_toanu")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg16" type="MeshInstance3D" parent="Big_Tiles/Floor_Single"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1)
+mesh = ExtResource("17_g2t41")
+skeleton = NodePath("../../..")
+
+[node name="Small_Tiles" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 14)
+
+[node name="Floor_1" type="Node3D" parent="Small_Tiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="SmModularTileFloorSingle01" type="MeshInstance3D" parent="Small_Tiles/Floor_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+mesh = ExtResource("18_x1m3i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorSingle02" type="MeshInstance3D" parent="Small_Tiles/Floor_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("19_wlgyn")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorSingle03" type="MeshInstance3D" parent="Small_Tiles/Floor_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+mesh = ExtResource("20_eqno2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorSingle04" type="MeshInstance3D" parent="Small_Tiles/Floor_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+mesh = ExtResource("21_ur8t3")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorSingle05" type="MeshInstance3D" parent="Small_Tiles/Floor_1"]
+mesh = ExtResource("22_63li1")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorSingle06" type="MeshInstance3D" parent="Small_Tiles/Floor_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+mesh = ExtResource("23_ak88e")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorSingle07" type="MeshInstance3D" parent="Small_Tiles/Floor_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
+mesh = ExtResource("24_225i1")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorSingle08" type="MeshInstance3D" parent="Small_Tiles/Floor_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+mesh = ExtResource("25_kmmrg")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorSingle09" type="MeshInstance3D" parent="Small_Tiles/Floor_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+mesh = ExtResource("26_evggb")
+skeleton = NodePath("../../..")
+
+[node name="Floor_2" type="Node3D" parent="Small_Tiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1)
+
+[node name="SmModularTileFloorSingle10" type="MeshInstance3D" parent="Small_Tiles/Floor_2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+mesh = ExtResource("27_c644p")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorSingle11" type="MeshInstance3D" parent="Small_Tiles/Floor_2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("28_n5rr3")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorSingle12" type="MeshInstance3D" parent="Small_Tiles/Floor_2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+mesh = ExtResource("29_nu8t1")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorSingle13" type="MeshInstance3D" parent="Small_Tiles/Floor_2"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+mesh = ExtResource("30_8wv5t")
+skeleton = NodePath("../../..")
+
+[node name="Floor_3" type="Node3D" parent="Small_Tiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1)
+
+[node name="SmModularTileFloorSingle14" type="MeshInstance3D" parent="Small_Tiles/Floor_3"]
+mesh = ExtResource("31_7agex")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorSingle15" type="MeshInstance3D" parent="Small_Tiles/Floor_3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+mesh = ExtResource("32_xmaj3")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorSingle16" type="MeshInstance3D" parent="Small_Tiles/Floor_3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+mesh = ExtResource("33_d11yb")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorSingle17" type="MeshInstance3D" parent="Small_Tiles/Floor_3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+mesh = ExtResource("34_trost")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorSingle18" type="MeshInstance3D" parent="Small_Tiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+mesh = ExtResource("35_55ku5")
+skeleton = NodePath("../..")
+
+[node name="Wall" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -2)
+
+[node name="SmModularTileWall01" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4997, 0, 0.00208282)
+mesh = ExtResource("36_i1u32")
+skeleton = NodePath("../..")
+
+[node name="SmModularTileWall02" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.499701, 0, 0.00208282)
+mesh = ExtResource("37_ob4fn")
+skeleton = NodePath("../..")
+
+[node name="SmModularTileWall03" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5003, 0, 0.00208282)
+mesh = ExtResource("38_6mebj")
+skeleton = NodePath("../..")
+
+[node name="SmModularTileWall04" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.500299, 0, 0.00208282)
+mesh = ExtResource("39_m01k4")
+skeleton = NodePath("../..")
+
+[node name="SmModularWall01" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 10)
+mesh = ExtResource("40_6ncr1")
+skeleton = NodePath("../..")
+
+[node name="SmModularWall02" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 8)
+mesh = ExtResource("41_p7nu8")
+skeleton = NodePath("../..")
+
+[node name="SmModularWall03" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 6)
+mesh = ExtResource("42_qgna0")
+skeleton = NodePath("../..")
+
+[node name="SmModularWall04" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+mesh = ExtResource("43_kqe8m")
+skeleton = NodePath("../..")
+
+[node name="SmModularWall05" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -4)
+mesh = ExtResource("44_n57ny")
+skeleton = NodePath("../..")
+
+[node name="SmModularWall06" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -8)
+mesh = ExtResource("45_3p7b1")
+skeleton = NodePath("../..")
+
+[node name="SmModularWall07" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+mesh = ExtResource("46_fhnrt")
+skeleton = NodePath("../..")
+
+[node name="SmModularWall08" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -2)
+mesh = ExtResource("47_ds5li")
+skeleton = NodePath("../..")
+
+[node name="SmModularWall09" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -4)
+mesh = ExtResource("48_k1pya")
+skeleton = NodePath("../..")
+
+[node name="SmModularWall10" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 10)
+mesh = ExtResource("49_t6c3p")
+skeleton = NodePath("../..")
+
+[node name="SmModularWall11" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 6)
+mesh = ExtResource("50_83oby")
+skeleton = NodePath("../..")
+
+[node name="SmModularWall12" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 2)
+mesh = ExtResource("51_0dofb")
+skeleton = NodePath("../..")
+
+[node name="SmModularWall13" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -5)
+mesh = ExtResource("52_vuf4j")
+skeleton = NodePath("../..")
+
+[node name="SmModularWall14" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -7)
+mesh = ExtResource("53_denmk")
+skeleton = NodePath("../..")
+
+[node name="SmModularWall15" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -9)
+mesh = ExtResource("54_ybgcr")
+skeleton = NodePath("../..")
+
+[node name="SmModularWall16" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 5)
+mesh = ExtResource("55_ym0fs")
+skeleton = NodePath("../..")
+
+[node name="SmModularWall17" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3)
+mesh = ExtResource("56_ln8sk")
+skeleton = NodePath("../..")
+
+[node name="SmModularWall18" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1)
+mesh = ExtResource("57_ljsg2")
+skeleton = NodePath("../..")
+
+[node name="Ramp" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 20)
+
+[node name="SmModularPlatformRamp01" type="MeshInstance3D" parent="Ramp"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+mesh = ExtResource("58_yxf6r")
+skeleton = NodePath("../..")
+
+[node name="SmModularPlatformRamp02" type="MeshInstance3D" parent="Ramp"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+mesh = ExtResource("59_c5iv5")
+skeleton = NodePath("../..")
+
+[node name="Platform" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 9)
+
+[node name="SmModularPlatform01" type="MeshInstance3D" parent="Platform"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 5)
+mesh = ExtResource("60_47i4b")
+skeleton = NodePath("../..")
+
+[node name="SmModularPlatform02" type="MeshInstance3D" parent="Platform"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2)
+mesh = ExtResource("61_og5by")
+skeleton = NodePath("../..")
+
+[node name="SmModularPlatform03" type="MeshInstance3D" parent="Platform"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -2)
+mesh = ExtResource("62_u0pw3")
+skeleton = NodePath("../..")
+
+[node name="SmModularPlatform04" type="MeshInstance3D" parent="Platform"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -5)
+mesh = ExtResource("63_240lc")
+skeleton = NodePath("../..")
+
+[node name="SmModularPlatform05" type="MeshInstance3D" parent="Platform"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 5)
+mesh = ExtResource("64_6bpdd")
+skeleton = NodePath("../..")
+
+[node name="SmModularPlatform06" type="MeshInstance3D" parent="Platform"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+mesh = ExtResource("65_l2hxa")
+skeleton = NodePath("../..")
+
+[node name="SmModularPlatform07" type="MeshInstance3D" parent="Platform"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -2)
+mesh = ExtResource("66_exv3w")
+skeleton = NodePath("../..")
+
+[node name="SmModularPlatform08" type="MeshInstance3D" parent="Platform"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -5)
+mesh = ExtResource("67_jc8ja")
+skeleton = NodePath("../..")
+
+[node name="Bush" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -3)
+
+[node name="SmGardenBush01" type="MeshInstance3D" parent="Bush"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+mesh = ExtResource("68_lgsw2")
+skeleton = NodePath("../..")
+
+[node name="SmGardenBush02" type="MeshInstance3D" parent="Bush"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+mesh = ExtResource("69_xclhy")
+skeleton = NodePath("../..")
+
+[node name="SmGardenBush03" type="MeshInstance3D" parent="Bush"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+mesh = ExtResource("70_22n5c")
+skeleton = NodePath("../..")
+
+[node name="SmGardenBush04" type="MeshInstance3D" parent="Bush"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+mesh = ExtResource("71_fpc8o")
+skeleton = NodePath("../..")
+
+[node name="Grass" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -4)
+
+[node name="SmGardenGrass01" type="MeshInstance3D" parent="Grass"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2)
+mesh = ExtResource("72_cy272")
+skeleton = NodePath("../..")
+
+[node name="SmGardenGrass02" type="MeshInstance3D" parent="Grass"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+mesh = ExtResource("73_b5efu")
+skeleton = NodePath("../..")
+
+[node name="SmGardenGrass03" type="MeshInstance3D" parent="Grass"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("74_t807n")
+skeleton = NodePath("../..")
+
+[node name="SmGardenGrass04" type="MeshInstance3D" parent="Grass"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+mesh = ExtResource("75_0nx6j")
+skeleton = NodePath("../..")
+
+[node name="SmGardenGrass05" type="MeshInstance3D" parent="Grass"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.611514, 0.0806993, 1.44862)
+mesh = ExtResource("76_x63oe")
+skeleton = NodePath("../..")
+
+[node name="SmGardenGrass06" type="MeshInstance3D" parent="Grass"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+mesh = ExtResource("77_clg5i")
+skeleton = NodePath("../..")
+
+[node name="Houses" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -42)
+
+[node name="SmHouse01" type="MeshInstance3D" parent="Houses"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.79998, 0, 29.982)
+mesh = ExtResource("78_gq3gj")
+skeleton = NodePath("../..")
+
+[node name="SmHouse02" type="MeshInstance3D" parent="Houses"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.79998, 0, 21.982)
+mesh = ExtResource("79_myadh")
+skeleton = NodePath("../..")
+
+[node name="SmHouse03" type="MeshInstance3D" parent="Houses"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.79998, 0, 12.982)
+mesh = ExtResource("80_u4kso")
+skeleton = NodePath("../..")
+
+[node name="SmHouse04" type="MeshInstance3D" parent="Houses"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.79998, 0, 2.982)
+mesh = ExtResource("81_ohg74")
+skeleton = NodePath("../..")
+
+[node name="SmHouse05" type="MeshInstance3D" parent="Houses"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.79998, 0, -8.018)
+mesh = ExtResource("82_27sa0")
+skeleton = NodePath("../..")
+
+[node name="SmHouse06" type="MeshInstance3D" parent="Houses"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.79998, 0, -20.018)
+mesh = ExtResource("83_b4o5b")
+skeleton = NodePath("../..")
+
+[node name="SmHouse07" type="MeshInstance3D" parent="Houses"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.79998, 0, -34.018)
+mesh = ExtResource("84_hu8fl")
+skeleton = NodePath("../..")
+
+[node name="SmMarket01" type="MeshInstance3D" parent="Houses"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.22552, -0.0303421, 16.9471)
+mesh = ExtResource("85_utd1n")
+skeleton = NodePath("../..")
+
+[node name="Chimney" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -17)
+
+[node name="SmHouseAddonChimney01" type="MeshInstance3D" parent="Chimney"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7)
+mesh = ExtResource("86_5ev6j")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonChimney02" type="MeshInstance3D" parent="Chimney"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+mesh = ExtResource("87_2b30g")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonChimney03" type="MeshInstance3D" parent="Chimney"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+mesh = ExtResource("88_8g6n2")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonChimney04" type="MeshInstance3D" parent="Chimney"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+mesh = ExtResource("89_kd3vq")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonChimney05" type="MeshInstance3D" parent="Chimney"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)
+mesh = ExtResource("90_ajmoe")
+skeleton = NodePath("../..")
+
+[node name="Door" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -31)
+
+[node name="SmHouseAddonDoor01" type="MeshInstance3D" parent="Door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00112152, 9.53674e-07, 2.0076)
+mesh = ExtResource("91_1qstk")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonDoor02" type="MeshInstance3D" parent="Door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00112152, 9.53674e-07, 0.00759697)
+mesh = ExtResource("92_hopol")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonDoor03" type="MeshInstance3D" parent="Door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00112152, 9.53674e-07, -0.992403)
+mesh = ExtResource("93_qxkss")
+skeleton = NodePath("../..")
+
+[node name="house_addons" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -8, -39)
+
+[node name="SmHouseAddonForge01" type="MeshInstance3D" parent="house_addons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0002, 8, 2.96198)
+mesh = ExtResource("94_7ptoj")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonRoof01" type="MeshInstance3D" parent="house_addons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0002, 8, -0.0380249)
+mesh = ExtResource("95_gjgae")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonSide01" type="MeshInstance3D" parent="house_addons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0002, 8, -3.03802)
+mesh = ExtResource("96_kyooq")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonWindowGarden01" type="MeshInstance3D" parent="house_addons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 8, -6)
+mesh = ExtResource("97_2ljpf")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonWindowGarden02" type="MeshInstance3D" parent="house_addons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 8, -8)
+mesh = ExtResource("98_0eu6m")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonWindowLit01" type="MeshInstance3D" parent="house_addons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 8, -6)
+mesh = ExtResource("99_tse6k")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonWindowLit02" type="MeshInstance3D" parent="house_addons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 8, -7)
+mesh = ExtResource("100_yd1yn")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonWindowLit03" type="MeshInstance3D" parent="house_addons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 8, -8)
+mesh = ExtResource("101_ddw8a")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonWindowLit04" type="MeshInstance3D" parent="house_addons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 8, -9)
+mesh = ExtResource("102_5m2lc")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonWindow01" type="MeshInstance3D" parent="house_addons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 8, -6)
+mesh = ExtResource("103_kj3ko")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonWindow02" type="MeshInstance3D" parent="house_addons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 8, -7)
+mesh = ExtResource("104_t0qpg")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonWindow03" type="MeshInstance3D" parent="house_addons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 8, -8)
+mesh = ExtResource("105_m7f5m")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonWindow04" type="MeshInstance3D" parent="house_addons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 8, -9)
+mesh = ExtResource("106_42v7e")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonWindow05" type="MeshInstance3D" parent="house_addons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 8, -10)
+mesh = ExtResource("107_7r4lk")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonWindow06" type="MeshInstance3D" parent="house_addons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 8, -11)
+mesh = ExtResource("108_17n3v")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonWindow07" type="MeshInstance3D" parent="house_addons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 8, -13)
+mesh = ExtResource("109_s6u43")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonWindow08" type="MeshInstance3D" parent="house_addons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 8, -14)
+mesh = ExtResource("110_ffs8v")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonWindow09" type="MeshInstance3D" parent="house_addons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 8, -16)
+mesh = ExtResource("111_7e30p")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonWindow10" type="MeshInstance3D" parent="house_addons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 8, -17)
+mesh = ExtResource("112_8ld44")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonWindow11" type="MeshInstance3D" parent="house_addons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 8, -18)
+mesh = ExtResource("113_u78gu")
+skeleton = NodePath("../..")
+
+[node name="SmModularHouse01" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.38756, 0, -20.5556)
+mesh = ExtResource("114_qct5x")
+
+[node name="SmModularHouse02" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.38756, 0, -28.5556)
+mesh = ExtResource("115_md3wb")
+
+[node name="SmModularHouse03" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.38756, 0, -35.5556)
+mesh = ExtResource("116_y4an4")
+
+[node name="SmModularHouse04" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.38756, 0, -42.5556)
+mesh = ExtResource("117_a8l2h")
+
+[node name="SmModularHouse05" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.38756, 0, -48.5556)
+mesh = ExtResource("118_yuhxl")
+
+[node name="SmModularHouse06" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.38756, 0, -55.5556)
+mesh = ExtResource("119_fxenb")
+
+[node name="SmModularHouseBase01" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -20)
+mesh = ExtResource("120_6n4kg")
+
+[node name="SmModularHouseMid01" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -25)
+mesh = ExtResource("121_ywav0")
+
+[node name="SmModularHouseMid02" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -30)
+mesh = ExtResource("122_axlem")
+
+[node name="SmModularHouseMid03" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -35)
+mesh = ExtResource("123_mvk18")
+
+[node name="SmModularHouseMid04" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -41)
+mesh = ExtResource("124_swp63")
+
+[node name="SmModularHouseRoof01" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -47)
+mesh = ExtResource("125_m5ol1")
+
+[node name="SmModularHouseRoof02" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -53)
+mesh = ExtResource("126_0guqr")
+
+[node name="SmModularHouseRoof03" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -58)
+mesh = ExtResource("127_m4m8k")
+
+[node name="SmModularHouseRoof04" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -64)
+mesh = ExtResource("128_wnder")

@@ -15,7 +15,7 @@
 [ext_resource type="Script" path="res://UI Asset/Script/BtnAnimation.gd" id="12_yvty3"]
 [ext_resource type="Texture2D" uid="uid://btqt1bq6mvx54" path="res://UI Asset/Sprite/UI_Wordwise/Icons/Icon_Lock_White.tres" id="13_khga1"]
 [ext_resource type="Texture2D" uid="uid://b3owxht1nchb8" path="res://UI Asset/Sprite/UI_Wordwise/Button/Button_QuestionMark_Purple.tres" id="15_lb1m0"]
-[ext_resource type="PackedScene" uid="uid://blf5rto5wrcth" path="res://UI Asset/Scene/popup_tutorial.tscn" id="16_4wjy4"]
+[ext_resource type="PackedScene" uid="uid://dueqwg188gd0l" path="res://UI Asset/Scene/popup_tutorial.tscn" id="16_4wjy4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3kxsk"]
 bg_color = Color(0, 0, 0, 1)

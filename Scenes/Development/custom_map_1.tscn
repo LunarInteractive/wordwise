@@ -1,0 +1,1859 @@
+[gd_scene load_steps=30 format=3 uid="uid://c5wftee0bnm31"]
+
+[ext_resource type="ArrayMesh" uid="uid://bs40y7amhry0f" path="res://Objects/Pixel_3D_RPG_Town/Houses/SM_House_03.obj" id="1_jd707"]
+[ext_resource type="ArrayMesh" uid="uid://bpsji0mu6n3hu" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Door_01.obj" id="3_e0ai8"]
+[ext_resource type="ArrayMesh" uid="uid://d10d2vjo7rda1" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Window_03.obj" id="4_li5cn"]
+[ext_resource type="ArrayMesh" uid="uid://d0d72h7i48qud" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_WindowGarden_01.obj" id="5_uex55"]
+[ext_resource type="ArrayMesh" uid="uid://d2l2xtusybj42" path="res://Objects/Pixel_3D_RPG_Town/Houses/SM_House_04.obj" id="6_3iiwa"]
+[ext_resource type="ArrayMesh" uid="uid://bfkbk0rf1xmfd" path="res://Objects/Pixel_3D_RPG_Town/Houses/SM_House_02.obj" id="7_84yms"]
+[ext_resource type="ArrayMesh" uid="uid://c2vaoseomdbbc" path="res://Objects/Pixel_3D_RPG_Town/Houses/SM_House_06.obj" id="8_1s0bj"]
+[ext_resource type="ArrayMesh" uid="uid://c75nc2yvamuie" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Window_10.obj" id="9_fheca"]
+[ext_resource type="ArrayMesh" uid="uid://cchvsd87yas2o" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Window_02.obj" id="10_6cb6r"]
+[ext_resource type="ArrayMesh" uid="uid://11i261bqgjtr" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Window_11.obj" id="11_w6fxw"]
+[ext_resource type="ArrayMesh" uid="uid://vr37hor7d35s" path="res://Objects/Pixel_3D_RPG_Town/House_Addons/SM_HouseAddon_Window_04.obj" id="12_nqih3"]
+[ext_resource type="ArrayMesh" uid="uid://c6vrls85dyw0s" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorLrg_08.obj" id="13_jnx23"]
+[ext_resource type="ArrayMesh" uid="uid://brk8i5qoanno" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorLrg_16.obj" id="14_hn6k2"]
+[ext_resource type="ArrayMesh" uid="uid://die1i6ojcud0h" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorLrg_05.obj" id="15_loo7i"]
+[ext_resource type="ArrayMesh" uid="uid://cga1brqc0he3f" path="res://Objects/Pixel_3D_RPG_Town/Modular_Tile_Models/SM_ModularTile_FloorLrg_02.obj" id="16_tvos4"]
+[ext_resource type="ArrayMesh" uid="uid://bhj4v3m4m62a8" path="res://Objects/Pixel_3D_RPG_Town/Objects/SM_Garden_01.obj" id="17_efegr"]
+[ext_resource type="ArrayMesh" uid="uid://dyetyfg4x6t0f" path="res://Objects/Pixel_3D_RPG_Town/Foliage/SM_Garden_Bush_04.obj" id="18_qbf78"]
+[ext_resource type="ArrayMesh" uid="uid://dlsthop8dq8vj" path="res://Objects/Pixel_3D_RPG_Town/Foliage/SM_Garden_Grass_06.obj" id="19_duq2n"]
+[ext_resource type="ArrayMesh" uid="uid://cos05l46vk3iq" path="res://Objects/Pixel_3D_RPG_Town/Foliage/SM_Garden_Grass_05.obj" id="20_snqri"]
+[ext_resource type="ArrayMesh" uid="uid://ecuxqstdta2e" path="res://Objects/Pixel_3D_RPG_Town/Foliage/SM_Garden_Bush_01.obj" id="21_gghgc"]
+[ext_resource type="Texture2D" uid="uid://bxotk0t68jbb7" path="res://Objects/Characters/Villagers/chara_0.png" id="23_a11qv"]
+[ext_resource type="Texture2D" uid="uid://blw08u8v25ulj" path="res://addons/kenney_prototype_textures/dark/texture_03.png" id="24_gg63u"]
+[ext_resource type="Texture2D" uid="uid://cjys0nqej126x" path="res://Objects/Characters/Villagers/chara_0_normal.png" id="24_r44fn"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_bydul"]
+auto_exposure_scale = 0.06
+auto_exposure_speed = 0.01
+dof_blur_far_enabled = true
+dof_blur_far_transition = 15.0
+dof_blur_near_enabled = true
+dof_blur_near_distance = 5.45
+dof_blur_near_transition = 3.0
+dof_blur_amount = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uf0ed"]
+albedo_texture = ExtResource("24_gg63u")
+uv1_triplanar = true
+texture_filter = 5
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2srfb"]
+ground_bottom_color = Color(0.384314, 0.454902, 0.54902, 1)
+
+[sub_resource type="Sky" id="Sky_uyjn2"]
+sky_material = SubResource("ProceduralSkyMaterial_2srfb")
+
+[sub_resource type="Environment" id="Environment_7timn"]
+background_mode = 2
+background_energy_multiplier = 1.25
+sky = SubResource("Sky_uyjn2")
+tonemap_mode = 3
+glow_enabled = true
+glow_levels/2 = 1.2
+glow_levels/4 = 1.3
+glow_intensity = 1.75
+glow_strength = 1.41
+glow_blend_mode = 1
+glow_hdr_threshold = 1.05
+fog_enabled = true
+fog_light_color = Color(0.494968, 0.569624, 0.549717, 1)
+fog_sun_scatter = 0.48
+fog_sky_affect = 0.485
+adjustment_enabled = true
+adjustment_contrast = 1.04
+adjustment_saturation = 1.07
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ddn45"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("23_a11qv")
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("24_r44fn")
+rim_enabled = true
+heightmap_scale = 0.765
+subsurf_scatter_strength = 1.0
+subsurf_scatter_skin_mode = true
+backlight_texture = ExtResource("23_a11qv")
+texture_filter = 4
+
+[node name="CustomMap1" type="Node3D"]
+
+[node name="Enviorment" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19, 0, 20)
+
+[node name="Houses" type="Node3D" parent="Enviorment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 11)
+
+[node name="SmHouse03" type="MeshInstance3D" parent="Enviorment/Houses"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3)
+mesh = ExtResource("1_jd707")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonDoor02" type="MeshInstance3D" parent="Enviorment/Houses/SmHouse03"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.96578, 0, 0.00640678)
+mesh = ExtResource("3_e0ai8")
+skeleton = NodePath("../../../..")
+
+[node name="SmHouseAddonWindow24" type="MeshInstance3D" parent="Enviorment/Houses/SmHouse03"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06321, 2.41507, 0.811182)
+mesh = ExtResource("4_li5cn")
+skeleton = NodePath("../../../..")
+
+[node name="SmHouseAddonWindow25" type="MeshInstance3D" parent="Enviorment/Houses/SmHouse03"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06321, 2.41507, -0.852856)
+mesh = ExtResource("4_li5cn")
+skeleton = NodePath("../../../..")
+
+[node name="SmHouseAddonWindowGarden07" type="MeshInstance3D" parent="Enviorment/Houses/SmHouse03"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.24155, 2.4391, 0.808996)
+mesh = ExtResource("5_uex55")
+skeleton = NodePath("../../../..")
+
+[node name="SmHouseAddonWindowGarden08" type="MeshInstance3D" parent="Enviorment/Houses/SmHouse03"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.24155, 2.4391, -0.863626)
+mesh = ExtResource("5_uex55")
+skeleton = NodePath("../../../..")
+
+[node name="SmHouse04" type="MeshInstance3D" parent="Enviorment/Houses"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -11, 0, 6)
+mesh = ExtResource("6_3iiwa")
+skeleton = NodePath("../..")
+
+[node name="SmHouse02" type="MeshInstance3D" parent="Enviorment/Houses"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -3)
+mesh = ExtResource("7_84yms")
+skeleton = NodePath("../..")
+
+[node name="SmHouse05" type="MeshInstance3D" parent="Enviorment/Houses"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -11, 0, 17)
+mesh = ExtResource("7_84yms")
+skeleton = NodePath("../..")
+
+[node name="SmHouse06" type="MeshInstance3D" parent="Enviorment/Houses"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 12)
+mesh = ExtResource("8_1s0bj")
+skeleton = NodePath("../..")
+
+[node name="SmHouseAddonDoor01" type="MeshInstance3D" parent="Enviorment/Houses/SmHouse06"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.05185, 0, 3.23263)
+mesh = ExtResource("3_e0ai8")
+skeleton = NodePath("../../../..")
+
+[node name="SmHouseAddonWindow13" type="MeshInstance3D" parent="Enviorment/Houses/SmHouse06"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.17374, 2.41507, 4.08412)
+mesh = ExtResource("4_li5cn")
+skeleton = NodePath("../../../..")
+
+[node name="SmHouseAddonWindow16" type="MeshInstance3D" parent="Enviorment/Houses/SmHouse06"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.17374, 2.41507, -2.43384)
+mesh = ExtResource("4_li5cn")
+skeleton = NodePath("../../../..")
+
+[node name="SmHouseAddonWindow17" type="MeshInstance3D" parent="Enviorment/Houses/SmHouse06"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.17374, 2.41507, -4.09787)
+mesh = ExtResource("4_li5cn")
+skeleton = NodePath("../../../..")
+
+[node name="SmHouseAddonWindow12" type="MeshInstance3D" parent="Enviorment/Houses/SmHouse06"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1934, 2.45893, 2.3927)
+mesh = ExtResource("9_fheca")
+skeleton = NodePath("../../../..")
+
+[node name="SmHouseAddonWindow14" type="MeshInstance3D" parent="Enviorment/Houses/SmHouse06"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.04421, 0.816726, -2.70073)
+mesh = ExtResource("10_6cb6r")
+skeleton = NodePath("../../../..")
+
+[node name="SmHouseAddonWindow15" type="MeshInstance3D" parent="Enviorment/Houses/SmHouse06"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.04421, 0.816726, -3.823)
+mesh = ExtResource("10_6cb6r")
+skeleton = NodePath("../../../..")
+
+[node name="SmHouseAddonWindow18" type="MeshInstance3D" parent="Enviorment/Houses/SmHouse06"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.977818, 0.309616, -0.803453)
+mesh = ExtResource("11_w6fxw")
+skeleton = NodePath("../../../..")
+
+[node name="SmHouseAddonWindow19" type="MeshInstance3D" parent="Enviorment/Houses/SmHouse06"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.977818, 0.309616, 0.755775)
+mesh = ExtResource("11_w6fxw")
+skeleton = NodePath("../../../..")
+
+[node name="SmHouseAddonWindow20" type="MeshInstance3D" parent="Enviorment/Houses/SmHouse06"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05339, 2.42017, 1.23611)
+mesh = ExtResource("12_nqih3")
+skeleton = NodePath("../../../..")
+
+[node name="SmHouseAddonWindow21" type="MeshInstance3D" parent="Enviorment/Houses/SmHouse06"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05339, 2.42017, 0.669468)
+mesh = ExtResource("12_nqih3")
+skeleton = NodePath("../../../..")
+
+[node name="SmHouseAddonWindow22" type="MeshInstance3D" parent="Enviorment/Houses/SmHouse06"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05339, 2.42017, -0.371202)
+mesh = ExtResource("12_nqih3")
+skeleton = NodePath("../../../..")
+
+[node name="SmHouseAddonWindow23" type="MeshInstance3D" parent="Enviorment/Houses/SmHouse06"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05339, 2.42017, -0.903276)
+mesh = ExtResource("12_nqih3")
+skeleton = NodePath("../../../..")
+
+[node name="SmHouseAddonWindowGarden03" type="MeshInstance3D" parent="Enviorment/Houses/SmHouse06"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.34879, 2.4391, 2.37257)
+mesh = ExtResource("5_uex55")
+skeleton = NodePath("../../../..")
+
+[node name="SmHouseAddonWindowGarden05" type="MeshInstance3D" parent="Enviorment/Houses/SmHouse06"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.34879, 2.4391, -2.43664)
+mesh = ExtResource("5_uex55")
+skeleton = NodePath("../../../..")
+
+[node name="SmHouseAddonWindowGarden06" type="MeshInstance3D" parent="Enviorment/Houses/SmHouse06"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.34879, 2.4391, -4.10926)
+mesh = ExtResource("5_uex55")
+skeleton = NodePath("../../../..")
+
+[node name="SmHouseAddonWindowGarden04" type="MeshInstance3D" parent="Enviorment/Houses/SmHouse06"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.34879, 2.4391, 4.07845)
+mesh = ExtResource("5_uex55")
+skeleton = NodePath("../../../..")
+
+[node name="Roads" type="Node3D" parent="Enviorment"]
+
+[node name="SmModularTileFloorLrg10" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 31)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg11" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 29)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg12" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 27)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg13" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 25)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg14" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 23)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg15" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 21)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg136" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 19)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg137" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 17)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg138" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 15)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg139" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 13)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg140" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 11)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg141" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 9)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg142" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 7)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg143" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 5)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg144" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg145" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg146" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -1)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg147" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -3)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg148" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -5)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg149" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -7)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg150" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -9)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg151" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -11)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg152" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -13)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg153" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -15)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg194" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 31)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg195" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 29)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg196" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 27)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg197" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 25)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg198" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 23)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg199" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 21)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg200" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 19)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg201" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 17)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg202" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 15)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg203" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 13)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg204" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 11)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg205" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 9)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg206" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 7)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg207" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 5)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg208" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg209" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg210" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg211" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg212" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -5)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg213" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -7)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg214" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -9)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg215" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -11)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg216" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -13)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg217" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -15)
+mesh = ExtResource("13_jnx23")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg16" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 31)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg17" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 29)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg18" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 27)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg19" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 25)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg20" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 23)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg21" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 21)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg22" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 31)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg23" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 29)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg24" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 27)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg25" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 25)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg26" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 23)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg27" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 21)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg28" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 31)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg29" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 29)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg30" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 27)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg31" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 25)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg32" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 23)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg33" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 21)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg34" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 31)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg35" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 29)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg36" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 27)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg37" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 25)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg38" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 23)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg39" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 21)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg40" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 31)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg41" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 29)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg42" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 27)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg43" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 25)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg44" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 23)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg45" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 21)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg46" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 19)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg47" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 17)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg48" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 15)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg49" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 13)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg50" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 11)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg51" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 9)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg52" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 19)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg53" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 17)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg54" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 15)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg55" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 13)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg56" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 11)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg57" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 9)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg58" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 19)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg59" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 17)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg60" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 15)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg61" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 13)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg62" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 11)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg63" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 9)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg64" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 19)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg65" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 17)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg66" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 15)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg67" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 13)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg68" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 11)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg69" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 9)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg70" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 19)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg71" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 17)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg72" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 15)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg73" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 13)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg74" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 11)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg75" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 9)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg76" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 7)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg77" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 5)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg78" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 3)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg79" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 1)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg80" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -1)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg81" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -3)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg82" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 7)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg83" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 5)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg84" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 3)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg85" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 1)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg86" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -1)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg87" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -3)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg88" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 7)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg89" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 5)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg90" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 3)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg91" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 1)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg92" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -1)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg93" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -3)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg94" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 7)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg95" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 5)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg96" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 3)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg97" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 1)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg98" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -1)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg99" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -3)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg100" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 7)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg101" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 5)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg102" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 3)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg103" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 1)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg218" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 31)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg219" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 29)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg220" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 27)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg221" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 25)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg222" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 23)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg223" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 21)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg224" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 31)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg225" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 29)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg226" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 27)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg227" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 25)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg228" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 23)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg229" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 21)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg230" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 19)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg231" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 17)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg232" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 15)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg233" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 13)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg234" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 11)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg235" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 9)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg236" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 19)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg237" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 17)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg238" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 15)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg239" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 13)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg240" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 11)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg241" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 9)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg242" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 7)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg243" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 5)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg244" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 3)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg245" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 1)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg246" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 7)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg247" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 5)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg248" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 3)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg249" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 1)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg250" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 31)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg251" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 29)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg252" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 27)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg253" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 25)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg254" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 23)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg255" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 21)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg256" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 31)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg257" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 29)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg258" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 27)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg259" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 25)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg260" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 23)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg261" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 21)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg262" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 19)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg263" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 17)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg264" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 15)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg265" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 13)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg266" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 11)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg267" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 9)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg268" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 19)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg269" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 17)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg270" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 15)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg271" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 13)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg272" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 11)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg273" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg274" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 7)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg275" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 5)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg276" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 3)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg277" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 1)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg278" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg279" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg280" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg281" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg282" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 31)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg283" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 29)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg284" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 27)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg285" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 25)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg286" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 23)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg287" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 21)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg288" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 31)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg289" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 29)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg290" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 27)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg291" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 25)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg292" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 23)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg293" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 21)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg294" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 19)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg295" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 17)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg296" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 15)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg297" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 13)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg298" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 11)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg299" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 9)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg300" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 19)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg301" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 17)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg302" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 15)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg303" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 13)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg304" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 11)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg305" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 9)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg306" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 7)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg307" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 5)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg308" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 3)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg309" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 1)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg310" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 7)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg311" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 5)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg312" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 3)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg313" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 1)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg104" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -1)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg105" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -3)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg106" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -5)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg107" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -7)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg108" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -9)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg109" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -11)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg110" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -13)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg111" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -15)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg112" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -5)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg113" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -7)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg114" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -9)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg115" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -11)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg116" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -13)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg117" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -15)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg118" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -5)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg119" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -7)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg120" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -9)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg121" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -11)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg122" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -13)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg123" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -15)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg124" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -5)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg125" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -7)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg126" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -9)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg127" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -11)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg128" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -13)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg129" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -15)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg130" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -5)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg131" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -7)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg132" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -9)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg133" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -11)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg134" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -13)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg135" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -15)
+mesh = ExtResource("14_hn6k2")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg05" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 31)
+mesh = ExtResource("15_loo7i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg06" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 29)
+mesh = ExtResource("15_loo7i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg07" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 27)
+mesh = ExtResource("15_loo7i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg08" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 25)
+mesh = ExtResource("15_loo7i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg09" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 23)
+mesh = ExtResource("15_loo7i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg154" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 21)
+mesh = ExtResource("15_loo7i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg155" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 19)
+mesh = ExtResource("15_loo7i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg156" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 17)
+mesh = ExtResource("15_loo7i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg157" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 15)
+mesh = ExtResource("15_loo7i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg158" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 13)
+mesh = ExtResource("15_loo7i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg159" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 11)
+mesh = ExtResource("15_loo7i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg160" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 9)
+mesh = ExtResource("15_loo7i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg161" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 7)
+mesh = ExtResource("15_loo7i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg162" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 5)
+mesh = ExtResource("15_loo7i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg163" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3)
+mesh = ExtResource("15_loo7i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg164" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
+mesh = ExtResource("15_loo7i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg165" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+mesh = ExtResource("15_loo7i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg166" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -3)
+mesh = ExtResource("15_loo7i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg167" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -5)
+mesh = ExtResource("15_loo7i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg168" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -7)
+mesh = ExtResource("15_loo7i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg169" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -9)
+mesh = ExtResource("15_loo7i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg170" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -11)
+mesh = ExtResource("15_loo7i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg171" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -13)
+mesh = ExtResource("15_loo7i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg172" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -15)
+mesh = ExtResource("15_loo7i")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg02" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 31)
+mesh = ExtResource("16_tvos4")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg03" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 29)
+mesh = ExtResource("16_tvos4")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg04" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 27)
+mesh = ExtResource("16_tvos4")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg173" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 25)
+mesh = ExtResource("16_tvos4")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg174" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 23)
+mesh = ExtResource("16_tvos4")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg175" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 21)
+mesh = ExtResource("16_tvos4")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg176" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 19)
+mesh = ExtResource("16_tvos4")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg177" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 17)
+mesh = ExtResource("16_tvos4")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg178" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 15)
+mesh = ExtResource("16_tvos4")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg179" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 13)
+mesh = ExtResource("16_tvos4")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg180" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 11)
+mesh = ExtResource("16_tvos4")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg181" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 9)
+mesh = ExtResource("16_tvos4")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg182" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 7)
+mesh = ExtResource("16_tvos4")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg183" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 5)
+mesh = ExtResource("16_tvos4")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg184" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3)
+mesh = ExtResource("16_tvos4")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg185" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+mesh = ExtResource("16_tvos4")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg186" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+mesh = ExtResource("16_tvos4")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg187" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3)
+mesh = ExtResource("16_tvos4")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg188" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -5)
+mesh = ExtResource("16_tvos4")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg189" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -7)
+mesh = ExtResource("16_tvos4")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg190" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -9)
+mesh = ExtResource("16_tvos4")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg191" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -11)
+mesh = ExtResource("16_tvos4")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg192" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -13)
+mesh = ExtResource("16_tvos4")
+skeleton = NodePath("../../..")
+
+[node name="SmModularTileFloorLrg193" type="MeshInstance3D" parent="Enviorment/Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -15)
+mesh = ExtResource("16_tvos4")
+skeleton = NodePath("../../..")
+
+[node name="SmGarden01" type="MeshInstance3D" parent="Enviorment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.37663, -0.418392, 28.1756)
+mesh = ExtResource("17_efegr")
+skeleton = NodePath("../..")
+
+[node name="SmGardenBush04" type="MeshInstance3D" parent="Enviorment/SmGarden01"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.222515, 0.461807, -0.753147)
+mesh = ExtResource("18_qbf78")
+skeleton = NodePath("../../..")
+
+[node name="SmGardenGrass06" type="MeshInstance3D" parent="Enviorment/SmGarden01"]
+transform = Transform3D(1.2501, 0, 0, 0, 1, 0, 0, 0, 1.41285, -0.326486, 0.490747, -0.73917)
+mesh = ExtResource("19_duq2n")
+skeleton = NodePath("../../..")
+
+[node name="SmGarden02" type="MeshInstance3D" parent="Enviorment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.37663, -0.418392, 25.8151)
+mesh = ExtResource("17_efegr")
+skeleton = NodePath("../..")
+
+[node name="SmGardenGrass05" type="MeshInstance3D" parent="Enviorment/SmGarden02"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.3066, -0.341773, 0.418391, -0.736233)
+mesh = ExtResource("20_snqri")
+skeleton = NodePath("../../..")
+
+[node name="SmGardenBush01" type="MeshInstance3D" parent="Enviorment/SmGarden02"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.171529, 0.485763, -0.783026)
+mesh = ExtResource("21_gghgc")
+skeleton = NodePath("../../..")
+
+[node name="SmGarden03" type="MeshInstance3D" parent="Enviorment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.57262, -0.0205504, 20.4927)
+mesh = ExtResource("17_efegr")
+skeleton = NodePath("../..")
+
+[node name="SmGardenGrass05" type="MeshInstance3D" parent="Enviorment/SmGarden03"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.29217, -0.315971, 0.456921, -0.767218)
+mesh = ExtResource("20_snqri")
+skeleton = NodePath("../../..")
+
+[node name="SmGardenGrass06" type="MeshInstance3D" parent="Enviorment/SmGarden03"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0847349, 0.475767, -0.766701)
+mesh = ExtResource("19_duq2n")
+skeleton = NodePath("../../..")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 9.96399e-13, -1.98141e-12, -4.92097e-13, 0.970813, 0.239839, 2.16255e-12, -0.239839, 0.970813, -0.958413, 2.53152, 18.8352)
+attributes = SubResource("CameraAttributesPractical_bydul")
+fov = 43.7
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.96851, 0, 12.9958)
+visible = false
+use_collision = true
+size = Vector3(48.1875, 0.02, 22.1826)
+material = SubResource("StandardMaterial3D_uf0ed")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7timn")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.31486, 0.580564, 14.7158)
+visible = false
+material_override = SubResource("StandardMaterial3D_ddn45")
+pixel_size = 0.057
+alpha_cut = 2
+texture_filter = 4
+texture = ExtResource("23_a11qv")
+hframes = 3
+vframes = 4
+frame = 1
