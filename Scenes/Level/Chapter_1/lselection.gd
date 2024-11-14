@@ -77,7 +77,7 @@ func _ready() -> void:
 
 #CHAPTER1
 func _on_c_1l_1_pressed() -> void:
-	get_tree().change_scene_to_file("res://Objects/Environtment/UI/menu.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Level/Chapter_1/Level_1.tscn")
 func _on_c_1l_2_pressed() -> void:
 	get_tree().change_scene_to_file("res://Objects/Environtment/UI/menu.tscn")
 func _on_c_1l_3_pressed() -> void:

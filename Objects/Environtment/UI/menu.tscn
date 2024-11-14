@@ -14,9 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://8kr16c27k78h" path="res://UI Asset/Sprite/UI_Wordwise/Button_Text/ButtonText_Purple_Border.tres" id="10_322vs"]
 [ext_resource type="Texture2D" uid="uid://xox3jbw1ua0k" path="res://UI Asset/Sprite/UI_Wordwise/Icons/Icon_Task_Purple.tres" id="11_diobg"]
 [ext_resource type="PackedScene" uid="uid://caltpti6fey3v" path="res://Objects/Environtment/UI/custom.tscn" id="12_pap1w"]
-[ext_resource type="Texture2D" path="res://UI Asset/Sprite/UI_Wordwise/Button/Button_Hanger_Purple.tres" id="13_3t0dv"]
-[ext_resource type="Texture2D" path="res://UI Asset/Sprite/UI_Wordwise/Button/Button_Hamburger_Purple.tres" id="14_dj4mf"]
-[ext_resource type="Texture2D" path="res://UI Asset/Sprite/UI_Wordwise/Button/Button_Setting_Purple.tres" id="15_t0n6j"]
+[ext_resource type="Texture2D" path="res://VisualNovelTextbox/Button_Hanger_Purple.tres" id="13_3t0dv"]
+[ext_resource type="Texture2D" path="res://VisualNovelTextbox/Button_Hamburger_Purple.tres" id="14_dj4mf"]
+[ext_resource type="Texture2D" path="res://VisualNovelTextbox/Button_Setting_Purple.tres" id="15_t0n6j"]
 [ext_resource type="Texture2D" uid="uid://oxstr365hodm" path="res://UI Asset/Sprite/UI_Wordwise/Icons/Icon_Play_Purple.tres" id="16_bh2uq"]
 [ext_resource type="PackedScene" uid="uid://bxefct3ha1r1q" path="res://UI Asset/Scene/task_panel.tscn" id="19_necf6"]
 

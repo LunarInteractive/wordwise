@@ -1,13 +1,13 @@
 [gd_scene load_steps=12 format=3 uid="uid://bikmskv6luara"]
 
 [ext_resource type="Script" path="res://UI Asset/Scene/Pause_Settings.gd" id="1_234m7"]
-[ext_resource type="Texture2D" uid="uid://di38t0vbusjgv" path="res://UI Asset/Sprite/UI_Wordwise/Button/Button_Pause_Purple.tres" id="2_bry68"]
+[ext_resource type="Texture2D" path="res://VisualNovelTextbox/Button_Pause_Purple.tres" id="2_slrfy"]
 [ext_resource type="Script" path="res://UI Asset/Script/BtnAnimation.gd" id="2_um2ye"]
 [ext_resource type="FontFile" uid="uid://dclwgnpvy23n7" path="res://UI Asset/Font/Pixel Dogica/dogicapixelbold.ttf" id="3_74wkf"]
 [ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="5_1e2xi"]
-[ext_resource type="Texture2D" uid="uid://cladcmwdti6xb" path="res://UI Asset/Sprite/UI_Wordwise/Button/Button_Home_Purple.tres" id="5_pct8y"]
+[ext_resource type="Texture2D" path="res://VisualNovelTextbox/Button_Home_Purple.tres" id="5_qp2qf"]
 [ext_resource type="Texture2D" uid="uid://dipvpycl4yeb6" path="res://UI Asset/Sprite/UI_Wordwise/Border/Border_NO BG_.png" id="7_2u3np"]
-[ext_resource type="Texture2D" uid="uid://clgx0bg8mw86x" path="res://UI Asset/Sprite/UI_Wordwise/Button/Button_Play_Purple.tres" id="7_hsat7"]
+[ext_resource type="Texture2D" path="res://VisualNovelTextbox/Button_Play_Purple.tres" id="7_lx5i1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_88aun"]
 bg_color = Color(0.380392, 0.333333, 0.537255, 1)
@@ -42,9 +42,9 @@ offset_top = 21.0
 offset_right = 143.0
 offset_bottom = 141.0
 rotation = 0.00281493
-texture_normal = ExtResource("2_bry68")
-texture_pressed = ExtResource("2_bry68")
-texture_hover = ExtResource("2_bry68")
+texture_normal = ExtResource("2_slrfy")
+texture_pressed = ExtResource("2_slrfy")
+texture_hover = ExtResource("2_slrfy")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -109,9 +109,9 @@ alignment = 1
 custom_minimum_size = Vector2(250, 250)
 layout_mode = 2
 size_flags_vertical = 4
-texture_normal = ExtResource("5_pct8y")
-texture_pressed = ExtResource("5_pct8y")
-texture_hover = ExtResource("5_pct8y")
+texture_normal = ExtResource("5_qp2qf")
+texture_pressed = ExtResource("5_qp2qf")
+texture_hover = ExtResource("5_qp2qf")
 stretch_mode = 5
 
 [node name="Node" type="Node" parent="Control/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/Content/HBoxContainer/TextureButton"]
@@ -142,9 +142,9 @@ metadata/_edit_use_anchors_ = true
 custom_minimum_size = Vector2(250, 250)
 layout_mode = 2
 size_flags_vertical = 4
-texture_normal = ExtResource("7_hsat7")
-texture_pressed = ExtResource("7_hsat7")
-texture_hover = ExtResource("7_hsat7")
+texture_normal = ExtResource("7_lx5i1")
+texture_pressed = ExtResource("7_lx5i1")
+texture_hover = ExtResource("7_lx5i1")
 stretch_mode = 5
 
 [node name="Node" type="Node" parent="Control/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/Content/HBoxContainer/TextureButton2"]

@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bw2hn21c6id43" path="res://UI Asset/Sprite/UI_Wordwise/Icons/Icon_Back_White.tres" id="3_8ctsx"]
 [ext_resource type="Texture2D" uid="uid://c4jihgqj5boch" path="res://UI Asset/Sprite/UI_Wordwise/Icons/Icon_Continue_White.tres" id="4_4c7dj"]
 [ext_resource type="FontFile" uid="uid://dlfcvrx0tug2e" path="res://UI Asset/Font/Pixel Dogica/dogicapixel.ttf" id="5_8nfns"]
-[ext_resource type="Texture2D" path="res://VisualNovelTextbox/Button_Back_Purple.tres" id="7_mmyrx"]
+[ext_resource type="Texture2D" uid="uid://dv3eurbxph57p" path="res://VisualNovelTextbox/Button_Back_Purple.tres" id="7_mmyrx"]
 [ext_resource type="Script" path="res://UI Asset/Script/LockSystem.gd" id="9_fw8m4"]
 [ext_resource type="Texture2D" uid="uid://dipvpycl4yeb6" path="res://UI Asset/Sprite/UI_Wordwise/Border/Border_NO BG_.png" id="10_75wwx"]
 [ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="10_s8e21"]
@@ -517,6 +517,9 @@ theme_override_constants/separation = 30
 [node name="Back" type="TextureButton" parent="CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
+texture_normal = ExtResource("7_mmyrx")
+texture_pressed = ExtResource("7_mmyrx")
+texture_hover = ExtResource("7_mmyrx")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -854,6 +857,9 @@ theme_override_constants/separation = 30
 [node name="Back" type="TextureButton" parent="CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
+texture_normal = ExtResource("7_mmyrx")
+texture_pressed = ExtResource("7_mmyrx")
+texture_hover = ExtResource("7_mmyrx")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -1191,6 +1197,9 @@ theme_override_constants/separation = 30
 [node name="Back" type="TextureButton" parent="CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
+texture_normal = ExtResource("7_mmyrx")
+texture_pressed = ExtResource("7_mmyrx")
+texture_hover = ExtResource("7_mmyrx")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -1528,6 +1537,9 @@ theme_override_constants/separation = 30
 [node name="Back" type="TextureButton" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
+texture_normal = ExtResource("7_mmyrx")
+texture_pressed = ExtResource("7_mmyrx")
+texture_hover = ExtResource("7_mmyrx")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -1866,6 +1878,9 @@ theme_override_constants/separation = 30
 [node name="Back" type="TextureButton" parent="CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
+texture_normal = ExtResource("7_mmyrx")
+texture_pressed = ExtResource("7_mmyrx")
+texture_hover = ExtResource("7_mmyrx")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -2204,6 +2219,9 @@ theme_override_constants/separation = 30
 [node name="Back" type="TextureButton" parent="CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
+texture_normal = ExtResource("7_mmyrx")
+texture_pressed = ExtResource("7_mmyrx")
+texture_hover = ExtResource("7_mmyrx")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -2541,6 +2559,9 @@ theme_override_constants/separation = 30
 [node name="Back" type="TextureButton" parent="CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
+texture_normal = ExtResource("7_mmyrx")
+texture_pressed = ExtResource("7_mmyrx")
+texture_hover = ExtResource("7_mmyrx")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -2878,6 +2899,9 @@ theme_override_constants/separation = 30
 [node name="Back" type="TextureButton" parent="CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
+texture_normal = ExtResource("7_mmyrx")
+texture_pressed = ExtResource("7_mmyrx")
+texture_hover = ExtResource("7_mmyrx")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -3215,6 +3239,9 @@ theme_override_constants/separation = 30
 [node name="Back" type="TextureButton" parent="CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
+texture_normal = ExtResource("7_mmyrx")
+texture_pressed = ExtResource("7_mmyrx")
+texture_hover = ExtResource("7_mmyrx")
 ignore_texture_size = true
 stretch_mode = 5
 

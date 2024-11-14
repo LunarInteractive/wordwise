@@ -740,6 +740,7 @@ theme_override_font_sizes/font_size = 42
 text = "TRY AGAIN"
 
 [node name="Tester" type="PanelContainer" parent="." node_paths=PackedStringArray("panel_prompt", "v_box_container", "npc_panel")]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

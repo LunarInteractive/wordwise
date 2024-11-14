@@ -193,6 +193,7 @@ size_flags_horizontal = 2
 size_flags_vertical = 3
 
 [node name="TaskItem" parent="MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginBadanPanel/ScrollContainer/VBoxContainer" instance=ExtResource("6_3cuee")]
+visible = false
 layout_mode = 2
 
 [connection signal="button_up" from="MarginPanelTask/PanelContainer/VBoxContainer/HeaderPanel/MarginHeader/MarginClose/CloseButton2" to="." method="_on_button_2_button_up"]
