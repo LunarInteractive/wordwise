@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://1wjpkwwq28sm" path="res://UI Asset/Font/Pixel Monogram/monogram.ttf" id="4_1qsun"]
 [ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="4_8gp6t"]
 [ext_resource type="FontFile" uid="uid://dclwgnpvy23n7" path="res://UI Asset/Font/Pixel Dogica/dogicapixelbold.ttf" id="5_cp5j7"]
-[ext_resource type="Texture2D" uid="uid://6mam1x45sjhb" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Progress3_BAR.png" id="6_rhw6v"]
+[ext_resource type="Texture2D" uid="uid://clqvscxff8680" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Progress3_BAR.png" id="6_rhw6v"]
 [ext_resource type="Texture2D" uid="uid://duhxdsydyaa4b" path="res://UI Asset/Sprite/GUI/Button And Others.png" id="7_t65fa"]
 [ext_resource type="Texture2D" uid="uid://b612br7qsmmey" path="res://UI Asset/Sprite/GUI/Slider_BAR.png" id="11_qvf4v"]
 

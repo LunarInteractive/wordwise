@@ -37,13 +37,13 @@ albedo_texture = ExtResource("2_kxqkq")
 uv1_triplanar = true
 texture_filter = 5
 
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_am20x"]
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_cs2pc"]
+exposure_multiplier = 0.585
 auto_exposure_scale = 0.06
 auto_exposure_speed = 0.01
 dof_blur_far_enabled = true
 dof_blur_far_transition = 15.0
 dof_blur_near_enabled = true
-dof_blur_near_distance = 5.45
 dof_blur_near_transition = 3.0
 dof_blur_amount = 0.3
 
@@ -128,7 +128,7 @@ shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 9.96399e-13, -1.98141e-12, -4.92097e-13, 0.970813, 0.239839, 2.16255e-12, -0.239839, 0.970813, 9.27341, 3.6402, 8.94978)
-attributes = SubResource("CameraAttributesPractical_am20x")
+attributes = SubResource("CameraAttributesPractical_cs2pc")
 fov = 45.0
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]

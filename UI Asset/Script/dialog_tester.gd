@@ -137,3 +137,9 @@ func _on_tes_dialogic_button_up():
 	var dialogic = Dialogic.start(path) # Replace with function body.
 	#print("klik")
 	lapor_atasan.emit(true)
+
+
+func _on_button_pressed() -> void:
+	var dialogic = Dialogic.start(path) # Replace with function body.
+	#print("klik")
+	lapor_atasan.emit(true)

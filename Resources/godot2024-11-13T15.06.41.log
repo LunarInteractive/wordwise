@@ -7,10 +7,4 @@ USER ERROR: Node not found: "MarginContainer/VBoxContainer/SpeechToText" (relati
    at: get_node (scene/main/node.cpp:1792)
 USER ERROR: Node not found: "MarginContainer/VBoxContainer/RichTextLabel" (relative to "/root/CanvasLayer/Dialog_Panel/HBoxContainer/AwnserPanel/VBoxContainer/PanelPrompt").
    at: get_node (scene/main/node.cpp:1792)
-USER WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
-If you want to set size, change the anchors or consider using set_deferred().
-   at: _set_size (scene/gui/control.cpp:1448)
-USER WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
-If you want to set size, change the anchors or consider using set_deferred().
-   at: _set_size (scene/gui/control.cpp:1448)
 ERROR: 1 RID allocations of type 'N17RendererSceneCull6CameraE' were leaked at exit.
