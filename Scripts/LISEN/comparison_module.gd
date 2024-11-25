@@ -93,7 +93,8 @@ func on_speech_recognized(speech: String) -> void:
 			print("Error percentage: " + str(error_percentage) + "%")
 			print("Score: " + str(score))
 			Dialogic.get_subsystem("Choices").get_choice_button_node(closest_command[1]).emit_signal("pressed")
-			result = "Error percentage: " + str(error_percentage) + "%" + "\n" + "Score: " + str(score)
+			result = "Command recognized: " + speech + "\n" + "Score: " + str(score)
+			# result = "Error percentage: " + str(error_percentage) + "%" + "\n" + "Score: " + str(score)
 			kirim_nilai.emit(score)
 		else:
 			LimboConsole.print_line("Command not recognized.")

@@ -1,21 +1,24 @@
-[gd_scene load_steps=31 format=3 uid="uid://dnp04amk8k4x3"]
+[gd_scene load_steps=34 format=3 uid="uid://dnp04amk8k4x3"]
 
 [ext_resource type="Script" path="res://Scenes/Level/Chapter_1/level_selection.gd" id="1_4bxj1"]
 [ext_resource type="Script" path="res://Scenes/Level/Chapter_1/lselection.gd" id="1_b3sv5"]
-[ext_resource type="VideoStream" path="res://UI Asset/Background/WORDWISE_BG.ogv" id="1_yukqj"]
 [ext_resource type="FontFile" uid="uid://dclwgnpvy23n7" path="res://UI Asset/Font/Pixel Dogica/dogicapixelbold.ttf" id="2_3cy7r"]
+[ext_resource type="Script" path="res://Scripts/Database_Grabber.gd" id="2_gwogx"]
 [ext_resource type="Texture2D" uid="uid://bw2hn21c6id43" path="res://UI Asset/Sprite/UI_Wordwise/Icons/Icon_Back_White.tres" id="3_8ctsx"]
+[ext_resource type="VideoStream" path="res://UI Asset/Background/Wordwise_BG_Blue__1.ogv" id="3_kw55a"]
 [ext_resource type="Texture2D" uid="uid://c4jihgqj5boch" path="res://UI Asset/Sprite/UI_Wordwise/Icons/Icon_Continue_White.tres" id="4_4c7dj"]
 [ext_resource type="FontFile" uid="uid://dlfcvrx0tug2e" path="res://UI Asset/Font/Pixel Dogica/dogicapixel.ttf" id="5_8nfns"]
-[ext_resource type="Texture2D" uid="uid://dv3eurbxph57p" path="res://VisualNovelTextbox/Button_Back_Purple.tres" id="7_mmyrx"]
+[ext_resource type="Texture2D" path="res://VisualNovelTextbox/Button_Back_Purple.tres" id="7_mmyrx"]
+[ext_resource type="Texture2D" uid="uid://b26ckailne7ld" path="res://UI Asset/Sprite/UI_Wordwise/Button/Orange/Button_Orange_Back.tres" id="8_eajen"]
 [ext_resource type="Script" path="res://UI Asset/Script/LockSystem.gd" id="9_fw8m4"]
-[ext_resource type="Texture2D" uid="uid://dipvpycl4yeb6" path="res://UI Asset/Sprite/UI_Wordwise/Border/Border_NO BG_.png" id="10_75wwx"]
 [ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="10_s8e21"]
 [ext_resource type="Texture2D" uid="uid://ctgp46i35s375" path="res://UI Asset/Sprite/UI_Wordwise/Button_Text/ButtonText_white_Border.tres" id="11_1j6ou"]
 [ext_resource type="Script" path="res://UI Asset/Script/BtnAnimation.gd" id="12_yvty3"]
 [ext_resource type="Texture2D" uid="uid://btqt1bq6mvx54" path="res://UI Asset/Sprite/UI_Wordwise/Icons/Icon_Lock_White.tres" id="13_khga1"]
-[ext_resource type="Texture2D" path="res://VisualNovelTextbox/Button_QuestionMark_Purple.tres" id="15_pm0jt"]
-[ext_resource type="PackedScene" uid="uid://dueqwg188gd0l" path="res://UI Asset/Scene/popup_tutorial.tscn" id="16_4wjy4"]
+[ext_resource type="Texture2D" uid="uid://c2rd1gh6eqbvp" path="res://UI Asset/Sprite/UI_Wordwise/Button_Text/ButtonText_Orange_Border.tres" id="14_w3nlh"]
+[ext_resource type="Texture2D" uid="uid://codormxttyb7v" path="res://UI Asset/Sprite/UI_Wordwise/Border/Borders_Dual Color.png" id="15_ustnu"]
+[ext_resource type="PackedScene" uid="uid://ngvsk81cwf0y" path="res://UI Asset/Scene/popup_tutorial.tscn" id="16_4wjy4"]
+[ext_resource type="Texture2D" uid="uid://c3p2yr7aobyep" path="res://UI Asset/Sprite/UI_Wordwise/Button/Orange/Button_Orange_QuestionMark.tres" id="18_6chkk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3kxsk"]
 bg_color = Color(0, 0, 0, 1)
@@ -23,7 +26,7 @@ bg_color = Color(0, 0, 0, 1)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_slx4u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pf0y5"]
-bg_color = Color(0.490196, 0.423529, 0.709804, 1)
+bg_color = Color(0.2, 0.32549, 0.619608, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_roqom"]
 
@@ -42,7 +45,7 @@ content_margin_bottom = 45.0
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8u620"]
-bg_color = Color(0.623529, 0.466667, 0.745098, 1)
+bg_color = Color(0.2, 0.32549, 0.619608, 1)
 corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
@@ -53,7 +56,7 @@ expand_margin_right = 20.0
 expand_margin_bottom = 20.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b5ulj"]
-texture = ExtResource("11_1j6ou")
+texture = ExtResource("14_w3nlh")
 texture_margin_left = 41.0
 texture_margin_top = 40.0
 texture_margin_right = 40.0
@@ -69,7 +72,7 @@ texture_margin_bottom = 40.0
 modulate_color = Color(0.393086, 0.393085, 0.393086, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6q7bo"]
-texture = ExtResource("11_1j6ou")
+texture = ExtResource("14_w3nlh")
 texture_margin_left = 41.0
 texture_margin_top = 40.0
 texture_margin_right = 40.0
@@ -80,7 +83,7 @@ modulate_color = Color(0.960784, 0.941176, 1, 1)
 bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2wpy5"]
-texture = ExtResource("10_75wwx")
+texture = ExtResource("15_ustnu")
 texture_margin_left = 70.0
 texture_margin_top = 70.0
 texture_margin_right = 60.0
@@ -89,18 +92,19 @@ expand_margin_left = 12.0
 expand_margin_top = 30.0
 expand_margin_right = 12.0
 expand_margin_bottom = 30.0
-region_rect = Rect2(150, 150, 320, 320)
+region_rect = Rect2(1140, 110, 320, 320)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wv2q8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jr6nh"]
-texture = ExtResource("15_pm0jt")
+texture = ExtResource("18_6chkk")
 region_rect = Rect2(0, 0, 220, 220)
 
 [node name="LevelSelection" type="Node2D"]
 script = ExtResource("1_b3sv5")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("2_gwogx")
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -111,6 +115,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer/Control"]
+modulate = Color(0.43134, 0.43134, 0.43134, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -119,7 +124,7 @@ offset_top = -4.0
 offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("1_yukqj")
+stream = ExtResource("3_kw55a")
 autoplay = true
 expand = true
 loop = true
@@ -178,9 +183,9 @@ theme_override_constants/separation = 30
 [node name="Back" type="TextureButton" parent="CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-texture_normal = ExtResource("7_mmyrx")
-texture_pressed = ExtResource("7_mmyrx")
-texture_hover = ExtResource("7_mmyrx")
+texture_normal = ExtResource("8_eajen")
+texture_pressed = ExtResource("8_eajen")
+texture_hover = ExtResource("8_eajen")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -212,9 +217,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 115
+theme_override_constants/margin_left = 105
 theme_override_constants/margin_top = 70
-theme_override_constants/margin_right = 115
+theme_override_constants/margin_right = 105
 theme_override_constants/margin_bottom = 70
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/Control/MarginContainer"]
@@ -551,9 +556,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 115
+theme_override_constants/margin_left = 105
 theme_override_constants/margin_top = 70
-theme_override_constants/margin_right = 115
+theme_override_constants/margin_right = 105
 theme_override_constants/margin_bottom = 70
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/Control2/MarginContainer"]
@@ -891,9 +896,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 115
+theme_override_constants/margin_left = 105
 theme_override_constants/margin_top = 70
-theme_override_constants/margin_right = 115
+theme_override_constants/margin_right = 105
 theme_override_constants/margin_bottom = 70
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/Control2/MarginContainer"]
@@ -1231,9 +1236,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 115
+theme_override_constants/margin_left = 105
 theme_override_constants/margin_top = 70
-theme_override_constants/margin_right = 115
+theme_override_constants/margin_right = 105
 theme_override_constants/margin_bottom = 70
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/Control2/MarginContainer"]
@@ -1571,9 +1576,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 115
+theme_override_constants/margin_left = 105
 theme_override_constants/margin_top = 70
-theme_override_constants/margin_right = 115
+theme_override_constants/margin_right = 105
 theme_override_constants/margin_bottom = 70
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer"]
@@ -1912,9 +1917,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 115
+theme_override_constants/margin_left = 105
 theme_override_constants/margin_top = 70
-theme_override_constants/margin_right = 115
+theme_override_constants/margin_right = 105
 theme_override_constants/margin_bottom = 70
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/Control2/MarginContainer"]
@@ -2253,9 +2258,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 115
+theme_override_constants/margin_left = 105
 theme_override_constants/margin_top = 70
-theme_override_constants/margin_right = 115
+theme_override_constants/margin_right = 105
 theme_override_constants/margin_bottom = 70
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/Control2/MarginContainer"]
@@ -2593,9 +2598,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 115
+theme_override_constants/margin_left = 105
 theme_override_constants/margin_top = 70
-theme_override_constants/margin_right = 115
+theme_override_constants/margin_right = 105
 theme_override_constants/margin_bottom = 70
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/Control2/MarginContainer"]
@@ -2933,9 +2938,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 115
+theme_override_constants/margin_left = 105
 theme_override_constants/margin_top = 70
-theme_override_constants/margin_right = 115
+theme_override_constants/margin_right = 105
 theme_override_constants/margin_bottom = 70
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/Control2/MarginContainer"]
@@ -3273,9 +3278,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 115
+theme_override_constants/margin_left = 105
 theme_override_constants/margin_top = 70
-theme_override_constants/margin_right = 115
+theme_override_constants/margin_right = 105
 theme_override_constants/margin_bottom = 70
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/Control2/MarginContainer"]

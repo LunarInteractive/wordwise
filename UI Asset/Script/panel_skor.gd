@@ -4,6 +4,8 @@ signal persenan_berubah(persen_baru)
 signal total_error_berubah(total_error_baru)
 signal kata_error_berubah(kata_error_baru)
 
+@onready var data_level = "res://UI Asset/Script/tes_data_level.json"
+
 @export var angka_persen:Label
 @export var angka_total_error:Label
 @export var angka_kata_eror:Label
@@ -51,6 +53,8 @@ func _on_persenan_berubah(persen_baru: int):
 	
 	uji_lulus(persen_baru)
 	tampil_total_error()
+	
+	data_level.level += 1
 
 
 func _on_button_retry_button_up():
@@ -70,14 +74,14 @@ func pesen_angka_total():
 
 func pesen_angka_kata():
 	kata_error = randi_range(0,500)
-	
+
 
 func _on_kata_error_berubah(kata_error_baru):
 	angka_kata_eror.text = str(kata_error_baru)
-	
+
 func _on_total_error_berubah(total_error_baru):
 	angka_total_error.text = str(total_error_baru)
-	
+
 func update_teks_skor(nilainyah:int):
 	angka_persen.text = str(nilainyah) + "%"
 

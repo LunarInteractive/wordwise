@@ -20,16 +20,28 @@ var lolos_lanjut : bool = false
 var voices = DisplayServer.tts_get_voices_for_language("en")
 var voice_id = voices[0]
 
+var kode_level = GlobalVariable.kode_level
+var dialogue = GlobalVariable.get_dialogue_by_key(kode_level)
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if dialogue:
+		print(dialogue)
 	#Dialogic.get_subsystem("Choices").connect("question_shown", simpan_data_choice) # ini sebenarnya ga perlu
 	# untuk menampilkan promp pas pilih salah satu choice
 	Dialogic.get_subsystem("Choices").connect("choice_selected", tampilkan_prompt)
 	# ini buat TTS dan try again
 	Dialogic.get_subsystem("Choices").connect("choice_selected", simpan_data_choice) 
 	Dialogic.connect("event_handled", cek_even_jalan)
-	var dialogic = Dialogic.start(path)
+	setup_dialogic()
 	AudioServer.set_bus_mute(2,true)
+
+func setup_dialogic():
+	var events : Array = dialogue.split('\n')
+
+	var timeline : DialogicTimeline = DialogicTimeline.new()
+	timeline.events = events
+	Dialogic.start(timeline)
+
 
 func simpan_data_choice(info: Dictionary):
 	choices = info

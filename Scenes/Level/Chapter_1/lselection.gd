@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var Tutorial_layer : CanvasLayer = $Popup_Tutorial
+@onready var kode_level = ""
 
 #CH1
 @onready var c_1l_1: Button = $"CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/Control/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/C1L1"
@@ -75,30 +76,36 @@ extends Node2D
 func _ready() -> void:
 	handle_connecting_signal()
 
+func setup_level(kode: String):
+	kode_level = kode
+	GlobalVariable.kode_level = kode_level
+	print(GlobalVariable.kode_level)
+	get_tree().change_scene_to_file("res://Scenes/Level/Chapter_1/Level_1.tscn")
+
 #CHAPTER1
 func _on_c_1l_1_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Level/Chapter_1/Level_1.tscn")
+	setup_level("Chapter 1_Level 1")
 func _on_c_1l_2_pressed() -> void:
-	get_tree().change_scene_to_file("res://Objects/Environtment/UI/menu.tscn")
+	setup_level("Chapter 1_Level 2")
 func _on_c_1l_3_pressed() -> void:
-	get_tree().change_scene_to_file("res://Objects/Environtment/UI/menu.tscn")
+	setup_level("Chapter 1_Level 3")
 func _on_c_1l_4_pressed() -> void:
-	get_tree().change_scene_to_file("res://Objects/Environtment/UI/menu.tscn")
+	setup_level("Chapter 1_Level 4")
 func _on_c_1l_5_pressed() -> void:
-	get_tree().change_scene_to_file("res://Objects/Environtment/UI/menu.tscn")
-	
+	setup_level("Chapter 1_Level 5")
+
 #CHAPTER2
 func _on_c_2l_1_pressed() -> void:
-	get_tree().change_scene_to_file("res://Objects/Environtment/UI/menu.tscn")
+	setup_level("Chapter 2_Level 1")
 func _on_c_2l_2_pressed() -> void:
-	get_tree().change_scene_to_file("res://Objects/Environtment/UI/menu.tscn")
+	setup_level("Chapter 2_Level 2")
 func _on_c_2l_3_pressed() -> void:
-	get_tree().change_scene_to_file("res://Objects/Environtment/UI/menu.tscn")
+	setup_level("Chapter 2_Level 3")
 func _on_c_2l_4_pressed() -> void:
-	get_tree().change_scene_to_file("res://Objects/Environtment/UI/menu.tscn")
+	setup_level("Chapter 2_Level 4")
 func _on_c_2l_5_pressed() -> void:
-	get_tree().change_scene_to_file("res://Objects/Environtment/UI/menu.tscn")
-	
+	setup_level("Chapter 2_Level 5")
+
 #CHAPTER3
 func _on_c_3l_1_pressed() -> void:
 	get_tree().change_scene_to_file("res://Objects/Environtment/UI/menu.tscn")
@@ -201,73 +208,73 @@ func _on_c_10l_5_pressed() -> void:
 func handle_connecting_signal() -> void:
 	#CHAPTER1
 	c_1l_1.button_down.connect(_on_c_1l_1_pressed)
-	c_1l_2.button_down.connect(_on_c_1l_1_pressed)
-	c_1l_3.button_down.connect(_on_c_1l_1_pressed)
-	c_1l_4.button_down.connect(_on_c_1l_1_pressed)
-	c_1l_5.button_down.connect(_on_c_1l_1_pressed)
+	c_1l_2.button_down.connect(_on_c_1l_2_pressed)
+	c_1l_3.button_down.connect(_on_c_1l_3_pressed)
+	c_1l_4.button_down.connect(_on_c_1l_4_pressed)
+	c_1l_5.button_down.connect(_on_c_1l_5_pressed)
 	
 	#CHAPTER2
-	c_2l_1.button_down.connect(_on_c_1l_1_pressed)
-	c_2l_2.button_down.connect(_on_c_1l_1_pressed)
-	c_2l_3.button_down.connect(_on_c_1l_1_pressed)
-	c_2l_4.button_down.connect(_on_c_1l_1_pressed)
-	c_2l_5.button_down.connect(_on_c_1l_1_pressed)
+	c_2l_1.button_down.connect(_on_c_2l_1_pressed)
+	c_2l_2.button_down.connect(_on_c_2l_2_pressed)
+	c_2l_3.button_down.connect(_on_c_2l_3_pressed)
+	c_2l_4.button_down.connect(_on_c_2l_4_pressed)
+	c_2l_5.button_down.connect(_on_c_2l_5_pressed)
 	
 	#CHAPTER3
-	c_3l_1.button_down.connect(_on_c_1l_1_pressed)
-	c_3l_2.button_down.connect(_on_c_1l_1_pressed)
-	c_3l_3.button_down.connect(_on_c_1l_1_pressed)
-	c_3l_4.button_down.connect(_on_c_1l_1_pressed)
-	c_3l_5.button_down.connect(_on_c_1l_1_pressed)
+	c_3l_1.button_down.connect(_on_c_3l_1_pressed)
+	c_3l_2.button_down.connect(_on_c_3l_2_pressed)
+	c_3l_3.button_down.connect(_on_c_3l_3_pressed)
+	c_3l_4.button_down.connect(_on_c_3l_4_pressed)
+	c_3l_5.button_down.connect(_on_c_3l_5_pressed)
 	
 	#CHAPTER4
-	c_4l_1.button_down.connect(_on_c_1l_1_pressed)
-	c_4l_2.button_down.connect(_on_c_1l_1_pressed)
-	c_4l_3.button_down.connect(_on_c_1l_1_pressed)
-	c_4l_4.button_down.connect(_on_c_1l_1_pressed)
-	c_4l_5.button_down.connect(_on_c_1l_1_pressed)
+	c_4l_1.button_down.connect(_on_c_4l_1_pressed)
+	c_4l_2.button_down.connect(_on_c_4l_2_pressed)
+	c_4l_3.button_down.connect(_on_c_4l_3_pressed)
+	c_4l_4.button_down.connect(_on_c_4l_4_pressed)
+	c_4l_5.button_down.connect(_on_c_4l_5_pressed)
 	
 	#CHAPTER5
-	c_5l_1.button_down.connect(_on_c_1l_1_pressed)
-	c_5l_2.button_down.connect(_on_c_1l_1_pressed)
-	c_5l_3.button_down.connect(_on_c_1l_1_pressed)
-	c_5l_4.button_down.connect(_on_c_1l_1_pressed)
-	c_5l_5.button_down.connect(_on_c_1l_1_pressed)
+	c_5l_1.button_down.connect(_on_c_5l_1_pressed)
+	c_5l_2.button_down.connect(_on_c_5l_2_pressed)
+	c_5l_3.button_down.connect(_on_c_5l_3_pressed)
+	c_5l_4.button_down.connect(_on_c_5l_4_pressed)
+	c_5l_5.button_down.connect(_on_c_5l_5_pressed)
 	
 	#CHAPTER6
-	c_6l_1.button_down.connect(_on_c_1l_1_pressed)
-	c_6l_2.button_down.connect(_on_c_1l_1_pressed)
-	c_6l_3.button_down.connect(_on_c_1l_1_pressed)
-	c_6l_4.button_down.connect(_on_c_1l_1_pressed)
-	c_6l_5.button_down.connect(_on_c_1l_1_pressed)
+	c_6l_1.button_down.connect(_on_c_6l_1_pressed)
+	c_6l_2.button_down.connect(_on_c_6l_2_pressed)
+	c_6l_3.button_down.connect(_on_c_6l_3_pressed)
+	c_6l_4.button_down.connect(_on_c_6l_4_pressed)
+	c_6l_5.button_down.connect(_on_c_6l_5_pressed)
 	
 	#CHAPTER7
-	c_7l_1.button_down.connect(_on_c_1l_1_pressed)
-	c_7l_2.button_down.connect(_on_c_1l_1_pressed)
-	c_7l_3.button_down.connect(_on_c_1l_1_pressed)
-	c_7l_4.button_down.connect(_on_c_1l_1_pressed)
-	c_7l_5.button_down.connect(_on_c_1l_1_pressed)
+	c_7l_1.button_down.connect(_on_c_7l_1_pressed)
+	c_7l_2.button_down.connect(_on_c_7l_2_pressed)
+	c_7l_3.button_down.connect(_on_c_7l_3_pressed)
+	c_7l_4.button_down.connect(_on_c_7l_4_pressed)
+	c_7l_5.button_down.connect(_on_c_7l_5_pressed)
 	
 	#CHAPTER8
-	c_8l_1.button_down.connect(_on_c_1l_1_pressed)
-	c_8l_2.button_down.connect(_on_c_1l_1_pressed)
-	c_8l_3.button_down.connect(_on_c_1l_1_pressed)
-	c_8l_4.button_down.connect(_on_c_1l_1_pressed)
-	c_8l_5.button_down.connect(_on_c_1l_1_pressed)
+	c_8l_1.button_down.connect(_on_c_8l_1_pressed)
+	c_8l_2.button_down.connect(_on_c_8l_2_pressed)
+	c_8l_3.button_down.connect(_on_c_8l_3_pressed)
+	c_8l_4.button_down.connect(_on_c_8l_4_pressed)
+	c_8l_5.button_down.connect(_on_c_8l_5_pressed)
 	
 	#CHAPTER9
-	c_9l_1.button_down.connect(_on_c_1l_1_pressed)
-	c_9l_2.button_down.connect(_on_c_1l_1_pressed)
-	c_9l_3.button_down.connect(_on_c_1l_1_pressed)
-	c_9l_4.button_down.connect(_on_c_1l_1_pressed)
-	c_9l_5.button_down.connect(_on_c_1l_1_pressed)
+	c_9l_1.button_down.connect(_on_c_9l_1_pressed)
+	c_9l_2.button_down.connect(_on_c_9l_2_pressed)
+	c_9l_3.button_down.connect(_on_c_9l_3_pressed)
+	c_9l_4.button_down.connect(_on_c_9l_4_pressed)
+	c_9l_5.button_down.connect(_on_c_9l_5_pressed)
 	
 	#CHAPTER10
-	c_10l_1.button_down.connect(_on_c_1l_1_pressed)
-	c_10l_2.button_down.connect(_on_c_1l_1_pressed)
-	c_10l_3.button_down.connect(_on_c_1l_1_pressed)
-	c_10l_4.button_down.connect(_on_c_1l_1_pressed)
-	c_10l_5.button_down.connect(_on_c_1l_1_pressed)
+	c_10l_1.button_down.connect(_on_c_10l_1_pressed)
+	c_10l_2.button_down.connect(_on_c_10l_2_pressed)
+	c_10l_3.button_down.connect(_on_c_10l_3_pressed)
+	c_10l_4.button_down.connect(_on_c_10l_4_pressed)
+	c_10l_5.button_down.connect(_on_c_10l_5_pressed)
 
 
 func _on_button_tutorial_pressed() -> void:

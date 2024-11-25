@@ -1,7 +1,7 @@
-[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://f2pxf81r3upa"]
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cntfcxiqjdptw"]
 
-[ext_resource type="Texture2D" uid="uid://b7ufo8gycppf8" path="res://UI Asset/Sprite/UI_Wordwise/Slider/Slider_BAR.png" id="1_nvt4p"]
+[ext_resource type="Texture2D" uid="uid://b34t3nmeqtpig" path="res://UI Asset/Sprite/UI_Wordwise/Slider/Slider_BAR_Dual Color.png" id="1_wnahx"]
 
 [resource]
-atlas = ExtResource("1_nvt4p")
-region = Rect2(1060, 1340, 160, 160)
+atlas = ExtResource("1_wnahx")
+region = Rect2(2420, 1340, 160, 160)

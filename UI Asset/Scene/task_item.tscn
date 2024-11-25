@@ -1,13 +1,14 @@
-[gd_scene load_steps=18 format=3 uid="uid://dru6beado57f8"]
+[gd_scene load_steps=19 format=3 uid="uid://dru6beado57f8"]
 
 [ext_resource type="Script" path="res://UI Asset/Script/task_item.gd" id="1_6xfpo"]
 [ext_resource type="Texture2D" uid="uid://lnx6onv3ycd5" path="res://UI Asset/Sprite/two-coins.svg" id="2_ig6cp"]
 [ext_resource type="Texture2D" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Background_PB.tres" id="5_35yir"]
 [ext_resource type="Texture2D" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Border_PB.tres" id="6_4egw0"]
 [ext_resource type="Theme" uid="uid://la05b3bnexvl" path="res://UI Asset/Shader/theme_fajar/theme_fajar.tres" id="6_diqdm"]
-[ext_resource type="Texture2D" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Fill_PB.tres" id="7_dff38"]
+[ext_resource type="Texture2D" uid="uid://0o36lwnn5yml" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Fill_PB_Orange.tres" id="7_qi2tm"]
 [ext_resource type="AudioStream" uid="uid://deesmb07s1up7" path="res://UI Asset/Audio/SFX/zapsplat_multimedia_game_sound_coins_collect_several_at_once_002_40813.mp3" id="8_3dbft"]
-[ext_resource type="Texture2D" uid="uid://crcm6qx3hyusk" path="res://UI Asset/Sprite/Border/Border_NO BG_.png" id="8_grj4t"]
+[ext_resource type="Texture2D" uid="uid://c2rd1gh6eqbvp" path="res://UI Asset/Sprite/UI_Wordwise/Button_Text/ButtonText_Orange_Border.tres" id="8_mpk1w"]
+[ext_resource type="Texture2D" uid="uid://codormxttyb7v" path="res://UI Asset/Sprite/UI_Wordwise/Border/Borders_Dual Color.png" id="9_678m6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8vfva"]
 
@@ -184,10 +185,15 @@ _data = {
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8lnrj"]
 content_margin_top = 8.0
-bg_color = Color(0.384314, 0.333333, 0.541176, 1)
+bg_color = Color(0.2, 0.32549, 0.619608, 1)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_m6vqp"]
-atlas = ExtResource("8_grj4t")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6s2oa"]
+texture = ExtResource("8_mpk1w")
+texture_margin_left = 40.0
+texture_margin_top = 70.0
+texture_margin_right = 40.0
+texture_margin_bottom = 30.0
+region_rect = Rect2(0, 0, 660, 220)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4rl0t"]
 bg_color = Color(1, 1, 0.776471, 1)
@@ -300,12 +306,11 @@ custom_minimum_size = Vector2(960, 120)
 layout_mode = 2
 size_flags_vertical = 4
 theme = ExtResource("6_diqdm")
-value = 41.0
+value = 34.0
 nine_patch_stretch = true
 texture_under = ExtResource("5_35yir")
 texture_over = ExtResource("6_4egw0")
-texture_progress = ExtResource("7_dff38")
-texture_progress_offset = Vector2(-1, 0)
+texture_progress = ExtResource("7_qi2tm")
 
 [node name="MarginTombol" type="MarginContainer" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(100, 100)
@@ -354,6 +359,7 @@ focus_mode = 0
 mouse_filter = 1
 theme = ExtResource("6_diqdm")
 theme_type_variation = &"TombolPlay"
+theme_override_styles/normal = SubResource("StyleBoxTexture_6s2oa")
 
 [node name="LabelPlay" type="Label" parent="GrupTaskItem/MarginPanelTask/IsiPanel/HBoxContainer/MarginIsiTask/VBoxContainer/HBoxContainer/MarginTombol/TombolPlay"]
 layout_mode = 1
@@ -378,8 +384,8 @@ autowrap_mode = 3
 
 [node name="BorderPanel" type="NinePatchRect" parent="GrupTaskItem/MarginPanelTask"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_m6vqp")
-region_rect = Rect2(150, 480, 320, 320)
+texture = ExtResource("9_678m6")
+region_rect = Rect2(1140, 440, 320, 320)
 patch_margin_left = 60
 patch_margin_top = 60
 patch_margin_right = 60

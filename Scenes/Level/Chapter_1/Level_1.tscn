@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bm2twp74h3kjb"]
 
-[ext_resource type="PackedScene" uid="uid://c5wftee0bnm31" path="res://Scenes/Development/custom_map_1.tscn" id="1_6wixu"]
+[ext_resource type="PackedScene" uid="uid://cara12bso7fk2" path="res://Scenes/Development/custom_map_1.tscn" id="1_6wixu"]
 [ext_resource type="PackedScene" uid="uid://bikmskv6luara" path="res://UI Asset/Scene/Pause_Layer.tscn" id="2_66sla"]
 [ext_resource type="PackedScene" uid="uid://dgw5vkhymydno" path="res://UI Asset/Scene/UI_Dialogue_2.tscn" id="3_o5n77"]
 

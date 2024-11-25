@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dk8jpxjr5pxwp"
 path.bptc="res://.godot/imported/House_Emission.png-52ef4783c2a319da072f33485e0ff827.bptc.ctex"
+path.astc="res://.godot/imported/House_Emission.png-52ef4783c2a319da072f33485e0ff827.astc.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Objects/Environtment/Houses/House_Emission.png"
-dest_files=["res://.godot/imported/House_Emission.png-52ef4783c2a319da072f33485e0ff827.bptc.ctex"]
+dest_files=["res://.godot/imported/House_Emission.png-52ef4783c2a319da072f33485e0ff827.bptc.ctex", "res://.godot/imported/House_Emission.png-52ef4783c2a319da072f33485e0ff827.astc.ctex"]
 
 [params]
 

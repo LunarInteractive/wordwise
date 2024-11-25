@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://dgw5vkhymydno"]
+[gd_scene load_steps=47 format=3 uid="uid://dgw5vkhymydno"]
 
 [ext_resource type="Script" path="res://UI Asset/Script/ui_dialogue_root.gd" id="1_sknvp"]
 [ext_resource type="Resource" path="res://Resources/Timeline/chapter_1.dtl" id="2_e2are"]
@@ -10,84 +10,83 @@
 [ext_resource type="Script" path="res://Scripts/LISEN/comparison_module.gd" id="8_kh4cp"]
 [ext_resource type="WhisperResource" path="res://addons/godot_whisper/models/gglm-tiny.en.bin" id="9_pf5ng"]
 [ext_resource type="Script" path="res://addons/godot_whisper/capture_stream_to_text.gd" id="10_cv352"]
-[ext_resource type="Texture2D" uid="uid://crcm6qx3hyusk" path="res://UI Asset/Sprite/Border/Border_NO BG_.png" id="11_doql6"]
+[ext_resource type="Texture2D" uid="uid://codormxttyb7v" path="res://UI Asset/Sprite/UI_Wordwise/Border/Borders_Dual Color.png" id="11_yr2ce"]
 [ext_resource type="FontFile" uid="uid://dlfcvrx0tug2e" path="res://UI Asset/Font/Pixel Dogica/dogicapixel.ttf" id="12_8ak8n"]
 [ext_resource type="Script" path="res://UI Asset/Script/popup_speech.gd" id="13_10lme"]
-[ext_resource type="Texture2D" uid="uid://duhxdsydyaa4b" path="res://UI Asset/Sprite/GUI/Button And Others.png" id="14_8qb1n"]
+[ext_resource type="Texture2D" uid="uid://xspjuiwyo8pa" path="res://UI Asset/Sprite/UI_Wordwise/Button/Orange/Button_Orange_Speaker.tres" id="14_s6l1s"]
 [ext_resource type="Script" path="res://UI Asset/Script/panel_skor.gd" id="15_gtjcr"]
+[ext_resource type="Texture2D" uid="uid://bwuq4h66m2x52" path="res://UI Asset/Sprite/UI_Wordwise/Button/Orange/Button_Orange_Restart.tres" id="15_j7koc"]
 [ext_resource type="FontFile" uid="uid://dclwgnpvy23n7" path="res://UI Asset/Font/Pixel Dogica/dogicapixelbold.ttf" id="16_hheou"]
+[ext_resource type="Texture2D" uid="uid://cxfocdmymsvfj" path="res://UI Asset/Sprite/UI_Wordwise/Button/Orange/Button_Orange_Continue.tres" id="16_hjyqx"]
 [ext_resource type="Script" path="res://UI Asset/Script/dialog_tester.gd" id="17_8epyf"]
 [ext_resource type="Resource" path="res://Scenes/Dialog/chapter_5.dtl" id="18_v786c"]
 [ext_resource type="Script" path="res://UI Asset/Script/skor_tester.gd" id="19_2nlcj"]
+[ext_resource type="Texture2D" uid="uid://d0wdem87sxalu" path="res://UI Asset/Sprite/UI_Wordwise/Button/Orange/Button_Orange_Home.tres" id="19_sxpwj"]
+[ext_resource type="Texture2D" uid="uid://b7g08etqt50l1" path="res://UI Asset/Sprite/UI_Wordwise/Button/Orange/Button_Orange_Play.tres" id="20_ymjp3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tilfw"]
 bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wir23"]
-bg_color = Color(0.619608, 0.466667, 0.74902, 1)
+bg_color = Color(0.2, 0.32549, 0.619608, 1)
 
 [sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_dycff"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_50te5"]
-atlas = ExtResource("11_doql6")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6hjb"]
 bg_color = Color(0, 0, 0, 0.701961)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_astq6"]
-bg_color = Color(0.380392, 0.333333, 0.537255, 1)
+bg_color = Color(0.2, 0.32549, 0.619608, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gv5ab"]
-bg_color = Color(0.619608, 0.466667, 0.74902, 1)
+content_margin_top = 19.0
+bg_color = Color(0.360784, 0.458824, 0.690196, 1)
 border_width_bottom = 10
-border_color = Color(0.490196, 0.423529, 0.709804, 1)
+border_color = Color(0.0941176, 0.14902, 0.305882, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8npsy"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nfoc4"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_43h2n"]
-atlas = ExtResource("14_8qb1n")
-region = Rect2(10, 240, 220, 220)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6u1rq"]
-atlas = ExtResource("14_8qb1n")
-region = Rect2(240, 240, 220, 220)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u0yk3"]
-atlas = ExtResource("14_8qb1n")
-region = Rect2(10, 930, 220, 220)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_er50w"]
-atlas = ExtResource("14_8qb1n")
-region = Rect2(240, 930, 220, 220)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oocw6"]
-atlas = ExtResource("14_8qb1n")
-region = Rect2(10, 10, 220, 220)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6nuc8"]
-atlas = ExtResource("14_8qb1n")
-region = Rect2(240, 10, 220, 220)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d2pvt"]
-atlas = ExtResource("11_doql6")
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pilcr"]
 bg_color = Color(0, 0, 0, 0.701961)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mg0jk"]
-bg_color = Color(0.384314, 0.333333, 0.541176, 1)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yd43m"]
-atlas = ExtResource("11_doql6")
-region = Rect2(0, 0, 1280, 1280)
+bg_color = Color(0.2, 0.32549, 0.619608, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nftyb"]
-bg_color = Color(0.490196, 0.419608, 0.709804, 1)
+bg_color = Color(0.360784, 0.458824, 0.690196, 1)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1yhgp"]
-atlas = ExtResource("11_doql6")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p1hqr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cjwq5"]
+texture = ExtResource("19_sxpwj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jv5d3"]
+texture = ExtResource("19_sxpwj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pdi10"]
+texture = ExtResource("19_sxpwj")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tshcb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ce3s"]
+texture = ExtResource("15_j7koc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4ki2h"]
+texture = ExtResource("15_j7koc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e4l8s"]
+texture = ExtResource("15_j7koc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yd8rh"]
+texture = ExtResource("20_ymjp3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gn4oy"]
+texture = ExtResource("20_ymjp3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gif5v"]
+texture = ExtResource("20_ymjp3")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dp3lr"]
 
@@ -193,8 +192,8 @@ minimum_sentence_time = 5
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Dialog_Panel/MarginContainer/PanelPrompt"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_50te5")
-region_rect = Rect2(150, 480, 320, 320)
+texture = ExtResource("11_yr2ce")
+region_rect = Rect2(1140, 440, 320, 320)
 patch_margin_left = 60
 patch_margin_top = 60
 patch_margin_right = 60
@@ -244,9 +243,9 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_o6hjb")
 [node name="MarginContainer" type="MarginContainer" parent="Popup_Speech/PanelContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 300
-theme_override_constants/margin_top = 215
+theme_override_constants/margin_top = 200
 theme_override_constants/margin_right = 300
-theme_override_constants/margin_bottom = 215
+theme_override_constants/margin_bottom = 155
 
 [node name="PanelContainer" type="PanelContainer" parent="Popup_Speech/PanelContainer/MarginContainer"]
 layout_mode = 2
@@ -312,25 +311,22 @@ alignment = 1
 [node name="TextureButton" type="TextureButton" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer"]
 custom_minimum_size = Vector2(140, 140)
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_43h2n")
-texture_pressed = SubResource("AtlasTexture_6u1rq")
-texture_hover = SubResource("AtlasTexture_6u1rq")
+texture_normal = ExtResource("14_s6l1s")
+texture_pressed = ExtResource("14_s6l1s")
+texture_hover = ExtResource("14_s6l1s")
 ignore_texture_size = true
 stretch_mode = 4
 
 [node name="Label" type="Label" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer/TextureButton"]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -123.0
-offset_top = -87.0
-offset_right = 125.0
-offset_bottom = -34.0
+offset_left = -124.0
+offset_top = 153.225
+offset_right = 124.0
+offset_bottom = 206.225
 grow_horizontal = 2
-grow_vertical = 0
 theme_override_fonts/font = ExtResource("4_pv17d")
 theme_override_font_sizes/font_size = 66
 text = "Play Audio"
@@ -339,25 +335,22 @@ horizontal_alignment = 1
 [node name="TextureButton2" type="TextureButton" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer"]
 custom_minimum_size = Vector2(140, 140)
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_u0yk3")
-texture_pressed = SubResource("AtlasTexture_er50w")
-texture_hover = SubResource("AtlasTexture_er50w")
+texture_normal = ExtResource("15_j7koc")
+texture_pressed = ExtResource("15_j7koc")
+texture_hover = ExtResource("15_j7koc")
 ignore_texture_size = true
 stretch_mode = 4
 
 [node name="Label" type="Label" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer/TextureButton2"]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -111.0
-offset_top = -87.0
-offset_right = 112.0
-offset_bottom = -34.0
+offset_left = -111.5
+offset_top = 153.225
+offset_right = 111.5
+offset_bottom = 206.225
 grow_horizontal = 2
-grow_vertical = 0
 theme_override_fonts/font = ExtResource("4_pv17d")
 theme_override_font_sizes/font_size = 66
 text = "Try Speak"
@@ -366,25 +359,22 @@ horizontal_alignment = 1
 [node name="TextureButton3" type="TextureButton" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer"]
 custom_minimum_size = Vector2(140, 140)
 layout_mode = 2
-texture_normal = SubResource("AtlasTexture_oocw6")
-texture_pressed = SubResource("AtlasTexture_6nuc8")
-texture_hover = SubResource("AtlasTexture_6nuc8")
+texture_normal = ExtResource("16_hjyqx")
+texture_pressed = ExtResource("16_hjyqx")
+texture_hover = ExtResource("16_hjyqx")
 ignore_texture_size = true
 stretch_mode = 4
 
 [node name="Label" type="Label" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer/TextureButton3"]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -98.0
-offset_top = -87.0
-offset_right = 100.0
-offset_bottom = -34.0
+offset_left = -99.0
+offset_top = 153.225
+offset_right = 99.0
+offset_bottom = 206.225
 grow_horizontal = 2
-grow_vertical = 0
 theme_override_fonts/font = ExtResource("4_pv17d")
 theme_override_font_sizes/font_size = 66
 text = "Continue"
@@ -392,8 +382,8 @@ horizontal_alignment = 1
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Popup_Speech/PanelContainer/MarginContainer"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_d2pvt")
-region_rect = Rect2(810, 810, 320, 320)
+texture = ExtResource("11_yr2ce")
+region_rect = Rect2(1140, 110, 320, 320)
 patch_margin_left = 80
 patch_margin_top = 159
 patch_margin_right = 80
@@ -456,8 +446,8 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_mg0jk")
 custom_minimum_size = Vector2(1250, 750)
 layout_mode = 2
 mouse_filter = 1
-texture = SubResource("AtlasTexture_yd43m")
-region_rect = Rect2(480, 480, 320, 320)
+texture = ExtResource("11_yr2ce")
+region_rect = Rect2(1470, 110, 320, 320)
 patch_margin_left = 150
 patch_margin_top = 140
 patch_margin_right = 150
@@ -481,8 +471,8 @@ size_flags_stretch_ratio = 0.1
 mouse_filter = 1
 theme = ExtResource("5_1bvvl")
 theme_type_variation = &"PanelHeaderTask"
-texture = SubResource("AtlasTexture_1yhgp")
-region_rect = Rect2(480, 810, 320, 320)
+texture = ExtResource("11_yr2ce")
+region_rect = Rect2(1470, 770, 320, 320)
 patch_margin_left = 60
 patch_margin_top = 60
 patch_margin_right = 60
@@ -498,14 +488,16 @@ theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 20
 
 [node name="TitlePanelSkor" type="Label" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/HeaderReport/MarginHeader"]
-custom_minimum_size = Vector2(250, 90)
 layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("5_1bvvl")
-theme_type_variation = &"LabelTitle"
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 7
+theme_override_constants/outline_size = 18
+theme_override_fonts/font = ExtResource("16_hheou")
+theme_override_font_sizes/font_size = 95
 text = "LEVEL REPORT"
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="MarginBadanPanel" type="MarginContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer"]
 layout_mode = 2
@@ -581,8 +573,11 @@ custom_minimum_size = Vector2(220, 220)
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 4
-theme = ExtResource("5_1bvvl")
 theme_type_variation = &"TombolHome"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p1hqr")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cjwq5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jv5d3")
+theme_override_styles/normal = SubResource("StyleBoxTexture_pdi10")
 
 [node name="ButtonRetry" type="Button" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTombol/Tombols"]
 custom_minimum_size = Vector2(220, 220)
@@ -592,6 +587,10 @@ size_flags_vertical = 4
 size_flags_stretch_ratio = 0.0
 theme = ExtResource("5_1bvvl")
 theme_type_variation = &"TombolRetry"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tshcb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3ce3s")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4ki2h")
+theme_override_styles/normal = SubResource("StyleBoxTexture_e4l8s")
 
 [node name="ButtonLanjut2" type="Button" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi/VBoxContainer/MarginBadanPanel/VBoxContainer/MarginTombol/Tombols"]
 self_modulate = Color(1, 1, 1, 0)
@@ -612,6 +611,9 @@ size_flags_horizontal = 2
 size_flags_vertical = 4
 theme = ExtResource("5_1bvvl")
 theme_type_variation = &"TombolLanjut"
+theme_override_styles/hover = SubResource("StyleBoxTexture_yd8rh")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gn4oy")
+theme_override_styles/normal = SubResource("StyleBoxTexture_gif5v")
 
 [node name="MarginSkor" type="MarginContainer" parent="PanelContainerSkor/MarginContainer/PanelSkorIsi"]
 layout_mode = 2

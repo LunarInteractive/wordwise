@@ -1,14 +1,17 @@
-[gd_scene load_steps=38 format=3 uid="uid://d7rkg7ufvq46"]
+[gd_scene load_steps=39 format=3 uid="uid://d7rkg7ufvq46"]
 
 [ext_resource type="Script" path="res://Objects/Environtment/UI/setting_tab.gd" id="1_2qfkc"]
 [ext_resource type="PackedScene" uid="uid://c1nrexm1chsfu" path="res://Objects/Environtment/UI/audio_setting.tscn" id="1_vpx88"]
+[ext_resource type="Texture2D" uid="uid://codormxttyb7v" path="res://UI Asset/Sprite/UI_Wordwise/Border/Borders_Dual Color.png" id="3_7qlwq"]
 [ext_resource type="Texture2D" uid="uid://nywdk2wpv1yr" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/Button And Others.png" id="3_338wa"]
-[ext_resource type="Texture2D" uid="uid://dwy8mv8kyai4h" path="res://UI Asset/Sprite/UI_Wordwise/Border/Border_.png" id="3_p7q24"]
 [ext_resource type="Texture2D" uid="uid://uotssy04s6sx" path="res://UI Asset/Sprite/UI_Wordwise/Button_Text/ButtonText_Border.tres" id="4_1qnog"]
 [ext_resource type="ButtonGroup" uid="uid://2jvi4fn66lbj" path="res://Objects/Environtment/UI/ButtonGroup/difficulty.tres" id="4_kd500"]
 [ext_resource type="FontFile" uid="uid://c7mvg73i0pnen" path="res://UI Asset/Font/Pixel Dogica/dogicabold.ttf" id="4_xtybj"]
+[ext_resource type="Texture2D" uid="uid://c2rd1gh6eqbvp" path="res://UI Asset/Sprite/UI_Wordwise/Button_Text/ButtonText_Orange_Border.tres" id="5_714n6"]
 [ext_resource type="ButtonGroup" uid="uid://bkglfjlji23uf" path="res://Objects/Environtment/UI/ButtonGroup/LA.tres" id="5_ffd8a"]
+[ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="5_mp1oo"]
 [ext_resource type="Script" path="res://UI Asset/Script/BtnAnimation.gd" id="5_q8d6k"]
+[ext_resource type="Texture2D" uid="uid://ctgp46i35s375" path="res://UI Asset/Sprite/UI_Wordwise/Button_Text/ButtonText_white_Border.tres" id="6_3nmid"]
 [ext_resource type="ButtonGroup" uid="uid://luvlh3xspwgi" path="res://Objects/Environtment/UI/ButtonGroup/LC.tres" id="6_7odi5"]
 [ext_resource type="Texture2D" uid="uid://ct671flg818rf" path="res://UI Asset/Sprite/UI_Wordwise/Button_Text/ButtonText_Border_2.tres" id="8_uyk1m"]
 [ext_resource type="Texture2D" path="res://UI Asset/Sprite/UI_Wordwise/Slider/Handle_Slider.tres" id="12_aehdc"]
@@ -18,12 +21,12 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yyr6f"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n3qnj"]
-texture = ExtResource("3_p7q24")
+texture = ExtResource("3_7qlwq")
 texture_margin_left = 60.0
 texture_margin_top = 60.0
 texture_margin_right = 60.0
 texture_margin_bottom = 60.0
-region_rect = Rect2(480, 810, 320, 320)
+region_rect = Rect2(1470, 2010, 320, 320)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dglyr"]
 content_margin_top = 30.0
@@ -41,29 +44,23 @@ content_margin_right = 15.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pofvj"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yjg5w"]
-atlas = ExtResource("3_338wa")
-region = Rect2(1872, 512, 672, 232)
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2354y"]
-texture = SubResource("AtlasTexture_yjg5w")
+content_margin_top = 38.0
+texture = ExtResource("5_714n6")
 texture_margin_left = 40.0
-texture_margin_top = 40.0
+texture_margin_top = 70.0
 texture_margin_right = 40.0
 texture_margin_bottom = 40.0
-region_rect = Rect2(8, 8, 660, 220)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tb15n"]
-atlas = ExtResource("3_338wa")
-region = Rect2(1872, 744, 672, 232)
+region_rect = Rect2(0, 0, 660, 220)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rik8o"]
-texture = SubResource("AtlasTexture_tb15n")
-texture_margin_left = 41.0
-texture_margin_top = 40.0
+content_margin_top = 29.0
+texture = ExtResource("6_3nmid")
+texture_margin_left = 40.0
+texture_margin_top = 71.0
 texture_margin_right = 40.0
-texture_margin_bottom = 40.0
-region_rect = Rect2(8, 6, 660, 220)
+texture_margin_bottom = 30.0
+region_rect = Rect2(0, 0, 660, 220)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jxh2h"]
 texture = ExtResource("8_uyk1m")
@@ -106,13 +103,13 @@ region = Rect2(1000, 344, 96, 112)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o4svy"]
 texture = ExtResource("13_frqtq")
-texture_margin_left = 10.0
+texture_margin_left = 20.0
 texture_margin_top = 10.0
-texture_margin_right = 10.0
-texture_margin_bottom = 10.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
 expand_margin_top = 30.0
 expand_margin_bottom = 30.0
-region_rect = Rect2(0, 0, 960, 40)
+region_rect = Rect2(0, 0, 980, 60)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fv1xi"]
 texture = ExtResource("13_w8the")
@@ -234,9 +231,11 @@ custom_minimum_size = Vector2(179.815, 100)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(0.286275, 0.219608, 0.439216, 1)
-theme_override_fonts/font = ExtResource("4_xtybj")
-theme_override_font_sizes/font_size = 25
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_mp1oo")
+theme_override_font_sizes/font_size = 45
 theme_override_styles/focus = SubResource("StyleBoxEmpty_pofvj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_2354y")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_2354y")
@@ -255,9 +254,10 @@ custom_minimum_size = Vector2(179.815, 100)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(0.286275, 0.219608, 0.439216, 1)
-theme_override_fonts/font = ExtResource("4_xtybj")
-theme_override_font_sizes/font_size = 25
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_mp1oo")
+theme_override_font_sizes/font_size = 45
 theme_override_styles/focus = SubResource("StyleBoxEmpty_pofvj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_2354y")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_2354y")
@@ -276,9 +276,10 @@ custom_minimum_size = Vector2(179.815, 100)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(0.286275, 0.219608, 0.439216, 1)
-theme_override_fonts/font = ExtResource("4_xtybj")
-theme_override_font_sizes/font_size = 25
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_mp1oo")
+theme_override_font_sizes/font_size = 45
 theme_override_styles/focus = SubResource("StyleBoxEmpty_pofvj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_2354y")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_2354y")
@@ -341,9 +342,10 @@ custom_minimum_size = Vector2(179.815, 100)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(0.286275, 0.219608, 0.439216, 1)
-theme_override_fonts/font = ExtResource("4_xtybj")
-theme_override_font_sizes/font_size = 25
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_mp1oo")
+theme_override_font_sizes/font_size = 45
 theme_override_styles/focus = SubResource("StyleBoxEmpty_pofvj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_2354y")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_2354y")
@@ -362,9 +364,10 @@ custom_minimum_size = Vector2(179.815, 100)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(0.286275, 0.219608, 0.439216, 1)
-theme_override_fonts/font = ExtResource("4_xtybj")
-theme_override_font_sizes/font_size = 25
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_mp1oo")
+theme_override_font_sizes/font_size = 45
 theme_override_styles/focus = SubResource("StyleBoxEmpty_pofvj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_2354y")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_2354y")
@@ -383,9 +386,10 @@ custom_minimum_size = Vector2(179.815, 100)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(0.286275, 0.219608, 0.439216, 1)
-theme_override_fonts/font = ExtResource("4_xtybj")
-theme_override_font_sizes/font_size = 25
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_mp1oo")
+theme_override_font_sizes/font_size = 45
 theme_override_styles/focus = SubResource("StyleBoxEmpty_pofvj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_2354y")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_2354y")
@@ -448,9 +452,10 @@ custom_minimum_size = Vector2(172.28, 104.065)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(0.286275, 0.219608, 0.439216, 1)
-theme_override_fonts/font = ExtResource("4_xtybj")
-theme_override_font_sizes/font_size = 25
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_mp1oo")
+theme_override_font_sizes/font_size = 45
 theme_override_styles/focus = SubResource("StyleBoxEmpty_pofvj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_2354y")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_2354y")
@@ -469,9 +474,10 @@ custom_minimum_size = Vector2(172.28, 104.065)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(0.286275, 0.219608, 0.439216, 1)
-theme_override_fonts/font = ExtResource("4_xtybj")
-theme_override_font_sizes/font_size = 25
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_mp1oo")
+theme_override_font_sizes/font_size = 45
 theme_override_styles/focus = SubResource("StyleBoxEmpty_pofvj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_2354y")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_2354y")
@@ -531,9 +537,10 @@ custom_minimum_size = Vector2(179.815, 100)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(0.286275, 0.219608, 0.439216, 1)
-theme_override_fonts/font = ExtResource("4_xtybj")
-theme_override_font_sizes/font_size = 25
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_mp1oo")
+theme_override_font_sizes/font_size = 45
 theme_override_styles/focus = SubResource("StyleBoxEmpty_gnaqu")
 theme_override_styles/hover = SubResource("StyleBoxTexture_2354y")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_2354y")
@@ -553,9 +560,10 @@ custom_minimum_size = Vector2(179.815, 100)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(0.286275, 0.219608, 0.439216, 1)
-theme_override_fonts/font = ExtResource("4_xtybj")
-theme_override_font_sizes/font_size = 25
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_mp1oo")
+theme_override_font_sizes/font_size = 45
 theme_override_styles/focus = SubResource("StyleBoxEmpty_gnaqu")
 theme_override_styles/hover = SubResource("StyleBoxTexture_2354y")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_2354y")
@@ -574,9 +582,10 @@ custom_minimum_size = Vector2(179.815, 100)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(0.286275, 0.219608, 0.439216, 1)
-theme_override_fonts/font = ExtResource("4_xtybj")
-theme_override_font_sizes/font_size = 25
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_mp1oo")
+theme_override_font_sizes/font_size = 45
 theme_override_styles/focus = SubResource("StyleBoxEmpty_gnaqu")
 theme_override_styles/hover = SubResource("StyleBoxTexture_2354y")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_2354y")
@@ -736,9 +745,10 @@ custom_minimum_size = Vector2(179.815, 100)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(0.286275, 0.219608, 0.439216, 1)
-theme_override_fonts/font = ExtResource("4_xtybj")
-theme_override_font_sizes/font_size = 25
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_mp1oo")
+theme_override_font_sizes/font_size = 45
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4d82r")
 theme_override_styles/hover = SubResource("StyleBoxTexture_2354y")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_2354y")
@@ -758,9 +768,10 @@ custom_minimum_size = Vector2(179.815, 100)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(0.286275, 0.219608, 0.439216, 1)
-theme_override_fonts/font = ExtResource("4_xtybj")
-theme_override_font_sizes/font_size = 25
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_mp1oo")
+theme_override_font_sizes/font_size = 45
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4d82r")
 theme_override_styles/hover = SubResource("StyleBoxTexture_2354y")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_2354y")
@@ -779,9 +790,10 @@ custom_minimum_size = Vector2(179.815, 100)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(0.286275, 0.219608, 0.439216, 1)
-theme_override_fonts/font = ExtResource("4_xtybj")
-theme_override_font_sizes/font_size = 25
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_mp1oo")
+theme_override_font_sizes/font_size = 45
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4d82r")
 theme_override_styles/hover = SubResource("StyleBoxTexture_2354y")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_2354y")
@@ -837,7 +849,7 @@ theme_override_icons/grabber_highlight = ExtResource("12_aehdc")
 theme_override_styles/slider = SubResource("StyleBoxTexture_o4svy")
 theme_override_styles/grabber_area = SubResource("StyleBoxTexture_fv1xi")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_gp8mc")
-value = 0.0
+value = 0.505
 ticks_on_borders = true
 bus_name = "Master"
 
@@ -858,7 +870,7 @@ theme_override_icons/grabber_highlight = ExtResource("12_aehdc")
 theme_override_styles/slider = SubResource("StyleBoxTexture_o4svy")
 theme_override_styles/grabber_area = SubResource("StyleBoxTexture_s1i22")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_oj5vd")
-value = 0.0
+value = 0.425
 ticks_on_borders = true
 bus_name = "Record"
 
@@ -879,7 +891,7 @@ theme_override_icons/grabber_highlight = ExtResource("12_aehdc")
 theme_override_styles/slider = SubResource("StyleBoxTexture_o4svy")
 theme_override_styles/grabber_area = SubResource("StyleBoxTexture_s1i22")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_oj5vd")
-value = 0.0
+value = 0.46
 ticks_on_borders = true
 bus_name = "SFX"
 
@@ -900,7 +912,7 @@ theme_override_icons/grabber_highlight = ExtResource("12_aehdc")
 theme_override_styles/slider = SubResource("StyleBoxTexture_o4svy")
 theme_override_styles/grabber_area = SubResource("StyleBoxTexture_s1i22")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_oj5vd")
-value = 0.0
+value = 0.49
 ticks_on_borders = true
 bus_name = "Music"
 

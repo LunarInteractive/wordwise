@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjys0nqej126x"
 path.bptc="res://.godot/imported/chara_0_normal.png-2aaffe5517345db36f1d7e73a890fe71.bptc.ctex"
+path.astc="res://.godot/imported/chara_0_normal.png-2aaffe5517345db36f1d7e73a890fe71.astc.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Objects/Characters/Villagers/chara_0_normal.png"
-dest_files=["res://.godot/imported/chara_0_normal.png-2aaffe5517345db36f1d7e73a890fe71.bptc.ctex"]
+dest_files=["res://.godot/imported/chara_0_normal.png-2aaffe5517345db36f1d7e73a890fe71.bptc.ctex", "res://.godot/imported/chara_0_normal.png-2aaffe5517345db36f1d7e73a890fe71.astc.ctex"]
 
 [params]
 

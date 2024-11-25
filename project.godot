@@ -22,6 +22,7 @@ buses/default_bus_layout="res://UI Asset/Audio/default_bus_layout.tres"
 general/text_to_speech=true
 driver/enable_input=true
 driver/mix_rate=16000
+<<<<<<<Updatedupstreambuses/default_bus_layout="res://UI Asset/Audio/default_bus_layout.tres"
 
 [autoload]
 
@@ -30,9 +31,10 @@ RuntimeDebugTools="*res://addons/runtime_debug_tools/scenes/remote_inspector.tsc
 LimboConsole="*res://addons/limbo_console/limbo_console.gd"
 ANIMA="*res://addons/anima/core/constants.gd"
 SceneTransition="*res://UI Asset/Scene/Scene_Transition.tscn"
-ImGuiRoot="*res://addons/imgui-godot/data/ImGuiRoot.tscn"
 LisenBus="*res://Scripts/LISEN/LisenBus.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+GlobalVariable="*res://Scripts/Global_Variable.gd"
+ImGuiRoot="*res://addons/imgui-godot/data/ImGuiRoot.tscn"
 
 [debug]
 
@@ -50,19 +52,19 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"Dialogue/chapter_10": "res://Scenes/Dialogue/chapter_10.dtl",
+"Dialogue/chapter_3": "res://Scenes/Dialogue/chapter_3.dtl",
+"Dialogue/chapter_4": "res://Scenes/Dialogue/chapter_4.dtl",
+"Dialogue/chapter_7": "res://Scenes/Dialogue/chapter_7.dtl",
+"Dialogue/chapter_8": "res://Scenes/Dialogue/chapter_8.dtl",
+"Dialogue/chapter_9": "res://Scenes/Dialogue/chapter_9.dtl",
 "Text_timeline": "res://UI Asset/Testing/Text_timeline.dtl",
 "Timeline/chapter_5": "res://Resources/Timeline/chapter_5.dtl",
 "Timeline/chapter_6": "res://Resources/Timeline/chapter_6.dtl",
 "chapter_1": "res://Resources/Timeline/chapter_1.dtl",
-"chapter_10": "res://Scenes/Dialogue/chapter_10.dtl",
 "chapter_2": "res://Resources/Timeline/chapter_2.dtl",
-"chapter_3": "res://Scenes/Dialogue/chapter_3.dtl",
-"chapter_4": "res://Scenes/Dialogue/chapter_4.dtl",
 "chapter_5": "res://Scenes/Dialog/chapter_5.dtl",
 "chapter_6": "res://Scenes/Dialog/chapter_6.dtl",
-"chapter_7": "res://Scenes/Dialogue/chapter_7.dtl",
-"chapter_8": "res://Scenes/Dialogue/chapter_8.dtl",
-"chapter_9": "res://Scenes/Dialogue/chapter_9.dtl",
 "test": "res://Resources/Timeline/test.dtl"
 }
 glossary/default_case_sensitive=true
@@ -182,6 +184,7 @@ locale/translations_pot_files=PackedStringArray("res://Scenes/Development/test.d
 [rendering]
 
 textures/canvas_textures/default_texture_filter=3
+textures/vram_compression/import_etc2_astc=true
 camera/depth_of_field/depth_of_field_use_jitter=true
 viewport/hdr_2d=true
 anti_aliasing/quality/use_debanding=true
