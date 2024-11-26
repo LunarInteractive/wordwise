@@ -1,0 +1,77 @@
+Godot Engine v4.3.stable.official.77dcf97d8 - https://godotengine.org
+Vulkan 1.3.289 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 3050 Laptop GPU
+
+AVX = 0 | AVX2 = 0 | AVX512 = 0 | FMA = 0 | NEON = 0 | ARM_FMA = 0 | METAL = 0 | F16C = 0 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 0 | SSSE3 = 0 | VSX = 0 | CUDA = 0 | COREML = 0 | OPENVINO = 0 | 
+whisper_init_from_buffer_with_params_no_state: loading model from buffer
+
+whisper_model_load: loading model
+
+whisper_model_load: n_vocab       = 51864
+
+whisper_model_load: n_audio_ctx   = 1500
+
+whisper_model_load: n_audio_state = 384
+
+whisper_model_load: n_audio_head  = 6
+
+whisper_model_load: n_audio_layer = 4
+
+whisper_model_load: n_text_ctx    = 448
+
+whisper_model_load: n_text_state  = 384
+
+whisper_model_load: n_text_head   = 6
+
+whisper_model_load: n_text_layer  = 4
+
+whisper_model_load: n_mels        = 80
+
+whisper_model_load: ftype         = 1
+
+whisper_model_load: qntvr         = 0
+
+whisper_model_load: type          = 1 (tiny)
+
+whisper_model_load: adding 1607 extra tokens
+
+whisper_model_load: n_langs       = 99
+
+whisper_model_load:      CPU buffer size =    77.18 MB
+
+whisper_model_load: model size    =   77.11 MB
+
+whisper_init_state: kv self size  =    8.26 MB
+
+whisper_init_state: kv cross size =    9.22 MB
+
+whisper_init_state: compute buffer (conv)   =   12.17 MB
+
+whisper_init_state: compute buffer (encode) =   64.92 MB
+
+whisper_init_state: compute buffer (cross)  =    4.01 MB
+
+whisper_init_state: compute buffer (decode) =   96.02 MB
+
+Label
+Text
+Choice
+Isi dialog tombol dipilih : Good morning! How you are today?
+isi_command : [4, 2, false, "Good morning! How you are today?", true, false]
+USER WARNING: A Thread object is being destroyed without its completion having been realized.
+Please call wait_to_finish() on it to ensure correct cleanup.
+   at: ~Thread (core/os/thread.cpp:105)
+isi_pesan : 'Good morning, how are you are today? Good morning, how are you are today'
+mulai hitung
+mau return
+Command not recognized.
+isi_pesan : 'Good morning, how you are today.'
+mulai hitung
+mau return
+Words comparison:
+Word different: Spoken 'morning,', Expected 'morning!'
+Word different: Spoken 'how', Expected 'How'
+Word different: Spoken 'today.', Expected 'today?'
+Error percentage: 50%
+Score: 50
+Isi dialog tombol dipilih : Good morning! How you are today?
+isi_command : [4, 2, false, "Good morning! How you are today?", true, false]

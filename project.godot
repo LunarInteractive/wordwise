@@ -36,7 +36,6 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [debug]
 
-file_logging/enable_file_logging=true
 file_logging/log_path="res://Resources/godot.log"
 
 [dialogic]

@@ -1,77 +1,6 @@
-Godot Engine v4.3.stable.mono.official.77dcf97d8 - https://godotengine.org
-Vulkan 1.3.289 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 3060 Laptop GPU
+Godot Engine v4.3.stable.official.77dcf97d8 - https://godotengine.org
+Vulkan 1.3.289 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 3050 Laptop GPU
 
-Chapter terbuka:1
-Level yang terbuka:1
-Chapter1 terbuka (semua level dalam chapter ini terbuka).
-Level 1 terbuka.
-Level 2 terkunci.
-Level 3 terkunci.
-Level 4 terkunci.
-Level 5 terkunci.
-Chapter terbuka:1
-Level yang terbuka:1
-Level 1 terkunci (semua level dalam chapter ini terkunci).
-Level 2 terkunci (semua level dalam chapter ini terkunci).
-Level 3 terkunci (semua level dalam chapter ini terkunci).
-Level 4 terkunci (semua level dalam chapter ini terkunci).
-Level 5 terkunci (semua level dalam chapter ini terkunci).
-Chapter terbuka:1
-Level yang terbuka:1
-Level 1 terkunci (semua level dalam chapter ini terkunci).
-Level 2 terkunci (semua level dalam chapter ini terkunci).
-Level 3 terkunci (semua level dalam chapter ini terkunci).
-Level 4 terkunci (semua level dalam chapter ini terkunci).
-Level 5 terkunci (semua level dalam chapter ini terkunci).
-Chapter terbuka:1
-Level yang terbuka:1
-Level 1 terkunci (semua level dalam chapter ini terkunci).
-Level 2 terkunci (semua level dalam chapter ini terkunci).
-Level 3 terkunci (semua level dalam chapter ini terkunci).
-Level 4 terkunci (semua level dalam chapter ini terkunci).
-Level 5 terkunci (semua level dalam chapter ini terkunci).
-Chapter terbuka:1
-Level yang terbuka:1
-Level 1 terkunci (semua level dalam chapter ini terkunci).
-Level 2 terkunci (semua level dalam chapter ini terkunci).
-Level 3 terkunci (semua level dalam chapter ini terkunci).
-Level 4 terkunci (semua level dalam chapter ini terkunci).
-Level 5 terkunci (semua level dalam chapter ini terkunci).
-Chapter terbuka:1
-Level yang terbuka:1
-Level 1 terkunci (semua level dalam chapter ini terkunci).
-Level 2 terkunci (semua level dalam chapter ini terkunci).
-Level 3 terkunci (semua level dalam chapter ini terkunci).
-Level 4 terkunci (semua level dalam chapter ini terkunci).
-Level 5 terkunci (semua level dalam chapter ini terkunci).
-Chapter terbuka:1
-Level yang terbuka:1
-Level 1 terkunci (semua level dalam chapter ini terkunci).
-Level 2 terkunci (semua level dalam chapter ini terkunci).
-Level 3 terkunci (semua level dalam chapter ini terkunci).
-Level 4 terkunci (semua level dalam chapter ini terkunci).
-Level 5 terkunci (semua level dalam chapter ini terkunci).
-Chapter terbuka:1
-Level yang terbuka:1
-Level 1 terkunci (semua level dalam chapter ini terkunci).
-Level 2 terkunci (semua level dalam chapter ini terkunci).
-Level 3 terkunci (semua level dalam chapter ini terkunci).
-Level 4 terkunci (semua level dalam chapter ini terkunci).
-Level 5 terkunci (semua level dalam chapter ini terkunci).
-Chapter terbuka:1
-Level yang terbuka:1
-Level 1 terkunci (semua level dalam chapter ini terkunci).
-Level 2 terkunci (semua level dalam chapter ini terkunci).
-Level 3 terkunci (semua level dalam chapter ini terkunci).
-Level 4 terkunci (semua level dalam chapter ini terkunci).
-Level 5 terkunci (semua level dalam chapter ini terkunci).
-Chapter terbuka:1
-Level yang terbuka:1
-Level 1 terkunci (semua level dalam chapter ini terkunci).
-Level 2 terkunci (semua level dalam chapter ini terkunci).
-Level 3 terkunci (semua level dalam chapter ini terkunci).
-Level 4 terkunci (semua level dalam chapter ini terkunci).
-Level 5 terkunci (semua level dalam chapter ini terkunci).
 AVX = 0 | AVX2 = 0 | AVX512 = 0 | FMA = 0 | NEON = 0 | ARM_FMA = 0 | METAL = 0 | F16C = 0 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 0 | SSSE3 = 0 | VSX = 0 | CUDA = 0 | COREML = 0 | OPENVINO = 0 | 
 whisper_init_from_buffer_with_params_no_state: loading model from buffer
 
@@ -123,20 +52,22 @@ whisper_init_state: compute buffer (cross)  =    4.01 MB
 
 whisper_init_state: compute buffer (decode) =   96.02 MB
 
-USER ERROR: Parameter "data.tree" is null.
-   at: get_tree (scene/main/node.h:446)
-USER WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
-If you want to set size, change the anchors or consider using set_deferred().
-   at: _set_size (scene/gui/control.cpp:1448)
 Label
 Text
-USER WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
-If you want to set size, change the anchors or consider using set_deferred().
-   at: _set_size (scene/gui/control.cpp:1448)
 Choice
-isi_command : [2, 1, false, "Good morning! How are you feeling today?", true, false]
 Isi dialog tombol dipilih : Good morning! How are you feeling today?
+isi_command : [2, 1, false, "Good morning! How are you feeling today?", true, false]
 USER WARNING: A Thread object is being destroyed without its completion having been realized.
 Please call wait_to_finish() on it to ensure correct cleanup.
    at: ~Thread (core/os/thread.cpp:105)
+isi_pesan : 'Good morning, how are you feeling today?'
+mulai hitung
+mau return
+Words comparison:
+Word different: Spoken 'morning,', Expected 'morning!'
+Word different: Spoken 'how', Expected 'How'
+Error percentage: 28.5714285714286%
+Score: 72
+Isi dialog tombol dipilih : Good morning! How are you feeling today?
+isi_command : [2, 1, false, "Good morning! How are you feeling today?", true, false]
 ERROR: 1 RID allocations of type 'N17RendererSceneCull6CameraE' were leaked at exit.

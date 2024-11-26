@@ -4,6 +4,7 @@ class_name ComparisonModule
 
 # List of valid commands
 var commands: Array
+		
 # Difficulty settings (thresholds, etc.) in a dictionary
 var difficulty_settings: Dictionary = {
 	"easy": {
@@ -20,10 +21,11 @@ var difficulty_settings: Dictionary = {
 	}
 }
 
-@export var LisenBus : Node
+#@export var LisenBus : Node
 
 signal kirim_result(pesan)
 signal kirim_nilai(nilai)
+signal kirim_banding_kata(kata_kata : Dictionary)
 
 #nyimpan hasil perbandingan
 var result := "" :
@@ -36,22 +38,23 @@ var result := "" :
 # Default difficulty level (can be changed dynamically)
 var difficulty_level: String = "easy"
 
-func _ready() -> void:
+#func _ready() -> void:
 	# Register commands and argument autocomplete for LimboConsole
 	#Dari 'LisenBus' ke 'LimboConsole' ga ngerti gunanya buat apa tapi biarin dulu
-	LisenBus.connect("recognized_string", on_speech_recognized)
-	LimboConsole.register_command(on_speech_recognized, "lisen_compare", "compare speech to commands")
-	LimboConsole.add_argument_autocomplete_source("lisen_compare", 1, func() -> Array[String]: return commands)
-	LimboConsole.register_command(set_difficulty_level, "lisen_set_difficulty_level", "set difficulty level")
-	LimboConsole.add_argument_autocomplete_source("lisen_set_difficulty_level", 1, func() -> Array: return difficulty_settings.keys())
+	#LisenBus.connect("recognized_string", on_speech_recognized)
+	#LimboConsole.register_command(on_speech_recognized, "lisen_compare", "compare speech to commands")
+	#LimboConsole.add_argument_autocomplete_source("lisen_compare", 1, func() -> Array[String]: return commands)
+	#LimboConsole.register_command(set_difficulty_level, "lisen_set_difficulty_level", "set difficulty level")
+	#LimboConsole.add_argument_autocomplete_source("lisen_set_difficulty_level", 1, func() -> Array: return difficulty_settings.keys())
 	
 	#'choice_selected' jika ingin commands hanya berisi dialog choice yang dipilih
 	#'quiestion_shown' jika ingin commands berisi semua dialog choice dalam chapter
-	Dialogic.get_subsystem("Choices").connect("choice_selected", handle_dialogic_signal)
+	#Dialogic.get_subsystem("Choices").connect("choice_selected", handle_dialogic_signal)
 	#Dialogic.get_subsystem("Choices").connect("question_shown", handle_dialogic_signal)
 	#TODO: Add connection to speech recognition module
 
-func handle_dialogic_signal(info: Dictionary):
+#func handle_dialogic_signal(info: Dictionary):
+func handle_new_commands(info: Dictionary):
 	
 	commands.clear()
 	for i in info:
@@ -75,7 +78,7 @@ func on_speech_recognized(speech: String) -> void:
 	if commands.has(speech):
 		var score: int = calculate_score(0.0)
 		print("Command recognized: " + speech)
-		LimboConsole.print_line("Score: " + str(score))
+		#LimboConsole.print_line("Score: " + str(score))
 		print("Score: " + str(score))
 		result = "Command recognized: " + speech + "\n" + "Score: " + str(score)
 		kirim_nilai.emit(score)
@@ -88,15 +91,15 @@ func on_speech_recognized(speech: String) -> void:
 			var score: int = calculate_score(error_percentage)
 
 			check_word_difference(speech, closest_command[0])
-			LimboConsole.print_line("Error percentage: " + str(error_percentage) + "%")
-			LimboConsole.print_line("Score: " + str(score))
+			#LimboConsole.print_line("Error percentage: " + str(error_percentage) + "%")
+			#LimboConsole.print_line("Score: " + str(score))
 			print("Error percentage: " + str(error_percentage) + "%")
 			print("Score: " + str(score))
 			Dialogic.get_subsystem("Choices").get_choice_button_node(closest_command[1]).emit_signal("pressed")
 			result = "Error percentage: " + str(error_percentage) + "%" + "\n" + "Score: " + str(score)
 			kirim_nilai.emit(score)
 		else:
-			LimboConsole.print_line("Command not recognized.")
+			#LimboConsole.print_line("Command not recognized.")
 			print("Command not recognized.")
 			result = "Command not recognized."
 
@@ -123,7 +126,6 @@ func find_closest_command(speech: String) -> Array:
 	if distance < min_distance:
 		min_distance = distance
 		closest_command = commands[3]
-		
 		closest_index = commands[1]
 			
 	var allowed_distance: float = difficulty_settings[difficulty_level]["allowed_distance"]
@@ -140,7 +142,7 @@ func levenshtein_distance(s1: String, s2: String) -> int:
 		matrix.append([i])
 	for j in range(1, len_s2 + 1):
 		matrix[0].append(j)
-	print("mulai copulate the maagtrix")
+	#print("mulai copulate the maagtrix")
 	# Populate the matrix
 	for i in range(1, len_s1 + 1):
 		for j in range(1, len_s2 + 1):
@@ -187,17 +189,25 @@ func calculate_score(error_percentage: float) -> int:
 func check_word_difference(spoken: String, command: String) -> void:
 	var spoken_words: PackedStringArray = spoken.split(" ")
 	var command_words: PackedStringArray = command.split(" ")
-
+	var hasil_banding_kata: Dictionary = {}
+	
 	LimboConsole.print_line("Words comparison:")
 	print("Words comparison:")
 	for i in range(min(spoken_words.size(), command_words.size())):
+		var beda = false
 		if spoken_words[i] != command_words[i]:
-			LimboConsole.print_line("Word different: Spoken '" + spoken_words[i] + "', Expected '" + command_words[i] + "'")
+			#LimboConsole.print_line("Word different: Spoken '" + spoken_words[i] + "', Expected '" + command_words[i] + "'")
 			print("Word different: Spoken '" + spoken_words[i] + "', Expected '" + command_words[i] + "'")
-
+			beda = true
+			#print(spoken_words[i].similarity(command_words[i]))
+		
+		hasil_banding_kata[command_words[i]]= { "Hasil" : spoken_words[i], "Beda" : beda }
+		
 	if spoken_words.size() != command_words.size():
-		LimboConsole.print_line("Word count mismatch, additional/missing words detected.")
+		#LimboConsole.print_line("Word count mismatch, additional/missing words detected.")
 		print("Word count mismatch, additional/missing words detected.")
+	
+	kirim_banding_kata.emit(hasil_banding_kata)
 
 
 #func _on_speech_to_text_transcribed_msg(is_partial, new_text):

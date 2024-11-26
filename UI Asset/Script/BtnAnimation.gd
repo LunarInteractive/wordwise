@@ -22,7 +22,7 @@ func _ready() -> void:
 	call_deferred("setup")
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if target == null:
 		Scene_transition.emit()
 		

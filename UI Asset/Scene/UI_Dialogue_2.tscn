@@ -91,15 +91,16 @@ atlas = ExtResource("11_doql6")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dp3lr"]
 
-[node name="CanvasLayer" type="CanvasLayer" node_paths=PackedStringArray("prompto", "result", "result_text", "lisen", "judul_level", "skor_akhir")]
+[node name="CanvasLayer" type="CanvasLayer" node_paths=PackedStringArray("prompto", "result", "lisen", "judul_level", "skor_akhir", "container_kata_per_kata")]
 layer = 4
 script = ExtResource("1_sknvp")
 prompto = NodePath("Dialog_Panel/MarginContainer/PanelPrompt")
 result = NodePath("Popup_Speech")
-result_text = NodePath("Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer/Label")
 lisen = NodePath("Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/comparison")
 judul_level = NodePath("Dialog_Panel/Judul Level/Label")
 skor_akhir = NodePath("PanelContainerSkor")
+nilai_lulus = 50
+container_kata_per_kata = NodePath("Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/TeksJawaban/ContainerKataPerKata")
 path = ExtResource("2_e2are")
 
 [node name="Dialog_Panel" type="Control" parent="."]
@@ -163,7 +164,10 @@ theme_override_font_sizes/font_size = 76
 text = "Your Word"
 horizontal_alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer"]
+[node name="TeksJawaban" type="PanelContainer" parent="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="KataTerucap" type="RichTextLabel" parent="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/TeksJawaban"]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 size_flags_vertical = 3
@@ -172,12 +176,59 @@ theme_override_fonts/normal_font = ExtResource("4_pv17d")
 theme_override_font_sizes/normal_font_size = 32
 script = ExtResource("6_sv08d")
 
+[node name="KataPerkata" type="RichTextLabel" parent="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/TeksJawaban"]
+self_modulate = Color(1, 1, 1, 0.560784)
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("5_1bvvl")
+theme_override_fonts/normal_font = ExtResource("4_pv17d")
+theme_override_font_sizes/normal_font_size = 32
+
+[node name="KataTerisi" type="RichTextLabel" parent="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/TeksJawaban/KataPerkata"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+offset_right = 925.0
+offset_bottom = 70.0
+size_flags_vertical = 3
+theme = ExtResource("5_1bvvl")
+theme_override_fonts/normal_font = ExtResource("4_pv17d")
+theme_override_font_sizes/normal_font_size = 32
+
+[node name="ContainerKataPerKata" type="HBoxContainer" parent="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/TeksJawaban"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/TeksJawaban/ContainerKataPerKata"]
+layout_mode = 2
+theme = ExtResource("5_1bvvl")
+theme_override_fonts/font = ExtResource("4_pv17d")
+theme_override_font_sizes/font_size = 76
+text = "Kalau"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/TeksJawaban/ContainerKataPerKata"]
+layout_mode = 2
+theme = ExtResource("5_1bvvl")
+theme_override_fonts/font = ExtResource("4_pv17d")
+theme_override_font_sizes/font_size = 76
+text = " ada"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/TeksJawaban/ContainerKataPerKata"]
+layout_mode = 2
+theme = ExtResource("5_1bvvl")
+theme_override_fonts/font = ExtResource("4_pv17d")
+theme_override_font_sizes/font_size = 76
+text = "!"
+horizontal_alignment = 1
+
 [node name="LISEN" type="Node" parent="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer"]
+process_mode = 4
 script = ExtResource("7_vexld")
 
-[node name="comparison" type="Node" parent="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer" node_paths=PackedStringArray("LisenBus")]
+[node name="comparison" type="Node" parent="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer"]
 script = ExtResource("8_kh4cp")
-LisenBus = NodePath("../LISEN")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer"]
 stream = SubResource("AudioStreamMicrophone_dycff")
@@ -188,8 +239,6 @@ language_model = ExtResource("9_pf5ng")
 script = ExtResource("10_cv352")
 LisenBus = NodePath("../LISEN")
 recording = false
-transcribe_interval = 0.7
-minimum_sentence_time = 5
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Dialog_Panel/MarginContainer/PanelPrompt"]
 layout_mode = 2
@@ -220,7 +269,7 @@ theme_override_fonts/font = ExtResource("12_8ak8n")
 theme_override_font_sizes/font_size = 75
 text = "Level 1"
 
-[node name="Popup_Speech" type="Control" parent="." node_paths=PackedStringArray("tombol_lanjut")]
+[node name="Popup_Speech" type="Control" parent="." node_paths=PackedStringArray("tombol_lanjut", "teks_hasil", "container_hasil_perkata")]
 visible = false
 layout_mode = 3
 anchors_preset = 15
@@ -230,6 +279,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("13_10lme")
 tombol_lanjut = NodePath("PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer/TextureButton3")
+teks_hasil = NodePath("PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer/Label")
+container_hasil_perkata = NodePath("PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer/ScrollContainer/HBoxContainer")
 
 [node name="PanelContainer" type="PanelContainer" parent="Popup_Speech"]
 layout_mode = 1
@@ -291,12 +342,23 @@ mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxEmpty_nfoc4")
 
 [node name="Label" type="Label" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer"]
+visible = false
 custom_minimum_size = Vector2(200, 160)
 layout_mode = 2
 theme = ExtResource("5_1bvvl")
 text = "lorem ipsum apalah gatau yang penting text biar panjang "
 horizontal_alignment = 1
 autowrap_mode = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer"]
+layout_mode = 2
+vertical_scroll_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+alignment = 1
 
 [node name="PanelContainer2" type="PanelContainer" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
 layout_mode = 2
@@ -796,10 +858,11 @@ theme = ExtResource("5_1bvvl")
 theme_override_font_sizes/font_size = 64
 text = "TES 3"
 
-[connection signal="kirim_teks" from="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/RichTextLabel" to="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/comparison" method="_on_rich_text_label_kirim_teks"]
+[connection signal="kirim_teks" from="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/TeksJawaban/KataTerucap" to="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/comparison" method="_on_rich_text_label_kirim_teks"]
+[connection signal="kirim_banding_kata" from="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/comparison" to="." method="_on_comparison_kirim_banding_kata"]
 [connection signal="kirim_nilai" from="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/comparison" to="." method="_on_comparison_kirim_nilai"]
 [connection signal="kirim_result" from="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/comparison" to="." method="_on_comparison_kirim_result"]
-[connection signal="transcribed_msg" from="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/SpeechToText" to="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/RichTextLabel" method="_on_speech_to_text_transcribed_msg"]
+[connection signal="transcribed_msg" from="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/SpeechToText" to="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/TeksJawaban/KataTerucap" method="_on_speech_to_text_transcribed_msg"]
 [connection signal="button_up" from="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer/TextureButton" to="." method="_on_texture_button_button_up"]
 [connection signal="button_up" from="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer/TextureButton2" to="." method="_on_texture_button_2_button_up"]
 [connection signal="button_up" from="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer/TextureButton3" to="." method="_on_texture_button_3_button_up"]

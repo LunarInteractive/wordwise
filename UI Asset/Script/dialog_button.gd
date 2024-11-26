@@ -11,7 +11,7 @@ var max_width : Array[float]
 @export var margin_y : float = 150.0
 var tipe_balon : Rect2
 
-signal munculkan_prompt
+#signal munculkan_prompt
 signal disable_other(pesan1, pesan2)
 signal disable_self 
 
@@ -41,12 +41,12 @@ func _on_button_toggled(toggled_on):
 	if toggled_on:
 		nine_patch_rect.region_rect = Rect2(1060.0, 10.0, 490.0, 240.0)
 		label.add_theme_color_override("font_color", Color.SANDY_BROWN)
-		emit_signal("munculkan_prompt", true)
+		#emit_signal("munculkan_prompt", true)
 		is_toggled = true
 		
 	else:
 		reset_panel_dialog()
-		emit_signal("munculkan_prompt", false)
+		#emit_signal("munculkan_prompt", false)
 		is_toggled = false
 		
 
