@@ -7,6 +7,7 @@ func _on_button_pause_pressed() -> void:
 
 
 func _on_button_home_pressed() -> void:
+	Dialogic.end_timeline()
 	get_tree().change_scene_to_file('res://Objects/Environtment/UI/menu.tscn')
 
 

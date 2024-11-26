@@ -53,7 +53,7 @@ func add_tween(property: String, value, seconds: float) -> void:
 	if target != null:
 		# Kill the previous tween if it exists
 		if tween != null:
-			tween.kill()
+			return
 
 		tween = get_tree().create_tween()
 		tween.tween_property(target, property, value, seconds)

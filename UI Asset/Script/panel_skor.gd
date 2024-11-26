@@ -53,8 +53,7 @@ func _on_persenan_berubah(persen_baru: int):
 	
 	uji_lulus(persen_baru)
 	tampil_total_error()
-	
-	data_level.level += 1
+
 
 
 func _on_button_retry_button_up():
