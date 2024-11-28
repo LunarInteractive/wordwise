@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cso0hm3f8di82"]
+[gd_scene load_steps=14 format=3 uid="uid://curtaxjf7a3l3"]
 
 [ext_resource type="Script" path="res://Objects/Environtment/UI/sign_up.gd" id="1_18mbg"]
 [ext_resource type="FontFile" uid="uid://1wjpkwwq28sm" path="res://UI Asset/Font/Pixel Monogram/monogram.ttf" id="1_vafbd"]

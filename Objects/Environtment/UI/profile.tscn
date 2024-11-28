@@ -215,15 +215,15 @@ text = "Add your class code"
 vertical_alignment = 1
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-visible = false
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
+alignment = 1
 
 [node name="Sign Out" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("10_5eywy")
 theme_override_font_sizes/font_size = 25
-text = "SIGN OUT"
+text = "SIGN IN"
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 visible = false

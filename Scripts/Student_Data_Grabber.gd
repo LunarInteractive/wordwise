@@ -1,4 +1,5 @@
 extends Node
+@onready var Nama_Siswa = ""
 
 # Encryption key for saving data
 const ENCRYPTION_KEY = "KodePasswordGameWordwise"  # Use a strong key (16 bytes for AES-128, 24 bytes for AES-192, 32 bytes for AES-256)
@@ -129,4 +130,4 @@ func send_data_to_api(url: String, data: Dictionary) -> void:
 
 # Entry point
 func _ready() -> void:
-	fetch_all_data("https://lunarinteractive.net/api/v1/students", "Broderick Bashirian")
+	fetch_all_data("https://lunarinteractive.net/api/v1/students", Nama_Siswa)
