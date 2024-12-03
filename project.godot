@@ -49,9 +49,16 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"Chapter 1_Level 1": "res://Resources/Timeline/Chapter 1_Level 1.dtl",
 "Text_timeline": "res://UI Asset/Testing/Text_timeline.dtl",
+"Timeline/chapter_10": "res://Resources/Timeline/chapter_10.dtl",
+"Timeline/chapter_3": "res://Resources/Timeline/chapter_3.dtl",
+"Timeline/chapter_4": "res://Resources/Timeline/chapter_4.dtl",
 "Timeline/chapter_5": "res://Resources/Timeline/chapter_5.dtl",
 "Timeline/chapter_6": "res://Resources/Timeline/chapter_6.dtl",
+"Timeline/chapter_7": "res://Resources/Timeline/chapter_7.dtl",
+"Timeline/chapter_8": "res://Resources/Timeline/chapter_8.dtl",
+"Timeline/chapter_9": "res://Resources/Timeline/chapter_9.dtl",
 "chapter_1": "res://Resources/Timeline/chapter_1.dtl",
 "chapter_10": "res://Scenes/Dialogue/chapter_10.dtl",
 "chapter_2": "res://Resources/Timeline/chapter_2.dtl",
@@ -108,7 +115,6 @@ text/autocolor_names=false
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=2
-window/size/always_on_top=true
 window/size/extend_to_title=true
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"

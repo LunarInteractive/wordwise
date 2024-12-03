@@ -211,8 +211,7 @@ func get_choice_button_node(button_index:int) -> DialogicNode_ChoiceButton:
 
 
 func _on_choice_selected(choice_info := {}) -> void:
-	
-	
+
 	if dialogic.paused or not _choice_blocker.is_stopped():
 		return
 

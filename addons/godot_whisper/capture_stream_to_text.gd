@@ -15,7 +15,7 @@ func _get_configuration_warnings():
 	else:
 		return []
 		
-@export var recording := true:
+@export var recording := false:
 	set(value):
 		recording = value
 		if recording:
@@ -47,15 +47,21 @@ func _get_configuration_warnings():
 @onready var _effect_capture := AudioServer.get_bus_effect(_idx, audio_effect_capture_index) as AudioEffectCapture
 
 var thread: Thread
+var thread_count : int = 0
 
 func _ready():
 	if Engine.is_editor_hint():
 		return
+		
 	if thread && thread.is_alive():
-		#recording = false
 		
 		thread.wait_to_finish()
 	
+	if thread && thread_count == 0:
+		
+		thread.wait_to_finish()
+		thread_count += 1
+		
 	thread = Thread.new()
 	_effect_capture.clear_buffer()
 	thread.start(transcribe_thread)
@@ -64,17 +70,21 @@ var _accumulated_frames: PackedVector2Array
 
 func transcribe_thread():
 	var last_token_count := 0
+	_accumulated_frames = []
 	while recording:
+		
 		var start_time = Time.get_ticks_msec()
+		
 		_accumulated_frames.append_array(_effect_capture.get_buffer(_effect_capture.get_frames_available()))
+		
 		var resampled = resample(_accumulated_frames, SpeechToText.SRC_SINC_FASTEST)
 		if resampled.size() <= 0:
 			OS.delay_msec(transcribe_interval * 1000)
 			continue
 		var no_activity := voice_activity_detection(resampled)
-		#if no_activity:
+		if no_activity:
 			#print("no activity")
-			#continue
+			continue
 		var total_time: float = (resampled.size() as float) / SpeechToText.SPEECH_SETTING_SAMPLE_RATE
 		var audio_ctx: int = clampf(total_time * 1500 / 30 + 128,0,1500)
 		#var audio_ctx: int = total_time * 1500 / 30 + 128
@@ -84,10 +94,15 @@ func transcribe_thread():
 		#Failed to process audio, returned -5"
 		# nge-clamp nilai audio_ctx di 1500 juga bikin behaviornya lebih ga stabil
 		var tokens := transcribe(resampled, initial_prompt, audio_ctx)
+		
 		if tokens.is_empty():
 			push_warning("No tokens generated")
 			return
+		
 		var full_text: String = tokens.pop_front()
+		
+		
+		
 		var mix_rate: int = ProjectSettings.get_setting("audio/driver/mix_rate")
 		var finish_sentence = false
 		if total_time > maximum_sentence_time:
@@ -102,11 +117,13 @@ func transcribe_thread():
 			finish_sentence = false
 		var time_processing = (Time.get_ticks_msec() - start_time)
 		if no_activity:
-			#_accumulated_frames = []
+			_accumulated_frames = []
 			continue
 		if finish_sentence:
 			_accumulated_frames = _accumulated_frames.slice(_accumulated_frames.size() - (0.2 * mix_rate))
 		#if !no_activity:
+		#print("full_text:" + full_text)
+		
 		call_deferred("emit_signal", "transcribed_msg", finish_sentence, full_text)
 		
 		#LisenBus.call_deferred("emit_signal", "recognized_string", full_text)
@@ -118,6 +135,8 @@ func transcribe_thread():
 		var interval_sleep = transcribe_interval * 1000 - time_processing
 		if interval_sleep > 0:
 			OS.delay_msec(interval_sleep)
+		
+		
 
 func _has_terminating_characters(message: String, characters: String):
 	for character in characters:

@@ -1,0 +1,166 @@
+Godot Engine v4.3.stable.official.77dcf97d8 - https://godotengine.org
+Vulkan 1.3.289 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 3050 Laptop GPU
+
+AVX = 0 | AVX2 = 0 | AVX512 = 0 | FMA = 0 | NEON = 0 | ARM_FMA = 0 | METAL = 0 | F16C = 0 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 0 | SSSE3 = 0 | VSX = 0 | CUDA = 0 | COREML = 0 | OPENVINO = 0 | 
+whisper_init_from_buffer_with_params_no_state: loading model from buffer
+
+whisper_model_load: loading model
+
+whisper_model_load: n_vocab       = 51864
+
+whisper_model_load: n_audio_ctx   = 1500
+
+whisper_model_load: n_audio_state = 384
+
+whisper_model_load: n_audio_head  = 6
+
+whisper_model_load: n_audio_layer = 4
+
+whisper_model_load: n_text_ctx    = 448
+
+whisper_model_load: n_text_state  = 384
+
+whisper_model_load: n_text_head   = 6
+
+whisper_model_load: n_text_layer  = 4
+
+whisper_model_load: n_mels        = 80
+
+whisper_model_load: ftype         = 1
+
+whisper_model_load: qntvr         = 0
+
+whisper_model_load: type          = 1 (tiny)
+
+whisper_model_load: adding 1607 extra tokens
+
+whisper_model_load: n_langs       = 99
+
+whisper_model_load:      CPU buffer size =    77.18 MB
+
+whisper_model_load: model size    =   77.11 MB
+
+whisper_init_state: kv self size  =    8.26 MB
+
+whisper_init_state: kv cross size =    9.22 MB
+
+whisper_init_state: compute buffer (conv)   =   12.17 MB
+
+whisper_init_state: compute buffer (encode) =   64.92 MB
+
+whisper_init_state: compute buffer (cross)  =    4.01 MB
+
+whisper_init_state: compute buffer (decode) =   96.02 MB
+
+is playing? false
+is ada? <Thread#-9223371954612861016>
+Isi dialog tombol dipilih : Good morning! How you are today?
+pesan dikirim ke comparison: []
+Command not recognized.
+pesan dikirim ke comparison: [ up]
+Command not recognized.
+pesan dikirim ke comparison: [ up]
+Command not recognized.
+pesan dikirim ke comparison: [ I'm going to go to the next one.]
+Command not recognized.
+pesan dikirim ke comparison: [ I'm going to go to the next one. I'm going to go to]
+Command not recognized.
+pesan dikirim ke comparison: [ Good morning how you are]
+Words comparison:
+Spoken 'Good', Expected 'Good'
+Spoken 'morning', Expected 'morning!'
+Spoken 'how', Expected 'How'
+Spoken 'you', Expected 'you'
+Spoken 'are', Expected 'are'
+Spoken 'missing', Expected 'today?'
+Word count mismatch, additional/missing words detected.
+Error percentage: 16.67%
+Score: 84
+hasil isinya apa aja: { "Good": { "Hasil": "Good", "Beda": false }, "morning!": { "Hasil": "morning", "Beda": false }, "How": { "Hasil": "how", "Beda": false }, "you": { "Hasil": "you", "Beda": false }, "are": { "Hasil": "are", "Beda": false }, "today?": { "Hasil": "missing", "Beda": true } }
+choices isinya apa:Good morning! How you are today?
+Isi dialog tombol dipilih : Good morning! How you are today?
+pesan dikirim ke comparison: []
+Command not recognized.
+pesan dikirim ke comparison: [ .]
+Command not recognized.
+pesan dikirim ke comparison: [ .]
+Command not recognized.
+pesan dikirim ke comparison: [ Good]
+Command not recognized.
+pesan dikirim ke comparison: [ Good morning, Howard.]
+Words comparison:
+Spoken 'Good', Expected 'Good'
+Spoken 'morning,', Expected 'morning!'
+Spoken 'Howard.', Expected 'How'
+Spoken 'missing', Expected 'you'
+Spoken 'missing', Expected 'are'
+Spoken 'missing', Expected 'today?'
+Word count mismatch, additional/missing words detected.
+Error percentage: 66.67%
+Score: 34
+hasil isinya apa aja: { "Good": { "Hasil": "Good", "Beda": false }, "morning!": { "Hasil": "morning,", "Beda": false }, "How": { "Hasil": "Howard.", "Beda": true }, "you": { "Hasil": "missing", "Beda": true }, "are": { "Hasil": "missing", "Beda": true }, "today?": { "Hasil": "missing", "Beda": true } }
+choices isinya apa:Good morning! How you are today?
+Isi dialog tombol dipilih : Good morning! How you are today?
+pesan dikirim ke comparison: []
+Command not recognized.
+pesan dikirim ke comparison: [ Okay.]
+Command not recognized.
+pesan dikirim ke comparison: [ Thank you.]
+Command not recognized.
+pesan dikirim ke comparison: [Good morning, Helen]
+Words comparison:
+Spoken 'Good', Expected 'Good'
+Spoken 'morning,', Expected 'morning!'
+Spoken 'Helen', Expected 'How'
+Spoken 'missing', Expected 'you'
+Spoken 'missing', Expected 'are'
+Spoken 'missing', Expected 'today?'
+Word count mismatch, additional/missing words detected.
+Error percentage: 66.67%
+Score: 34
+sabar
+hasil isinya apa aja: { "Good": { "Hasil": "Good", "Beda": false }, "morning!": { "Hasil": "morning,", "Beda": false }, "How": { "Hasil": "Helen", "Beda": true }, "you": { "Hasil": "missing", "Beda": true }, "are": { "Hasil": "missing", "Beda": true }, "today?": { "Hasil": "missing", "Beda": true } }
+choices isinya apa:Good morning! How you are today?
+Isi dialog tombol dipilih : Good morning! How you are today?
+pesan dikirim ke comparison: []
+Command not recognized.
+pesan dikirim ke comparison: [ Okay.]
+Command not recognized.
+pesan dikirim ke comparison: [ .]
+Command not recognized.
+pesan dikirim ke comparison: [Good night]
+Command not recognized.
+pesan dikirim ke comparison: [ Good morning, how are you today?]
+Words comparison:
+Spoken 'Good', Expected 'Good'
+Spoken 'morning,', Expected 'morning!'
+Spoken 'how', Expected 'How'
+Spoken 'are', Expected 'you'
+Spoken 'you', Expected 'are'
+Spoken 'today?', Expected 'today?'
+Error percentage: 33.33%
+Score: 67
+hasil isinya apa aja: { "Good": { "Hasil": "Good", "Beda": false }, "morning!": { "Hasil": "morning,", "Beda": false }, "How": { "Hasil": "how", "Beda": false }, "you": { "Hasil": "are", "Beda": true }, "are": { "Hasil": "you", "Beda": true }, "today?": { "Hasil": "today?", "Beda": false } }
+choices isinya apa:Good morning! How you are today?
+Isi dialog tombol dipilih : Good morning! How you are today?
+pesan dikirim ke comparison: []
+Command not recognized.
+pesan dikirim ke comparison: [ . . . . . . . . . . . . . . . .]
+Command not recognized.
+pesan dikirim ke comparison: [ . . . . . . . . . . . . . . . .]
+Command not recognized.
+pesan dikirim ke comparison: [ How are you today?]
+Words comparison:
+ARGH
+Spoken 'missing', Expected 'Good'
+Spoken 'missing', Expected 'morning!'
+Spoken 'How', Expected 'How'
+Spoken 'are', Expected 'you'
+Spoken 'you', Expected 'are'
+Spoken 'today?', Expected 'today?'
+Word count mismatch, additional/missing words detected.
+Error percentage: 100%
+Score: 0
+hasil isinya apa aja: { "Good": { "Hasil": "missing", "Beda": true }, "morning!": { "Hasil": "missing", "Beda": true }, "How": { "Hasil": "How", "Beda": false }, "you": { "Hasil": "are", "Beda": true }, "are": { "Hasil": "you", "Beda": true }, "today?": { "Hasil": "today?", "Beda": false } }
+choices isinya apa:Good morning! How you are today?
+ERROR: 1 RID allocations of type 'N17RendererSceneCull6CameraE' were leaked at exit.

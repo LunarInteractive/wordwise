@@ -1,0 +1,412 @@
+Godot Engine v4.3.stable.official.77dcf97d8 - https://godotengine.org
+Vulkan 1.3.289 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 3050 Laptop GPU
+
+AVX = 0 | AVX2 = 0 | AVX512 = 0 | FMA = 0 | NEON = 0 | ARM_FMA = 0 | METAL = 0 | F16C = 0 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 0 | SSSE3 = 0 | VSX = 0 | CUDA = 0 | COREML = 0 | OPENVINO = 0 | 
+whisper_init_from_buffer_with_params_no_state: loading model from buffer
+
+whisper_model_load: loading model
+
+whisper_model_load: n_vocab       = 51864
+
+whisper_model_load: n_audio_ctx   = 1500
+
+whisper_model_load: n_audio_state = 384
+
+whisper_model_load: n_audio_head  = 6
+
+whisper_model_load: n_audio_layer = 4
+
+whisper_model_load: n_text_ctx    = 448
+
+whisper_model_load: n_text_state  = 384
+
+whisper_model_load: n_text_head   = 6
+
+whisper_model_load: n_text_layer  = 4
+
+whisper_model_load: n_mels        = 80
+
+whisper_model_load: ftype         = 1
+
+whisper_model_load: qntvr         = 0
+
+whisper_model_load: type          = 1 (tiny)
+
+whisper_model_load: adding 1607 extra tokens
+
+whisper_model_load: n_langs       = 99
+
+whisper_model_load:      CPU buffer size =    77.18 MB
+
+whisper_model_load: model size    =   77.11 MB
+
+whisper_init_state: kv self size  =    8.26 MB
+
+whisper_init_state: kv cross size =    9.22 MB
+
+whisper_init_state: compute buffer (conv)   =   12.17 MB
+
+whisper_init_state: compute buffer (encode) =   64.92 MB
+
+whisper_init_state: compute buffer (cross)  =    4.01 MB
+
+whisper_init_state: compute buffer (decode) =   96.02 MB
+
+is playing? false
+is ada? <Thread#-9223371954612861016>
+Isi dialog tombol dipilih : Good morning! How are you feeling today?
+pesan dikirim ke comparison: []
+Command not recognized.
+pesan dikirim ke comparison: [Good morning, Harais]
+Command not recognized.
+pesan dikirim ke comparison: [ Good morning, how are you feeling today?]
+Words comparison:
+Spoken 'Good', Expected 'Good'
+Spoken 'morning,', Expected 'morning!'
+Spoken 'how', Expected 'How'
+Spoken 'are', Expected 'are'
+Spoken 'you', Expected 'you'
+Spoken 'feeling', Expected 'feeling'
+Spoken 'today?', Expected 'today?'
+Error percentage: 0%
+Score: 100
+hasil isinya apa aja: { "Good": { "Hasil": "Good", "Beda": false }, "morning!": { "Hasil": "morning,", "Beda": false }, "How": { "Hasil": "how", "Beda": false }, "are": { "Hasil": "are", "Beda": false }, "you": { "Hasil": "you", "Beda": false }, "feeling": { "Hasil": "feeling", "Beda": false }, "today?": { "Hasil": "today?", "Beda": false } }
+choices isinya apa:Good morning! How are you feeling today?
+Isi dialog tombol dipilih : We need to finish everything by next Friday
+pesan dikirim ke comparison: []
+Command not recognized.
+pesan dikirim ke comparison: [ We need to finish everything by]
+Words comparison:
+Spoken 'We', Expected 'We'
+Spoken 'need', Expected 'need'
+Spoken 'to', Expected 'to'
+Spoken 'finish', Expected 'finish'
+Spoken 'everything', Expected 'everything'
+Spoken 'by', Expected 'by'
+Spoken 'missing', Expected 'next'
+Spoken 'missing', Expected 'Friday'
+Word count mismatch, additional/missing words detected.
+Error percentage: 25%
+Score: 75
+hasil isinya apa aja: { "We": { "Hasil": "We", "Beda": false }, "need": { "Hasil": "need", "Beda": false }, "to": { "Hasil": "to", "Beda": false }, "finish": { "Hasil": "finish", "Beda": false }, "everything": { "Hasil": "everything", "Beda": false }, "by": { "Hasil": "by", "Beda": false }, "next": { "Hasil": "missing", "Beda": true }, "Friday": { "Hasil": "missing", "Beda": true } }
+choices isinya apa:We need to finish everything by next Friday
+Isi dialog tombol dipilih : You're welcome! Let me know if you needing anything else.
+pesan dikirim ke comparison: []
+Command not recognized.
+pesan dikirim ke comparison: [ Your welcome, let me know.]
+Command not recognized.
+pesan dikirim ke comparison: [ You are welcome, let me know if you really need me.]
+Command not recognized.
+pesan dikirim ke comparison: [ You're welcome. Let me know if you really need anything else.]
+Words comparison:
+Spoken 'You're', Expected 'You're'
+Spoken 'welcome.', Expected 'welcome!'
+Spoken 'Let', Expected 'Let'
+Spoken 'me', Expected 'me'
+Spoken 'know', Expected 'know'
+Spoken 'if', Expected 'if'
+Spoken 'you', Expected 'you'
+Spoken 'really', Expected 'needing'
+Spoken 'need', Expected 'anything'
+Spoken 'anything', Expected 'else.'
+Word count mismatch, additional/missing words detected.
+Error percentage: 36.36%
+Score: 64
+hasil isinya apa aja: { "You\'re": { "Hasil": "You\'re", "Beda": false }, "welcome!": { "Hasil": "welcome.", "Beda": false }, "Let": { "Hasil": "Let", "Beda": false }, "me": { "Hasil": "me", "Beda": false }, "know": { "Hasil": "know", "Beda": false }, "if": { "Hasil": "if", "Beda": false }, "you": { "Hasil": "you", "Beda": false }, "needing": { "Hasil": "really", "Beda": true }, "anything": { "Hasil": "need", "Beda": true }, "else.": { "Hasil": "anything", "Beda": true } }
+choices isinya apa:You're welcome! Let me know if you needing anything else.
+AVX = 0 | AVX2 = 0 | AVX512 = 0 | FMA = 0 | NEON = 0 | ARM_FMA = 0 | METAL = 0 | F16C = 0 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 0 | SSSE3 = 0 | VSX = 0 | CUDA = 0 | COREML = 0 | OPENVINO = 0 | 
+whisper_init_from_buffer_with_params_no_state: loading model from buffer
+
+whisper_model_load: loading model
+
+whisper_model_load: n_vocab       = 51864
+
+whisper_model_load: n_audio_ctx   = 1500
+
+whisper_model_load: n_audio_state = 384
+
+whisper_model_load: n_audio_head  = 6
+
+whisper_model_load: n_audio_layer = 4
+
+whisper_model_load: n_text_ctx    = 448
+
+whisper_model_load: n_text_state  = 384
+
+whisper_model_load: n_text_head   = 6
+
+whisper_model_load: n_text_layer  = 4
+
+whisper_model_load: n_mels        = 80
+
+whisper_model_load: ftype         = 1
+
+whisper_model_load: qntvr         = 0
+
+whisper_model_load: type          = 1 (tiny)
+
+whisper_model_load: adding 1607 extra tokens
+
+whisper_model_load: n_langs       = 99
+
+whisper_model_load:      CPU buffer size =    77.18 MB
+
+whisper_model_load: model size    =   77.11 MB
+
+whisper_init_state: kv self size  =    8.26 MB
+
+whisper_init_state: kv cross size =    9.22 MB
+
+whisper_init_state: compute buffer (conv)   =   12.17 MB
+
+whisper_init_state: compute buffer (encode) =   64.92 MB
+
+whisper_init_state: compute buffer (cross)  =    4.01 MB
+
+whisper_init_state: compute buffer (decode) =   96.02 MB
+
+is playing? false
+is ada? <Thread#-9223371855644064236>
+Isi dialog tombol dipilih : Good morning everyone! How are you today?
+pesan dikirim ke comparison: []
+Command not recognized.
+pesan dikirim ke comparison: [ Good morning, everyone.]
+Words comparison:
+Spoken 'Good', Expected 'Good'
+Spoken 'morning,', Expected 'morning'
+Spoken 'everyone.', Expected 'everyone!'
+Spoken 'missing', Expected 'How'
+Spoken 'missing', Expected 'are'
+Spoken 'missing', Expected 'you'
+Spoken 'missing', Expected 'today?'
+Word count mismatch, additional/missing words detected.
+Error percentage: 57.14%
+Score: 43
+hasil isinya apa aja: { "Good": { "Hasil": "Good", "Beda": false }, "morning": { "Hasil": "morning,", "Beda": false }, "everyone!": { "Hasil": "everyone.", "Beda": false }, "How": { "Hasil": "missing", "Beda": true }, "are": { "Hasil": "missing", "Beda": true }, "you": { "Hasil": "missing", "Beda": true }, "today?": { "Hasil": "missing", "Beda": true } }
+choices isinya apa:Good morning everyone! How are you today?
+Isi dialog tombol dipilih : Good morning everyone! How are you today?
+pesan dikirim ke comparison: []
+Command not recognized.
+pesan dikirim ke comparison: []
+Command not recognized.
+pesan dikirim ke comparison: [Good morning]
+Command not recognized.
+pesan dikirim ke comparison: [ Good morning everyone, how are you today?]
+Words comparison:
+Spoken 'Good', Expected 'Good'
+Spoken 'morning', Expected 'morning'
+Spoken 'everyone,', Expected 'everyone!'
+Spoken 'how', Expected 'How'
+Spoken 'are', Expected 'are'
+Spoken 'you', Expected 'you'
+Spoken 'today?', Expected 'today?'
+Error percentage: 0%
+Score: 100
+hasil isinya apa aja: { "Good": { "Hasil": "Good", "Beda": false }, "morning": { "Hasil": "morning", "Beda": false }, "everyone!": { "Hasil": "everyone,", "Beda": false }, "How": { "Hasil": "how", "Beda": false }, "are": { "Hasil": "are", "Beda": false }, "you": { "Hasil": "you", "Beda": false }, "today?": { "Hasil": "today?", "Beda": false } }
+choices isinya apa:Good morning everyone! How are you today?
+Isi dialog tombol dipilih : We need to finish everything by next Friday
+pesan dikirim ke comparison: []
+Command not recognized.
+pesan dikirim ke comparison: [ We need to finish and break.]
+Command not recognized.
+pesan dikirim ke comparison: [ We need to finish everything by next Friday.]
+Words comparison:
+Spoken 'We', Expected 'We'
+Spoken 'need', Expected 'need'
+Spoken 'to', Expected 'to'
+Spoken 'finish', Expected 'finish'
+Spoken 'everything', Expected 'everything'
+Spoken 'by', Expected 'by'
+Spoken 'next', Expected 'next'
+Spoken 'Friday.', Expected 'Friday'
+Error percentage: 0%
+Score: 100
+hasil isinya apa aja: { "We": { "Hasil": "We", "Beda": false }, "need": { "Hasil": "need", "Beda": false }, "to": { "Hasil": "to", "Beda": false }, "finish": { "Hasil": "finish", "Beda": false }, "everything": { "Hasil": "everything", "Beda": false }, "by": { "Hasil": "by", "Beda": false }, "next": { "Hasil": "next", "Beda": false }, "Friday": { "Hasil": "Friday.", "Beda": false } }
+choices isinya apa:We need to finish everything by next Friday
+Isi dialog tombol dipilih : You're welcome! Just let me know if you need anything else.
+pesan dikirim ke comparison: []
+Command not recognized.
+pesan dikirim ke comparison: [You are welcome this, let you]
+Command not recognized.
+pesan dikirim ke comparison: [ You are welcome. Just let me know if you need...]
+Words comparison:
+ARGH
+Spoken 'missing', Expected 'You're'
+Spoken 'missing', Expected 'welcome!'
+Spoken 'missing', Expected 'Just'
+Spoken 'missing', Expected 'let'
+Spoken 'missing', Expected 'me'
+Spoken 'missing', Expected 'know'
+Spoken 'missing', Expected 'if'
+Spoken 'You', Expected 'you'
+Spoken 'are', Expected 'need'
+Spoken 'welcome.', Expected 'anything'
+Spoken 'Just', Expected 'else.'
+Word count mismatch, additional/missing words detected.
+Error percentage: 100%
+Score: 0
+hasil isinya apa aja: { "You\'re": { "Hasil": "missing", "Beda": true }, "welcome!": { "Hasil": "missing", "Beda": true }, "Just": { "Hasil": "missing", "Beda": true }, "let": { "Hasil": "missing", "Beda": true }, "me": { "Hasil": "missing", "Beda": true }, "know": { "Hasil": "missing", "Beda": true }, "if": { "Hasil": "missing", "Beda": true }, "you": { "Hasil": "You", "Beda": false }, "need": { "Hasil": "are", "Beda": true }, "anything": { "Hasil": "welcome.", "Beda": true }, "else.": { "Hasil": "Just", "Beda": true } }
+choices isinya apa:You're welcome! Just let me know if you need anything else.
+Isi dialog tombol dipilih : You're welcome! Just let me know if you need anything else.
+pesan dikirim ke comparison: []
+Command not recognized.
+pesan dikirim ke comparison: [ your will come. Your will come. Your will come. Your will come.]
+Command not recognized.
+pesan dikirim ke comparison: [ your welcome just let me know.]
+Command not recognized.
+pesan dikirim ke comparison: [ your welcome just let me know the unit as]
+Command not recognized.
+pesan dikirim ke comparison: [ your welcome just let me know if you need anything else]
+Words comparison:
+ARGH
+Spoken 'missing', Expected 'You're'
+Spoken 'welcome', Expected 'welcome!'
+Spoken 'just', Expected 'Just'
+Spoken 'let', Expected 'let'
+Spoken 'me', Expected 'me'
+Spoken 'know', Expected 'know'
+Spoken 'if', Expected 'if'
+Spoken 'you', Expected 'you'
+Spoken 'need', Expected 'need'
+Spoken 'anything', Expected 'anything'
+Spoken 'else', Expected 'else.'
+Error percentage: 9.09%
+Score: 91
+hasil isinya apa aja: { "You\'re": { "Hasil": "missing", "Beda": true }, "welcome!": { "Hasil": "welcome", "Beda": false }, "Just": { "Hasil": "just", "Beda": false }, "let": { "Hasil": "let", "Beda": false }, "me": { "Hasil": "me", "Beda": false }, "know": { "Hasil": "know", "Beda": false }, "if": { "Hasil": "if", "Beda": false }, "you": { "Hasil": "you", "Beda": false }, "need": { "Hasil": "need", "Beda": false }, "anything": { "Hasil": "anything", "Beda": false }, "else.": { "Hasil": "else", "Beda": false } }
+choices isinya apa:You're welcome! Just let me know if you need anything else.
+Isi dialog tombol dipilih : You're welcome! Just let me know if you need anything else.
+pesan dikirim ke comparison: []
+Command not recognized.
+Isi dialog tombol dipilih : You're welcome! Let me know if you needing anything else.
+pesan dikirim ke comparison: [ Okay.]
+Command not recognized.
+pesan dikirim ke comparison: [You are welcome]
+Command not recognized.
+pesan dikirim ke comparison: [ You are welcome. Let me know if you want to speak. You are welcome]
+Command not recognized.
+pesan dikirim ke comparison: [ You are welcome. Let me know if you need an error.]
+Words comparison:
+ARGH
+Spoken 'missing', Expected 'You're'
+Spoken 'missing', Expected 'welcome!'
+Spoken 'missing', Expected 'Let'
+Spoken 'missing', Expected 'me'
+Spoken 'missing', Expected 'know'
+Spoken 'missing', Expected 'if'
+Spoken 'You', Expected 'you'
+Spoken 'are', Expected 'needing'
+Spoken 'welcome.', Expected 'anything'
+Spoken 'Let', Expected 'else.'
+Word count mismatch, additional/missing words detected.
+Error percentage: 100%
+Score: 0
+hasil isinya apa aja: { "You\'re": { "Hasil": "missing", "Beda": true }, "welcome!": { "Hasil": "missing", "Beda": true }, "Let": { "Hasil": "missing", "Beda": true }, "me": { "Hasil": "missing", "Beda": true }, "know": { "Hasil": "missing", "Beda": true }, "if": { "Hasil": "missing", "Beda": true }, "you": { "Hasil": "You", "Beda": false }, "needing": { "Hasil": "are", "Beda": true }, "anything": { "Hasil": "welcome.", "Beda": true }, "else.": { "Hasil": "Let", "Beda": true } }
+choices isinya apa:You're welcome! Let me know if you needing anything else.
+Isi dialog tombol dipilih : You're welcome! Let me know if you needing anything else.
+pesan dikirim ke comparison: []
+Command not recognized.
+pesan dikirim ke comparison: [ your relative, your relative, your relative, your relative, your relative, your]
+Command not recognized.
+pesan dikirim ke comparison: [ You are welcome, let me know.]
+Command not recognized.
+pesan dikirim ke comparison: [ You are welcome, let me know if you need it.]
+Words comparison:
+ARGH
+Spoken 'missing', Expected 'You're'
+Spoken 'missing', Expected 'welcome!'
+Spoken 'missing', Expected 'Let'
+Spoken 'missing', Expected 'me'
+Spoken 'missing', Expected 'know'
+Spoken 'missing', Expected 'if'
+Spoken 'You', Expected 'you'
+Spoken 'are', Expected 'needing'
+Spoken 'welcome,', Expected 'anything'
+Spoken 'let', Expected 'else.'
+Error percentage: 100%
+Score: 0
+hasil isinya apa aja: { "You\'re": { "Hasil": "missing", "Beda": true }, "welcome!": { "Hasil": "missing", "Beda": true }, "Let": { "Hasil": "missing", "Beda": true }, "me": { "Hasil": "missing", "Beda": true }, "know": { "Hasil": "missing", "Beda": true }, "if": { "Hasil": "missing", "Beda": true }, "you": { "Hasil": "You", "Beda": false }, "needing": { "Hasil": "are", "Beda": true }, "anything": { "Hasil": "welcome,", "Beda": true }, "else.": { "Hasil": "let", "Beda": true } }
+choices isinya apa:You're welcome! Let me know if you needing anything else.
+Isi dialog tombol dipilih : You're welcome! Let me know if you needing anything else.
+pesan dikirim ke comparison: []
+Command not recognized.
+Isi dialog tombol dipilih : You're welcome! Let me know if you need anything else.
+pesan dikirim ke comparison: [ Thank you.]
+Command not recognized.
+pesan dikirim ke comparison: [Your will come]
+Command not recognized.
+pesan dikirim ke comparison: [ You will come, let me know if you need to come.]
+Words comparison:
+ARGH
+Spoken 'missing', Expected 'You're'
+Spoken 'missing', Expected 'welcome!'
+Spoken 'missing', Expected 'Let'
+Spoken 'missing', Expected 'me'
+Spoken 'missing', Expected 'know'
+Spoken 'missing', Expected 'if'
+Spoken 'You', Expected 'you'
+Spoken 'will', Expected 'need'
+Spoken 'come,', Expected 'anything'
+Spoken 'let', Expected 'else.'
+Word count mismatch, additional/missing words detected.
+Error percentage: 100%
+Score: 0
+hasil isinya apa aja: { "You\'re": { "Hasil": "missing", "Beda": true }, "welcome!": { "Hasil": "missing", "Beda": true }, "Let": { "Hasil": "missing", "Beda": true }, "me": { "Hasil": "missing", "Beda": true }, "know": { "Hasil": "missing", "Beda": true }, "if": { "Hasil": "missing", "Beda": true }, "you": { "Hasil": "You", "Beda": false }, "need": { "Hasil": "will", "Beda": true }, "anything": { "Hasil": "come,", "Beda": true }, "else.": { "Hasil": "let", "Beda": true } }
+choices isinya apa:You're welcome! Let me know if you need anything else.
+Isi dialog tombol dipilih : You're welcome! Let me know if you need anything else.
+pesan dikirim ke comparison: []
+Command not recognized.
+pesan dikirim ke comparison: [ .]
+Command not recognized.
+pesan dikirim ke comparison: [ Thank you.]
+Command not recognized.
+pesan dikirim ke comparison: [ I]
+Command not recognized.
+Isi dialog tombol dipilih : You're welcome! Let me know if you needing anything else.
+pesan dikirim ke comparison: [ . . . . . . . . . . . . . . . .]
+Command not recognized.
+pesan dikirim ke comparison: [ Let me know if you need]
+Command not recognized.
+pesan dikirim ke comparison: [ Let me know if you need anything else.]
+Words comparison:
+ARGH
+Spoken 'missing', Expected 'You're'
+Spoken 'missing', Expected 'welcome!'
+Spoken 'Let', Expected 'Let'
+Spoken 'me', Expected 'me'
+Spoken 'know', Expected 'know'
+Spoken 'if', Expected 'if'
+Spoken 'you', Expected 'you'
+Spoken 'need', Expected 'needing'
+Spoken 'anything', Expected 'anything'
+Spoken 'else.', Expected 'else.'
+Word count mismatch, additional/missing words detected.
+Error percentage: 100%
+Score: 0
+hasil isinya apa aja: { "You\'re": { "Hasil": "missing", "Beda": true }, "welcome!": { "Hasil": "missing", "Beda": true }, "Let": { "Hasil": "Let", "Beda": false }, "me": { "Hasil": "me", "Beda": false }, "know": { "Hasil": "know", "Beda": false }, "if": { "Hasil": "if", "Beda": false }, "you": { "Hasil": "you", "Beda": false }, "needing": { "Hasil": "need", "Beda": true }, "anything": { "Hasil": "anything", "Beda": false }, "else.": { "Hasil": "else.", "Beda": false } }
+choices isinya apa:You're welcome! Let me know if you needing anything else.
+Isi dialog tombol dipilih : You're welcome! Let me know if you needing anything else.
+pesan dikirim ke comparison: []
+Command not recognized.
+pesan dikirim ke comparison: [ your well, your well, your well, your well, your well, your]
+Command not recognized.
+pesan dikirim ke comparison: [ You are welcome. Let me know.]
+Command not recognized.
+pesan dikirim ke comparison: [ You are welcome, let me know if you need.]
+Command not recognized.
+pesan dikirim ke comparison: [ You're welcome, let me know if you need anything else.]
+Words comparison:
+Spoken 'You're', Expected 'You're'
+Spoken 'welcome,', Expected 'welcome!'
+Spoken 'let', Expected 'Let'
+Spoken 'me', Expected 'me'
+Spoken 'know', Expected 'know'
+Spoken 'if', Expected 'if'
+Spoken 'you', Expected 'you'
+Spoken 'need', Expected 'needing'
+Spoken 'anything', Expected 'anything'
+Spoken 'else.', Expected 'else.'
+Error percentage: 10%
+Score: 90
+hasil isinya apa aja: { "You\'re": { "Hasil": "You\'re", "Beda": false }, "welcome!": { "Hasil": "welcome,", "Beda": false }, "Let": { "Hasil": "let", "Beda": false }, "me": { "Hasil": "me", "Beda": false }, "know": { "Hasil": "know", "Beda": false }, "if": { "Hasil": "if", "Beda": false }, "you": { "Hasil": "you", "Beda": false }, "needing": { "Hasil": "need", "Beda": true }, "anything": { "Hasil": "anything", "Beda": false }, "else.": { "Hasil": "else.", "Beda": false } }
+choices isinya apa:You're welcome! Let me know if you needing anything else.
+ERROR: 1 RID allocations of type 'N17RendererSceneCull6CameraE' were leaked at exit.

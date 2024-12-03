@@ -91,16 +91,14 @@ atlas = ExtResource("11_doql6")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dp3lr"]
 
-[node name="CanvasLayer" type="CanvasLayer" node_paths=PackedStringArray("prompto", "result", "lisen", "judul_level", "skor_akhir", "container_kata_per_kata")]
+[node name="CanvasLayer" type="CanvasLayer" node_paths=PackedStringArray("temp_prompt", "panel_hasil", "judul_level", "panel_skor_akhir")]
 layer = 4
 script = ExtResource("1_sknvp")
-prompto = NodePath("Dialog_Panel/MarginContainer/PanelPrompt")
-result = NodePath("Popup_Speech")
-lisen = NodePath("Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/comparison")
+temp_prompt = NodePath("Dialog_Panel/MarginContainer/PanelPrompt")
+panel_hasil = NodePath("Popup_Speech")
 judul_level = NodePath("Dialog_Panel/Judul Level/Label")
-skor_akhir = NodePath("PanelContainerSkor")
+panel_skor_akhir = NodePath("PanelContainerSkor")
 nilai_lulus = 50
-container_kata_per_kata = NodePath("Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/TeksJawaban/ContainerKataPerKata")
 path = ExtResource("2_e2are")
 
 [node name="Dialog_Panel" type="Control" parent="."]
@@ -138,7 +136,7 @@ grow_vertical = 0
 mouse_filter = 2
 theme_override_constants/margin_left = 845
 
-[node name="PanelPrompt" type="PanelContainer" parent="Dialog_Panel/MarginContainer"]
+[node name="PanelPrompt" type="PanelContainer" parent="Dialog_Panel/MarginContainer" node_paths=PackedStringArray("audio_stream_player", "speech_to_text", "kata_terucap", "kata_perkata", "comparison")]
 visible = false
 custom_minimum_size = Vector2(0, 187.665)
 layout_mode = 2
@@ -146,6 +144,11 @@ size_flags_vertical = 8
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_wir23")
 script = ExtResource("3_m1oim")
+audio_stream_player = NodePath("MarginContainer/VBoxContainer/AudioStreamPlayer")
+speech_to_text = NodePath("MarginContainer/VBoxContainer/SpeechToText")
+kata_terucap = NodePath("MarginContainer/VBoxContainer/TeksJawaban/KataTerucap")
+kata_perkata = NodePath("MarginContainer/VBoxContainer/TeksJawaban/ContainerKataPerKata")
+comparison = NodePath("MarginContainer/VBoxContainer/comparison")
 
 [node name="MarginContainer" type="MarginContainer" parent="Dialog_Panel/MarginContainer/PanelPrompt"]
 layout_mode = 2
@@ -177,6 +180,7 @@ theme_override_font_sizes/normal_font_size = 32
 script = ExtResource("6_sv08d")
 
 [node name="KataPerkata" type="RichTextLabel" parent="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/TeksJawaban"]
+visible = false
 self_modulate = Color(1, 1, 1, 0.560784)
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
@@ -186,6 +190,7 @@ theme_override_fonts/normal_font = ExtResource("4_pv17d")
 theme_override_font_sizes/normal_font_size = 32
 
 [node name="KataTerisi" type="RichTextLabel" parent="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/TeksJawaban/KataPerkata"]
+visible = false
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 offset_right = 925.0
@@ -196,6 +201,7 @@ theme_override_fonts/normal_font = ExtResource("4_pv17d")
 theme_override_font_sizes/normal_font_size = 32
 
 [node name="ContainerKataPerKata" type="HBoxContainer" parent="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/TeksJawaban"]
+visible = false
 layout_mode = 2
 alignment = 1
 
@@ -238,7 +244,7 @@ bus = &"Record"
 language_model = ExtResource("9_pf5ng")
 script = ExtResource("10_cv352")
 LisenBus = NodePath("../LISEN")
-recording = false
+maximum_sentence_time = 20
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Dialog_Panel/MarginContainer/PanelPrompt"]
 layout_mode = 2
@@ -279,8 +285,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("13_10lme")
 tombol_lanjut = NodePath("PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer/TextureButton3")
-teks_hasil = NodePath("PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer/Label")
-container_hasil_perkata = NodePath("PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer/ScrollContainer/HBoxContainer")
+teks_hasil = NodePath("PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer/MarginContainer/Label")
+container_hasil_perkata = NodePath("PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer/MarginContainer/ScrollContainer/HBoxContainer")
 
 [node name="PanelContainer" type="PanelContainer" parent="Popup_Speech"]
 layout_mode = 1
@@ -341,20 +347,27 @@ size_flags_vertical = 3
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxEmpty_nfoc4")
 
-[node name="Label" type="Label" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer"]
-visible = false
+[node name="MarginContainer" type="MarginContainer" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 80
+theme_override_constants/margin_right = 80
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="RichTextLabel" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer/MarginContainer"]
 custom_minimum_size = Vector2(200, 160)
 layout_mode = 2
+size_flags_vertical = 4
 theme = ExtResource("5_1bvvl")
+bbcode_enabled = true
 text = "lorem ipsum apalah gatau yang penting text biar panjang "
-horizontal_alignment = 1
-autowrap_mode = 3
+fit_content = true
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer/MarginContainer"]
+visible = false
 layout_mode = 2
 vertical_scroll_mode = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer/ScrollContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer/MarginContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 3
@@ -862,6 +875,7 @@ text = "TES 3"
 [connection signal="kirim_banding_kata" from="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/comparison" to="." method="_on_comparison_kirim_banding_kata"]
 [connection signal="kirim_nilai" from="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/comparison" to="." method="_on_comparison_kirim_nilai"]
 [connection signal="kirim_result" from="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/comparison" to="." method="_on_comparison_kirim_result"]
+[connection signal="transcribed_msg" from="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/SpeechToText" to="." method="_on_speech_to_text_transcribed_msg"]
 [connection signal="transcribed_msg" from="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/SpeechToText" to="Dialog_Panel/MarginContainer/PanelPrompt/MarginContainer/VBoxContainer/TeksJawaban/KataTerucap" method="_on_speech_to_text_transcribed_msg"]
 [connection signal="button_up" from="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer/TextureButton" to="." method="_on_texture_button_button_up"]
 [connection signal="button_up" from="Popup_Speech/PanelContainer/MarginContainer/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer/PanelContainer2/HBoxContainer/TextureButton2" to="." method="_on_texture_button_2_button_up"]

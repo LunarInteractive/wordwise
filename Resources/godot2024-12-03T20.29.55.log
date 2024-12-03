@@ -1,0 +1,102 @@
+Godot Engine v4.3.stable.official.77dcf97d8 - https://godotengine.org
+Vulkan 1.3.289 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 3050 Laptop GPU
+
+AVX = 0 | AVX2 = 0 | AVX512 = 0 | FMA = 0 | NEON = 0 | ARM_FMA = 0 | METAL = 0 | F16C = 0 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 0 | SSSE3 = 0 | VSX = 0 | CUDA = 0 | COREML = 0 | OPENVINO = 0 | 
+whisper_init_from_buffer_with_params_no_state: loading model from buffer
+
+whisper_model_load: loading model
+
+whisper_model_load: n_vocab       = 51864
+
+whisper_model_load: n_audio_ctx   = 1500
+
+whisper_model_load: n_audio_state = 384
+
+whisper_model_load: n_audio_head  = 6
+
+whisper_model_load: n_audio_layer = 4
+
+whisper_model_load: n_text_ctx    = 448
+
+whisper_model_load: n_text_state  = 384
+
+whisper_model_load: n_text_head   = 6
+
+whisper_model_load: n_text_layer  = 4
+
+whisper_model_load: n_mels        = 80
+
+whisper_model_load: ftype         = 1
+
+whisper_model_load: qntvr         = 0
+
+whisper_model_load: type          = 1 (tiny)
+
+whisper_model_load: adding 1607 extra tokens
+
+whisper_model_load: n_langs       = 99
+
+whisper_model_load:      CPU buffer size =    77.18 MB
+
+whisper_model_load: model size    =   77.11 MB
+
+whisper_init_state: kv self size  =    8.26 MB
+
+whisper_init_state: kv cross size =    9.22 MB
+
+whisper_init_state: compute buffer (conv)   =   12.17 MB
+
+whisper_init_state: compute buffer (encode) =   64.92 MB
+
+whisper_init_state: compute buffer (cross)  =    4.01 MB
+
+whisper_init_state: compute buffer (decode) =   96.02 MB
+
+is playing? false
+is ada? <Thread#-9223371954612861016>
+Isi dialog tombol dipilih : Good morning! How are you feeling today?
+pesan dikirim ke comparison: []
+Command not recognized.
+pesan dikirim ke comparison: [Good morning, how are you]
+Words comparison:
+Spoken 'Good', Expected 'Good'
+Spoken 'morning,', Expected 'morning!'
+Spoken 'how', Expected 'How'
+Spoken 'are', Expected 'are'
+Spoken 'you', Expected 'you'
+Spoken 'missing', Expected 'feeling'
+Spoken 'missing', Expected 'today?'
+Word count mismatch, additional/missing words detected.
+Error percentage: 28.57%
+Score: 72
+hasil isinya apa aja: { "Good": { "Hasil": "Good", "Beda": false }, "morning!": { "Hasil": "morning,", "Beda": false }, "How": { "Hasil": "how", "Beda": false }, "are": { "Hasil": "are", "Beda": false }, "you": { "Hasil": "you", "Beda": false }, "feeling": { "Hasil": "missing", "Beda": true }, "today?": { "Hasil": "missing", "Beda": true } }
+choices isinya apa:Good morning! How are you feeling today?
+Isi dialog tombol dipilih : The deadline is next Friday.
+pesan dikirim ke comparison: []
+Command not recognized.
+pesan dikirim ke comparison: [ Did learn his next right?]
+Words comparison:
+ARGH
+Spoken 'missing', Expected 'The'
+Spoken 'missing', Expected 'deadline'
+Spoken 'his', Expected 'is'
+Spoken 'next', Expected 'next'
+Spoken 'missing', Expected 'Friday.'
+Error percentage: 60%
+Score: 40
+sabar
+hasil isinya apa aja: { "The": { "Hasil": "missing", "Beda": true }, "deadline": { "Hasil": "missing", "Beda": true }, "is": { "Hasil": "his", "Beda": false }, "next": { "Hasil": "next", "Beda": false }, "Friday.": { "Hasil": "missing", "Beda": true } }
+choices isinya apa:The deadline is next Friday.
+Isi dialog tombol dipilih : The deadline is next Friday.
+pesan dikirim ke comparison: []
+Command not recognized.
+pesan dikirim ke comparison: [ the dead line, dead line, dead line, dead line, dead line,]
+Command not recognized.
+pesan dikirim ke comparison: [ The deadline is next Friday.]
+Score: 100
+Words comparison:
+Spoken 'The', Expected 'The'
+Spoken 'deadline', Expected 'deadline'
+Spoken 'is', Expected 'is'
+Spoken 'next', Expected 'next'
+Spoken 'Friday.', Expected 'Friday.'
