@@ -37,7 +37,7 @@ albedo_texture = ExtResource("2_kxqkq")
 uv1_triplanar = true
 texture_filter = 5
 
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_cs2pc"]
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_dg6s3"]
 exposure_multiplier = 0.585
 auto_exposure_scale = 0.06
 auto_exposure_speed = 0.01
@@ -128,7 +128,7 @@ shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 9.96399e-13, -1.98141e-12, -4.92097e-13, 0.970813, 0.239839, 2.16255e-12, -0.239839, 0.970813, 9.27341, 3.6402, 8.94978)
-attributes = SubResource("CameraAttributesPractical_cs2pc")
+attributes = SubResource("CameraAttributesPractical_dg6s3")
 fov = 45.0
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
