@@ -56,7 +56,13 @@ Level 2 terkunci (semua level dalam chapter ini terkunci).
 Level 3 terkunci (semua level dalam chapter ini terkunci).
 Level 4 terkunci (semua level dalam chapter ini terkunci).
 Level 5 terkunci (semua level dalam chapter ini terkunci).
-Request completed with response code: 200
-All dialogue data has been set.
-Dialogue data has been stored.
-ERROR: 1 RID allocations of type 'N17RendererSceneCull6CameraE' were leaked at exit.
+USER ERROR: Node not found: "CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L1" (relative to "/root/LevelSelection").
+   at: get_node (scene/main/node.cpp:1792)
+USER ERROR: Node not found: "CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L2" (relative to "/root/LevelSelection").
+   at: get_node (scene/main/node.cpp:1792)
+USER ERROR: Node not found: "CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L3" (relative to "/root/LevelSelection").
+   at: get_node (scene/main/node.cpp:1792)
+USER ERROR: Node not found: "CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L4" (relative to "/root/LevelSelection").
+   at: get_node (scene/main/node.cpp:1792)
+USER ERROR: Node not found: "CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L5" (relative to "/root/LevelSelection").
+   at: get_node (scene/main/node.cpp:1792)

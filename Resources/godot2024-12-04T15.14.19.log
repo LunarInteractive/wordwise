@@ -23,6 +23,14 @@ Level 4 terkunci.
 Level 5 terkunci.
 Chapter terbuka:5
 Level yang terbuka:3
+Chapter5 terbuka (semua level dalam chapter ini terbuka).
+Level 1 terbuka.
+Level 2 terbuka.
+Level 3 terbuka.
+Level 4 terkunci.
+Level 5 terkunci.
+Chapter terbuka:5
+Level yang terbuka:3
 Level 1 terkunci (semua level dalam chapter ini terkunci).
 Level 2 terkunci (semua level dalam chapter ini terkunci).
 Level 3 terkunci (semua level dalam chapter ini terkunci).
@@ -59,4 +67,3 @@ Level 5 terkunci (semua level dalam chapter ini terkunci).
 Request completed with response code: 200
 All dialogue data has been set.
 Dialogue data has been stored.
-ERROR: 1 RID allocations of type 'N17RendererSceneCull6CameraE' were leaked at exit.

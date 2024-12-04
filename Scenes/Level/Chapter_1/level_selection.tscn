@@ -164,10 +164,11 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_roqom")
 theme_override_styles/tab_selected = SubResource("StyleBoxFlat_4tv6q")
 theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_wexuw")
 tab_alignment = 1
-current_tab = 0
+current_tab = 4
 tabs_position = 1
 
 [node name="Chapter 1" type="PanelContainer" parent="CanvasLayer/Control/TabContainer"]
+visible = false
 layout_mode = 2
 script = ExtResource("1_4bxj1")
 metadata/_tab_index = 0
@@ -1502,7 +1503,6 @@ mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_2wpy5")
 
 [node name="Chapter 5" type="PanelContainer" parent="CanvasLayer/Control/TabContainer"]
-visible = false
 layout_mode = 2
 script = ExtResource("1_4bxj1")
 metadata/_tab_index = 4
@@ -1578,6 +1578,225 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
+[node name="Chapter 5" type="HBoxContainer" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+script = ExtResource("9_fw8m4")
+chapter_index = 5
+
+[node name="C2L1" type="Button" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5"]
+custom_minimum_size = Vector2(350, 300)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("10_s8e21")
+theme_override_font_sizes/font_size = 85
+theme_override_styles/disabled = SubResource("StyleBoxTexture_b5ulj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_u1f1j")
+theme_override_styles/normal = SubResource("StyleBoxTexture_6q7bo")
+text = "Level 1
+"
+
+[node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L1"]
+script = ExtResource("12_yvty3")
+transition_type = 4
+
+[node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L1"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -83.5
+offset_right = 76.0
+offset_bottom = 83.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_khga1")
+stretch_mode = 5
+
+[node name="-" type="Panel" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5"]
+custom_minimum_size = Vector2(131.37, 10.315)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_v4n13")
+
+[node name="C2L2" type="Button" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5"]
+custom_minimum_size = Vector2(350, 300)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("10_s8e21")
+theme_override_font_sizes/font_size = 85
+theme_override_styles/disabled = SubResource("StyleBoxTexture_b5ulj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b5ulj")
+theme_override_styles/normal = SubResource("StyleBoxTexture_6q7bo")
+text = "Level 2
+"
+
+[node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L2"]
+script = ExtResource("12_yvty3")
+transition_type = 4
+
+[node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L2"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -83.5
+offset_right = 76.0
+offset_bottom = 83.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_khga1")
+stretch_mode = 5
+
+[node name="-2" type="Panel" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5"]
+custom_minimum_size = Vector2(131.37, 10.315)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_v4n13")
+
+[node name="C2L3" type="Button" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5"]
+custom_minimum_size = Vector2(350, 300)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("10_s8e21")
+theme_override_font_sizes/font_size = 85
+theme_override_styles/disabled = SubResource("StyleBoxTexture_b5ulj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b5ulj")
+theme_override_styles/normal = SubResource("StyleBoxTexture_6q7bo")
+text = "Level 3
+"
+
+[node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L3"]
+script = ExtResource("12_yvty3")
+transition_type = 4
+
+[node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L3"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -83.5
+offset_right = 76.0
+offset_bottom = 83.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_khga1")
+stretch_mode = 5
+
+[node name="-3" type="Panel" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5"]
+custom_minimum_size = Vector2(131.37, 10.315)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_v4n13")
+
+[node name="C2L4" type="Button" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5"]
+custom_minimum_size = Vector2(350, 300)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("10_s8e21")
+theme_override_font_sizes/font_size = 85
+theme_override_styles/disabled = SubResource("StyleBoxTexture_b5ulj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b5ulj")
+theme_override_styles/normal = SubResource("StyleBoxTexture_6q7bo")
+text = "Level 4
+"
+
+[node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L4"]
+script = ExtResource("12_yvty3")
+transition_type = 4
+
+[node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L4"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -83.5
+offset_right = 76.0
+offset_bottom = 83.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_khga1")
+stretch_mode = 5
+
+[node name="-4" type="Panel" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5"]
+custom_minimum_size = Vector2(131.37, 10.315)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_v4n13")
+
+[node name="C2L5" type="Button" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5"]
+custom_minimum_size = Vector2(350, 300)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("10_s8e21")
+theme_override_font_sizes/font_size = 85
+theme_override_styles/disabled = SubResource("StyleBoxTexture_b5ulj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b5ulj")
+theme_override_styles/normal = SubResource("StyleBoxTexture_6q7bo")
+text = "Level 5
+"
+
+[node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L5"]
+script = ExtResource("12_yvty3")
+transition_type = 4
+
+[node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L5"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -83.5
+offset_right = 76.0
+offset_bottom = 83.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_khga1")
+stretch_mode = 5
+
 [node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5"]
 layout_mode = 2
 mouse_filter = 2
@@ -1616,225 +1835,6 @@ custom_minimum_size = Vector2(0, 600)
 layout_mode = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_2wpy5")
-
-[node name="Chapter 5" type="HBoxContainer" parent="CanvasLayer/Control/TabContainer/Chapter 5"]
-layout_mode = 2
-theme_override_constants/separation = 30
-script = ExtResource("9_fw8m4")
-chapter_index = 5
-
-[node name="C2L1" type="Button" parent="CanvasLayer/Control/TabContainer/Chapter 5/Chapter 5"]
-custom_minimum_size = Vector2(350, 300)
-layout_mode = 2
-size_flags_vertical = 4
-mouse_filter = 1
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("10_s8e21")
-theme_override_font_sizes/font_size = 85
-theme_override_styles/disabled = SubResource("StyleBoxTexture_b5ulj")
-theme_override_styles/hover = SubResource("StyleBoxTexture_u1f1j")
-theme_override_styles/normal = SubResource("StyleBoxTexture_6q7bo")
-text = "Level 1
-"
-
-[node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 5/Chapter 5/C2L1"]
-script = ExtResource("12_yvty3")
-transition_type = 4
-
-[node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 5/Chapter 5/C2L1"]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -76.0
-offset_top = -83.5
-offset_right = 76.0
-offset_bottom = 83.5
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("13_khga1")
-stretch_mode = 5
-
-[node name="-" type="Panel" parent="CanvasLayer/Control/TabContainer/Chapter 5/Chapter 5"]
-custom_minimum_size = Vector2(131.37, 10.315)
-layout_mode = 2
-size_flags_vertical = 4
-mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_v4n13")
-
-[node name="C2L2" type="Button" parent="CanvasLayer/Control/TabContainer/Chapter 5/Chapter 5"]
-custom_minimum_size = Vector2(350, 300)
-layout_mode = 2
-size_flags_vertical = 4
-mouse_filter = 1
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("10_s8e21")
-theme_override_font_sizes/font_size = 85
-theme_override_styles/disabled = SubResource("StyleBoxTexture_b5ulj")
-theme_override_styles/hover = SubResource("StyleBoxTexture_b5ulj")
-theme_override_styles/normal = SubResource("StyleBoxTexture_6q7bo")
-text = "Level 2
-"
-
-[node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 5/Chapter 5/C2L2"]
-script = ExtResource("12_yvty3")
-transition_type = 4
-
-[node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 5/Chapter 5/C2L2"]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -76.0
-offset_top = -83.5
-offset_right = 76.0
-offset_bottom = 83.5
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("13_khga1")
-stretch_mode = 5
-
-[node name="-2" type="Panel" parent="CanvasLayer/Control/TabContainer/Chapter 5/Chapter 5"]
-custom_minimum_size = Vector2(131.37, 10.315)
-layout_mode = 2
-size_flags_vertical = 4
-mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_v4n13")
-
-[node name="C2L3" type="Button" parent="CanvasLayer/Control/TabContainer/Chapter 5/Chapter 5"]
-custom_minimum_size = Vector2(350, 300)
-layout_mode = 2
-size_flags_vertical = 4
-mouse_filter = 1
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("10_s8e21")
-theme_override_font_sizes/font_size = 85
-theme_override_styles/disabled = SubResource("StyleBoxTexture_b5ulj")
-theme_override_styles/hover = SubResource("StyleBoxTexture_b5ulj")
-theme_override_styles/normal = SubResource("StyleBoxTexture_6q7bo")
-text = "Level 3
-"
-
-[node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 5/Chapter 5/C2L3"]
-script = ExtResource("12_yvty3")
-transition_type = 4
-
-[node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 5/Chapter 5/C2L3"]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -76.0
-offset_top = -83.5
-offset_right = 76.0
-offset_bottom = 83.5
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("13_khga1")
-stretch_mode = 5
-
-[node name="-3" type="Panel" parent="CanvasLayer/Control/TabContainer/Chapter 5/Chapter 5"]
-custom_minimum_size = Vector2(131.37, 10.315)
-layout_mode = 2
-size_flags_vertical = 4
-mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_v4n13")
-
-[node name="C2L4" type="Button" parent="CanvasLayer/Control/TabContainer/Chapter 5/Chapter 5"]
-custom_minimum_size = Vector2(350, 300)
-layout_mode = 2
-size_flags_vertical = 4
-mouse_filter = 1
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("10_s8e21")
-theme_override_font_sizes/font_size = 85
-theme_override_styles/disabled = SubResource("StyleBoxTexture_b5ulj")
-theme_override_styles/hover = SubResource("StyleBoxTexture_b5ulj")
-theme_override_styles/normal = SubResource("StyleBoxTexture_6q7bo")
-text = "Level 4
-"
-
-[node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 5/Chapter 5/C2L4"]
-script = ExtResource("12_yvty3")
-transition_type = 4
-
-[node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 5/Chapter 5/C2L4"]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -76.0
-offset_top = -83.5
-offset_right = 76.0
-offset_bottom = 83.5
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("13_khga1")
-stretch_mode = 5
-
-[node name="-4" type="Panel" parent="CanvasLayer/Control/TabContainer/Chapter 5/Chapter 5"]
-custom_minimum_size = Vector2(131.37, 10.315)
-layout_mode = 2
-size_flags_vertical = 4
-mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_v4n13")
-
-[node name="C2L5" type="Button" parent="CanvasLayer/Control/TabContainer/Chapter 5/Chapter 5"]
-custom_minimum_size = Vector2(350, 300)
-layout_mode = 2
-size_flags_vertical = 4
-mouse_filter = 1
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("10_s8e21")
-theme_override_font_sizes/font_size = 85
-theme_override_styles/disabled = SubResource("StyleBoxTexture_b5ulj")
-theme_override_styles/hover = SubResource("StyleBoxTexture_b5ulj")
-theme_override_styles/normal = SubResource("StyleBoxTexture_6q7bo")
-text = "Level 5
-"
-
-[node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 5/Chapter 5/C2L5"]
-script = ExtResource("12_yvty3")
-transition_type = 4
-
-[node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 5/Chapter 5/C2L5"]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -76.0
-offset_top = -83.5
-offset_right = 76.0
-offset_bottom = 83.5
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("13_khga1")
-stretch_mode = 5
 
 [node name="Chapter 6" type="PanelContainer" parent="CanvasLayer/Control/TabContainer"]
 visible = false
