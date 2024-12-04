@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dqo3vmbw7m0ar"]
+[gd_scene load_steps=28 format=3 uid="uid://dqo3vmbw7m0ar"]
 
 [ext_resource type="Script" path="res://Objects/Environtment/UI/profile.gd" id="1_woprc"]
 [ext_resource type="VideoStream" path="res://UI Asset/Background/Wordwise_BG_Blue__1.ogv" id="2_f5qal"]
@@ -10,13 +10,26 @@
 [ext_resource type="Texture2D" uid="uid://x4ruv8xt1qxv" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/whitprog.tres" id="7_4a0du"]
 [ext_resource type="Texture2D" uid="uid://4bthiqt45xgn" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/bingkaiprog.tres" id="8_8065e"]
 [ext_resource type="Texture2D" uid="uid://c3bwdc7825qnk" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/purpleprog.tres" id="9_3bgqx"]
-[ext_resource type="FontFile" uid="uid://c4oi6yeb8dvyl" path="res://UI Asset/Font/Fredoka-VariableFont_wdth,wght.ttf" id="10_5eywy"]
 [ext_resource type="Texture2D" uid="uid://cshpviwjh3mjy" path="res://UI Asset/Sprite/UI_Wordwise/Button/Orange/Button_Orange_Plus.tres" id="11_bgubd"]
 [ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="12_eo8kt"]
+[ext_resource type="Texture2D" uid="uid://c2rd1gh6eqbvp" path="res://UI Asset/Sprite/UI_Wordwise/Button_Text/ButtonText_Orange_Border.tres" id="13_ioynr"]
 [ext_resource type="FontFile" uid="uid://dclwgnpvy23n7" path="res://UI Asset/Font/Pixel Dogica/dogicapixelbold.ttf" id="14_hvqok"]
 [ext_resource type="Texture2D" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Border_PB.tres" id="15_dhay7"]
 [ext_resource type="Texture2D" uid="uid://ctgp46i35s375" path="res://UI Asset/Sprite/UI_Wordwise/Button_Text/ButtonText_white_Border.tres" id="16_ei2la"]
 [ext_resource type="Texture2D" uid="uid://codormxttyb7v" path="res://UI Asset/Sprite/UI_Wordwise/Border/Borders_Dual Color.png" id="17_wwcg7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i5i88"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f3eej"]
+content_margin_left = 55.0
+content_margin_top = 30.0
+content_margin_right = 55.0
+content_margin_bottom = 30.0
+texture = ExtResource("13_ioynr")
+texture_margin_left = 40.0
+texture_margin_top = 40.0
+texture_margin_right = 44.0
+texture_margin_bottom = 44.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_loedg"]
 bg_color = Color(0.2, 0.32549, 0.619608, 1)
@@ -105,6 +118,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 stream = ExtResource("2_f5qal")
 autoplay = true
 expand = true
@@ -147,7 +161,6 @@ flat = true
 
 [node name="Node" type="Node" parent="MarginContainer/VBoxContainer/HBoxContainer2/Out"]
 script = ExtResource("5_acem0")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
@@ -204,7 +217,6 @@ stretch_mode = 5
 
 [node name="Node" type="Node" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer/TextureButton"]
 script = ExtResource("5_acem0")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
@@ -221,9 +233,18 @@ alignment = 1
 
 [node name="Sign Out" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("10_5eywy")
-theme_override_font_sizes/font_size = 25
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("12_eo8kt")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i5i88")
+theme_override_styles/hover = SubResource("StyleBoxTexture_f3eej")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_f3eej")
+theme_override_styles/normal = SubResource("StyleBoxTexture_f3eej")
 text = "SIGN IN"
+
+[node name="Node" type="Node" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3/Sign Out"]
+script = ExtResource("5_acem0")
+transition_type = 4
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 visible = false
@@ -312,7 +333,6 @@ text = "Cancel"
 
 [node name="Node" type="Node" parent="PanelContainer/MarginContainer/PanelContainer/VBoxContainer/Content/VBoxContainer/HBoxContainer/Button"]
 script = ExtResource("5_acem0")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="Button2" type="Button" parent="PanelContainer/MarginContainer/PanelContainer/VBoxContainer/Content/VBoxContainer/HBoxContainer"]
@@ -328,7 +348,6 @@ text = "Confirm"
 
 [node name="Node" type="Node" parent="PanelContainer/MarginContainer/PanelContainer/VBoxContainer/Content/VBoxContainer/HBoxContainer/Button2"]
 script = ExtResource("5_acem0")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="MarginContainer2" type="MarginContainer" parent="PanelContainer"]
@@ -350,5 +369,6 @@ patch_margin_bottom = 60
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/Out" to="." method="_on_out_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer/TextureButton" to="." method="_on_button_Plus_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3/Sign Out" to="." method="_on_sign_out_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/PanelContainer/VBoxContainer/Content/VBoxContainer/HBoxContainer/Button" to="." method="_on_button_cancel_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/PanelContainer/VBoxContainer/Content/VBoxContainer/HBoxContainer/Button2" to="." method="_on_button_Confirm_pressed"]

@@ -8,14 +8,4 @@ null
 null
 null
 null
-null
-null
-null
-null
-null
-null
-null
-null
-null
-null
 ERROR: 1 RID allocations of type 'N17RendererSceneCull6CameraE' were leaked at exit.

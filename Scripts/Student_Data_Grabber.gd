@@ -7,6 +7,8 @@ const ENCRYPTION_KEY = "KodePasswordGameWordwise"  # Use a strong key (16 bytes 
 # File path for saving the encrypted data
 const FILE_PATH = "user://saved_data.enc"
 
+signal send_data_success
+signal send_API
 # Save the given data to a file with encryption
 func save_data(data: Dictionary) -> void:
 	var json_string = JSON.stringify(data)
@@ -21,11 +23,13 @@ func save_data(data: Dictionary) -> void:
 		file.store_buffer(combined_data)
 		file.close()
 		print("Data saved successfully!")
+		emit_signal("send_data_success")
 	else:
 		print("Failed to save data.")
 
 # Load and decrypt data from the file
 func load_data() -> Dictionary:
+	print("bisa")
 	if FileAccess.file_exists(FILE_PATH):
 		var file = FileAccess.open(FILE_PATH, FileAccess.READ)
 		if file:
@@ -39,7 +43,8 @@ func load_data() -> Dictionary:
 			var json = JSON.new()
 			var parsed_data = json.parse(json_string)
 			if parsed_data.error == OK:
-				return parsed_data.result
+				print("bisa")
+				return json.data
 			else:
 				print("Failed to parse JSON:", parsed_data.error_string)
 		else:
@@ -73,17 +78,26 @@ func decrypt_string(encrypted_data: PackedByteArray, iv: PackedByteArray) -> Str
 func fetch_all_data(base_url: String, name: String) -> void:
 	var http_request = HTTPRequest.new()
 	add_child(http_request)
+	
+	# Connect the request completion signal
 	http_request.request_completed.connect(_on_fetch_all_completed)
-	http_request.request(base_url)
-
+	
+	# Send the request
+	var error = http_request.request(base_url)
+	if error != OK:
+		print("Failed to send HTTP request.")
+		return  # Exit the function if the request couldn't be sent
+	
+	print("Request sent successfully.")
+	
 	# Store the name we are looking for
 	self.target_name = name
-
 # Callback for the API request
 var target_name = ""
 
 func _on_fetch_all_completed(result, response_code, headers, body):
 	if response_code == 200:
+		print("trying to fetch")
 		var body_text = body.get_string_from_utf8()
 
 		var json = JSON.new()
@@ -104,7 +118,7 @@ func _on_fetch_all_completed(result, response_code, headers, body):
 						print(filtered_data)
 						break
 
-				if filtered_data.empty():
+				if filtered_data == null:
 					print("No data found for name containing:", target_name)
 				else:
 					print("Filtered data:", filtered_data)
@@ -114,20 +128,59 @@ func _on_fetch_all_completed(result, response_code, headers, body):
 		else:
 			print("Failed to parse JSON:", parse_result.error_string)
 	else:
-		print("Failed to fetch data. HTTP Response Code:", response_code)
+		# Handle different HTTP error code
+		print("error fetching")
+		match response_code:
+			404:
+				print("Error: Resource not found (404).")
+			500:
+				print("Error: Server error (500).")
+			_:
+				print("Error: HTTP request failed with response code: ", response_code)
 
 
+func send_data_api(data: Dictionary) -> void:
+	var http_request = HTTPRequest.new()
+	add_child(http_request)
+
+	var body = JSON.new().stringify(data)
+	var header = ["Content-Type: application/json"]
+	var error = http_request.request("https://lunarinteractive.net/api/v1/students", header, HTTPClient.METHOD_POST, body)
+	
+	http_request.request_completed.connect(self._http_send_completed)
+	
+	if error != OK:
+		push_error("An error occurred in the HTTP request.")
+	if error == OK:
+		print("data send succesfuly")
 
 
 # Send data to an API (POST request)
 func send_data_to_api(url: String, data: Dictionary) -> void:
 	var http_request = HTTPRequest.new()
 	add_child(http_request)
-	var headers = ["Content-Type: application/json"]
-	var body = JSON.stringify(data)
-	http_request.request(url, headers, HTTPClient.METHOD_POST, body)
+	var body = JSON.new().stringify(data)
+	var error = http_request.request(url, [], HTTPClient.METHOD_POST, body)
+	http_request.request_completed.connect(self._http_send_completed)
+	if error != OK:
+		push_error("An error occurred in the HTTP request.")
+	emit_signal("send_API")
 	print("Data sent to API:", body)
 
+
+
+func _http_send_completed(result, response_code, headers, body):
+	var json = JSON.new()
+	json.parse(body.get_string_from_utf8())
+	var response = json.get_data()
+	
+	print(response)
+	if response_code == 201 :
+		print("data created successfuly")
+		emit_signal("send_API")
+	else:
+		print(response_code)
+
 # Entry point
-func _ready() -> void:
-	fetch_all_data("https://lunarinteractive.net/api/v1/students", Nama_Siswa)
+#func _ready() -> void:
+	#load_data()

@@ -70,5 +70,4 @@ stretch_mode = 5
 
 [node name="Node" type="Node" parent="MarginContainer/Exit"]
 script = ExtResource("4_t1bse")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4

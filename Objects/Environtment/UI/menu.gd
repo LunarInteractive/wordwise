@@ -1,6 +1,7 @@
 class_name Menu
 extends Control
 
+@onready var kode_kelas = GlobalVariable.ClassCode
 
 @onready var task: Button = $Container/Bottom_Left_Buttons/Button_Task as Button
 @onready var mode: TextureButton = $Container/Bottom_Right_Buttons/Mode as TextureButton
@@ -63,3 +64,6 @@ func handle_connecting_signal() -> void:
 	
 	custom.button_down.connect(on_custom_pressed)
 	customize.confirm_confirm.connect(on_confirm_on_custom)
+
+func get_class_data() -> void:
+	pass
