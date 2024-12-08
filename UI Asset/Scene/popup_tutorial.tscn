@@ -162,7 +162,6 @@ stretch_mode = 0
 
 [node name="Node" type="Node" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/HeaderPanel/MarginHeader/MarginClose/CloseButton2"]
 script = ExtResource("5_lxf15")
-hover_scale = Vector2(0.9, 0.9)
 
 [node name="TitlePanelTask" type="Label" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/HeaderPanel/MarginHeader"]
 custom_minimum_size = Vector2(250, 90)
@@ -206,7 +205,6 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_etntv")
 
 [node name="Node" type="Node" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/Button_Prev"]
 script = ExtResource("5_lxf15")
-hover_scale = Vector2(0.9, 0.9)
 
 [node name="MarginBadanPanel" type="MarginContainer" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -454,7 +452,6 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_hvjce")
 
 [node name="Node" type="Node" parent="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/Button_Next"]
 script = ExtResource("5_lxf15")
-hover_scale = Vector2(0.9, 0.9)
 
 [connection signal="pressed" from="Control/MarginPanelTask/PanelContainer/VBoxContainer/HeaderPanel/MarginHeader/MarginClose/CloseButton2" to="Control" method="_on_close_button_pressed"]
 [connection signal="pressed" from="Control/MarginPanelTask/PanelContainer/VBoxContainer/BadanPanel/MarginContainer/HBoxContainer/Button_Prev" to="Control" method="_on_button_prev_pressed"]

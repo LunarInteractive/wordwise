@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://4s6thc8kywtu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4n13"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="-" type="Panel"]
+custom_minimum_size = Vector2(131.37, 10.315)
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_v4n13")

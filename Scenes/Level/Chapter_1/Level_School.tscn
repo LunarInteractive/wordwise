@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4hl2by4sw1wh"]
+
+[ext_resource type="PackedScene" uid="uid://cara12bso7fk2" path="res://Scenes/Development/custom_map_1.tscn" id="1_58a2i"]
+[ext_resource type="PackedScene" uid="uid://bqjvx1wjoyp5o" path="res://UI Asset/Scene/UI_Dialogue_School.tscn" id="2_pvdk1"]
+[ext_resource type="PackedScene" uid="uid://bikmskv6luara" path="res://UI Asset/Scene/Pause_Layer.tscn" id="3_78qxv"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="CustomMap1" parent="." instance=ExtResource("1_58a2i")]
+
+[node name="CanvasLayer" parent="." instance=ExtResource("2_pvdk1")]
+
+[node name="Pause_layer" parent="." instance=ExtResource("3_78qxv")]
+layer = 5

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cf3w88e7q78qd"]
+[gd_scene load_steps=23 format=3 uid="uid://cf3w88e7q78qd"]
 
 [ext_resource type="Script" path="res://Objects/Environtment/UI/menu.gd" id="1_xit0o"]
 [ext_resource type="Texture2D" uid="uid://nop14tpltyv" path="res://UI Asset/Background/Background_sementara.png" id="2_kx8mq"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bb3hcsiv7s7h2" path="res://UI Asset/Sprite/UI_Wordwise/Button/Orange/Button_Orange_Option.tres" id="15_4n0ab"]
 [ext_resource type="Texture2D" uid="uid://cywyr04bh4oaj" path="res://UI Asset/Sprite/UI_Wordwise/Icons/Icon_Play_Orange.tres" id="16_b7wpc"]
 [ext_resource type="PackedScene" uid="uid://bxefct3ha1r1q" path="res://UI Asset/Scene/task_panel.tscn" id="19_necf6"]
+[ext_resource type="Script" path="res://Scripts/data_sekolah_grabber.gd" id="20_mdhdj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5oa8e"]
 
@@ -90,7 +91,6 @@ theme_override_constants/separation = 20
 [node name="Avatar" type="Button" parent="Container/Profile_Tab/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(135, 135)
 layout_mode = 2
-disabled = true
 text = "PROFILE
 PICTURE"
 
@@ -165,7 +165,6 @@ icon = ExtResource("11_mjxwm")
 
 [node name="Node" type="Node" parent="Container/Bottom_Left_Buttons/Button_Task"]
 script = ExtResource("9_cedgc")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="Custom" type="TextureButton" parent="Container/Bottom_Left_Buttons"]
@@ -177,7 +176,6 @@ texture_hover = ExtResource("13_77n84")
 
 [node name="Node" type="Node" parent="Container/Bottom_Left_Buttons/Custom"]
 script = ExtResource("9_cedgc")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="Setting_Button" type="TextureButton" parent="Container"]
@@ -198,7 +196,6 @@ texture_hover = ExtResource("14_0lk1w")
 
 [node name="Node" type="Node" parent="Container/Setting_Button"]
 script = ExtResource("9_cedgc")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="Bottom_Right_Buttons" type="HBoxContainer" parent="Container"]
@@ -243,7 +240,6 @@ icon_alignment = 2
 
 [node name="Node" type="Node" parent="Container/Bottom_Right_Buttons/Button_Play"]
 script = ExtResource("9_cedgc")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="Settings" parent="." instance=ExtResource("4_ijbmb")]
@@ -257,3 +253,6 @@ layout_mode = 1
 [node name="TaskPanel" parent="." instance=ExtResource("19_necf6")]
 visible = false
 layout_mode = 1
+
+[node name="Data_sekolah_grabber" type="Node" parent="."]
+script = ExtResource("20_mdhdj")

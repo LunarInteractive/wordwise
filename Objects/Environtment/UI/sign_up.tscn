@@ -1,59 +1,28 @@
-[gd_scene load_steps=14 format=3 uid="uid://curtaxjf7a3l3"]
+[gd_scene load_steps=12 format=3 uid="uid://curtaxjf7a3l3"]
 
 [ext_resource type="Script" path="res://Objects/Environtment/UI/sign_up.gd" id="1_18mbg"]
-[ext_resource type="FontFile" uid="uid://1wjpkwwq28sm" path="res://UI Asset/Font/Pixel Monogram/monogram.ttf" id="1_vafbd"]
 [ext_resource type="FontFile" uid="uid://dclwgnpvy23n7" path="res://UI Asset/Font/Pixel Dogica/dogicapixelbold.ttf" id="2_ngjge"]
-[ext_resource type="Texture2D" uid="uid://nywdk2wpv1yr" path="res://Objects/Environtment/UI/Assets/UI_WORDWISE_HD/Button And Others.png" id="3_6hshy"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_668e6"]
-atlas = ExtResource("3_6hshy")
-region = Rect2(1880, 744, 664, 232)
-margin = Rect2(5, 5, 5, 5)
+[ext_resource type="Script" path="res://Scripts/Student_Data_Grabber.gd" id="2_ujmhh"]
+[ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="4_85ic4"]
+[ext_resource type="Texture2D" uid="uid://ctgp46i35s375" path="res://UI Asset/Sprite/UI_Wordwise/Button_Text/ButtonText_white_Border.tres" id="4_bfkg6"]
+[ext_resource type="Texture2D" uid="uid://c2rd1gh6eqbvp" path="res://UI Asset/Sprite/UI_Wordwise/Button_Text/ButtonText_Orange_Border.tres" id="6_2aje8"]
+[ext_resource type="Script" path="res://UI Asset/Script/BtnAnimation.gd" id="7_palsh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t0rwp"]
-texture = SubResource("AtlasTexture_668e6")
+content_margin_top = 44.0
+content_margin_bottom = 1.0
+texture = ExtResource("4_bfkg6")
 texture_margin_left = 45.0
 texture_margin_top = 51.0
 texture_margin_right = 44.0
 texture_margin_bottom = 46.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wj5qx"]
-atlas = ExtResource("3_6hshy")
-region = Rect2(1880, 744, 664, 232)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h77ao"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qyj5y"]
-texture = SubResource("AtlasTexture_wj5qx")
-texture_margin_left = 40.0
-texture_margin_top = 40.0
-texture_margin_right = 40.0
-texture_margin_bottom = 40.0
-region_rect = Rect2(0, 6, 660, 220)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1eovn"]
-texture = SubResource("AtlasTexture_wj5qx")
-texture_margin_left = 40.0
-texture_margin_top = 40.0
-texture_margin_right = 40.0
-texture_margin_bottom = 40.0
-region_rect = Rect2(0, 6, 660, 220)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_t2d48"]
-atlas = ExtResource("3_6hshy")
-region = Rect2(1880, 520, 664, 224)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r4u1g"]
-texture = SubResource("AtlasTexture_t2d48")
-texture_margin_left = 40.0
-texture_margin_top = 40.0
-texture_margin_right = 44.0
-texture_margin_bottom = 44.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_674vk"]
-atlas = ExtResource("3_6hshy")
-region = Rect2(1880, 520, 664, 224)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fig8t"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xjmqc"]
-texture = SubResource("AtlasTexture_674vk")
+texture = ExtResource("6_2aje8")
 texture_margin_left = 40.0
 texture_margin_top = 40.0
 texture_margin_right = 44.0
@@ -75,6 +44,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("2_ujmhh")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -85,16 +55,20 @@ layout_mode = 2
 alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(962.5, 0)
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = 10
 alignment = 1
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_vafbd")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 6
+theme_override_fonts/font = ExtResource("2_ngjge")
 theme_override_font_sizes/font_size = 100
-text = "WORLDWISE"
+text = "SIGN UP"
 horizontal_alignment = 1
 
 [node name="Seperator4" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
@@ -108,19 +82,22 @@ custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ngjge")
 theme_override_font_sizes/font_size = 25
-text = "Username"
+text = "Full Name"
+vertical_alignment = 2
 
 [node name="Username" type="TextEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(500, 132.61)
 layout_mode = 2
-theme_override_colors/font_placeholder_color = Color(0.623529, 0.466667, 0.745098, 1)
-theme_override_colors/font_color = Color(0.623529, 0.466667, 0.745098, 1)
-theme_override_constants/outline_size = 1
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.811765)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("1_vafbd")
-theme_override_font_sizes/font_size = 69
+theme_override_fonts/font = ExtResource("4_85ic4")
+theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxTexture_t0rwp")
-placeholder_text = "Username"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h77ao")
+placeholder_text = "Insert Fullname"
+scroll_fit_content_height = true
 
 [node name="Pass" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(100, 50)
@@ -128,18 +105,22 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ngjge")
 theme_override_font_sizes/font_size = 25
 text = "Password"
+vertical_alignment = 2
 
 [node name="Password" type="TextEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(500, 132.61)
 layout_mode = 2
-theme_override_colors/font_placeholder_color = Color(0.623529, 0.466667, 0.745098, 1)
-theme_override_colors/font_color = Color(0.623529, 0.466667, 0.745098, 1)
-theme_override_constants/outline_size = 1
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.811765)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("1_vafbd")
-theme_override_font_sizes/font_size = 69
+theme_override_fonts/font = ExtResource("4_85ic4")
+theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxTexture_t0rwp")
-placeholder_text = "Password"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h77ao")
+placeholder_text = "Insert Password"
+scroll_fit_content_height = true
+minimap_draw = true
 
 [node name="RPass" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(100, 50)
@@ -147,18 +128,21 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ngjge")
 theme_override_font_sizes/font_size = 25
 text = "Repeat Password"
+vertical_alignment = 2
 
 [node name="Password2" type="TextEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(500, 132.61)
 layout_mode = 2
-theme_override_colors/font_placeholder_color = Color(0.623529, 0.466667, 0.745098, 1)
-theme_override_colors/font_color = Color(0.623529, 0.466667, 0.745098, 1)
-theme_override_constants/outline_size = 1
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.811765)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 theme_override_constants/line_spacing = 15
-theme_override_fonts/font = ExtResource("1_vafbd")
-theme_override_font_sizes/font_size = 69
+theme_override_fonts/font = ExtResource("4_85ic4")
+theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxTexture_t0rwp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h77ao")
 placeholder_text = "Repeat Password"
+scroll_fit_content_height = true
 
 [node name="Seperator2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(100, 50)
@@ -166,32 +150,46 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ngjge")
 theme_override_font_sizes/font_size = 30
 
-[node name="su" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 250
+theme_override_constants/margin_right = 250
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="su" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
-theme_override_colors/font_hover_pressed_color = Color(0.623529, 0.466667, 0.745098, 1)
-theme_override_colors/font_hover_color = Color(0.623529, 0.466667, 0.745098, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("2_ngjge")
 theme_override_font_sizes/font_size = 25
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_qyj5y")
-theme_override_styles/hover = SubResource("StyleBoxTexture_1eovn")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_r4u1g")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fig8t")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_xjmqc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_xjmqc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xjmqc")
 theme_override_styles/normal = SubResource("StyleBoxTexture_xjmqc")
 text = "SIGN UP"
 
-[node name="si" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Node" type="Node" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/MarginContainer/VBoxContainer/su"]
+script = ExtResource("7_palsh")
+transition_type = 4
+
+[node name="si" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
-theme_override_colors/font_hover_pressed_color = Color(0.623529, 0.466667, 0.745098, 1)
-theme_override_colors/font_hover_color = Color(0.623529, 0.466667, 0.745098, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("2_ngjge")
 theme_override_font_sizes/font_size = 25
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_qyj5y")
-theme_override_styles/hover = SubResource("StyleBoxTexture_1eovn")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_r4u1g")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_xjmqc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_xjmqc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xjmqc")
 theme_override_styles/normal = SubResource("StyleBoxTexture_xjmqc")
 text = "SIGN IN"
+
+[node name="Node" type="Node" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/MarginContainer/VBoxContainer/si"]
+script = ExtResource("7_palsh")
+transition_type = 4

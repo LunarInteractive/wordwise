@@ -1,0 +1,365 @@
+[gd_scene load_steps=14 format=3 uid="uid://dyls0fs8ghrar"]
+
+[ext_resource type="Script" path="res://UI Asset/Script/BtnAnimation.gd" id="3_qapga"]
+[ext_resource type="FontFile" uid="uid://dlfcvrx0tug2e" path="res://UI Asset/Font/Pixel Dogica/dogicapixel.ttf" id="4_28lb0"]
+[ext_resource type="StyleBox" uid="uid://cla8flpoq6rxs" path="res://UI Asset/Shader/button_level.tres" id="5_v2xws"]
+[ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="6_lkftx"]
+[ext_resource type="Texture2D" uid="uid://c2rd1gh6eqbvp" path="res://UI Asset/Sprite/UI_Wordwise/Button_Text/ButtonText_Orange_Border.tres" id="7_vvsua"]
+[ext_resource type="Texture2D" uid="uid://ctgp46i35s375" path="res://UI Asset/Sprite/UI_Wordwise/Button_Text/ButtonText_white_Border.tres" id="8_5825i"]
+[ext_resource type="Texture2D" uid="uid://btqt1bq6mvx54" path="res://UI Asset/Sprite/UI_Wordwise/Icons/Icon_Lock_White.tres" id="9_g1d8f"]
+[ext_resource type="Texture2D" uid="uid://codormxttyb7v" path="res://UI Asset/Sprite/UI_Wordwise/Border/Borders_Dual Color.png" id="10_dmhob"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8u620"]
+bg_color = Color(0.2, 0.32549, 0.619608, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_left = 20.0
+expand_margin_top = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b5ulj"]
+texture = ExtResource("7_vvsua")
+texture_margin_left = 41.0
+texture_margin_top = 40.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
+modulate_color = Color(0.637843, 0.637843, 0.637843, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u1f1j"]
+texture = ExtResource("8_5825i")
+texture_margin_left = 41.0
+texture_margin_top = 40.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
+modulate_color = Color(0.393086, 0.393085, 0.393086, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4n13"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2wpy5"]
+texture = ExtResource("10_dmhob")
+texture_margin_left = 70.0
+texture_margin_top = 70.0
+texture_margin_right = 60.0
+texture_margin_bottom = 60.0
+expand_margin_left = 12.0
+expand_margin_top = 30.0
+expand_margin_right = 12.0
+expand_margin_bottom = 30.0
+region_rect = Rect2(1140, 110, 320, 320)
+
+[node name="ChapterTemplate" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+mouse_filter = 1
+metadata/_tab_index = 0
+
+[node name="Content" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 105
+theme_override_constants/margin_top = 70
+theme_override_constants/margin_right = 105
+theme_override_constants/margin_bottom = 70
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Content"]
+layout_mode = 2
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="PanelChapter1" type="PanelContainer" parent="Content/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8u620")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Content/ScrollContainer/PanelChapter1"]
+layout_mode = 2
+theme_override_constants/separation = 45
+alignment = 1
+
+[node name="LabelChapter" type="MarginContainer" parent="Content/ScrollContainer/PanelChapter1/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ChapterLabel" type="Label" parent="Content/ScrollContainer/PanelChapter1/VBoxContainer/LabelChapter"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_outline_size = 15
+theme_override_fonts/font = ExtResource("4_28lb0")
+theme_override_font_sizes/font_size = 55
+text = "Chapter 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Levels" type="MarginContainer" parent="Content/ScrollContainer/PanelChapter1/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="LevelsContainer" type="HBoxContainer" parent="Content/ScrollContainer/PanelChapter1/VBoxContainer/Levels"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="C1L1" type="Button" parent="Content/ScrollContainer/PanelChapter1/VBoxContainer/Levels/LevelsContainer"]
+visible = false
+custom_minimum_size = Vector2(350, 300)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("6_lkftx")
+theme_override_font_sizes/font_size = 85
+theme_override_styles/disabled = SubResource("StyleBoxTexture_b5ulj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_u1f1j")
+theme_override_styles/normal = ExtResource("5_v2xws")
+text = "Level 1
+"
+
+[node name="Node" type="Node" parent="Content/ScrollContainer/PanelChapter1/VBoxContainer/Levels/LevelsContainer/C1L1"]
+script = ExtResource("3_qapga")
+transition_type = 4
+
+[node name="LockIcon" type="TextureRect" parent="Content/ScrollContainer/PanelChapter1/VBoxContainer/Levels/LevelsContainer/C1L1"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -83.5
+offset_right = 76.0
+offset_bottom = 83.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_g1d8f")
+stretch_mode = 5
+
+[node name="-" type="Panel" parent="Content/ScrollContainer/PanelChapter1/VBoxContainer/Levels/LevelsContainer"]
+visible = false
+custom_minimum_size = Vector2(131.37, 10.315)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_v4n13")
+
+[node name="C1L2" type="Button" parent="Content/ScrollContainer/PanelChapter1/VBoxContainer/Levels/LevelsContainer"]
+visible = false
+custom_minimum_size = Vector2(350, 300)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("6_lkftx")
+theme_override_font_sizes/font_size = 85
+theme_override_styles/disabled = SubResource("StyleBoxTexture_b5ulj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b5ulj")
+theme_override_styles/normal = ExtResource("5_v2xws")
+text = "Level 2
+"
+
+[node name="Node" type="Node" parent="Content/ScrollContainer/PanelChapter1/VBoxContainer/Levels/LevelsContainer/C1L2"]
+script = ExtResource("3_qapga")
+transition_type = 4
+
+[node name="LockIcon" type="TextureRect" parent="Content/ScrollContainer/PanelChapter1/VBoxContainer/Levels/LevelsContainer/C1L2"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -83.5
+offset_right = 76.0
+offset_bottom = 83.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_g1d8f")
+stretch_mode = 5
+
+[node name="-2" type="Panel" parent="Content/ScrollContainer/PanelChapter1/VBoxContainer/Levels/LevelsContainer"]
+visible = false
+custom_minimum_size = Vector2(131.37, 10.315)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_v4n13")
+
+[node name="C1L3" type="Button" parent="Content/ScrollContainer/PanelChapter1/VBoxContainer/Levels/LevelsContainer"]
+visible = false
+custom_minimum_size = Vector2(350, 300)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("6_lkftx")
+theme_override_font_sizes/font_size = 85
+theme_override_styles/disabled = SubResource("StyleBoxTexture_b5ulj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b5ulj")
+theme_override_styles/normal = ExtResource("5_v2xws")
+text = "Level 3
+"
+
+[node name="Node" type="Node" parent="Content/ScrollContainer/PanelChapter1/VBoxContainer/Levels/LevelsContainer/C1L3"]
+script = ExtResource("3_qapga")
+transition_type = 4
+
+[node name="LockIcon" type="TextureRect" parent="Content/ScrollContainer/PanelChapter1/VBoxContainer/Levels/LevelsContainer/C1L3"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -83.5
+offset_right = 76.0
+offset_bottom = 83.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_g1d8f")
+stretch_mode = 5
+
+[node name="-3" type="Panel" parent="Content/ScrollContainer/PanelChapter1/VBoxContainer/Levels/LevelsContainer"]
+visible = false
+custom_minimum_size = Vector2(131.37, 10.315)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_v4n13")
+
+[node name="C1L4" type="Button" parent="Content/ScrollContainer/PanelChapter1/VBoxContainer/Levels/LevelsContainer"]
+visible = false
+custom_minimum_size = Vector2(350, 300)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("6_lkftx")
+theme_override_font_sizes/font_size = 85
+theme_override_styles/disabled = SubResource("StyleBoxTexture_b5ulj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b5ulj")
+theme_override_styles/normal = ExtResource("5_v2xws")
+text = "Level 4
+"
+
+[node name="Node" type="Node" parent="Content/ScrollContainer/PanelChapter1/VBoxContainer/Levels/LevelsContainer/C1L4"]
+script = ExtResource("3_qapga")
+transition_type = 4
+
+[node name="LockIcon" type="TextureRect" parent="Content/ScrollContainer/PanelChapter1/VBoxContainer/Levels/LevelsContainer/C1L4"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -83.5
+offset_right = 76.0
+offset_bottom = 83.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_g1d8f")
+stretch_mode = 5
+
+[node name="-4" type="Panel" parent="Content/ScrollContainer/PanelChapter1/VBoxContainer/Levels/LevelsContainer"]
+visible = false
+custom_minimum_size = Vector2(131.37, 10.315)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_v4n13")
+
+[node name="C1L5" type="Button" parent="Content/ScrollContainer/PanelChapter1/VBoxContainer/Levels/LevelsContainer"]
+visible = false
+custom_minimum_size = Vector2(350, 300)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("6_lkftx")
+theme_override_font_sizes/font_size = 85
+theme_override_styles/disabled = SubResource("StyleBoxTexture_b5ulj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b5ulj")
+theme_override_styles/normal = ExtResource("5_v2xws")
+text = "Level 5
+"
+
+[node name="Node" type="Node" parent="Content/ScrollContainer/PanelChapter1/VBoxContainer/Levels/LevelsContainer/C1L5"]
+script = ExtResource("3_qapga")
+transition_type = 4
+
+[node name="LockIcon" type="TextureRect" parent="Content/ScrollContainer/PanelChapter1/VBoxContainer/Levels/LevelsContainer/C1L5"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -83.5
+offset_right = 76.0
+offset_bottom = 83.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_g1d8f")
+stretch_mode = 5
+
+[node name="Border" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 90
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 90
+theme_override_constants/margin_bottom = 100
+
+[node name="Panel" type="Panel" parent="Border"]
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_2wpy5")

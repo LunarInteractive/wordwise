@@ -14,9 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://ctgp46i35s375" path="res://UI Asset/Sprite/UI_Wordwise/Button_Text/ButtonText_white_Border.tres" id="6_3nmid"]
 [ext_resource type="ButtonGroup" uid="uid://luvlh3xspwgi" path="res://Objects/Environtment/UI/ButtonGroup/LC.tres" id="6_7odi5"]
 [ext_resource type="Texture2D" uid="uid://ct671flg818rf" path="res://UI Asset/Sprite/UI_Wordwise/Button_Text/ButtonText_Border_2.tres" id="8_uyk1m"]
-[ext_resource type="Texture2D" path="res://UI Asset/Sprite/UI_Wordwise/Slider/Handle_Slider.tres" id="12_aehdc"]
-[ext_resource type="Texture2D" path="res://UI Asset/Sprite/UI_Wordwise/Slider/Background_With_Border.tres" id="13_frqtq"]
-[ext_resource type="Texture2D" path="res://UI Asset/Sprite/UI_Wordwise/Slider/Background_Slider.tres" id="13_w8the"]
+[ext_resource type="Texture2D" uid="uid://cntfcxiqjdptw" path="res://UI Asset/Sprite/UI_Wordwise/Slider/Handle_Slider.tres" id="12_aehdc"]
+[ext_resource type="Texture2D" uid="uid://bgkad12yo4aao" path="res://UI Asset/Sprite/UI_Wordwise/Slider/Background_With_Border.tres" id="13_frqtq"]
+[ext_resource type="Texture2D" uid="uid://bjtowtryu5lof" path="res://UI Asset/Sprite/UI_Wordwise/Slider/Background_Slider.tres" id="13_w8the"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yyr6f"]
 
@@ -229,10 +229,7 @@ alignment = 1
 [node name="EASY" type="Button" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/Difficulty/HBoxContainer"]
 custom_minimum_size = Vector2(179.815, 100)
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("5_mp1oo")
 theme_override_font_sizes/font_size = 45
@@ -246,14 +243,11 @@ text = "EASY"
 
 [node name="Node" type="Node" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/Difficulty/HBoxContainer/EASY"]
 script = ExtResource("5_q8d6k")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="MED" type="Button" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/Difficulty/HBoxContainer"]
 custom_minimum_size = Vector2(179.815, 100)
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("5_mp1oo")
@@ -268,14 +262,11 @@ text = "MEDIUM"
 
 [node name="Node" type="Node" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/Difficulty/HBoxContainer/MED"]
 script = ExtResource("5_q8d6k")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="HARD" type="Button" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/Difficulty/HBoxContainer"]
 custom_minimum_size = Vector2(179.815, 100)
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("5_mp1oo")
@@ -290,7 +281,6 @@ text = "HARD"
 
 [node name="Node" type="Node" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/Difficulty/HBoxContainer/HARD"]
 script = ExtResource("5_q8d6k")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LISEN Accuracy" type="VBoxContainer" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer"]
@@ -328,7 +318,6 @@ text = "i"
 
 [node name="Node" type="Node" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/LISEN Accuracy/Label/ila"]
 script = ExtResource("5_q8d6k")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/LISEN Accuracy"]
@@ -340,8 +329,6 @@ alignment = 1
 [node name="SMALL" type="Button" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/LISEN Accuracy/HBoxContainer"]
 custom_minimum_size = Vector2(179.815, 100)
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("5_mp1oo")
@@ -356,14 +343,11 @@ text = "SMALL"
 
 [node name="Node" type="Node" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/LISEN Accuracy/HBoxContainer/SMALL"]
 script = ExtResource("5_q8d6k")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="MED" type="Button" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/LISEN Accuracy/HBoxContainer"]
 custom_minimum_size = Vector2(179.815, 100)
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("5_mp1oo")
@@ -378,14 +362,11 @@ text = "MEDIUM"
 
 [node name="Node" type="Node" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/LISEN Accuracy/HBoxContainer/MED"]
 script = ExtResource("5_q8d6k")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="BIG" type="Button" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/LISEN Accuracy/HBoxContainer"]
 custom_minimum_size = Vector2(179.815, 100)
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("5_mp1oo")
@@ -400,7 +381,6 @@ text = "BIG"
 
 [node name="Node" type="Node" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/LISEN Accuracy/HBoxContainer/BIG"]
 script = ExtResource("5_q8d6k")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LISEN Control" type="VBoxContainer" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer"]
@@ -438,7 +418,6 @@ text = "i"
 
 [node name="Node" type="Node" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/LISEN Control/Label/ilc"]
 script = ExtResource("5_q8d6k")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/LISEN Control"]
@@ -450,8 +429,6 @@ alignment = 1
 [node name="AUTO" type="Button" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/LISEN Control/HBoxContainer"]
 custom_minimum_size = Vector2(172.28, 104.065)
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("5_mp1oo")
@@ -466,14 +443,11 @@ text = "AUTO"
 
 [node name="Node" type="Node" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/LISEN Control/HBoxContainer/AUTO"]
 script = ExtResource("5_q8d6k")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="HOLD" type="Button" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/LISEN Control/HBoxContainer"]
 custom_minimum_size = Vector2(172.28, 104.065)
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("5_mp1oo")
@@ -488,7 +462,6 @@ text = "HOLD"
 
 [node name="Node" type="Node" parent="TabContainer/Gameplay/MarginContainer/VBoxContainer/LISEN Control/HBoxContainer/HOLD"]
 script = ExtResource("5_q8d6k")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="Visual" type="TabBar" parent="TabContainer"]
@@ -552,7 +525,6 @@ text = "LOW
 
 [node name="Node" type="Node" parent="TabContainer/Visual/MarginContainer/VBoxContainer/Graphics/HBoxContainer/LOW"]
 script = ExtResource("5_q8d6k")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="MED" type="Button" parent="TabContainer/Visual/MarginContainer/VBoxContainer/Graphics/HBoxContainer"]
@@ -574,7 +546,6 @@ text = "MEDIUM"
 
 [node name="Node" type="Node" parent="TabContainer/Visual/MarginContainer/VBoxContainer/Graphics/HBoxContainer/MED"]
 script = ExtResource("5_q8d6k")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="HIGH" type="Button" parent="TabContainer/Visual/MarginContainer/VBoxContainer/Graphics/HBoxContainer"]
@@ -596,7 +567,6 @@ text = "HIGH"
 
 [node name="Node" type="Node" parent="TabContainer/Visual/MarginContainer/VBoxContainer/Graphics/HBoxContainer/HIGH"]
 script = ExtResource("5_q8d6k")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="Advanced" type="Label" parent="TabContainer/Visual/MarginContainer/VBoxContainer"]
@@ -760,7 +730,6 @@ text = "LOW
 
 [node name="Node" type="Node" parent="TabContainer/Visual/MarginContainer/VBoxContainer/Advanced/MC Advanced/VBoxContainer/Graphics/HBoxContainer/LOW"]
 script = ExtResource("5_q8d6k")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="MED" type="Button" parent="TabContainer/Visual/MarginContainer/VBoxContainer/Advanced/MC Advanced/VBoxContainer/Graphics/HBoxContainer"]
@@ -782,7 +751,6 @@ text = "MEDIUM"
 
 [node name="Node" type="Node" parent="TabContainer/Visual/MarginContainer/VBoxContainer/Advanced/MC Advanced/VBoxContainer/Graphics/HBoxContainer/MED"]
 script = ExtResource("5_q8d6k")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="Hard" type="Button" parent="TabContainer/Visual/MarginContainer/VBoxContainer/Advanced/MC Advanced/VBoxContainer/Graphics/HBoxContainer"]
@@ -804,7 +772,6 @@ text = "HARD"
 
 [node name="Node" type="Node" parent="TabContainer/Visual/MarginContainer/VBoxContainer/Advanced/MC Advanced/VBoxContainer/Graphics/HBoxContainer/Hard"]
 script = ExtResource("5_q8d6k")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="Audio" type="TabBar" parent="TabContainer"]

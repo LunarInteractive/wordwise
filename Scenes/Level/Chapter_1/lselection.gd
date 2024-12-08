@@ -132,15 +132,15 @@ func _on_c_4l_5_pressed() -> void:
 	
 #CHAPTER5
 func _on_c_5l_1_pressed() -> void:
-	get_tree().change_scene_to_file("res://Objects/Environtment/UI/menu.tscn")
+	setup_level("Chapter 5_Level 1")
 func _on_c_5l_2_pressed() -> void:
-	get_tree().change_scene_to_file("res://Objects/Environtment/UI/menu.tscn")
+	setup_level("Chapter 5_Level 2")
 func _on_c_5l_3_pressed() -> void:
-	get_tree().change_scene_to_file("res://Objects/Environtment/UI/menu.tscn")
+	setup_level("Chapter 5_Level 3")
 func _on_c_5l_4_pressed() -> void:
-	get_tree().change_scene_to_file("res://Objects/Environtment/UI/menu.tscn")
+	setup_level("Chapter 5_Level 4")
 func _on_c_5l_5_pressed() -> void:
-	get_tree().change_scene_to_file("res://Objects/Environtment/UI/menu.tscn")
+	setup_level("Chapter 5_Level 5")
 	
 #CHAPTER6
 func _on_c_6l_1_pressed() -> void:

@@ -1,0 +1,295 @@
+[gd_scene load_steps=21 format=3 uid="uid://wctuaa8vkfby"]
+
+[ext_resource type="Theme" uid="uid://bafbb13d58phf" path="res://UI Asset/Shader/Wordwise.tres" id="1_iqvd8"]
+[ext_resource type="PackedScene" uid="uid://4s6thc8kywtu" path="res://UI Asset/Scene/Seperator.tscn" id="2_wwihf"]
+[ext_resource type="VideoStream" path="res://UI Asset/Background/Wordwise_BG_Blue__1.ogv" id="3_s0ayk"]
+[ext_resource type="FontFile" uid="uid://dclwgnpvy23n7" path="res://UI Asset/Font/Pixel Dogica/dogicapixelbold.ttf" id="4_c0a81"]
+[ext_resource type="Texture2D" uid="uid://bw2hn21c6id43" path="res://UI Asset/Sprite/UI_Wordwise/Icons/Icon_Back_White.tres" id="5_vvtpb"]
+[ext_resource type="Texture2D" uid="uid://c4jihgqj5boch" path="res://UI Asset/Sprite/UI_Wordwise/Icons/Icon_Continue_White.tres" id="6_kvpfv"]
+[ext_resource type="Texture2D" uid="uid://b26ckailne7ld" path="res://UI Asset/Sprite/UI_Wordwise/Button/Orange/Button_Orange_Back.tres" id="8_qpej8"]
+[ext_resource type="Script" path="res://UI Asset/Script/BtnAnimation.gd" id="9_qkh4n"]
+[ext_resource type="FontFile" uid="uid://dlfcvrx0tug2e" path="res://UI Asset/Font/Pixel Dogica/dogicapixel.ttf" id="10_peck6"]
+[ext_resource type="Texture2D" uid="uid://c3p2yr7aobyep" path="res://UI Asset/Sprite/UI_Wordwise/Button/Orange/Button_Orange_QuestionMark.tres" id="17_o61mj"]
+[ext_resource type="PackedScene" uid="uid://ngvsk81cwf0y" path="res://UI Asset/Scene/popup_tutorial.tscn" id="18_fvi84"]
+
+[sub_resource type="GDScript" id="GDScript_5fq4i"]
+script/source = "extends Node2D
+
+@export var button_theme : Theme 
+@export var separator_scene : PackedScene  
+@export var animated_button_script : Script
+
+@onready var tutorial_panel = $Popup_Tutorial
+@onready var chapter_panel_container : TabContainer = $CanvasLayer/Control/VBoxContainer/TabContainer  
+@onready var chapter_template : PackedScene = preload(\"res://UI Asset/Scene/chapter_Panel.tscn\") 
+func load_filtered_data() -> Array:
+	var file = FileAccess.open(\"res://UI Asset/Script/tes_level_sekolah.json\", FileAccess.READ)
+	var json = JSON.new()
+	if file:
+		var json_string = file.get_as_text()
+		var result = json.parse(json_string)
+		if result == OK:
+			return json.data  
+		else:
+			print(\"Failed to parse JSON\")
+	else:
+		print(\"Failed to open file\")
+	return []
+
+# Function to organize data by chapters and levels
+func organize_data_by_chapters(data: Array) -> Dictionary:
+	var chapters_data = {}
+	
+	for entry in data:
+		var chapter = entry[\"chapter\"] 
+		var chapter_name = \"Chapter \" + chapter 
+		var level = entry[\"level\"]
+		
+		if not chapters_data.has(chapter):
+			chapters_data[chapter] = {\"name\": chapter_name, \"levels\": []}  # Create an empty array for levels under each chapter
+		
+		chapters_data[chapter][\"levels\"].append(level)  # Add the level to the chapter
+		
+	return chapters_data
+
+# Function to create UI for chapters and levels
+func create_chapter_panels(chapters_data: Dictionary) -> void:
+	for chapter in chapters_data.keys():
+
+		var chapter_panel = chapter_template.instantiate()
+		
+		# Get the chapter name from the organized data
+		var chapter_name = chapters_data[chapter][\"name\"]
+		
+		# Add the instantiated chapter panel to the TabContainer (main container)
+		var tab_index = chapter_panel_container.get_child_count()  # Get the index for the tab
+		chapter_panel_container.add_child(chapter_panel)
+		
+		# Set the tab name for the newly added chapter panel
+		chapter_panel_container.set_tab_title(tab_index, chapter_name)  # Correct method to set the tab title
+		
+		var chapter_label = chapter_panel.get_node(\"Content/ScrollContainer/PanelChapter1/VBoxContainer/LabelChapter/ChapterLabel\") as Label
+		if chapter_label:
+			chapter_label.text = chapter_name
+		
+		# Assuming your chapter template has a container for levels
+		var levels_container = chapter_panel.get_node(\"Content/ScrollContainer/PanelChapter1/VBoxContainer/Levels/LevelsContainer\") as HBoxContainer
+		if levels_container:
+			var levels = chapters_data[chapter][\"levels\"]
+			for i in range(levels.size()):
+				var level = levels[i]
+				
+				# Create level button
+				var level_button = Button.new()
+				level_button.text = \"Level \" + str(level)
+				
+				# Apply the theme to the button
+				if button_theme:
+					level_button.theme = button_theme  # Apply the selected theme to the button
+				else:
+					print(\"No theme assigned to button!\")
+				
+				# Connect button press event
+				level_button.connect(\"pressed\", Callable(self, \"_on_level_button_pressed\").bind(chapter, level))
+				
+				# Attach the AnimatedButton script to the level button
+				if animated_button_script:
+					level_button.set_script(animated_button_script)  # Attach the animated button script to the button
+				
+				levels_container.add_child(level_button)
+				
+				# Add separator after each level button, except the last one
+				if i < levels.size() - 1:  # Not the last level
+					var separator = separator_scene.instantiate()  # Instantiate the separator
+					levels_container.add_child(separator)
+		else:
+			print(\"Levels container not found for chapter: \" + chapter)
+
+# Function called when a level button is pressed
+func _on_level_button_pressed(chapter: String, level: String) -> void:
+	GlobalVariable.Chapter = chapter
+	GlobalVariable.level = level
+	print(GlobalVariable.Chapter)
+	print(GlobalVariable.level)
+	print(\"Chapter \" + chapter + \" Level \" + level + \" selected!\")
+	get_tree().change_scene_to_file(\"res://Scenes/Level/Chapter_1/Level_School.tscn\")
+
+
+# Called when the node enters the scene tree for the first time
+func _ready() -> void:
+	var data = load_filtered_data()  # Load the filtered data
+	GlobalVariable.set_all_dialogue_data_spesific(data)
+	if data.size() > 0:
+		var organized_data = organize_data_by_chapters(data)  # Organize data by chapter
+		create_chapter_panels(organized_data)  # Create the UI dynamically
+	else:
+		print(\"No data available.\")
+
+
+func _on_button_tutorial_pressed() -> void:
+	tutorial_panel.visible = true
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3kxsk"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_slx4u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pf0y5"]
+bg_color = Color(0.2, 0.32549, 0.619608, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_roqom"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4tv6q"]
+content_margin_left = 20.0
+content_margin_top = 45.0
+content_margin_right = 20.0
+content_margin_bottom = 45.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wexuw"]
+content_margin_left = 20.0
+content_margin_top = 45.0
+content_margin_right = 20.0
+content_margin_bottom = 45.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wv2q8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jr6nh"]
+texture = ExtResource("17_o61mj")
+region_rect = Rect2(0, 0, 220, 220)
+
+[node name="LevelSelection" type="Node2D"]
+script = SubResource("GDScript_5fq4i")
+button_theme = ExtResource("1_iqvd8")
+separator_scene = ExtResource("2_wwihf")
+animated_button_script = ExtResource("9_qkh4n")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer/Control"]
+modulate = Color(0.43134, 0.43134, 0.43134, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("3_s0ayk")
+autoplay = true
+expand = true
+loop = true
+
+[node name="Dimed" type="PanelContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GarisItem" type="PanelContainer" parent="CanvasLayer/Control"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -53.0
+offset_top = 1.0
+offset_right = 69.0
+offset_bottom = 89.0
+grow_horizontal = 2
+rotation = -0.0226893
+theme_override_styles/panel = SubResource("StyleBoxFlat_3kxsk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Back" type="TextureButton" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+texture_normal = ExtResource("8_qpej8")
+texture_pressed = ExtResource("8_qpej8")
+texture_hover = ExtResource("8_qpej8")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Node" type="Node" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer/Back"]
+script = ExtResource("9_qkh4n")
+transition_type = 4
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_outline_size = 15
+theme_override_fonts/font = ExtResource("10_peck6")
+theme_override_font_sizes/font_size = 60
+text = "Level Selection"
+
+[node name="TabContainer" type="TabContainer" parent="CanvasLayer/Control/VBoxContainer"]
+custom_minimum_size = Vector2(250.88, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/outline_size = 8
+theme_override_constants/side_margin = 25
+theme_override_constants/icon_max_width = 10
+theme_override_fonts/font = ExtResource("4_c0a81")
+theme_override_font_sizes/font_size = 30
+theme_override_icons/decrement_highlight = ExtResource("5_vvtpb")
+theme_override_icons/decrement = ExtResource("5_vvtpb")
+theme_override_icons/increment_highlight = ExtResource("6_kvpfv")
+theme_override_icons/increment = ExtResource("6_kvpfv")
+theme_override_styles/tab_focus = SubResource("StyleBoxEmpty_slx4u")
+theme_override_styles/tabbar_background = SubResource("StyleBoxFlat_pf0y5")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_roqom")
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_4tv6q")
+theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_wexuw")
+tab_alignment = 1
+tabs_position = 1
+
+[node name="Button_Tutorial" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -127.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = 129.0
+grow_horizontal = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wv2q8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jr6nh")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jr6nh")
+theme_override_styles/normal = SubResource("StyleBoxTexture_jr6nh")
+
+[node name="Node" type="Node" parent="CanvasLayer/Control/Button_Tutorial"]
+script = ExtResource("9_qkh4n")
+transition_type = 4
+
+[node name="Popup_Tutorial" parent="." instance=ExtResource("18_fvi84")]
+visible = false
+
+[connection signal="pressed" from="CanvasLayer/Control/Button_Tutorial" to="." method="_on_button_tutorial_pressed"]

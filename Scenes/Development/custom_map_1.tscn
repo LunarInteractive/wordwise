@@ -30,7 +30,7 @@
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/camera_3d_resource.gd" id="28_dmy7n"]
 [ext_resource type="CameraAttributesPractical" uid="uid://c68oc31iywtvd" path="res://Objects/Characters/Player/Camera.tres" id="29_x1sko"]
 
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_0g3uw"]
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_3x8cu"]
 exposure_multiplier = 0.585
 auto_exposure_scale = 0.06
 auto_exposure_speed = 0.01
@@ -2208,7 +2208,7 @@ surface_material_override/0 = ExtResource("2_fr0vn")
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.18817, 0.866763, 18.6141)
 visible = false
-attributes = SubResource("CameraAttributesPractical_0g3uw")
+attributes = SubResource("CameraAttributesPractical_3x8cu")
 fov = 35.0
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]

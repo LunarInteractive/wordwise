@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dnp04amk8k4x3"]
+[gd_scene load_steps=33 format=3 uid="uid://dnp04amk8k4x3"]
 
 [ext_resource type="Script" path="res://Scenes/Level/Chapter_1/level_selection.gd" id="1_4bxj1"]
 [ext_resource type="Script" path="res://Scenes/Level/Chapter_1/lselection.gd" id="1_b3sv5"]
@@ -8,7 +8,6 @@
 [ext_resource type="VideoStream" path="res://UI Asset/Background/Wordwise_BG_Blue__1.ogv" id="3_kw55a"]
 [ext_resource type="Texture2D" uid="uid://c4jihgqj5boch" path="res://UI Asset/Sprite/UI_Wordwise/Icons/Icon_Continue_White.tres" id="4_4c7dj"]
 [ext_resource type="FontFile" uid="uid://dlfcvrx0tug2e" path="res://UI Asset/Font/Pixel Dogica/dogicapixel.ttf" id="5_8nfns"]
-[ext_resource type="Texture2D" path="res://VisualNovelTextbox/Button_Back_Purple.tres" id="7_mmyrx"]
 [ext_resource type="Texture2D" uid="uid://b26ckailne7ld" path="res://UI Asset/Sprite/UI_Wordwise/Button/Orange/Button_Orange_Back.tres" id="8_eajen"]
 [ext_resource type="Script" path="res://UI Asset/Script/LockSystem.gd" id="9_fw8m4"]
 [ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="10_s8e21"]
@@ -165,10 +164,11 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_roqom")
 theme_override_styles/tab_selected = SubResource("StyleBoxFlat_4tv6q")
 theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_wexuw")
 tab_alignment = 1
-current_tab = 0
+current_tab = 4
 tabs_position = 1
 
 [node name="Chapter 1" type="PanelContainer" parent="CanvasLayer/Control/TabContainer"]
+visible = false
 layout_mode = 2
 script = ExtResource("1_4bxj1")
 metadata/_tab_index = 0
@@ -191,7 +191,6 @@ stretch_mode = 5
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/HBoxContainer/Back"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="Label2" type="Label" parent="CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/HBoxContainer"]
@@ -268,7 +267,6 @@ text = "Level 1
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/Control/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/C1L1"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/Control/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/C1L1"]
@@ -313,7 +311,6 @@ text = "Level 2
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/Control/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/C1L2"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/Control/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/C1L2"]
@@ -358,7 +355,6 @@ text = "Level 3
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/Control/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/C1L3"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/Control/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/C1L3"]
@@ -403,7 +399,6 @@ text = "Level 4
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/Control/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/C1L4"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/Control/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/C1L4"]
@@ -448,7 +443,6 @@ text = "Level 5
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/Control/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/C1L5"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 1/VBoxContainer/Control/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 1/MarginContainer/Chapter 1/C1L5"]
@@ -522,15 +516,14 @@ theme_override_constants/separation = 30
 [node name="Back" type="TextureButton" parent="CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-texture_normal = ExtResource("7_mmyrx")
-texture_pressed = ExtResource("7_mmyrx")
-texture_hover = ExtResource("7_mmyrx")
+texture_normal = ExtResource("8_eajen")
+texture_pressed = ExtResource("8_eajen")
+texture_hover = ExtResource("8_eajen")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/HBoxContainer/Back"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="Label2" type="Label" parent="CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/HBoxContainer"]
@@ -608,7 +601,6 @@ text = "Level 1
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 2/MarginContainer/Chapter 2/C2L1"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 2/MarginContainer/Chapter 2/C2L1"]
@@ -653,7 +645,6 @@ text = "Level 2
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 2/MarginContainer/Chapter 2/C2L2"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 2/MarginContainer/Chapter 2/C2L2"]
@@ -698,7 +689,6 @@ text = "Level 3
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 2/MarginContainer/Chapter 2/C2L3"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 2/MarginContainer/Chapter 2/C2L3"]
@@ -743,7 +733,6 @@ text = "Level 4
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 2/MarginContainer/Chapter 2/C2L4"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 2/MarginContainer/Chapter 2/C2L4"]
@@ -788,7 +777,6 @@ text = "Level 5
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 2/MarginContainer/Chapter 2/C2L5"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 2/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 2/MarginContainer/Chapter 2/C2L5"]
@@ -862,15 +850,14 @@ theme_override_constants/separation = 30
 [node name="Back" type="TextureButton" parent="CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-texture_normal = ExtResource("7_mmyrx")
-texture_pressed = ExtResource("7_mmyrx")
-texture_hover = ExtResource("7_mmyrx")
+texture_normal = ExtResource("8_eajen")
+texture_pressed = ExtResource("8_eajen")
+texture_hover = ExtResource("8_eajen")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/HBoxContainer/Back"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="Label2" type="Label" parent="CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/HBoxContainer"]
@@ -948,7 +935,6 @@ text = "Level 1
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 3/MarginContainer/Chapter 3/C2L1"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 3/MarginContainer/Chapter 3/C2L1"]
@@ -993,7 +979,6 @@ text = "Level 2
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 3/MarginContainer/Chapter 3/C2L2"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 3/MarginContainer/Chapter 3/C2L2"]
@@ -1038,7 +1023,6 @@ text = "Level 3
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 3/MarginContainer/Chapter 3/C2L3"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 3/MarginContainer/Chapter 3/C2L3"]
@@ -1083,7 +1067,6 @@ text = "Level 4
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 3/MarginContainer/Chapter 3/C2L4"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 3/MarginContainer/Chapter 3/C2L4"]
@@ -1128,7 +1111,6 @@ text = "Level 5
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 3/MarginContainer/Chapter 3/C2L5"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 3/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 3/MarginContainer/Chapter 3/C2L5"]
@@ -1202,15 +1184,14 @@ theme_override_constants/separation = 30
 [node name="Back" type="TextureButton" parent="CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-texture_normal = ExtResource("7_mmyrx")
-texture_pressed = ExtResource("7_mmyrx")
-texture_hover = ExtResource("7_mmyrx")
+texture_normal = ExtResource("8_eajen")
+texture_pressed = ExtResource("8_eajen")
+texture_hover = ExtResource("8_eajen")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/HBoxContainer/Back"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="Label2" type="Label" parent="CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/HBoxContainer"]
@@ -1288,7 +1269,6 @@ text = "Level 1
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 4/MarginContainer/Chapter 4/C2L1"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 4/MarginContainer/Chapter 4/C2L1"]
@@ -1333,7 +1313,6 @@ text = "Level 2
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 4/MarginContainer/Chapter 4/C2L2"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 4/MarginContainer/Chapter 4/C2L2"]
@@ -1378,7 +1357,6 @@ text = "Level 3
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 4/MarginContainer/Chapter 4/C2L3"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 4/MarginContainer/Chapter 4/C2L3"]
@@ -1423,7 +1401,6 @@ text = "Level 4
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 4/MarginContainer/Chapter 4/C2L4"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 4/MarginContainer/Chapter 4/C2L4"]
@@ -1468,7 +1445,6 @@ text = "Level 5
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 4/MarginContainer/Chapter 4/C2L5"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 4/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 4/MarginContainer/Chapter 4/C2L5"]
@@ -1527,7 +1503,6 @@ mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_2wpy5")
 
 [node name="Chapter 5" type="PanelContainer" parent="CanvasLayer/Control/TabContainer"]
-visible = false
 layout_mode = 2
 script = ExtResource("1_4bxj1")
 metadata/_tab_index = 4
@@ -1542,15 +1517,14 @@ theme_override_constants/separation = 30
 [node name="Back" type="TextureButton" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-texture_normal = ExtResource("7_mmyrx")
-texture_pressed = ExtResource("7_mmyrx")
-texture_hover = ExtResource("7_mmyrx")
+texture_normal = ExtResource("8_eajen")
+texture_pressed = ExtResource("8_eajen")
+texture_hover = ExtResource("8_eajen")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/HBoxContainer/Back"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="Label2" type="Label" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/HBoxContainer"]
@@ -1628,7 +1602,6 @@ text = "Level 1
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L1"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L1"]
@@ -1673,7 +1646,6 @@ text = "Level 2
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L2"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L2"]
@@ -1718,7 +1690,6 @@ text = "Level 3
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L3"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L3"]
@@ -1763,7 +1734,6 @@ text = "Level 4
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L4"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L4"]
@@ -1808,7 +1778,6 @@ text = "Level 5
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L5"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 5/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 5/MarginContainer/Chapter 5/C2L5"]
@@ -1883,15 +1852,14 @@ theme_override_constants/separation = 30
 [node name="Back" type="TextureButton" parent="CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-texture_normal = ExtResource("7_mmyrx")
-texture_pressed = ExtResource("7_mmyrx")
-texture_hover = ExtResource("7_mmyrx")
+texture_normal = ExtResource("8_eajen")
+texture_pressed = ExtResource("8_eajen")
+texture_hover = ExtResource("8_eajen")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/HBoxContainer/Back"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="Label2" type="Label" parent="CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/HBoxContainer"]
@@ -1969,7 +1937,6 @@ text = "Level 1
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 6/MarginContainer/Chapter 6/C2L1"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 6/MarginContainer/Chapter 6/C2L1"]
@@ -2014,7 +1981,6 @@ text = "Level 2
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 6/MarginContainer/Chapter 6/C2L2"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 6/MarginContainer/Chapter 6/C2L2"]
@@ -2059,7 +2025,6 @@ text = "Level 3
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 6/MarginContainer/Chapter 6/C2L3"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 6/MarginContainer/Chapter 6/C2L3"]
@@ -2104,7 +2069,6 @@ text = "Level 4
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 6/MarginContainer/Chapter 6/C2L4"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 6/MarginContainer/Chapter 6/C2L4"]
@@ -2149,7 +2113,6 @@ text = "Level 5
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 6/MarginContainer/Chapter 6/C2L5"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 6/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 6/MarginContainer/Chapter 6/C2L5"]
@@ -2224,15 +2187,14 @@ theme_override_constants/separation = 30
 [node name="Back" type="TextureButton" parent="CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-texture_normal = ExtResource("7_mmyrx")
-texture_pressed = ExtResource("7_mmyrx")
-texture_hover = ExtResource("7_mmyrx")
+texture_normal = ExtResource("8_eajen")
+texture_pressed = ExtResource("8_eajen")
+texture_hover = ExtResource("8_eajen")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/HBoxContainer/Back"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="Label2" type="Label" parent="CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/HBoxContainer"]
@@ -2310,7 +2272,6 @@ text = "Level 1
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 7/MarginContainer/Chapter 7/C2L1"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 7/MarginContainer/Chapter 7/C2L1"]
@@ -2355,7 +2316,6 @@ text = "Level 2
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 7/MarginContainer/Chapter 7/C2L2"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 7/MarginContainer/Chapter 7/C2L2"]
@@ -2400,7 +2360,6 @@ text = "Level 3
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 7/MarginContainer/Chapter 7/C2L3"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 7/MarginContainer/Chapter 7/C2L3"]
@@ -2445,7 +2404,6 @@ text = "Level 4
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 7/MarginContainer/Chapter 7/C2L4"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 7/MarginContainer/Chapter 7/C2L4"]
@@ -2490,7 +2448,6 @@ text = "Level 5
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 7/MarginContainer/Chapter 7/C2L5"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 7/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 7/MarginContainer/Chapter 7/C2L5"]
@@ -2564,15 +2521,14 @@ theme_override_constants/separation = 30
 [node name="Back" type="TextureButton" parent="CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-texture_normal = ExtResource("7_mmyrx")
-texture_pressed = ExtResource("7_mmyrx")
-texture_hover = ExtResource("7_mmyrx")
+texture_normal = ExtResource("8_eajen")
+texture_pressed = ExtResource("8_eajen")
+texture_hover = ExtResource("8_eajen")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/HBoxContainer/Back"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="Label2" type="Label" parent="CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/HBoxContainer"]
@@ -2650,7 +2606,6 @@ text = "Level 1
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 8/MarginContainer/Chapter 8/C2L1"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 8/MarginContainer/Chapter 8/C2L1"]
@@ -2695,7 +2650,6 @@ text = "Level 2
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 8/MarginContainer/Chapter 8/C2L2"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 8/MarginContainer/Chapter 8/C2L2"]
@@ -2740,7 +2694,6 @@ text = "Level 3
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 8/MarginContainer/Chapter 8/C2L3"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 8/MarginContainer/Chapter 8/C2L3"]
@@ -2785,7 +2738,6 @@ text = "Level 4
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 8/MarginContainer/Chapter 8/C2L4"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 8/MarginContainer/Chapter 8/C2L4"]
@@ -2830,7 +2782,6 @@ text = "Level 5
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 8/MarginContainer/Chapter 8/C2L5"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 8/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 8/MarginContainer/Chapter 8/C2L5"]
@@ -2904,15 +2855,14 @@ theme_override_constants/separation = 30
 [node name="Back" type="TextureButton" parent="CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-texture_normal = ExtResource("7_mmyrx")
-texture_pressed = ExtResource("7_mmyrx")
-texture_hover = ExtResource("7_mmyrx")
+texture_normal = ExtResource("8_eajen")
+texture_pressed = ExtResource("8_eajen")
+texture_hover = ExtResource("8_eajen")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/HBoxContainer/Back"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="Label2" type="Label" parent="CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/HBoxContainer"]
@@ -2990,7 +2940,6 @@ text = "Level 1
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 9/MarginContainer/Chapter 9/C2L1"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 9/MarginContainer/Chapter 9/C2L1"]
@@ -3035,7 +2984,6 @@ text = "Level 2
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 9/MarginContainer/Chapter 9/C2L2"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 9/MarginContainer/Chapter 9/C2L2"]
@@ -3080,7 +3028,6 @@ text = "Level 3
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 9/MarginContainer/Chapter 9/C2L3"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 9/MarginContainer/Chapter 9/C2L3"]
@@ -3125,7 +3072,6 @@ text = "Level 4
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 9/MarginContainer/Chapter 9/C2L4"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 9/MarginContainer/Chapter 9/C2L4"]
@@ -3170,7 +3116,6 @@ text = "Level 5
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 9/MarginContainer/Chapter 9/C2L5"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 9/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 9/MarginContainer/Chapter 9/C2L5"]
@@ -3244,15 +3189,14 @@ theme_override_constants/separation = 30
 [node name="Back" type="TextureButton" parent="CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-texture_normal = ExtResource("7_mmyrx")
-texture_pressed = ExtResource("7_mmyrx")
-texture_hover = ExtResource("7_mmyrx")
+texture_normal = ExtResource("8_eajen")
+texture_pressed = ExtResource("8_eajen")
+texture_hover = ExtResource("8_eajen")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/HBoxContainer/Back"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="Label2" type="Label" parent="CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/HBoxContainer"]
@@ -3330,7 +3274,6 @@ text = "Level 1
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 10/MarginContainer/Chapter 10/C2L1"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 10/MarginContainer/Chapter 10/C2L1"]
@@ -3375,7 +3318,6 @@ text = "Level 2
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 10/MarginContainer/Chapter 10/C2L2"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 10/MarginContainer/Chapter 10/C2L2"]
@@ -3420,7 +3362,6 @@ text = "Level 3
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 10/MarginContainer/Chapter 10/C2L3"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 10/MarginContainer/Chapter 10/C2L3"]
@@ -3465,7 +3406,6 @@ text = "Level 4
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 10/MarginContainer/Chapter 10/C2L4"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 10/MarginContainer/Chapter 10/C2L4"]
@@ -3510,7 +3450,6 @@ text = "Level 5
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 10/MarginContainer/Chapter 10/C2L5"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="LockIcon" type="TextureRect" parent="CanvasLayer/Control/TabContainer/Chapter 10/VBoxContainer/Control2/MarginContainer/ScrollContainer/HBoxContainer/Panel Chapter 10/MarginContainer/Chapter 10/C2L5"]
@@ -3585,7 +3524,6 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_jr6nh")
 
 [node name="Node" type="Node" parent="CanvasLayer/Control/Button_Tutorial"]
 script = ExtResource("12_yvty3")
-hover_scale = Vector2(0.9, 0.9)
 transition_type = 4
 
 [node name="Popup_Tutorial" parent="." instance=ExtResource("16_4wjy4")]

@@ -1,0 +1,27 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://bafbb13d58phf"]
+
+[ext_resource type="FontFile" uid="uid://dshrn4y61t1ng" path="res://UI Asset/Font/Pixel Monogram/monogram-extended.ttf" id="1_o65i3"]
+[ext_resource type="Texture2D" uid="uid://c2rd1gh6eqbvp" path="res://UI Asset/Sprite/UI_Wordwise/Button_Text/ButtonText_Orange_Border.tres" id="2_fggmm"]
+[ext_resource type="StyleBox" uid="uid://cla8flpoq6rxs" path="res://UI Asset/Shader/button_level.tres" id="3_ovesj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8by2m"]
+content_margin_top = 45.0
+content_margin_bottom = 45.0
+texture = ExtResource("2_fggmm")
+texture_margin_left = 41.0
+texture_margin_top = 70.0
+texture_margin_right = 40.0
+texture_margin_bottom = 30.0
+modulate_color = Color(0.419813, 0.419813, 0.419813, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lnvo3"]
+
+[resource]
+Button/constants/outline_size = 8
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("1_o65i3")
+Button/styles/disabled = SubResource("StyleBoxTexture_8by2m")
+Button/styles/focus = SubResource("StyleBoxEmpty_lnvo3")
+Button/styles/hover = ExtResource("3_ovesj")
+Button/styles/normal = ExtResource("3_ovesj")
+Button/styles/pressed = ExtResource("3_ovesj")
