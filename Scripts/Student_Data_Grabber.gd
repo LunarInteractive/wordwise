@@ -3,7 +3,7 @@ extends Node
 @onready var Nama_Siswa = ""
 
 # Encryption key for saving data
-var ENCRYPTION_KEY = "KodePasswordGameWordwise"  # Use a strong key (16 bytes for AES-128, 24 bytes for AES-192, 32 bytes for AES-256)
+var ENCRYPTION_KEY = "KodePasswordGameWordwise"
 
 # File path for saving the encrypted data
 const FILE_PATH = "user://saved_data.enc"
@@ -11,87 +11,39 @@ const FILE_PATH = "user://saved_data.enc"
 signal send_data_success
 signal send_API
 
-# Save the given data to a file with encryption
-func save_data(data: Dictionary) -> void:
+func save_game(data: Dictionary) -> void:
+	var File = FileAccess.open_encrypted_with_pass("user://PlayerData.save", FileAccess.WRITE, ENCRYPTION_KEY)
 	var json_string = JSON.stringify(data)
-	var result = encrypt_string(json_string)
-	print("result : ", result)
-	var encrypted_data = result.encrypted_data
-	var iv = result.iv
-
-	var combined_data = iv + encrypted_data
-
-
-	var file = FileAccess.open(FILE_PATH, FileAccess.WRITE)
-	if file:
-		file.store_buffer(combined_data)
-		file.close()
-		print("Data saved successfully!")
+	
+	if File:
+		File.store_string(json_string)
+		File.close()
+		print("Data saved successfuly!")
 		emit_signal("send_data_success")
 	else:
-		print("Failed to save data.")
+		print("Failed to save data")
 
-# Load and decrypt data from the file
-func load_data() -> Dictionary:
-	if FileAccess.file_exists(FILE_PATH):
-		var file = FileAccess.open(FILE_PATH, FileAccess.READ)
-		if file:
-			var combined_data = file.get_buffer(file.get_length())
-			print(combined_data)
-			file.close()
-
-			var iv = combined_data.slice(0, 16)  # Extract the first 16 bytes as IV
-			var encrypted_data = combined_data.slice(16, combined_data.size())  # Extract the rest as encrypted data
+func load_game() -> Dictionary:
+	if FileAccess.file_exists("user://PlayerData.save"):
+		var File = FileAccess.open_encrypted_with_pass("user://PlayerData.save", FileAccess.READ, ENCRYPTION_KEY)
+		
+		while File.get_position() < File.get_length():
+			var json_string = File.get_as_text()
+			File.close()
 			
-			var json_string = decrypt_string(encrypted_data, iv)
 			var json = JSON.new()
-			print("JSON String:", json_string)
 			var parse_result = json.parse(json_string)  # This returns an int (error code)
-			
-			print(parse_result)
+
 			if parse_result == OK:
-				print("bisa dapetin file")
 				var data = json.data
+				print("data : ", data)
 				return data  # Return the parsed data from json
 			else:
 				print("Failed to parse JSON at line", json.get_error_line(), ":", json.get_error_message())
-		else:
-			print("Failed to open file.")
 	else:
-		print("File not found.")
+		print("no file detected")
 	return {}
 
-
-
-
-# Encrypt a string using AES with IV
-func encrypt_string(text: String) -> Dictionary:
-	var key = ENCRYPTION_KEY
-	var data = text
-	print("data : ", data)
-	var aes = AESContext.new()
-	var iv = generate_random_iv()  # Generate random IV for encryption
-	aes.start(AESContext.MODE_ECB_ENCRYPT, key.to_utf8_buffer())
-	var encrypted = aes.update(data.to_utf8_buffer())
-	aes.finish()
-
-	return {"encrypted_data": encrypted, "iv": iv}
-
-# Decrypt a string using AES with IV
-func decrypt_string(encrypted_data: PackedByteArray, iv: PackedByteArray) -> String:
-	var key = ENCRYPTION_KEY
-	var aes = AESContext.new()
-	aes.start(AESContext.MODE_ECB_DECRYPT, key.to_utf8_buffer())
-	var decrypted = aes.update(encrypted_data)
-	aes.finish()
-	return decrypted.get_string_from_utf8()
-
-# Generate a random 16-byte initialization vector (IV)
-func generate_random_iv() -> PackedByteArray:
-	var iv = PackedByteArray()
-	for i in range(16):
-		iv.append(randi() % 256)  # Generate random byte (0-255)
-	return iv
 
 # Fetch all data from the database
 func fetch_all_data(base_url: String, name: String) -> void:
@@ -117,7 +69,6 @@ var target_name = ""
 
 func _on_fetch_all_completed(result, response_code, headers, body):
 	if response_code == 200:
-		print("trying to fetch")
 		var body_text = body.get_string_from_utf8()
 
 		var json = JSON.new()
@@ -135,14 +86,13 @@ func _on_fetch_all_completed(result, response_code, headers, body):
 				for item in all_data:
 					if typeof(item) == TYPE_DICTIONARY and item["name"].find(target_name) != -1:
 						filtered_data = item
-						print(filtered_data)
 						break
 
 				if filtered_data == null:
 					print("No data found for name containing:", target_name)
 				else:
 					print("Filtered data:", filtered_data)
-					save_data(filtered_data)  # Save the filtered data to the file
+					save_game(filtered_data)  # Save the filtered data to the file
 			else:
 				print("Unexpected data format. 'data' key is missing or not an array.")
 		else:
