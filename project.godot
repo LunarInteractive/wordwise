@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="wordwise"
-run/main_scene="res://Scenes/Development/test_map.tscn"
+run/main_scene="res://Scenes/Level/Chapter_1/level_selection.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 run/max_fps=60
 config/icon="res://icon.svg"
@@ -22,7 +22,6 @@ buses/default_bus_layout="res://UI Asset/Audio/default_bus_layout.tres"
 general/text_to_speech=true
 driver/enable_input=true
 driver/mix_rate=16000
-<<<<<<<Updatedupstreambuses/default_bus_layout="res://UI Asset/Audio/default_bus_layout.tres"
 
 [autoload]
 
@@ -34,12 +33,10 @@ SceneTransition="*res://UI Asset/Scene/Scene_Transition.tscn"
 LisenBus="*res://Scripts/LISEN/LisenBus.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 GlobalVariable="*res://Scripts/Global_Variable.gd"
-ImGuiRoot="*res://addons/imgui-godot/data/ImGuiRoot.tscn"
 
 [debug]
 
 file_logging/enable_file_logging=true
-file_logging/log_path="res://Resources/godot.log"
 
 [dialogic]
 
@@ -52,19 +49,19 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"Dialogue/chapter_10": "res://Scenes/Dialogue/chapter_10.dtl",
-"Dialogue/chapter_3": "res://Scenes/Dialogue/chapter_3.dtl",
-"Dialogue/chapter_4": "res://Scenes/Dialogue/chapter_4.dtl",
-"Dialogue/chapter_7": "res://Scenes/Dialogue/chapter_7.dtl",
-"Dialogue/chapter_8": "res://Scenes/Dialogue/chapter_8.dtl",
-"Dialogue/chapter_9": "res://Scenes/Dialogue/chapter_9.dtl",
+"Dialog/chapter_5": "res://Scenes/Dialog/chapter_5.dtl",
+"Dialog/chapter_6": "res://Scenes/Dialog/chapter_6.dtl",
 "Text_timeline": "res://UI Asset/Testing/Text_timeline.dtl",
-"Timeline/chapter_5": "res://Resources/Timeline/chapter_5.dtl",
-"Timeline/chapter_6": "res://Resources/Timeline/chapter_6.dtl",
 "chapter_1": "res://Resources/Timeline/chapter_1.dtl",
+"chapter_10": "res://Scenes/Dialogue/chapter_10.dtl",
 "chapter_2": "res://Resources/Timeline/chapter_2.dtl",
-"chapter_5": "res://Scenes/Dialog/chapter_5.dtl",
-"chapter_6": "res://Scenes/Dialog/chapter_6.dtl",
+"chapter_3": "res://Scenes/Dialogue/chapter_3.dtl",
+"chapter_4": "res://Scenes/Dialogue/chapter_4.dtl",
+"chapter_5": "res://Resources/Timeline/chapter_5.dtl",
+"chapter_6": "res://Resources/Timeline/chapter_6.dtl",
+"chapter_7": "res://Scenes/Dialogue/chapter_7.dtl",
+"chapter_8": "res://Scenes/Dialogue/chapter_8.dtl",
+"chapter_9": "res://Scenes/Dialogue/chapter_9.dtl",
 "test": "res://Resources/Timeline/test.dtl"
 }
 glossary/default_case_sensitive=true
@@ -122,7 +119,7 @@ project/assembly_name="wordwise"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/anima/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/godot_whisper/plugin.cfg", "res://addons/imgui-godot/plugin.cfg", "res://addons/limbo_console/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/runtime_debug_tools/plugin.cfg")
+enabled=PackedStringArray("res://addons/anima/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/godot_whisper/plugin.cfg", "res://addons/limbo_console/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/runtime_debug_tools/plugin.cfg")
 
 [input]
 

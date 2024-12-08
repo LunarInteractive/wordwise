@@ -1,32 +1,58 @@
-Godot Engine v4.3.stable.mono.official.77dcf97d8 - https://godotengine.org
-Vulkan 1.3.289 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 3060 Laptop GPU
+Godot Engine v4.3.stable.steam.77dcf97d8 - https://godotengine.org
+Vulkan 1.3.292 - Forward+ - Using Device #0: AMD - AMD Radeon RX 5700 XT
 
-[188, 185, 178, 80, 225, 90, 121, 46, 237, 59, 123, 91, 245, 94, 203, 225]
-USER ERROR: AES key must be either 16 or 32 bytes
-   at: start (core/crypto/aes_context.cpp:38)
-USER ERROR: AESContext not started. Call 'start' before calling 'update'.
-   at: update (core/crypto/aes_context.cpp:56)
-JSON String:
-43
-Failed to parse JSON at line0:
-somethings wrong in fullname or password
-Request sent successfully.
-trying to fetch
-{ "id": 6, "name": "Jayce Nikolaus", "sprite": 2, "teacher_id": 5, "level": 4, "total_points": 525 }
-Filtered data:{ "id": 6, "name": "Jayce Nikolaus", "sprite": 2, "teacher_id": 5, "level": 4, "total_points": 525 }
-data : {"id":6,"level":4,"name":"Jayce Nikolaus","sprite":2,"teacher_id":5,"total_points":525}
-USER ERROR: AES key must be either 16 or 32 bytes
-   at: start (core/crypto/aes_context.cpp:38)
-USER ERROR: AESContext not started. Call 'start' before calling 'update'.
-   at: update (core/crypto/aes_context.cpp:56)
-result : { "encrypted_data": [], "iv": [85, 127, 225, 255, 165, 117, 113, 103, 221, 226, 37, 38, 116, 36, 0, 48] }
-Data saved successfully!
-[85, 127, 225, 255, 165, 117, 113, 103, 221, 226, 37, 38, 116, 36, 0, 48]
-USER ERROR: AES key must be either 16 or 32 bytes
-   at: start (core/crypto/aes_context.cpp:38)
-USER ERROR: AESContext not started. Call 'start' before calling 'update'.
-   at: update (core/crypto/aes_context.cpp:56)
-JSON String:
-43
-Failed to parse JSON at line0:
-ERROR: 1 RID allocations of type 'N17RendererSceneCull6CameraE' were leaked at exit.
+Chapter terbuka:5
+Level yang terbuka:5
+Chapter1 terbuka (semua level dalam chapter ini terbuka).
+Chapter terbuka:5
+Level yang terbuka:5
+Chapter2 terbuka (semua level dalam chapter ini terbuka).
+Chapter terbuka:5
+Level yang terbuka:5
+Chapter3 terbuka (semua level dalam chapter ini terbuka).
+Chapter terbuka:5
+Level yang terbuka:5
+Chapter4 terbuka (semua level dalam chapter ini terbuka).
+Chapter terbuka:5
+Level yang terbuka:5
+Chapter5 terbuka (semua level dalam chapter ini terbuka).
+Level 1 terbuka.
+Level 2 terbuka.
+Level 3 terbuka.
+Level 4 terbuka.
+Level 5 terbuka.
+Chapter terbuka:5
+Level yang terbuka:5
+Level 1 terkunci (semua level dalam chapter ini terkunci).
+Level 2 terkunci (semua level dalam chapter ini terkunci).
+Level 3 terkunci (semua level dalam chapter ini terkunci).
+Level 4 terkunci (semua level dalam chapter ini terkunci).
+Level 5 terkunci (semua level dalam chapter ini terkunci).
+Chapter terbuka:5
+Level yang terbuka:5
+Level 1 terkunci (semua level dalam chapter ini terkunci).
+Level 2 terkunci (semua level dalam chapter ini terkunci).
+Level 3 terkunci (semua level dalam chapter ini terkunci).
+Level 4 terkunci (semua level dalam chapter ini terkunci).
+Level 5 terkunci (semua level dalam chapter ini terkunci).
+Chapter terbuka:5
+Level yang terbuka:5
+Level 1 terkunci (semua level dalam chapter ini terkunci).
+Level 2 terkunci (semua level dalam chapter ini terkunci).
+Level 3 terkunci (semua level dalam chapter ini terkunci).
+Level 4 terkunci (semua level dalam chapter ini terkunci).
+Level 5 terkunci (semua level dalam chapter ini terkunci).
+Chapter terbuka:5
+Level yang terbuka:5
+Level 1 terkunci (semua level dalam chapter ini terkunci).
+Level 2 terkunci (semua level dalam chapter ini terkunci).
+Level 3 terkunci (semua level dalam chapter ini terkunci).
+Level 4 terkunci (semua level dalam chapter ini terkunci).
+Level 5 terkunci (semua level dalam chapter ini terkunci).
+Chapter terbuka:5
+Level yang terbuka:5
+Level 1 terkunci (semua level dalam chapter ini terkunci).
+Level 2 terkunci (semua level dalam chapter ini terkunci).
+Level 3 terkunci (semua level dalam chapter ini terkunci).
+Level 4 terkunci (semua level dalam chapter ini terkunci).
+Level 5 terkunci (semua level dalam chapter ini terkunci).

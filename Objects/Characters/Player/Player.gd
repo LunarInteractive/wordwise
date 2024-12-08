@@ -4,7 +4,6 @@ extends CharacterBody3D
 var SPEED: float = 5.0
 var JUMP_VELOCITY: float = 4.5: set = set_jump_velocity, get = get_jump_velocity
 var angle: Array = ["rawr", "juga"]
-var drawer: ImDrawListPtr
 
 @onready var animation_tree: AnimationTree = $AnimationTree
 
@@ -16,12 +15,6 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	animation_tree.set("parameters/blend_position", Vector2(velocity.x, velocity.z * -1))
-	ImGui.Begin("Player")
-	ImGui.Text("FPS: " + str(Engine.get_frames_per_second()))
-	ImGui.Text("Position: " + str(global_transform.origin))
-	ImGui.Text("Velocity: " + str(velocity))
-
-	ImGui.End()
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
