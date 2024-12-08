@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dqo3vmbw7m0ar"]
+[gd_scene load_steps=29 format=3 uid="uid://dqo3vmbw7m0ar"]
 
 [ext_resource type="Script" path="res://Objects/Environtment/UI/profile.gd" id="1_woprc"]
 [ext_resource type="VideoStream" path="res://UI Asset/Background/Wordwise_BG_Blue__1.ogv" id="2_f5qal"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" path="res://UI Asset/Sprite/UI_Wordwise/Progress_Bar/Border_PB.tres" id="15_dhay7"]
 [ext_resource type="Texture2D" uid="uid://ctgp46i35s375" path="res://UI Asset/Sprite/UI_Wordwise/Button_Text/ButtonText_white_Border.tres" id="16_ei2la"]
 [ext_resource type="Texture2D" uid="uid://codormxttyb7v" path="res://UI Asset/Sprite/UI_Wordwise/Border/Borders_Dual Color.png" id="17_wwcg7"]
+[ext_resource type="Script" path="res://Scripts/Student_Data_Grabber.gd" id="18_ioien"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i5i88"]
 
@@ -231,7 +232,7 @@ custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 alignment = 1
 
-[node name="Sign Out" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+[node name="SignIn" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
 theme_override_constants/outline_size = 9
 theme_override_fonts/font = ExtResource("12_eo8kt")
@@ -242,7 +243,23 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_f3eej")
 theme_override_styles/normal = SubResource("StyleBoxTexture_f3eej")
 text = "SIGN IN"
 
-[node name="Node" type="Node" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3/Sign Out"]
+[node name="Node" type="Node" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3/SignIn"]
+script = ExtResource("5_acem0")
+transition_type = 4
+
+[node name="SignOut" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+visible = false
+layout_mode = 2
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("12_eo8kt")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i5i88")
+theme_override_styles/hover = SubResource("StyleBoxTexture_f3eej")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_f3eej")
+theme_override_styles/normal = SubResource("StyleBoxTexture_f3eej")
+text = "SIGN IN"
+
+[node name="Node" type="Node" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3/SignOut"]
 script = ExtResource("5_acem0")
 transition_type = 4
 
@@ -367,8 +384,12 @@ patch_margin_top = 70
 patch_margin_right = 60
 patch_margin_bottom = 60
 
+[node name="Student_data_Grabber" type="Node" parent="."]
+script = ExtResource("18_ioien")
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/Out" to="." method="_on_out_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer/TextureButton" to="." method="_on_button_Plus_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3/Sign Out" to="." method="_on_sign_out_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3/SignIn" to="." method="_on_sign_out_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3/SignOut" to="." method="_on_sign_out_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/PanelContainer/VBoxContainer/Content/VBoxContainer/HBoxContainer/Button" to="." method="_on_button_cancel_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/PanelContainer/VBoxContainer/Content/VBoxContainer/HBoxContainer/Button2" to="." method="_on_button_Confirm_pressed"]
